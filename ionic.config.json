@@ -1,0 +1,7 @@
+{
+  "name": "Sahara_Motors_SRS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
