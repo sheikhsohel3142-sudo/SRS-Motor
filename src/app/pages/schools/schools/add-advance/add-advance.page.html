@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true">
+  <div class="add-advance">
+    <div class="title-container">
+      <div routerLink="/admin/bus">
+        <ion-icon name="chevron-back-outline"></ion-icon>Add Advance
+      </div>
+    </div>
+    <ion-card>
+      <form [formGroup]="busForm">
+        <div class="header-container">
+          <h2>Add Advance</h2>
+        </div>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12" size-md="6">
+              <label>Amount</label>
+              <ion-input formControlName="amount" placeholder="Eg: $ 45.00">
+              </ion-input>
+            </ion-col>
+
+            <!-- Seating Capacity -->
+            <ion-col class="align-right-field" size="12" size-md="6">
+              <label>Advance Date</label>
+              <ion-input
+                formControlName="expenseDate"
+                type="data"
+                placeholder="Eg: 30/12/2025"
+              >
+              </ion-input>
+            </ion-col>
+
+            <!-- Service Start Date -->
+            <ion-col class="align-right-field" size="12" size-md="6">
+              <label>Reason</label>
+              <ion-input
+                formControlName="notesOptional"
+                placeholder="Eg: New Tyre has been changed"
+              >
+              </ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <!-- Confirm Button -->
+        <ion-button
+          expand="block"
+          [disabled]="busForm.invalid"
+          class="confirm-btn"
+          (click)="submitForm()"
+        >
+          Save
+        </ion-button>
+      </form>
+    </ion-card>
+  </div>
+</ion-content>

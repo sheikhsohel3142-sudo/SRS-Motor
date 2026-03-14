@@ -1,11 +1,34 @@
 import { Component } from '@angular/core';
-import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { IonApp, IonRouterOutlet, IonContent, IonHeader, IonToolbar, IonButtons, IonTitle, IonButton, IonSplitPane, IonMenu, IonList, IonMenuToggle, IonItem, IonIcon, IonLabel } from '@ionic/angular/standalone';
+import { HomePage } from "./home/home.page";
+import { ProfilePage } from "./pages/profile/profile/profile.page";
+import { SidebarComponent } from "./component/layout/sidebar/sidebar.component";
+import { Router, RouterOutlet } from '@angular/router';
+import { addIcons } from 'ionicons';
+import { addCircleOutline, addOutline, chevronBackOutline, chevronDownOutline, close, closeCircle, closeCircleOutline, informationCircleOutline, search, shareSocialOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [IonApp, IonRouterOutlet],
+  imports: [IonApp, IonRouterOutlet, HomePage, ProfilePage, IonContent, IonHeader, IonToolbar, IonButtons, IonTitle, IonButton, IonSplitPane, SidebarComponent, IonMenu, IonList, IonMenuToggle, IonItem, IonIcon, IonLabel, RouterOutlet],
 })
 export class AppComponent {
-  constructor() {}
+  
+  constructor() {
+    this.addIonIcon()
+  }
+  
+  addIonIcon(){
+    addIcons({
+     chevronBackOutline,
+     chevronDownOutline,
+     close,
+     addCircleOutline,
+     addOutline,
+     closeCircleOutline,
+     search,
+     shareSocialOutline
+    })
+  }
+  
 }

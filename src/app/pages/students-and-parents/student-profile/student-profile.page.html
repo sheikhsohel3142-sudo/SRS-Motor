@@ -1,0 +1,287 @@
+<ion-content mode="ios">
+  <div class="student-profile-container">
+    <div class="title-container">
+      <div routerLink="/admin/students-and-parents">
+        <ion-icon name="chevron-back-outline"></ion-icon
+        ><span class="name">Student & Parents</span>
+      </div>
+    </div>
+    <ion-card>
+      <form [formGroup]="studentForm">
+        <div class="header-container">
+          <h2>Student Profile</h2>
+        </div>
+        <div class="status-container">
+          <!-- <ion-toggle color="success" [(ngModel)]="isActive"></ion-toggle> -->
+           <!-- [(ngModel)]="isActive" -->
+          <ion-toggle color="success" 
+            ><span>Active</span></ion-toggle
+          >
+        </div>
+        <ion-grid>
+          <!-- Row 1 -->
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-label position="stacked">Student Name</ion-label>
+              <ion-input formControlName="studentName"></ion-input>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <ion-label position="stacked"
+                >Admission Number (optional)</ion-label
+              >
+              <ion-input formControlName="admissionNumber"></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 2 -->
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-label position="stacked">Grade / Class</ion-label>
+              <div class="input">
+                <ion-select formControlName="grade">
+                  <ion-select-option value="10th">10th</ion-select-option>
+                </ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <ion-label position="stacked">Section (optional)</ion-label>
+              <ion-input formControlName="section"></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 3 -->
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-label position="stacked">School</ion-label>
+              <div class="input">
+                <ion-select formControlName="school">
+                  <ion-select-option value="ARLM">ARLM</ion-select-option>
+                </ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <ion-label position="stacked">Route</ion-label>
+              <div class="input">
+                <ion-select formControlName="route">
+                  <ion-select-option value="Route 51"
+                    >Route 51</ion-select-option
+                  >
+                </ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 4 -->
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-label position="stacked">Pickup / Drop Stop</ion-label>
+              <div class="input">
+                <ion-select formControlName="pickupStop">
+                  <ion-select-option value="Triplicane"
+                    >Triplicane</ion-select-option
+                  >
+                </ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <ion-label position="stacked">Assigned Bus</ion-label>
+              <div class="input">
+                <ion-select formControlName="assignedBus">
+                  <ion-select-option value="TN31BF8236"
+                    >TN31BF8236</ion-select-option
+                  >
+                </ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 5 -->
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-label position="stacked">Parent Name</ion-label>
+              <ion-input formControlName="parentName"></ion-input>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <ion-label position="stacked">Relationship</ion-label>
+              <ion-input formControlName="relationship"></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 6 -->
+
+          <ion-row>
+            <ion-col size="6" >
+              <ion-label position="stacked">Phone Number</ion-label>
+              <ion-input formControlName="phoneNumber"></ion-input>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <ion-label position="stacked">Email Address (optional)</ion-label>
+              <ion-input formControlName="email"></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 7 -->
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-label position="stacked">Billing Start Date</ion-label>
+              <ion-input
+                type="date"
+                formControlName="billingStartDate"
+              ></ion-input>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <ion-label>Receive Notices & Announcements</ion-label>
+              <div class="setting-box">
+                <div class="toggle">
+                  <span>{{studentForm.value.receiveNotice}}</span>
+                  <ion-toggle
+                    [checked]="isChecked('receiveNotice')"
+                    (ionChange)="toggleChange($event,'receiveNotice')"
+                  >
+                  </ion-toggle>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 8 -->
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-label>Complimentary Student</ion-label>
+              <div class="setting-box">
+                <div class="toggle">
+                  <span>{{studentForm.value.complimentaryStudent}}</span>
+                  <ion-toggle
+                    [checked]="isChecked('complimentaryStudent')"
+                    (ionChange)="toggleChange($event,'complimentaryStudent')"
+                  >
+                  </ion-toggle>
+                </div>
+              </div>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <ion-label position="stacked">Billing Type</ion-label>
+              <div class="input">
+                <ion-select formControlName="billingType">
+                  <ion-select-option value="Billable"
+                    >Billable</ion-select-option
+                  >
+                </ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 9 -->
+
+          <ion-row>
+            <ion-col size="6">
+              <ion-label position="stacked">Student Status</ion-label>
+              <div class="input">
+                <ion-select formControlName="studentStatus">
+                  <ion-select-option value="Pause">Pause</ion-select-option>
+                </ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <ion-label>Disable Notices & Announcements</ion-label>
+              <div class="setting-box">
+                <div class="toggle">
+                  <span>{{studentForm.value.disableNotice}}</span>
+                  <ion-toggle
+                    [checked]="isChecked('disableNotice')"
+                    (ionChange)="toggleChange($event,'disableNotice')"
+                  >
+                  </ion-toggle>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-button fill="clear" (click)="updateStudent()">
+          Update
+        </ion-button>
+      </form>
+    </ion-card>
+
+    <div>
+      <div class="billing-overview-container">
+        <form [formGroup]="billingForm">
+          <div class="header-container">
+            <h2>Billing Overview</h2>
+          </div>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <ion-label>Monthly Fare</ion-label>
+                <div class="input-count">
+                  <ion-input
+                    type="number"
+                    formControlName="monthlyFare"
+                    placeholder="$ 1000.00"
+                  ></ion-input>
+                </div>
+              </ion-col>
+
+              <ion-col size="6" class="align-right-field">
+                <ion-label>Billing Start Date</ion-label>
+                <div class="input-count">
+                  <ion-input
+                    type="date"
+                    formControlName="billingStartDate"
+                  ></ion-input>
+                </div>
+              </ion-col>
+
+              <ion-col size="6">
+                <ion-label>Outstanding Dues</ion-label>
+                <div class="input-count">
+                  <ion-input
+                    type="number"
+                    formControlName="outstandingDues"
+                    placeholder="$ 0"
+                  ></ion-input>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </form>
+      </div>
+    </div>
+
+    <ion-card class="activity-loge">
+      <div class="header-container">
+        <h2>Activity loge</h2>
+      </div>
+      <div class="activity-list">
+        <div class="activity-item" *ngFor="let item of activityLog">
+          <div class="date">{{item.date}}</div>
+          <div class="text">{{item.message}}</div>
+        </div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

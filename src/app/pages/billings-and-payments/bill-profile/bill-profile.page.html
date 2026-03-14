@@ -1,0 +1,483 @@
+<ion-content>
+  <div class="add-new-bus-container">
+    <div class="title-container">
+      <div routerLink="/admin/bus">
+        <ion-icon name="chevron-back-outline"></ion-icon>Billing & Payments
+      </div>
+    </div>
+    <ion-card>
+      <form [formGroup]="busForm">
+        <div class="header-container">
+          <h2>Bill Details</h2>
+        </div>
+        <ion-grid>
+          <ion-row>
+            <!-- Bus Registration -->
+            <ion-col size="12" size-md="6">
+              <label>Student Name</label>
+              <div class="input-count">
+                <ion-input
+                  placeholder="Eg: New Tyre has been changed"
+                  formControlName="studentName"
+                >
+                </ion-input>
+              </div>
+            </ion-col>
+
+            <!-- Seating Capacity -->
+            <ion-col class="align-right-field" size="12" size-md="6">
+              <label>Parents Name</label>
+              <div class="input-count">
+                <ion-input
+                  type="data"
+                  placeholder="Eg: 30/12/2025"
+                  formControlName="parentsName"
+                >
+                </ion-input>
+              </div>
+            </ion-col>
+
+            <!-- Fuel Type -->
+            <ion-col size="12" size-md="6">
+              <label>Phone Number</label>
+              <div class="input-count">
+                <ion-input
+                  placeholder="Eg: $ 45.00"
+                  formControlName="phoneNumber"
+                >
+                </ion-input>
+              </div>
+            </ion-col>
+
+            <!-- Assign School -->
+            <ion-col class="align-right-field" size="12" size-md="6">
+              <label>School</label>
+              <div class="input-count">
+                <ion-input
+                  placeholder="Eg: New Tyre has been changed"
+                  formControlName="school"
+                >
+                </ion-input>
+              </div>
+            </ion-col>
+
+            <!-- Route -->
+            <ion-col size="12" size-md="6">
+              <label>School</label>
+              <div class="input-count">
+                <ion-input
+                  placeholder="Eg: New Tyre has been changed"
+                  formControlName="school"
+                >
+                </ion-input>
+              </div>
+            </ion-col>
+
+            <!-- Service Start Date -->
+            <ion-col class="align-right-field" size="12" size-md="6">
+              <label>Billing Month</label>
+              <div class="input-count">
+                <ion-input
+                  placeholder="Eg: New Tyre has been changed"
+                  formControlName="billingMonth"
+                >
+                </ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <!-- Confirm Button -->
+        <div class="first-btn">
+          <ion-button
+            expand="block"
+            [disabled]="busForm.invalid"
+            class="confirm-btn"
+            fill="clear"
+            (click)="submitForm()"
+          >
+            Update
+          </ion-button>
+        </div>
+      </form>
+    </ion-card>
+
+    <ion-card class="billing-breakdown">
+      <form [formGroup]="billingForm" class="billing-card">
+        <div class="header-container">
+          <h2>Billing Breakdown</h2>
+        </div>
+        <ion-grid>
+          <ion-row>
+            <!-- Transport Fare -->
+            <ion-col size="6">
+              <div class="input-count">
+                <label>Transport Fare</label>
+
+                <ion-label slot="start">$</ion-label>
+                <ion-input
+                  type="number"
+                  formControlName="transportFare"
+                ></ion-input>
+              </div>
+            </ion-col>
+
+            <!-- Previous Due -->
+            <ion-col size="6" class="align-right-field">
+              <div class="input-count">
+                <label>Previous Due</label>
+
+                <ion-label slot="start">$</ion-label>
+                <ion-input
+                  type="number"
+                  formControlName="previousDue"
+                ></ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <!-- Late Fee -->
+            <ion-col size="6">
+              <div class="input-count">
+                <label>Late Fee</label>
+
+                <ion-label slot="start">$</ion-label>
+                <ion-input type="number" formControlName="lateFee"></ion-input>
+              </div>
+            </ion-col>
+
+            <!-- Total Amount -->
+            <ion-col size="6" class="align-right-field">
+              <div class="input-count">
+                <label>Total Amount</label>
+
+                <ion-label slot="start">$</ion-label>
+                <ion-input
+                  type="number"
+                  formControlName="totalAmount"
+                  readonly
+                ></ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+    </ion-card>
+
+    <div
+      *ngIf="
+    !isPaymentRecorded"
+    >
+      <ion-card class="payment-recording">
+        <form [formGroup]="paymentForm">
+          <div class="header-container">
+            <h2>Payment Recording</h2>
+          </div>
+
+          <ion-grid>
+            <!-- Row 1 -->
+            <ion-row>
+              <ion-col size="6">
+                <label>Payment Amount</label>
+
+                <ion-label slot="start">$</ion-label>
+                <ion-input type="number" formControlName="amount"></ion-input>
+              </ion-col>
+
+              <ion-col size="6" class="align-right-field">
+                <label>Payment Mode</label>
+                <div class="input">
+                  <ion-select formControlName="mode">
+                    <ion-select-option value="upi">UPI</ion-select-option>
+                    <ion-select-option value="cash">Cash</ion-select-option>
+                    <ion-select-option value="card">Card</ion-select-option>
+                  </ion-select>
+                  <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+
+            <!-- Row 2 -->
+            <ion-row>
+              <ion-col size="6">
+                <label>Payment Date</label>
+
+                <ion-input formControlName="date" type="date"></ion-input>
+                <ion-icon name="calendar-outline" slot="end"></ion-icon>
+              </ion-col>
+
+              <ion-col size="6" class="align-right-field">
+                <label>Reference ID (optional)</label>
+
+                <ion-input formControlName="reference"></ion-input>
+              </ion-col>
+            </ion-row>
+
+            <!-- Row 3 -->
+            <ion-row>
+              <ion-col size="12">
+                <label>Notes (optional)</label>
+                <div class="input">
+               
+
+                  <ion-select formControlName="notes">
+                    <ion-select-option value="parent">
+                      Payment made from parent’s phone
+                    </ion-select-option>
+                    <ion-select-option value="self">
+                      Payment made by student
+                    </ion-select-option>
+                  </ion-select>
+                  <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+                </div>
+              </ion-col>
+            </ion-row>
+            <br /><br />
+
+            <div class="header-container">
+              <!-- <h2>Payment Recording</h2> -->
+            </div>
+            <br /><br />
+
+            <!-- Row 4 -->
+            <ion-row>
+              <ion-col size="6">
+                <label>Total Bill</label>
+                <div class="input-count">
+                  <ion-input formControlName="totalBill" readonly></ion-input>
+                </div>
+              </ion-col>
+
+              <ion-col size="6" class="align-right-field">
+                <label>Paid So Far</label>
+                <div class="input-count">
+                  <ion-input formControlName="paid" readonly></ion-input>
+                </div>
+              </ion-col>
+            </ion-row>
+
+            <!-- Row 5 -->
+            <ion-row>
+              <ion-col size="6">
+                <label>Outstanding Balance</label>
+
+                <div class="input-count">
+                  <ion-input readonly formControlName="balance"></ion-input>
+                </div>
+              </ion-col>
+            </ion-row>
+
+            <!-- Buttons -->
+            <ion-row class="btn-row">
+              <ion-col size="6">
+                <div class="recored-btn">
+                  <ion-button fill="clear">Cancel </ion-button>
+                </div>
+              </ion-col>
+
+              <ion-col size="6">
+                <div class="recored-btn2">
+                  <ion-button fill="clear" (click)="recordPayment()"
+                    >Record Payment
+                  </ion-button>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </form>
+      </ion-card>
+
+      <ion-card class="payment-history">
+        <div class="header-container">
+          <h2>Payment History</h2>
+        </div>
+        <div class="head-container">
+          <div class="table-head-wrap">
+            <div class="table-head">
+              <span class="date">Date</span>
+
+              <span class="category">Amount</span>
+              <span class="amount2">Mode</span>
+              <span class="paid">Reference</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-card">
+          <div class="table-row" *ngFor="let e of advanceList">
+            <span class="date2">{{ e.date }}</span>
+            <span class="reason"
+              ><div class="reson-container">{{ e.reason }}</div></span
+            >
+            <span class="amount">{{ e.amount }}</span>
+            <span class="status">{{ e.status }}</span>
+          </div>
+        </div>
+      </ion-card>
+    </div>
+
+    <div *ngIf="isPaymentRecorded">
+      <div class="after-record">
+        <div class="header-container">
+          <h2>Payment Recording</h2>
+          <div class="button">
+            <ion-button (click)="sendWhatsapp()" fill="clear">
+              <div>WhatsApp</div>
+              <ion-icon name="share-social-outline"></ion-icon>
+            </ion-button>
+          </div>
+          <div class="button2">
+            <ion-button (click)="downloadReceipt()" fill="clear">
+              <div>download</div>
+              <img src="assets/img/download (1).png" alt="" />
+            </ion-button>
+          </div>
+        </div>
+        <form [formGroup]="paymentForm">
+          <ion-grid>
+            <!-- Row 1 -->
+            <ion-row>
+              <ion-col size="6">
+                <label>Payment Amount</label>
+
+                <div class="input-count">
+                  <ion-input type="number" formControlName="amount"></ion-input>
+                </div>
+              </ion-col>
+
+              <ion-col size="6">
+                <label>Payment Mode</label>
+                <div class="input-count">
+                  <ion-input formControlName="mode" readonly></ion-input>
+                </div>
+              </ion-col>
+            </ion-row>
+
+            <!-- Row 2 -->
+            <ion-row>
+              <ion-col size="6">
+                <label>Payment Date</label>
+                <div class="input-count">
+                  <ion-input formControlName="date" readonly></ion-input>
+                  <!-- <ion-icon name="calendar-outline" slot="end"></ion-icon> -->
+                </div>
+              </ion-col>
+
+              <ion-col size="6">
+                <label>Reference ID (optional)</label>
+                <div class="input-count">
+                  <ion-input formControlName="reference" readonly></ion-input>
+                </div>
+              </ion-col>
+            </ion-row>
+
+            <!-- Row 3 -->
+            <ion-row>
+              <ion-col size="12">
+                <label>Notes (optional)</label>
+                <div class="input-count">
+                  <ion-input formControlName="notes" readonly></ion-input>
+                </div>
+              </ion-col>
+            </ion-row>
+            <br /><br />
+
+            <div class="header-container">
+              <!-- <h2>Payment Recording</h2> -->
+            </div>
+            <br /><br />
+
+            <!-- Row 4 -->
+            <ion-row>
+              <ion-col size="6">
+                <label>Total Bill</label>
+                <div class="input-count">
+                  <ion-input formControlName="totalBill" readonly></ion-input>
+                </div>
+              </ion-col>
+
+              <ion-col size="6">
+                <label>Paid So Far</label>
+                <div class="input-count">
+                  <ion-input formControlName="paid" readonly></ion-input>
+                </div>
+              </ion-col>
+            </ion-row>
+
+            <!-- Row 5 -->
+            <ion-row>
+              <ion-col size="6">
+                <label>Outstanding Balance</label>
+
+                <div class="input-count">
+                  <ion-input formControlName="balance" readonly></ion-input>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <div class="add-new-recored-btn">
+            <ion-button fill="clear" (click)="isPaymentRecorded=false">
+              Add New Record &nbsp;<img src="assets/img/download.png" alt="" />
+            </ion-button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <ion-card class="due-and-reminder-managment">
+      <form [formGroup]="dueForm">
+        <div class="header-container">
+          <h2>Due & Reminder Managment</h2>
+        </div>
+        <ion-grid>
+          <ion-row>
+            <!-- Current Due -->
+            <ion-col size="6">
+              <ion-label>Current Due</ion-label>
+              <div class="input-count">
+                <ion-input
+                  type="number"
+                  formControlName="currentDue"
+                  placeholder="Enter Current Due"
+                >
+                </ion-input>
+              </div>
+            </ion-col>
+
+            <!-- Due Since -->
+            <ion-col size="6" class="align-right-field">
+              <ion-label>Due Since</ion-label>
+              <div class="input-count">
+                <ion-input formControlName="dueSince" type="date"> </ion-input>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <!-- Buttons -->
+          <ion-row class="btn-row">
+            <ion-col size="6">
+              <ion-button
+                class="dRM-btn"
+                fill="clear"
+                (click)="sendReceiptWhatsapp()"
+              >
+                Send Receipt via WhatsApp
+              </ion-button>
+            </ion-col>
+
+            <ion-col size="6">
+              <ion-button
+                class="dRM-btn2"
+                fill="clear"
+                (click)="sendPaymentReminder()"
+              >
+                Send Payment Reminder
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </form>
+    </ion-card>
+  </div>
+</ion-content>

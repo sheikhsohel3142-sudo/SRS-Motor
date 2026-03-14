@@ -1,0 +1,144 @@
+<ion-content>
+  <div class="add-new-bus-container">
+    <div class="title-container">
+      <div routerLink="/admin/bus">
+        <ion-icon name="chevron-back-outline"></ion-icon>Add Expenese
+      </div>
+    </div>
+    <ion-card>
+      <form [formGroup]="busForm">
+        <div class="header-container">
+          <h2>Add Expenese</h2>
+        </div>
+        <ion-grid>
+          <ion-row>
+            <!-- Bus Registration -->
+            <ion-col size="12" size-md="6">
+              <label>Expense Category</label>
+
+              <div class="input">
+                <ion-select
+                  formControlName="expenseCategory"
+                  placeholder="Eg:Fual,Maintenance..."
+                >
+                  <ion-select-option
+                    *ngFor="let fuel of fuelTypes"
+                    [value]="fuel"
+                  >
+                    {{fuel}}
+                  </ion-select-option>
+                </ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+
+            <!-- Seating Capacity -->
+            <ion-col class="align-right-field" size="12" size-md="6">
+              <label>Expense Date</label>
+              <ion-input
+                formControlName="expenseDate"
+                type="data"
+                placeholder="Eg: 30/12/2025"
+              >
+              </ion-input>
+            </ion-col>
+
+            <!-- Fuel Type -->
+            <ion-col size="12" size-md="6">
+              <label>Amount</label>
+              <ion-input
+                formControlName="amount"
+                placeholder="Eg: $ 45.00"
+              >
+              </ion-input>
+            </ion-col>
+
+            <!-- Assign School -->
+            <ion-col class="align-right-field" size="12" size-md="6">
+              <label>Paid by</label>
+
+              <div class="input">
+                <ion-select
+                  formControlName="paidBy"
+                  placeholder="Eg:vender..."
+                >
+                  <ion-select-option
+                    *ngFor="let fuel of fuelTypes"
+                    [value]="fuel"
+                  >
+                    {{fuel}}
+                  </ion-select-option>
+                </ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+
+            <!-- Route -->
+            <ion-col size="12" size-md="6">
+              <!-- <label> Upload Invoice </label>
+
+              <div>
+                <ion-input
+                  class="input"
+                  formControlName="uploadInvoice"
+                  type="file"
+                  #fileInputhidden
+                >
+                  <ion-icon name="add-circle-outline"></ion-icon>
+                </ion-input>
+              </div> -->
+
+              <div class="upload-container">
+                <label class="upload-label">Upload Invoice</label>
+
+                <div class="upload-box">
+                  <!-- Hidden File Input -->
+                  <input
+                    type="file"
+                    #fileInput
+                    hidden
+                    (change)="onFileSelected($event)"
+                    formControlName="uploadInvoice"
+                  />
+
+                  <!-- Left Side File Name -->
+                  <div
+                    class="file-pill"
+                    *ngIf="selectedFile"
+                    (click)="fileInput.click()"
+                  >
+                    <div class="file-name">{{ selectedFile.name }}</div>
+                    <ion-icon
+                      name="close-circle-outline"
+                      (click)="removeFile($event)"
+                    ></ion-icon>
+                  </div>
+
+                  <!-- Right Side Add Icon -->
+                  <div class="upload-icon" (click)="fileInput.click()">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </ion-col>
+
+            <!-- Service Start Date -->
+            <ion-col class="align-right-field" size="12" size-md="6">
+              <label>Notes [Optional]</label>
+              <ion-input
+                formControlName="notesOptional"
+                placeholder="Eg: New Tyre has been changed"
+              >
+              </ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <!-- Confirm Button -->
+        <ion-button fill="clear" [disabled]="busForm.invalid" class="confirm-btn" (click)="submitForm()">
+          Save
+        </ion-button>
+      </form>
+    </ion-card>
+  </div>
+</ion-content>

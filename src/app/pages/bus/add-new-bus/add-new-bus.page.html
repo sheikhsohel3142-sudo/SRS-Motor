@@ -1,0 +1,98 @@
+<ion-content>
+  <div class="add-new-bus-container">
+    <div class="title-container">
+      <div>Bus</div>
+    </div>
+    <ion-card>
+      <form [formGroup]="busForm">
+        <div class="header-container">
+        <h2 >Register New Bus</h2>
+      </div>
+        <ion-grid>
+          <ion-row>
+            <!-- Bus Registration -->
+            <ion-col size="12" size-md="6">
+              <label>Bus Registration Number</label>
+              <ion-input
+                formControlName="busRegistrationNumber"
+                placeholder="Eg: TN48C238"
+              >
+              </ion-input>
+            </ion-col>
+
+            <!-- Seating Capacity -->
+            <ion-col size="12" size-md="6" class="align-right-field">
+              <label>Seating Capacity</label>
+              <ion-input
+                formControlName="seatingCapacity"
+                type="number"
+                placeholder="Eg: 32"
+              >
+              </ion-input>
+            </ion-col>
+
+            <!-- Fuel Type -->
+            <ion-col size="12" size-md="6">
+              <label>Fuel Type</label>
+              
+               <div class="input">
+                <ion-select formControlName="fuelType" placeholder="Eg:Petrol,Diesal..." >
+                  <ion-select-option
+                    *ngFor="let fuel of fuelTypes"
+                    [value]="fuel"
+                  >
+                    {{fuel}}
+                  </ion-select-option>
+                </ion-select>
+                 <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+             </div>
+            </ion-col>
+ 
+            <!-- Assign School -->
+            <ion-col size="12" size-md="6" class="align-right-field">
+              <label>
+                Assign School
+              </label>
+              
+               <div class="input">
+                <ion-select
+                  formControlName="assignSchool"
+                  placeholder="Eg: SRV, ARLM..."
+                >
+                  <ion-select-option
+                    *ngFor="let school of school2s"
+                    [value]="school"
+                  >
+                    {{school}}
+                  </ion-select-option>
+                </ion-select>
+                <ion-icon name="add-circle-outline"></ion-icon>
+            </div>
+            </ion-col>
+
+            <!-- Route -->
+            <ion-col size="12" size-md="6">
+              <label>Route</label>
+              <ion-input formControlName="route" placeholder="Eg: Triplicane">
+              </ion-input>
+            </ion-col>
+
+            <!-- Service Start Date -->
+            <ion-col size="12" size-md="6" class="align-right-field">
+              <label>Service Start Date</label>
+
+              <ion-input formControlName="serviceStartDate" type="date">
+              </ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <!-- Confirm Button -->
+        <ion-button  class="confirm-btn" busForm.invalid (click)="submitForm()" fill="clear">
+          Confirm
+        </ion-button>
+      </form>
+    </ion-card>
+
+  </div>
+</ion-content>

@@ -1,0 +1,197 @@
+import { Component, OnInit } from '@angular/core';
+import { CommonModule, NgFor } from '@angular/common';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
+import {
+  IonContent,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonCard,
+  IonRow,
+  IonCol,
+  IonButton,
+  IonGrid,
+  IonItem,
+  IonLabel,
+  IonIcon,
+  IonSelectOption,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+  IonSelect, IonInput } from '@ionic/angular/standalone';
+import { Router, RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-driver-profile',
+  templateUrl: './driver-profile.page.html',
+  styleUrls: ['./driver-profile.page.scss'],
+  standalone: true,
+  imports: [IonInput, 
+    IonCardContent,
+    IonCardTitle,
+    IonCardHeader,
+    IonIcon,
+    IonLabel,
+    IonItem,
+    IonGrid,
+    IonButton,
+    IonCol,
+    IonRow,
+    IonCard,
+    IonContent,
+    IonHeader,
+    IonTitle,
+    IonToolbar,
+    CommonModule,
+    FormsModule,
+    IonSelectOption,
+    ReactiveFormsModule,
+    NgFor,
+    IonSelect,
+    RouterLink
+  ],
+})
+export class DriverProfilePage implements OnInit {
+  form!: FormGroup;
+  salaryForm!: FormGroup;
+  settlementForm!: FormGroup;
+
+  selectedFiles: { [key: string]: File[] } = {};
+  advanceList = [
+    {
+      date: '22/10/2025',
+      reason: 'Personal',
+      amount: 1500,
+      status: 'Pending',
+    },
+    {
+      date: '21/09/2025',
+      reason: 'Medical',
+      amount: 500,
+      status: 'Pending',
+    },
+    {
+      date: '12/08/2025',
+      reason: 'Personal',
+      amount: 400,
+      status: 'Approved',
+    },
+  ];
+
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+  ) {}
+
+  ngOnInit() {
+    this.form = this.fb.group({
+      driverName: ['', Validators.required],
+      phoneNumber: [
+        '',
+        [Validators.required, Validators.pattern(/^[0-9]{10}$/)],
+      ],
+      emergencyContact: ['', Validators.pattern(/^[0-9]{10}$/)],
+      address: [''],
+
+      license: [null],
+      aadhaar: [null],
+      policeVerification: [null],
+      medicalCertificate: [null],
+
+      joiningDate: ['', Validators.required],
+      employmentType: [''],
+      assignBus: [''],
+      assignRoute: [''],
+    });
+
+    this.salaryForm = this.fb.group({
+      monthlySalary: ['', [Validators.required, Validators.min(1)]],
+      salaryEffectiveFrom: ['', Validators.required],
+      notesOptional: ['', Validators.required],
+    });
+
+    this.settlementForm = this.fb.group({
+      monthlySalary: [1000],
+      totalAdvances: [600],
+      deductions: [1000],
+      netPayable: [{ value: 0, disabled: false }],
+    });
+
+    this.calculateNetPayable();
+
+    this.settlementForm.valueChanges.subscribe(() => {
+      this.calculateNetPayable();
+    });
+  }
+
+  calculateNetPayable() {
+    const salary = this.settlementForm.get('monthlySalary')?.value || 0;
+    const advances = this.settlementForm.get('totalAdvances')?.value || 0;
+    const deductions = this.settlementForm.get('deductions')?.value || 0;
+
+    const net = salary - advances - deductions;
+
+    this.settlementForm.get('netPayable')?.setValue(net, { emitEvent: false });
+  }
+
+  addNewSchool() {
+    this.router.navigate(['/', 'admin', 'schools', 'add-advance']);
+  }
+  onFileSelected(event: any, type: string) {
+    const files: FileList = event.target.files;
+
+    if (!files || files.length === 0) return;
+
+    // Agar pehle se array nahi hai to initialize karo
+    if (!this.selectedFiles[type]) {
+      this.selectedFiles[type] = [];
+    }
+
+    // Saare selected files push karo
+    for (let i = 0; i < files.length; i++) {
+      this.selectedFiles[type].push(files[i]);
+    }
+
+    // Same file dobara select karne ke liye reset
+    event.target.value = '';
+  }
+
+  removeFile(event: Event, type: string, index: number) {
+    event.stopPropagation();
+
+    if (this.selectedFiles[type]) {
+      this.selectedFiles[type].splice(index, 1);
+
+      // Agar empty ho jaye to delete bhi kar sakte ho
+      if (this.selectedFiles[type].length === 0) {
+        delete this.selectedFiles[type];
+      }
+    }
+  }
+  getStatusClass(status: string) {
+    switch (status) {
+      case 'Pending':
+        return 'pending';
+      case 'Approved':
+        return 'approved';
+      case 'Rejected':
+        return 'rejected';
+      default:
+        return '';
+    }
+  }
+  driverProfile(){
+    
+  }
+  onSubmit() {
+    if (this.salaryForm.valid) {
+      console.log(this.salaryForm.value);
+    }
+  }
+}

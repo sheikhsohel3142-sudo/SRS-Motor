@@ -1,0 +1,366 @@
+<ion-content mode="ios" class="ion-no-padding ion-no-margin">
+  <div class="root">
+    <div class="configration-container">
+      <div class="title-container">
+        <div>Configuration</div>
+      </div>
+      <form [formGroup]="settingsForm">
+        <!-- Operational Settings -->
+
+        <!-- <div class="card"> -->
+        <ion-card>
+          <h2>Operational Settings</h2>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" size-md="6" class="left-side">
+                <label>Allow Mid-Month Enrollment</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.midMonthEnrollment}}</span>
+                    <ion-toggle
+                      class="ios-exact-toggle"
+                      formControlName="midMonthEnrollment"
+                      [checked]="isChecked('midMonthEnrollment')"
+                      (ionChange)="toggleChange($event,'midMonthEnrollment')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="right-side">
+                <label>Auto-Deactivate Dropouts</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.autoDeactivateDropouts}}</span>
+                    <ion-toggle
+                      formControlName="autoDeactivateDropouts"
+                      [checked]="isChecked('autoDeactivateDropouts')"
+                      (ionChange)="toggleChange($event,'autoDeactivateDropouts')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="left-side">
+                <label>Allow Multiple Routes</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.allowMultipleRoutes}}</span>
+                    <ion-toggle
+                      formControlName="allowMultipleRoutes"
+                      [checked]="isChecked('allowMultipleRoutes')"
+                      (ionChange)="toggleChange($event,'allowMultipleRoutes')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="right-side">
+                <label>Enable School Operations</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.enableSchoolOperations}}</span>
+                    <ion-toggle
+                      formControlName="enableSchoolOperations"
+                      [checked]="isChecked('enableSchoolOperations')"
+                      (ionChange)="toggleChange($event,'enableSchoolOperations')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+        <!-- </div> -->
+
+        <!-- Fare & Billing -->
+
+        <ion-card>
+          <h2>Fare & Billing</h2>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" size-md="6" class="left-side">
+                <label>Fare Calculation Method</label>
+
+                <div class="dropdown-input">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                  <ion-select formControlName="fareCalculationMethod">
+                    <ion-select-option value="Stop Based Fare">
+                      Stop Based Fare
+                    </ion-select-option>
+                  </ion-select>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="right-side">
+                <label>Billing Cycle</label>
+                <div class="dropdown-input">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                  <ion-select formControlName="billingCycle">
+                    <ion-select-option value="Monthly"
+                      >Monthly</ion-select-option
+                    >
+                    <ion-select-option value="Monthly"
+                      >Weekly</ion-select-option
+                    >
+                    <ion-select-option value="Monthly"
+                      >Yearly</ion-select-option
+                    >
+                  </ion-select>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="left-side">
+                <label>Payment Due Grace Period</label>
+                <div class="dropdown-input">
+                  <ion-input
+                    type="number"
+                    formControlName="paymentDueGracePeriod"
+                  >
+                  </ion-input>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="right-side">
+                <label>Late Fee Applicable</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.lateFeeApplicable}}</span>
+                    <ion-toggle
+                      formControlName="lateFeeApplicable"
+                      [checked]="isChecked('lateFeeApplicable')"
+                      (ionChange)="toggleChange($event,'lateFeeApplicable')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+        <!-- Payment Visibility -->
+        <ion-card>
+          <h2>Payment Visibility & Controls</h2>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" size-md="6" class="left-side">
+                <label>Allow Partial Payments</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.allowPartialPayments}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('allowPartialPayments')"
+                      (ionChange)="toggleChange($event,'allowPartialPayments')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="right-side">
+                <label>Show Outstanding Dues</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.showOutstandingDues}}</span>
+                    <ion-toggle
+                      formControlName="showOutstandingDues"
+                      [checked]="isChecked('showOutstandingDues')"
+                      (ionChange)="toggleChange($event,'showOutstandingDues')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="left-side">
+                <label>Auto Generate Invoices</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.autoGenerateInvoices}}</span>
+                    <ion-toggle
+                      formControlName="autoGenerateInvoices"
+                      [checked]="isChecked('autoGenerateInvoices')"
+                      (ionChange)="toggleChange($event,'autoGenerateInvoices')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+        <!-- Driver & Route -->
+        <ion-card>
+          <h2>Driver & Route Permissions</h2>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" size-md="6" class="left-side">
+                <label>Driver Route Visibility</label>
+                <div class="dropdown-input">
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                  <ion-select formControlName="driverRouteVisibility">
+                    <ion-select-option value="Assigned Routes Only">
+                      Assigned Routes Only
+                    </ion-select-option>
+                  </ion-select>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="right-side">
+                <label>Allow Driver Attendance Marking</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.allowDriverAttendance}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('allowDriverAttendance')"
+                      (ionChange)="toggleChange($event,'allowDriverAttendance')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="left-side">
+                <label>Allow Route Change Requests</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.allowRouteChangeRequests}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('allowRouteChangeRequests')"
+                      (ionChange)="toggleChange($event,'allowRouteChangeRequests')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+        <!-- Notifications -->
+        <ion-card>
+          <h2>Notifications & Alerts</h2>
+
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" size-md="6" class="left-side">
+                <label>Payment Due Alerts</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.paymentDueAlerts}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('paymentDueAlerts')"
+                      (ionChange)="toggleChange($event,'paymentDueAlerts')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="right-side">
+                <label>Overdue Payments Alerts</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.overduePaymentAlerts}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('overduePaymentAlerts')"
+                      (ionChange)="toggleChange($event,'overduePaymentAlerts')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="left-side">
+                <label>Route Change Notifications</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.routeChangeNotifications}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('routeChangeNotifications')"
+                      (ionChange)="toggleChange($event,'routeChangeNotifications')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="right-side">
+                <label>Maintenance Alerts</label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{settingsForm.value.maintenanceAlerts}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('maintenanceAlerts')"
+                      (ionChange)="toggleChange($event,'maintenanceAlerts')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+
+        <!-- <ion-button (click)="submitForm()">
+        Update
+      </ion-button>
+
+      <ion-alert
+        [isOpen]="isAlertOpen"
+        header="Upgrade Changes"
+        message="Changes not saved"
+        [buttons]="alertButtons"
+        (didDismiss)="isAlertOpen = false"
+      >
+      </ion-alert> -->
+        <ion-button (click)="openModal()" fill="clear">Update</ion-button>
+        <div class="container">
+          <ion-modal
+            [isOpen]="showUnsavedModal"
+            class="unsaved-modal"
+            backdropDismiss="false"
+            [presentingElement]="presentingElement"
+          >
+            <ng-template>
+              <div class="modal-container">
+                <!--Header -->
+                <div class="modal-header">
+                  <h2>Unsaved Changes</h2>
+                  <ion-icon name="close" (click)="closeModal()"></ion-icon>
+                </div>
+
+                <!-- Content -->
+                <p>
+                  You’ve made changes that haven’t been updated yet. <br />If
+                  you leave this page, those changes will be lost.
+                </p>
+
+                <!-- Buttons -->
+                <div class="modal-buttons">
+                  <button class="discard-btn" (click)="discardChanges()">
+                    Discard Changes
+                  </button>
+
+                  <button class="update-btn" (click)="updateAndLeave()">
+                    Update & Leave
+                  </button>
+                </div>
+              </div>
+            </ng-template>
+          </ion-modal>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

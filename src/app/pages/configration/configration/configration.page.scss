@@ -1,0 +1,286 @@
+ion-content {
+  --background: #0f172a;
+ 
+}
+.root{
+  height: 1620px;
+}
+.title-container {
+  position: relative;
+  top: 20px;
+  right: 70px;
+  width: 125px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 5px;
+  padding-right: 8px;
+
+  background-color: #b3cbf9;
+  div{
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.configration-container {
+  background: #f2f2f2;
+  width: 910px;
+  height: 1600px;
+  position: relative;
+  top: 10px;
+  left: 0px;
+  bottom: 20px;
+
+  right: 10px;
+  border-radius: 14px;
+  padding-left: 100px;
+  overflow-x: hidden;
+  margin-bottom: 10px;
+}
+ion-card {
+  // position: relative;
+  // top: 50px;
+  // right: 80px;
+  // padding-top: 30%;
+
+  // margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
+  // background: #ffffff;
+  // border-radius: 12px;
+  // padding: 24px 32px;
+  // box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 860px;
+  position: relative;
+  top: 30px;
+  right: 70px;
+  height: 1500;
+}
+
+ion-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 145%;
+  font-style: Bold;
+  letter-spacing: 0%;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  font-family: "Urbanist", sans-serif;
+  color: #1f1f1f;
+
+  border-bottom: 1px solid #e5e3dc;
+}
+
+.setting-box {
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  width: 362px;
+  height: 50px;
+
+ 
+}
+label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #828282;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.update-btn {
+  margin-top: 20px;
+  position: relative;
+  right: 50px;
+  width: 700px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.setting-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  ion-toggle {
+    position: relative;
+    left: 280px;
+    transform: scale(0.5);
+  }
+  span {
+    position: relative;
+    left: 10px;
+  }
+}
+
+ion-button {
+  height: 26px;
+  width: 820px;
+  border-radius: 12px;
+  position: relative;
+  right: 40px;
+  top: 40px;
+  
+  text-transform: none;
+  background-color: #4F8CFF;
+  color: #FFFFFF;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: -300; /* Regular */
+  line-height: 145%; /* 18px × 1.45 = ~26px */
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.dropdown-input {
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  width: 362px;
+  height: 50px;
+
+  ion-select::part(icon) {
+    display: none;
+  }
+  ion-icon{
+    position: absolute;
+    left: 330px;
+    font-size: larger;
+  }
+}
+// .unsaved-modal::part(backdrop) {
+//   backdrop-filter: blur(6px);
+//   background: rgba(0, 0, 0, 0.25);
+// }
+// .unsaved-modal {
+//   --width: 420px;
+//   --height: auto;
+//   --border-radius: 16px;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .unsaved-modal::part(backdrop) {
+//   position: absolute;
+//   background: rgba(0, 0, 0, 0.25);
+// }
+.unsaved-modal{
+  --height: auto;
+  --border-radius: 16px;
+  --width: 595px;
+  margin-left: 195px;
+  width: 900px;
+  transform: translateX(160px);
+    // backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.25);
+
+  
+}
+
+.model-container{
+  position: relative;
+  left: 200px;
+}
+.modal-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-header {
+ 
+ 
+  h2{
+    text-align: center;
+    font-weight: 600;
+  }
+  ion-icon{
+    border: 3px solid black;
+    border-radius: 50%;
+    position: relative;
+    left: 265px;
+    bottom: 53px;
+    cursor: pointer;
+  }
+}
+
+
+
+.modal-container p {
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.discard-btn {
+  background: #ff3b30;
+  color: #FFFFFF;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width:261.5px;
+  height: 46px;
+  position: relative;
+  left: -3px;
+  top: 20px;
+  border: none;
+  font-weight: 400;
+}
+
+.update-btn {
+  background: #4F8CFF;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width:261.5px;
+  height: 46px;
+  position: relative;
+  left: 5px;
+
+  border: none;
+  font-weight: 500;
+}
+.right-side{
+  position: relative;
+  left: 40px;
+}
+.left-side{
+position: relative;
+  left: 20px;
+}
+

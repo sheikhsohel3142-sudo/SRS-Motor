@@ -1,0 +1,119 @@
+<ion-content mode="ios">
+  <div class="profile-container">
+    <div class="header">
+      <div class="title-container">
+        <div routerLink="/admin/billings-and-payments">
+          <ion-icon name="chevron-back-outline"></ion-icon
+          ><span class="name">Billing & Payments</span>
+        </div>
+      </div>
+      <ion-card>
+        <form [formGroup]="busForm">
+          <div class="header-container">
+            <h2>Generate bills</h2>
+          </div>
+          <ion-grid>
+            <ion-row>
+              <!-- Bus Registration -->
+              <ion-col size="12" size-md="6">
+                <label>billing Month</label>
+
+                <div class="input">
+                  <ion-select
+                    formControlName="billingMonth"
+                    placeholder="December"
+                  >
+                    <ion-select-option
+                      *ngFor="let fuel of fuelTypes"
+                      [value]="fuel"
+                    >
+                      {{fuel}}
+                    </ion-select-option>
+                  </ion-select>
+                  <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+                </div>
+              </ion-col>
+
+              <!-- Seating Capacity -->
+              <ion-col size="12" size-md="6" class="align-right-field">
+                <label>School</label>
+
+                <div class="input">
+                  <ion-select formControlName="school" placeholder="Eg:ARLM">
+                    <ion-select-option
+                      *ngFor="let fuel of fuelTypes"
+                      [value]="fuel"
+                    >
+                      {{fuel}}
+                    </ion-select-option>
+                  </ion-select>
+                  <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+                </div>
+              </ion-col>
+              <ion-col size="12" size-md="6" >
+                <ion-label>Include Active Students</ion-label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{busForm.value.receiveNotice}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('includeActiveStudents')"
+                      (ionChange)="toggleChange($event,'includeActiveStudents')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col size="12" size-md="6" class="align-right-field">
+                <ion-label>Include Paused Students</ion-label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{busForm.value.disableNotice}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('includePausedStudents')"
+                      (ionChange)="toggleChange($event,'disableNotice')"
+                    >
+                    </ion-toggle>
+                  </div>
+                </div>
+              </ion-col>
+
+              <ion-col class="align-left" size="12" size-md="6">
+                <div class="input-count">
+                  <ion-label>Total Students</ion-label>
+                  <ion-input
+                    type="number"
+                    prefix="$"
+                    formControlName="totalStudents"
+                  >
+                  </ion-input>
+                </div>
+              </ion-col>
+
+              <ion-col size="12" size-md="6" class="align-right-field">
+                <div class="input-count">
+                  <ion-label>Total Bill Amount</ion-label>
+                  <ion-input
+                    type="number"
+                    prefix="$"
+                    formControlName="totalBillAmount"
+                  >
+                  </ion-input>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+          <!-- Confirm Button -->
+          <ion-button
+            expand="block"
+            [disabled]="busForm.invalid"
+            class="confirm-btn"
+            (click)="submitForm()"
+          >
+            Generate
+          </ion-button>
+        </form>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

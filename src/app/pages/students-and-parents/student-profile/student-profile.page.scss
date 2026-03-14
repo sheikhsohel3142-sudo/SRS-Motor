@@ -1,0 +1,361 @@
+ion-content {
+  --background: #0f172a;
+}
+.align-right-field {
+  position: relative;
+  left: 40px;
+}
+.title-container {
+  position: relative;
+  top: 13px;
+  right: 90px;
+  width: 200px;
+  height: 45px;
+  border-radius: 8px;
+  padding: 5px;
+  padding-right: 8px;
+  cursor: pointer;
+
+  background-color: #b3cbf9;
+  div {
+    position: relative;
+
+    top: 2px;
+    left: 19px;
+
+    font-size: 17px;
+
+    .name {
+      position: relative;
+      font-size: 16px;
+      font-family: "Urbanist", sans-serif;
+      font-weight: 500;
+      line-height: 145%;
+      white-space: 0%;
+      top: 4px;
+      right: -8px;
+    }
+    ion-icon {
+      transform: scale(1.3);
+      position: relative;
+      top: 5px;
+      right: 5px;
+      color: #000000;
+    }
+  }
+}
+.header-container {
+  border-bottom: 1px solid #e5e3dc;
+  position: relative;
+  top: -8px;
+  h2 {
+    color: #1f1f1f;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 20px;
+    line-height: 145%;
+    letter-spacing: 0%;
+  }
+}
+
+.student-profile-container {
+  background: #f2f2f2;
+  width: 910px;
+  height: 2050px;
+  position: relative;
+  top: 10px;
+  left: 0px;
+  bottom: 10px;
+
+  right: 10px;
+  border-radius: 14px;
+  padding-left: 100px;
+  overflow-x: hidden;
+  margin-bottom: 10px;
+}
+ion-card {
+  // border: 2px solid black;
+  width: 880px;
+  height: 1200px;
+  position: relative;
+  top: 80px;
+  right: 80px;
+  padding-top: 30%;
+
+  margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 12px 30px rgba(121, 121, 121, 0.1);
+  ion-grid {
+    position: relative;
+    top: -20px;
+    ion-col {
+      margin-bottom: 10px;
+    }
+  }
+}
+.student-profile-container ion-input {
+  background: #f5f6f8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  width: 372px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  line-height: 150%;
+  font-size: 16px;
+  color: #333;
+  --placeholder-color: #0f172abf;
+  --padding-start: 25px;
+
+  ion-select::part(icon) {
+    display: none;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  --highlight-height: 0; /* red underline remove */
+  --border-width: 0;
+}
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  position: relative;
+  left: 700px;
+  bottom: 50px; 
+  ion-toggle{
+    
+    transform: scale(0.5);
+    font-size: 40px;
+    font-weight: 700;
+
+   
+  }
+}
+
+.input {
+  background: #f5f6f8;
+  border-radius: 8px;
+  width: 372px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center; // vertical center
+  justify-content: center; // horizontal center
+  text-align: center;
+
+  ion-icon {
+    height: 24px;
+    width: 24px;
+    position: relative;
+
+    right: 16px;
+    top: 2px;
+  }
+
+  ion-select {
+    width: 100%;
+    text-align: center;
+    --highlight-height: 0;
+    --border-width: 0;
+    --border-style: none;
+  }
+
+  ion-select::part(text) {
+    text-align: center;
+    width: 100%;
+  }
+  ion-select {
+    padding-left: 25px;
+    --placeholder-color: #0f172abf;
+  }
+
+  ion-select::part(icon) {
+    display: none;
+  }
+}
+ion-button {
+  height: 52px;
+  width: 817px;
+  border-radius: 16px;
+  position: relative;
+  left: 3px;
+  top: 20px;
+  gap: 12px;
+  text-transform: none;
+  background-color: #4f8cff;
+  color: #ffffff;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: -300; /* Regular */
+  line-height: 145%; /* 18px × 1.45 = ~26px */
+  letter-spacing: 0px;
+  text-align: center;
+}
+.setting-box {
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 362px;
+  height: 50px;
+  position: relative;
+  top: 12px;
+}
+label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #828282;
+  font-family: "Space Grotesk", sans-serif;
+  position: relative;
+  top: 15px;
+}
+
+.update-btn {
+  margin-top: 20px;
+  position: relative;
+  right: 50px;
+  width: 700px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.setting-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  ion-toggle {
+    position: relative;
+    left: 280px;
+    transform: scale(0.5);
+  }
+  span {
+    position: relative;
+    left: 10px;
+    color: #000000;
+  }
+}
+.billing-overview-container {
+  width: 880px;
+  height: 350px;
+  position: relative;
+  top: 150px;
+  right: 80px;
+  padding-top: 30%;
+
+  margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 12px 30px rgba(150, 149, 149, 0.1);
+  overflow: hidden;
+  ion-grid {
+    position: relative;
+    top: 50px;
+    ion-col {
+      margin-bottom: 10px;
+    }
+  }
+}
+.input-count {
+  ion-input {
+    background: #ffffff;
+    border-radius: 8px;
+    width: 368px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 19px;
+    font-size: 16px;
+    border: 1px solid #c7c9cc;
+  }
+}
+
+
+.activity-card{
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.activity-list{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+  
+}
+
+.activity-item{
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #C7C9CC;
+  border-radius: 6px;
+  background: #fafafa;
+  width: 228px;
+  height: 69px;
+}
+
+.date{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 145%;
+  white-space: 0%;
+  font-weight: 500;
+  color: #484E5C;
+}
+
+.text{
+  font-size: 12px;
+  color: #828282;
+}
+.activity-loge {
+  width: 880px;
+  height: 360px;
+  position: relative;
+  top: 220px;
+  right: 80px;
+  padding-top: 30%;
+
+  margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  ion-grid {
+    position: relative;
+    top: 50px;
+    ion-col {
+      margin-bottom: 10px;
+    }
+  }
+}

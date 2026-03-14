@@ -1,0 +1,681 @@
+ion-content {
+  --background: #0f172a;
+}
+.root-container{
+   width: 960px;
+  height: 2570px;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  position: relative;
+  left: 700px;
+  bottom: 50px; 
+  ion-toggle{
+    
+    transform: scale(0.5);
+    font-size: 40px;
+    font-weight: 700;
+
+   
+  }
+}
+.title-container {
+  position: relative;
+  top: 20px;
+  right: 85px;
+  width: 102px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 5px;
+  padding-right: 8px;
+
+  background-color: #b3cbf9;
+  div {
+    position: relative;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    top: 10px;
+    left: 30px;
+    font-style: 16px;
+    ion-icon{
+      position: relative;
+      right: 10px;
+      top: 1px;
+      transform: scale(1.3);
+      margin-right: 4px;
+    }
+  }
+}
+.align-field{
+  position: relative;
+  left: 50px;
+}
+.align-right-field{
+  position: relative;
+  left: 8px;
+}
+.add-new-bus-container {
+  background: #f2f2f2;
+  width: 910px;
+  height: 2550px;
+  position: relative;
+  top: 10px;
+  left: 0px;
+  bottom: 10px;
+
+  right: 10px;
+  border-radius: 14px;
+  padding-left: 100px;
+  overflow-x: hidden;
+  margin-bottom: 10px;
+}
+.bus-details {
+  // border: 2px solid black;
+  width: 880px;
+  height: 900px;
+  position: relative;
+  top: 100px;
+  right: 80px;
+  padding-top: 30%;
+  margin-bottom: 20px;
+
+  margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 32px;
+ box-shadow: 0 12px 30px rgba(253, 251, 251, 0);
+  ion-grid {
+    position: relative;
+    top: 50px;
+    ion-col {
+      margin-bottom: 10px;
+    }
+  }
+}
+.add-new-bus-container ion-input {
+  background: #f5f6f8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  width: 372px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  line-height: 150%;
+  font-size: 16px;
+  color: #333;
+  --placeholder-color: #0f172abf;
+  --padding-start: 25px;
+  font-family: "Space Grotesk", sans-serif;
+
+  ion-select::part(icon) {
+    display: none;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  --highlight-height: 0; /* red underline remove */
+  --border-width: 0;
+}
+.confirm-btn {
+  ion-button {
+    height: 52px;
+    width: 790px;
+    border-radius: 12px;
+    position: relative;
+    left: 28px;
+    top: 100px;
+    text-transform: none;
+    background-color: #4f8cff;
+    color: #ffffff;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: -300; /* Regular */
+    line-height: 145%; /* 18px × 1.45 = ~26px */
+    letter-spacing: 0px;
+    text-align: center;
+  }
+}
+
+.header-container {
+  border-bottom: 1px solid #e5e3dc;
+  position: relative;
+  top: -8px;
+  h2 {
+    color: #1f1f1f;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 20px;
+    line-height: 145%;
+    letter-spacing: 0%;
+  }
+}
+// .input {
+//   background: #f5f6f8;
+//   border-radius: 8px;
+//   padding: 12px 14px;
+//   width: 372px;
+//   height: 50px;
+//   margin-top: 10px;
+//   margin-bottom: 19px;
+//   line-height: 150%;
+//   font-size: 16px;
+//   color: #333;
+//   --placeholder-color: #aaa;
+
+//   ion-select::part(icon) {
+//     display: none;
+//   }
+
+// }
+
+.input {
+  background: #f5f6f8;
+  border-radius: 8px;
+  width: 372px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center; // vertical center
+  justify-content: center; // horizontal center
+  text-align: center;
+
+  ion-icon {
+    height: 24px;
+    width: 24px;
+    position: relative;
+
+    right: 16px;
+    top: 2px;
+  }
+
+  ion-select {
+    width: 100%;
+    text-align: center;
+    --highlight-height: 0;
+    --border-width: 0;
+    --border-style: none;
+  }
+
+  ion-select::part(text) {
+    text-align: center;
+    width: 100%;
+  }
+  ion-select {
+    padding-left: 25px;
+    --placeholder-color: #0f172abf;
+  }
+
+  ion-select::part(icon) {
+    display: none;
+  }
+}
+
+.input-count {
+  ion-input {
+    background: #ffffff;
+    border-radius: 8px;
+    width: 372px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 19px;
+    font-size: 16px;
+    border: 1px solid #c7c9cc;
+  }
+}
+
+.All-list {
+  // border: 2px solid black;
+  width: 880px;
+  height: 500px;
+  position: relative;
+  top: 147px;
+  right: 80px;
+  padding-top: 40%;
+
+  margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 12px 30px rgba(253, 251, 251, 0);
+}
+.table-head-wrap {
+  padding: 0 10px;
+  position: relative;
+  right: 70px;
+}
+.year {
+  position: relative;
+  left: 18px;
+}
+.month {
+  position: relative;
+  left: 105px;
+}
+.amount {
+  position: relative;
+  left: 171px;
+}
+.type {
+  position: relative;
+  left: 235px;
+}
+
+.table-container {
+  width: 810px;
+  padding: 10px;
+  border-radius: 12px;
+
+  position: relative;
+  left: 5px;
+  bottom: -20px;
+
+  background-color: #f8fafc;
+}
+.head-container {
+  width: 793px;
+  border-radius: 12px;
+  position: relative;
+  right: 2px;
+
+  border: 1px solid #ffffff;
+}
+.table-head {
+  // display: grid;
+  // grid-template-columns: 60px 1.5fr 80px 1fr 100px 80px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 12px 0;
+  font-weight: 500;
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  line-height: 145%;
+  letter-spacing: 0%;
+  width: 500px;
+  color: #0f172a;
+  position: relative;
+  left: 40px;
+}
+
+/* CARD */
+.table-card {
+  background-color: #ffffff;
+  margin: 8px 16px 4px;
+  width: 796px;
+
+  position: relative;
+  top: 5px;
+  left: -18px;
+  padding-left: 20px;
+  padding-right: 10px;
+  border-radius: 12px;
+}
+
+/* ROWS */
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #1f1f1f;
+  line-height: 145%;
+
+  letter-spacing: 0%;
+  padding: 12px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #f5f2f2;
+}
+
+.table-content {
+  border: 1px solid #ffffff;
+  width: 100px;
+  display: flex;
+  position: relative;
+  right: 10px;
+  justify-content: space-around;
+}
+.content-year {
+  position: relative;
+  left: 30px;
+}
+.content-month {
+  position: relative;
+  right: 15px;
+}
+.content-amount {
+  position: relative;
+  right: 110px;
+}
+.content-type {
+  position: relative;
+  right: 125px;
+}
+
+.active {
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.view {
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/*Expense Style*/
+.expense-container {
+  // border: 2px solid black;
+  width: 880px;
+
+  height: 500px;
+  position: relative;
+  top: 210px;
+  right: 80px;
+  padding-top: 30%;
+
+  margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 32px;
+ box-shadow: 0 12px 30px rgba(253, 251, 251, 0);
+}
+
+.button {
+  position: absolute;
+  top: 12px;
+ 
+ 
+  ion-button {
+    position: relative;
+    top: 10px;
+    left: 648px;
+    bottom: 400px;
+    width: 168px;
+    height: 38px;
+    
+    border-radius: 10px;
+    text-transform: none;
+    background-color: #ffffff;
+    color: #4f8cff;
+    border: 1px dashed #4f8cff;
+    white-space: nowrap;
+    div{
+      position: relative;
+      right: 10px;
+      font-size: 18px;
+    }
+    .plus {
+      width: 21px;
+      height: 21px;
+      transform: scale(2.0);
+      width: 14px;
+      height: 15px;
+      position: relative;
+
+      left: 3px;
+      bottom: 2px;
+      color: #4f8cff;
+    }
+  }
+}
+.expense-header-container {
+  border-bottom: 1px solid #e5e3dc;
+  position: relative;
+  top: 8px;
+  h2 {
+    color: #1f1f1f;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 20px;
+    line-height: 145%;
+    letter-spacing: 0%;
+  }
+}
+
+.table-expense-container {
+  position: relative;
+  top: 40px;
+  left: 5px;
+  width: 810px;
+  padding: 10px;
+  border-radius: 12px;
+
+  background-color: #f8fafc;
+}
+.date {
+  position: relative;
+  left: 20px;
+}
+.category {
+  position: relative;
+  left: 130px;
+}
+.amount2 {
+  position: relative;
+  left: 210px;
+}
+.paid {
+  position: relative;
+  left: 275px;
+}
+.invoice {
+  position: relative;
+  left: 340px;
+}
+.table-profit-container {
+  width: 810px;
+
+  padding: 10px;
+  border-radius: 12px;
+
+  position: relative;
+  left: 5px;
+  bottom: 20px;
+
+  background-color: #f8fafc;
+}
+
+.btn {
+  position: relative;
+  left: 610px;
+  bottom: 35px;
+  width: 187px;
+  height: 44px;
+  border-radius: 10px;
+  text-transform: none;
+  background-color: #b3cbf933;
+  color: #0f172a;
+  border: 1px dashed #4f8cff;
+  span {
+    border: 1px solid black;
+    width: 21px;
+    height: 21px;
+    font-size: 20px;
+    position: relative;
+    right: 12px;
+    color: #0f172a;
+  }
+}
+
+.profitability-summary-container {
+  width: 880px;
+  height: 455px;
+  position: relative;
+  top: 272px;
+  right: 80px;
+  padding-top: 30%;
+
+  margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 12px 30px rgba(253, 251, 251, 0);
+}
+.profitability-header-container {
+  border-bottom: 1px solid #e5e3dc;
+  position: relative;
+  top: -8px;
+  h2 {
+    color: #1f1f1f;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 20px;
+    line-height: 145%;
+    letter-spacing: 0%;
+  }
+}
+.table-profitability-container {
+  position: relative;
+  top: 30px;
+  left: 5px;
+  width: 810px;
+  padding: 10px;
+  border-radius: 12px;
+
+  background-color: #f8fafc;
+}
+.profitability-content-container {
+  // display: flex;
+  // justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 0.8fr;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #1f1f1f;
+  line-height: 145%;
+
+  letter-spacing: 0%;
+  padding: 12px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #f5f2f2;
+}
+.table-month {
+  // border: 1px solid black;
+  width: 90px;
+  display: flex;
+  position: relative;
+  right: 13px;
+  justify-content: space-around;
+}
+.month2 {
+  position: relative;
+  left: 30px;
+}
+.total-revenue {
+  position: relative;
+  left: 120px;
+}
+.total-Expenses {
+  position: relative;
+  left: 180px;
+}
+.net-profit {
+  position: relative;
+  left: 230px;
+}
+.status {
+  position: relative;
+  left: 310px;
+}
+.total-revenue-content {
+  position: relative;
+  right: -10px;
+}
+.total-Expenses-content {
+  position: relative;
+  left: 40px;
+}
+.net-profit-content {
+  position: relative;
+  left: 50px;
+}
+.net-profit-content {
+  position: relative;
+  left: 50px;
+}
+.status-content {
+  position: relative;
+  left: 65px;
+}
+.upload-container {
+  width: 30%;
+}
+
+.upload-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 2px;
+}
+
+.upload-box {
+  background: #f8fafc;
+  border-radius: 8px;
+  width: 372px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.file-pill {
+  display: inline-block;
+  background: #b3cbf9;
+  color: #0f172a;
+  width: 160px;
+  height: 35px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 13px;
+  gap: 6px;
+  margin-left: 1px;
+}
+.file-name {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 145%;
+  letter-spacing: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  left: -3px;
+}
+
+.file-pill ion-icon {
+  transform: scale(1.7);
+  width: 16.666664123535156px;
+  height: 16.666664123535156;
+  position: relative;
+  left: 5px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.upload-icon ion-icon {
+  font-size: 20px;
+  color: #888;
+  position: absolute;
+  left: 335px;
+  bottom: 15px;
+}

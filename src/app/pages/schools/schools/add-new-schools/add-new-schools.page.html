@@ -1,0 +1,245 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>add_new_schools</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content>
+  <div class="add-new-schools">
+    <div class="title-container">
+      <div routerLink="/admin/schools">
+        <ion-icon name="chevron-back-outline"></ion-icon><p>Schools</p>
+      </div>
+    </div>
+    <ion-card>
+      <div class="form-heading">
+        <h3>Add new school</h3>
+        <p>
+          Create a new school profile to manage routes, students, and drivers.
+        </p>
+      </div>
+      <form [formGroup]="schoolForm">
+        <div class="form-container">
+          <ion-grid>
+            <ion-row>
+              <!-- LEFT COLUMN -->
+              <ion-col size="12" size="6">
+                <ion-item lines="none">
+                  <ion-label position="stacked">School Name</ion-label>
+                  <ion-input
+                    placeholder="Eg: SRV Marticulation Higher Sec School"
+                    formControlName="schoolName"
+                  ></ion-input>
+                </ion-item>
+                <!-- <ion-text color="danger" *ngIf="isInvalid('schoolName')">
+                School Name is required
+              </ion-text> -->
+                <ion-label position="stacked">Affiliation Board</ion-label>
+                <div class="input">
+                 
+                  <ion-select
+                    formControlName="affiliationBoard"
+                    placeholder="Eg:CBSE,Stateboard..."
+                  >
+                    <ion-select-option value="CBSE">CBSE</ion-select-option>
+                    <ion-select-option value="ICSE">ICSE</ion-select-option>
+                    <ion-select-option value="State Board"
+                      >State Board</ion-select-option
+                    >
+                  </ion-select>
+                </div>
+
+                <!-- <ion-text color="danger" *ngIf="isInvalid('affiliationBoard')">
+                Board is required
+              </ion-text> -->
+
+                <ion-item lines="none">
+                  <ion-label position="stacked">Address Line 2</ion-label>
+                  <ion-input
+                    placeholder="Eg:Triplicane,Opp LIC Bus Stop"
+                    formControlName="address2"
+                  ></ion-input>
+                </ion-item>
+
+                <ion-item lines="none">
+                  <ion-label position="stacked">State</ion-label>
+                  <ion-input
+                    placeholder="Eg:Jharkhand"
+                    formControlName="state"
+                  ></ion-input>
+                </ion-item>
+                <!-- <ion-text color="danger" *ngIf="isInvalid('state')">
+                State is required
+              </ion-text> -->
+
+                <ion-item lines="none">
+                  <ion-label position="stacked">Primary Contact Name</ion-label>
+                  <ion-input
+                    placeholder="Russel"
+                    formControlName="primaryContactName"
+                  ></ion-input>
+                </ion-item>
+                <!-- <ion-text color="danger" *ngIf="isInvalid('primaryContactName')">
+                Contact name is required
+              </ion-text> -->
+
+                <ion-item lines="none">
+                  <ion-label position="stacked">Email</ion-label>
+                  <ion-input
+                    placeholder="Eg: ripleyenterpraises@gmail.com"
+                    type="email"
+                    formControlName="email"
+                  ></ion-input>
+                </ion-item>
+                <!-- <ion-text color="danger" *ngIf="schoolForm.get('email')?.touched">
+                <span *ngIf="schoolForm.get('email')?.hasError('required')">
+                  Email is required
+                </span>
+                <span *ngIf="schoolForm.get('email')?.hasError('email')">
+                  Enter valid email
+                </span>
+              </ion-text> -->
+
+                <ion-item lines="none">
+                  <ion-label position="stacked">School Timings</ion-label>
+                  <ion-input
+                    placeholder="Eg: 9.00 - 16.30 "
+                    formControlName="schoolTimings"
+                  ></ion-input>
+                </ion-item>
+                <!-- <ion-text color="danger" *ngIf="isInvalid('schoolTimings')">
+                Timings are required
+              </ion-text> -->
+              </ion-col>
+
+              <!-- RIGHT COLUMN -->
+              <ion-col size="12" size="6">
+                <ion-label position="stacked">School Type</ion-label>
+                <div class="input">
+                  <ion-select
+                    placeholder="Eg: Primary, Higher Secondary..."
+                    formControlName="schoolType"
+                  >
+                    <ion-select-option value="Primary"
+                      >Primary</ion-select-option
+                    >
+                    <ion-select-option value="Secondary"
+                      >Secondary</ion-select-option
+                    >
+                    <ion-select-option value="Higher Secondary"
+                      >Higher Secondary</ion-select-option
+                    >
+                  </ion-select>
+                </div>
+
+                <!-- <ion-text color="danger" *ngIf="isInvalid('schoolType')">
+                School Type is required
+              </ion-text> -->
+
+                <ion-item lines="none">
+                  <ion-label position="stacked">Address Line 1</ion-label>
+                  <ion-input
+                    placeholder="Eg: Redwood Building, Crossword Street..."
+                    formControlName="address1"
+                  ></ion-input>
+                </ion-item>
+                <!-- <ion-text color="danger" *ngIf="isInvalid('address1')">
+                Address is required
+              </ion-text> -->
+
+                <ion-item lines="none">
+                  <ion-label position="stacked">City</ion-label>
+                  <ion-input
+                    placeholder="Eg: Delhi"
+                    formControlName="city"
+                  ></ion-input>
+                </ion-item>
+                <!-- <ion-text color="danger" *ngIf="isInvalid('city')">
+                City is required
+              </ion-text> -->
+
+                <ion-item lines="none">
+                  <ion-label position="stacked">Postal Code</ion-label>
+                  <ion-input
+                    type="number"
+                    placeholder="Eg: 349 086"
+                    formControlName="postalCode"
+                  ></ion-input>
+                </ion-item>
+                <!-- <ion-text
+                color="danger"
+                *ngIf="schoolForm.get('postalCode')?.touched"
+              >
+                <span
+                  *ngIf="schoolForm.get('postalCode')?.hasError('required')"
+                >
+                  Postal Code is required
+                </span>
+                <span *ngIf="schoolForm.get('postalCode')?.hasError('pattern')">
+                  Enter 6 digit Postal Code
+                </span>
+              </ion-text> -->
+
+                <ion-item lines="none">
+                  <ion-label position="stacked">Contact Phone</ion-label>
+                  <ion-input
+                    type="tel"
+                    placeholder="Eg: 9629371***"
+                    formControlName="contactPhone"
+                  ></ion-input>
+                </ion-item>
+                <!-- <ion-text
+                color="danger"
+                *ngIf="schoolForm.get('contactPhone')?.touched"
+              >
+                <span
+                  *ngIf="schoolForm.get('contactPhone')?.hasError('required')"
+                >
+                  Phone is required
+                </span>
+                <span
+                  *ngIf="schoolForm.get('contactPhone')?.hasError('pattern')"
+                >
+                  Enter 10 digit phone number
+                </span>
+              </ion-text> -->
+
+                <ion-item lines="none">
+                    <ion-label position="stacked">Operating Days</ion-label>
+                  <div class="input">
+                  
+                    <ion-select
+                      placeholder="Eg: Monday-Friday, Monday to Saturday"
+                      formControlName="operatingDays"
+                    >
+                      <ion-select-option value="Mon-Fri"
+                        >Monday - Friday</ion-select-option
+                      >
+                      <ion-select-option value="Mon-Sat"
+                        >Monday - Saturday</ion-select-option
+                      >
+                    </ion-select>
+                  </div>
+                </ion-item>
+
+                <!-- <ion-text color="danger" *ngIf="isInvalid('operatingDays')">
+                Operating days are required
+              </ion-text> -->
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+          <ion-button
+            type="button"
+            expand="block"
+            class="confirm-btn"
+            [disabled]="schoolForm.invalid"
+            (click)="submit()"
+            fill="clear"
+          >
+            Confirm
+          </ion-button>
+        </div>
+      </form>
+    </ion-card>
+  </div>
+</ion-content>

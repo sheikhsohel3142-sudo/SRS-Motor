@@ -1,0 +1,213 @@
+ion-content {
+  --padding-start: 100px;
+  --padding-end: 100px;
+  width: 100%;
+  --background: #0f172a;
+}
+.title-container {
+  position: relative;
+  top: 20px;
+  right: 75px;
+  width: 190px;
+  height: 45px;
+  border-radius: 8px;
+  padding: 5px;
+  padding-right: 8px;
+
+  background-color: #b3cbf9;
+  div {
+    position: relative;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    top: 10px;
+    left: 16px;
+    font-style: 16px;
+   
+  }
+  ion-icon{
+    position: relative;
+    right: 10px;
+  }
+}
+ion-card {
+  // border: 2px solid black;
+  width: 880px;
+  height: 500px;
+  position: relative;
+  top: 98px;
+  right: 80px;
+  padding-top: 30%;
+
+  margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+.profile-container {
+  background: #f2f2f2;
+  width: 910px;
+  height: 885px;
+  position: relative;
+  top: 10px;
+
+  right: 100px;
+  border-radius: 14px;
+  padding-left: 100px;
+}
+
+ion-button {
+  position: relative;
+  left: 610px;
+  bottom: 35px;
+  width: 205px;
+  height: 44px;
+  border-radius: 10px;
+  text-transform: none;
+  background-color: #b3cbf933;
+  color: #0f172a;
+  border: 1px dashed #4f8cff;
+  white-space: nowrap;
+  span {
+    border: 2px solid black;
+    width: 19px;
+    height: 19px;
+    font-size: 20px;
+    position: relative;
+    right: 9px;
+    color: #0f172a;
+    border-radius: 3px;
+    p{
+      position: relative;
+      bottom: 2px;
+    }
+
+  }
+}
+
+.table-head-wrap {
+  padding: 0 10px;
+  position: relative;
+  right: 70px;
+}
+.s-no{
+  position: relative;
+  right: -5px;
+}
+.school-name{
+  position: relative;
+  left: -4px;
+}
+.school{
+  position: relative;
+  right: 2px;
+}
+.buses{
+  position: relative;
+  left: -2px;
+}
+.A-route{
+  position: relative;
+  left: 26px;
+}
+.status{
+  position: relative;
+  left: 10px;
+}
+.advance{
+  position: relative;
+  left: 35px;
+}
+.table-container {
+  width: 890px;
+  padding: 10px;
+  border-radius: 12px;
+  
+
+  position: relative;
+  right: 86px;
+
+  border: 1px solid #ffffff;
+}
+.head-container {
+  width: 870px;
+  border-radius: 12px;
+  height: 60px;
+
+  border: 1px solid #ffffff;
+}
+.table-head {
+  // display: grid;
+  // grid-template-columns: 60px 1.5fr 80px 1fr 100px 80px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 12px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 145%;
+  letter-spacing: 0%;
+  color: #0F172A;
+  position: relative;
+  left: 20px;
+  white-space: wrap;
+}
+
+/* CARD */
+.table-card {
+  background-color: #ffffff;
+  margin: 8px 16px 4px;
+  width: 870px;
+
+  position: relative;
+  top: 5px;
+  right: 18px;
+  padding-left: 20px;
+  padding-right: 10px;
+  border-radius: 12px;
+}
+
+/* ROWS */
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #f5f2f2;
+   font-family: "Space Grotesk", sans-serif;
+}
+
+.active {
+  position: relative;
+  left: 15px;
+}
+
+.view {
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 500;
+}
+.driver-name{
+  position: relative;
+  right: -42px;
+}
+.buses-no{
+  position: relative;
+  left: 70px;
+}
+.route{
+  position: relative;
+  left: 45px;
+}
+.c-no{
+  position: relative;
+  left: 12px;
+}
+.Advance-amount{
+  position: relative;
+  left: 35px;
+}
+.school-N{
+  position: relative;
+  left: 70px;
+}

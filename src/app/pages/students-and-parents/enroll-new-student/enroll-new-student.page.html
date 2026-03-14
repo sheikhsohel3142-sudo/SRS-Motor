@@ -1,0 +1,220 @@
+<ion-content mode="ios">
+  
+  <div class="enroll-new-student-container">
+    <div class="title-container">
+      <div routerLink="/admin/students-and-parents">
+        <ion-icon name="chevron-back-outline"></ion-icon
+        ><span class="name">Student & Parents</span>
+      </div>
+    </div>
+    <ion-card>
+      <form [formGroup]="enrollForm">
+        <div class="header-container">
+          <h2>Enroll Student</h2>
+        </div>
+        <ion-grid>
+          <!-- Row 1 -->
+          <ion-row>
+            <ion-col size="6">
+              <label>Student Name</label>
+              <ion-input
+                fill="outline"
+                formControlName="studentName"
+                placeholder="Eg: Michael"
+              ></ion-input>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <label>Admission Number (optional)</label>
+              <ion-input
+                fill="outline"
+                formControlName="admissionNumber"
+                placeholder="Eg: AD574985"
+              ></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 2 -->
+          <ion-row>
+            <ion-col size="6">
+              <label>Grade / Class</label>
+              <div class="input">
+                <ion-select
+                  fill="outline"
+                  formControlName="gradeClass"
+                  placeholder="Eg: 10th"
+                ></ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+
+            <ion-col size="6"class="align-right-field">
+              <label>Section (optional)</label>
+              <ion-input
+                fill="outline"
+                formControlName="section"
+                placeholder="Eg: A,B,C,D"
+              ></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 3 -->
+          <ion-row>
+            <ion-col size="6">
+              <label>School</label>
+              <div class="input">
+                <ion-select
+                  fill="outline"
+                  formControlName="school"
+                  placeholder="Eg: A,B,C,D"
+                ></ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <label>Route</label>
+              <div class="input">
+                <ion-select
+                  fill="outline"
+                  formControlName="route"
+                  placeholder="Eg: Route 51"
+                ></ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 4 -->
+          <ion-row>
+            <ion-col size="6">
+              <label>Pickup / Drop Stop</label>
+              <div class="input">
+                <ion-select
+                  fill="outline"
+                  formControlName="pickupStop"
+                  placeholder="Eg: Triplicane"
+                ></ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <label>Assign Bus</label>
+              <div class="input">
+                <ion-select
+                  fill="outline"
+                  formControlName="assignBus"
+                  placeholder="Eg: TN31BF8236"
+                ></ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 5 -->
+          <ion-row>
+            <ion-col size="6">
+              <label>Parent Name</label>
+              <ion-input
+                fill="outline"
+                formControlName="parentName"
+                placeholder="Eg: Grace"
+              ></ion-input>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <label>Relationship</label>
+              <ion-input
+                fill="outline"
+                formControlName="relationship"
+                placeholder="Eg: Mother"
+              ></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 6 -->
+          <ion-row>
+            <ion-col size="6">
+              <label>Phone Number</label>
+              <ion-input
+                fill="outline"
+                formControlName="phoneNumber"
+                placeholder="Eg: 9876537***"
+              ></ion-input>
+            </ion-col>
+
+            <ion-col size="6" class="align-right-field">
+              <label>Email Address (optional)</label>
+              <ion-input
+                fill="outline"
+                formControlName="email"
+                placeholder="Eg: abc@gmail.com"
+              ></ion-input>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 7 -->
+          <ion-row>
+            <ion-col size="6">
+              <label>Billing Start Date</label>
+              <ion-input
+                type="date"
+                formControlName="billingStartDate"
+                fill="outline"
+              ></ion-input>
+            </ion-col>
+
+            <ion-col size="6" class="toggle-row" class="align-right-field">
+               <label>Recieve Notice</label>
+              <div class="setting-box">
+                <div class="toggle">
+                  <span>{{enrollForm.value.receiveNotice}}</span>
+                  <ion-toggle
+                    [checked]="isChecked('receiveNotice')"
+                    (ionChange)="toggleChange($event,'receiveNotice')"
+                  >
+                  </ion-toggle>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+
+          <!-- Row 8 -->
+          <ion-row>
+            <ion-col size="6" class="toggle-row">
+               <label>Complimentary Student</label>
+              <div class="setting-box">
+                <div class="toggle">
+                  <span>{{enrollForm.value.complimentaryStudent}}</span>
+                  <ion-toggle
+                    [checked]="isChecked('complimentaryStudent')"
+                    (ionChange)="toggleChange($event,'complimentaryStudent')"
+                  >
+                  </ion-toggle>
+                </div>
+              </div>
+            </ion-col>
+
+            <ion-col size="6" class="toggle-row" class="align-right-field">
+              <label>Maintenance Alerts</label>
+              <div class="setting-box">
+                <div class="toggle">
+                  <span>{{enrollForm.value.disableNotice}}</span>
+                  <ion-toggle
+                    [checked]="isChecked('disableNotice')"
+                    (ionChange)="toggleChange($event,'disableNotice')"
+                  >
+                  </ion-toggle>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-button  fill="clear" (click)="saveStudent()">Save</ion-button>
+      </form>
+    </ion-card>
+  </div>
+ 
+</ion-content>

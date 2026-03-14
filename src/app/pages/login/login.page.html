@@ -1,0 +1,60 @@
+<ion-content>
+  <div class="profile-container">
+    <div class="icon-container">
+      <img src="assets/img/Mobile login-pana (1) 1.png" alt="" />
+    </div>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="login-container">
+    <p class="company">SAHARA MOTORS SRS</p>
+    <h2 class="title">Log-In</h2>
+
+    <!-- Email / Mobile -->
+    <div class="field">
+      <label>Email/Mobile Number</label>
+
+      <ion-item lines="none" class="input-box">
+        <ion-input
+          formControlName="email"
+          placeholder="Enter your email or mobile number"
+        >
+        </ion-input>
+      </ion-item>
+
+      <small *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+        Email or Mobile is required
+      </small>
+    </div>
+
+    <!-- Password -->
+    <div class="field">
+      <label>Password</label>
+
+      <ion-item lines="none" class="input-box">
+        <ion-input
+          type="password"
+          formControlName="password"
+          placeholder="Enter your password"
+        >
+        </ion-input>
+      </ion-item>
+
+      <small *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+        Password is required
+      </small>
+    </div>
+
+    <a class="forgot">Forgot Password?</a>
+
+    <ion-button
+      expand="block"
+      class="login-btn"
+      type="submit"
+      [disabled]="loginForm.invalid"
+    >
+      Log-In
+    </ion-button>
+  </div>
+</form>
+
+  </div>
+</ion-content>

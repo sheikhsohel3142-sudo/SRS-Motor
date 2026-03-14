@@ -1,0 +1,158 @@
+ion-content {
+  --padding-start: 100px;
+  --padding-end: 100px;
+  width: 100%;
+  --background: #0f172a;
+}
+.title-container {
+  position: relative;
+  top: 20px;
+  right: 85px;
+  width: 115px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 5px;
+  padding-right: 8px;
+
+  background-color: #b3cbf9;
+  div {
+    position: relative;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
+    top: 10px;
+    left: 16px;
+    font-style: 16px;
+  }
+}
+ion-card {
+  // border: 2px solid black;
+  width: 880px;
+  height: 500px;
+  position: relative;
+  top: 98px;
+  right: 80px;
+  padding-top: 30%;
+
+  margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+.profile-container {
+  background: #f2f2f2;
+  width: 910px;
+  height: 885px;
+  position: relative;
+  top: 10px;
+
+  right: 100px;
+  border-radius: 14px;
+  padding-left: 100px;
+}
+
+ion-button {
+  position: relative;
+  left: 610px;
+  bottom: 35px;
+  width: 187px;
+  height: 44px;
+  border-radius: 10px;
+  text-transform: none;
+  background-color: #b3cbf933;
+  color: #0f172a;
+  border: 1px dashed #4f8cff;
+  span {
+    border: 1px solid black;
+    width: 21px;
+    height: 21px;
+    font-size: 20px;
+    position: relative;
+    right: 12px;
+    color: #0f172a;
+  }
+}
+
+.table-head-wrap {
+  padding: 0 10px;
+  position: relative;
+  right: 70px;
+}
+.s-no{
+  position: relative;
+  right: 32px;
+}
+.school-name{
+  position: relative;
+  right: 22px;
+}
+.location{
+  position: relative;
+   right: 4px;
+}
+.status{
+  position: relative;
+  left: 13px;
+}
+.table-container {
+  width: 890px;
+  padding: 10px;
+  border-radius: 12px;
+  
+
+  position: relative;
+  right: 86px;
+
+  border: 1px solid #ffffff;
+}
+.head-container {
+  width: 870px;
+  border-radius: 12px;
+
+  border: 1px solid #ffffff;
+}
+.table-head {
+  // display: grid;
+  // grid-template-columns: 60px 1.5fr 80px 1fr 100px 80px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* CARD */
+.table-card {
+  background-color: #ffffff;
+  margin: 8px 16px 4px;
+  width: 870px;
+
+  position: relative;
+  top: 5px;
+  right: 18px;
+  padding-left: 20px;
+  padding-right: 10px;
+  border-radius: 12px;
+}
+
+/* ROWS */
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #f5f2f2;
+}
+
+.active {
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.view {
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 500;
+}

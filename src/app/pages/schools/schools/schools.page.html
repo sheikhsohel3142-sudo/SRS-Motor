@@ -1,0 +1,47 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>schools</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+ <ion-content>
+ <div class="profile-container">
+    <div class="header">
+      <div class="title-container">
+        <div>Schools</div>
+      </div>
+      <ion-button (click)="addNewSchool()"
+  fill="clear" fill="clear"><span>+</span> Add New School</ion-button>
+       
+   </div>
+   <div class="table-container">
+    <div class="head-container">
+   <div class="table-head-wrap">
+      <div class="table-head">
+        <span class="s-no">S.no</span>
+        <span class="school-name">School Name</span>
+        <span class="buses">Buses</span>
+        <span class="location">Location</span>
+        <span class="status">Status</span>
+      </div>
+      </div>
+    </div>
+
+
+    <div class="table-card">
+      <div>
+        <div class="table-row" *ngFor="let s of schools; let i = index">
+          <span>{{ i + 1 }}</span>
+          <span>{{ s.name }}</span>
+          <span>{{ s.buses }}</span>
+          <span>{{ s.location }}</span>
+          <span class="active">{{ s.status }}</span>
+          <span class="view" [routerLink]="['/admin/schools/school-detail']">View ››</span>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+   </div>
+
+</ion-content>
