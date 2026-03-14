@@ -10,7 +10,7 @@ import { addCircleOutline, addOutline, chevronBackOutline, chevronDownOutline, c
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [ RouterOutlet],
+  imports: [IonRouterOutlet, RouterOutlet, IonApp],
 })
 export class AppComponent {
   
