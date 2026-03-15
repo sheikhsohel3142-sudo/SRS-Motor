@@ -92,6 +92,41 @@ small {
   color: red;
   margin-left: 5px;
 }
+@media (min-width: 2000px) {
+
+.profile-container{
+  width: 1700px;
+  height: 1000px;
+}
+
+.login-container{
+  left: 950px;
+}
+
+.icon-container{
+  width: 650px;
+  left: 80px;
+}
+
+}
+
+@media (min-width: 2560px) {
+
+.profile-container{
+  width: 2000px;
+  height: 1100px;
+}
+
+.login-container{
+  left: 1150px;
+}
+
+.icon-container{
+  width: 750px;
+  left: 120px;
+}
+
+}
 
 @media (min-width: 1600px) {
   .profile-container {
