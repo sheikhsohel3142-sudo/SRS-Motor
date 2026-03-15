@@ -1,13 +1,24 @@
 ion-content{
   --background: #0F172A;
-  height: 100vh;
+  width:100vw;
+  height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 .profile-container {
   background: #f2f2f2;
-  width: 1250px;
-  height: 880px;
-  // width: 100vw; /* screen width ke hisab se */
-  // height: 100vh;
+  // width: 1250px;
+  // height: 880px;
+  width: 100vw; /* screen width ke hisab se */
+  height: 100vh;
+//  width:95%;
+//   max-width:1400px;
+
+//   height:90vh;
+  // width: 95vw;     
+  // height: 95vh;
   position: relative;
   top: 10px;
   left: 12px;
@@ -92,41 +103,41 @@ small {
   color: red;
   margin-left: 5px;
 }
-@media (min-width: 2000px) {
+// @media (min-width: 2000px) {
 
-.profile-container{
-  width: 1700px;
-  height: 1000px;
-}
+// .profile-container{
+//   width: 1700px;
+//   height: 1000px;
+// }
 
-.login-container{
-  left: 950px;
-}
+// .login-container{
+//   left: 950px;
+// }
 
-.icon-container{
-  width: 650px;
-  left: 80px;
-}
+// .icon-container{
+//   width: 650px;
+//   left: 80px;
+// }
 
-}
+// }
 
-@media (min-width: 2560px) {
+// @media (min-width: 2560px) {
 
-.profile-container{
-  width: 2000px;
-  height: 1100px;
-}
+// .profile-container{
+//   width: 2000px;
+//   height: 1100px;
+// }
 
-.login-container{
-  left: 1150px;
-}
+// .login-container{
+//   left: 1150px;
+// }
 
-.icon-container{
-  width: 750px;
-  left: 120px;
-}
+// .icon-container{
+//   width: 750px;
+//   left: 120px;
+// }
 
-}
+// }
 
 
 
@@ -159,18 +170,71 @@ small {
 //     width: 420px;
 //   }
 // }
-@media (max-width: 1024px) {
-  .profile-container {
-    width: 920px;
-    padding-left: 50px;
-  }
+// @media (max-width: 1024px) {
+//   .profile-container {
+//     width: 920px;
+//     padding-left: 50px;
+//   }
 
-  .login-container {
-    left: 470px;
-    bottom: 460px;
-  }
+//   .login-container {
+//     left: 470px;
+//     bottom: 460px;
+//   }
 
-  .icon-container {
-    width: 380px;
-  }
+//   .icon-container {
+//     width: 380px;
+//   }
+// }
+
+
+// /* Small Desktop */
+// @media (max-width: 1280px){
+
+// .profile-container{
+// width: 1050px;
+// }
+
+// .login-container{
+// left:560px;
+// }
+
+// }
+
+/* Normal Laptop */
+// @media (min-width:1281px) and (max-width:1600px){
+
+// .profile-container{
+// width:1200px;
+// }
+
+// .login-container{
+// left:650px;
+// }
+
+// }
+
+/* Large Desktop */
+// @media (min-width:1601px) and (max-width:1920px){
+
+// .profile-container{
+// width:1400px;
+// }
+
+// .login-container{
+// left:780px;
+// }
+
+// }
+
+/* Full HD Monitor */
+@media (min-width:1921px){
+
+.profile-container{
+width:1700px;
+}
+
+.login-container{
+left:950px;
+}
+
 }
