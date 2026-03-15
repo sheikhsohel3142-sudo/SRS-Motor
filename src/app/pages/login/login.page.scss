@@ -1,24 +1,11 @@
-ion-content{
-  --background: #0F172A;
-  width:100vw;
-  height:100vh;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
+ion-content {
+  --background: #0f172a;
 }
 .profile-container {
   background: #f2f2f2;
-  // width: 1250px;
-  // height: 880px;
-  width: 100vw; /* screen width ke hisab se */
-  height: 100vh;
-//  width:95%;
-//   max-width:1400px;
+  width: 1250px;
+  height: 880px;
 
-//   height:90vh;
-  // width: 95vw;     
-  // height: 95vh;
   position: relative;
   top: 10px;
   left: 12px;
@@ -103,138 +90,44 @@ small {
   color: red;
   margin-left: 5px;
 }
-// @media (min-width: 2000px) {
+@media (min-width: 1509px) {
+  .profile-container {
+    min-width: 1490px;
+    min-height: 920px;
+    left: 10px;
+  }
 
-// .profile-container{
-//   width: 1700px;
-//   height: 1000px;
-// }
+  .login-container {
+    left: 850px;
+    bottom: 520px;
+  }
 
-// .login-container{
-//   left: 950px;
-// }
-
-// .icon-container{
-//   width: 650px;
-//   left: 80px;
-// }
-
-// }
-
-// @media (min-width: 2560px) {
-
-// .profile-container{
-//   width: 2000px;
-//   height: 1100px;
-// }
-
-// .login-container{
-//   left: 1150px;
-// }
-
-// .icon-container{
-//   width: 750px;
-//   left: 120px;
-// }
-
-// }
-
-
-
-// @media (max-width: 1440px) {
+  .icon-container {
+    left: 20px;
+  }
+}
+// @media (max-width: 1509px) {
 //   .profile-container {
-//     width: 1180px;
+//     min-width: 1490px;
+//     min-height: 920px;
+//     left: 10px;
 //   }
 
 //   .login-container {
-//     left: 640px;
+//     left: 850px;
+//     bottom: 520px;
 //   }
 
 //   .icon-container {
-//     width: 460px;
+//     left: 20px;
 //   }
 // }
-
-// @media (max-width: 1280px) {
+// @media (min-width: 1600px) {
 //   .profile-container {
-//     width: 1050px;
-//     height: 850px;
+//     max-width: 1590px;
 //   }
 
-//   .login-container {
-//     left: 560px;
-//     bottom: 470px;
-//   }
-
-//   .icon-container {
-//     width: 420px;
+//   .icon-container img {
+//     max-width: 500px;
 //   }
 // }
-// @media (max-width: 1024px) {
-//   .profile-container {
-//     width: 920px;
-//     padding-left: 50px;
-//   }
-
-//   .login-container {
-//     left: 470px;
-//     bottom: 460px;
-//   }
-
-//   .icon-container {
-//     width: 380px;
-//   }
-// }
-
-
-// /* Small Desktop */
-// @media (max-width: 1280px){
-
-// .profile-container{
-// width: 1050px;
-// }
-
-// .login-container{
-// left:560px;
-// }
-
-// }
-
-/* Normal Laptop */
-// @media (min-width:1281px) and (max-width:1600px){
-
-// .profile-container{
-// width:1200px;
-// }
-
-// .login-container{
-// left:650px;
-// }
-
-// }
-
-/* Large Desktop */
-// @media (min-width:1601px) and (max-width:1920px){
-
-// .profile-container{
-// width:1400px;
-// }
-
-// .login-container{
-// left:780px;
-// }
-
-// }
-
-/* Full HD Monitor */
-@media (min-width:1921px){
-
-.profile-container{
-width:1700px;
-}
-
-.login-container{
-left:950px;
-}
-
-}
