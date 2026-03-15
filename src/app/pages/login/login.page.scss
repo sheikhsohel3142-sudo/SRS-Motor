@@ -176,22 +176,22 @@ small {
 // }
 
 
-@media only screen and (min-width: 1809px) {
+@media only screen and (min-width: 1409px) {
 
   .profile-container {
     min-width: 1709px;
     height: 950px;
   }
 
-  // .icon-container {
-  //   width: 600px;
-  //   top: 200px;
-  // }
+  .icon-container {
+    width: 600px;
+    top: 200px;
+  }
 
-  // .login-container {
-  //   width: 450px;
-  //   right: 400px;
+  .login-container {
+    width: 450px;
+    right: 400px;
     
-  // }
+  }
 
 }
