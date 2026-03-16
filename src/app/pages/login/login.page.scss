@@ -232,30 +232,28 @@ small {
 //   }
 // }
 /* Samsung Galaxy A8 Tablet */
-@media (min-width: 780px) and (max-width: 800px){
+// @media (max-width: 768px){
 
-  .profile-container{
-    width: 95%;
-    height: auto;
-    margin: 30px auto;
-    padding-left: 30px;
-  }
+//   .profile-container{
+//     width: 92%;
+//     height: auto;
+//     padding-left: 25px;
+//   }
 
-  .icon-container{
-    display: none;
-  }
+//   .icon-container{
+//     display: none;
+//   }
 
-  .login-container{
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin-top: 40px;
-  }
+//   .login-container{
+//     position: relative;
+//     left: 0;
+//     bottom: 0;
+//     width: 100%;
+//   }
 
-}
+// }
 
-}
+
 @media only screen and (min-width: 1024px) {
   .profile-container {
     width: 98%;
@@ -330,7 +328,7 @@ small {
 }
 
 /* ===== Tablet (768px) ===== */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 868px) {
   .profile-container {
     width: 90%;
     height: auto;
