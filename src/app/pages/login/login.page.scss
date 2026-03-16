@@ -1,66 +1,48 @@
 ion-content {
   --background: #0f172a;
 }
-
-// .profile-container {
-//   background: #f2f2f2;
-
-//   width: 90%;
-//   max-width: 1600px;   /* इससे large screen पर भी limit रहेगा */
-
-//   height: 880px;
-//   margin: auto;
-
-//   position: relative;
-//   top: 20px;
-
-//   border-radius: 14px;
-//   padding-left: 80px;
-//   overflow: hidden;
-// }
-
-// .icon-container {
-//   height: 600px;
-//   width: 500px;
-
-//   position: absolute;
-//   top: 160px;
-//   left: 40px;
-// }
-
-// .login-container {
-//   padding: 30px 20px;
-//   width: 400px;
-
-//   position: absolute;
-//   right: 120px;
-//   top: 200px;
-// }
-
-
-
-
-
 ion-content {
   --background: #0f172a;
 }
+// .profile-container {
+//   background: #f2f2f2;
+//   width: 1250px;
+//   height: 880px;
+
+//   position: relative;
+//   top: 10px;
+//   left: 12px;
+//   overflow: hidden;
+
+//   right: 2px;
+//   border-radius: 14px;
+//   padding-left: 100px;
+//   z-index: 9999;
+
+//   /* sidebar se upar */
+// }
 .profile-container {
   background: #f2f2f2;
-  width: 1250px;
+
+  width: 1500px;
+  // max-width: 1920px;   /* maximum desktop width */
+
   height: 880px;
 
+   margin: auto;        /* center */
+  border-radius: 14px;
+
+  padding-left: 100px;
   position: relative;
   top: 10px;
-  left: 12px;
+
   overflow: hidden;
-
-  right: 2px;
-  border-radius: 14px;
-  padding-left: 100px;
-  z-index: 9999;
-
-  /* sidebar se upar */
 }
+// .profile-container{
+//   width: calc(100% - 10px);  /* left + right margin */
+//   max-width: 1920px;
+//   margin: auto;
+// }
 .icon-container {
   height: 600px;
   width: 500px;
@@ -176,22 +158,157 @@ small {
 // }
 
 
-@media only screen and (min-width: 1909px) {
+// @media only screen and (min-width: 1909px) {
 
+//   .profile-container {
+//     min-width: 1609px;
+//     height: 950px;
+//   }
+
+//   .icon-container {
+//     width: 600px;
+//     top: 200px;
+//   }
+
+//   .login-container {
+//     width: 450px;
+//     right: 400px;
+    
+//   }
+
+// }.
+
+// .profile-container {
+//   background: #f2f2f2;
+
+//   width: 90%;
+//   max-width: 1600px;   /* इससे large screen पर भी limit रहेगा */
+
+//   height: 880px;
+//   margin: auto;
+
+//   position: relative;
+//   top: 20px;
+
+//   border-radius: 14px;
+//   padding-left: 80px;
+//   overflow: hidden;
+// }
+
+// .icon-container {
+//   height: 600px;
+//   width: 500px;
+
+//   position: absolute;
+//   top: 160px;
+//   left: 40px;
+// }
+
+// .login-container {
+//   padding: 30px 20px;
+//   width: 400px;
+
+//   position: absolute;
+//   right: 120px;
+//   top: 200px;
+// }
+
+
+/* ===== Desktop Large (1600px+) ===== */
+// @media only screen and (min-width: 1409px) {
+//   .profile-container {
+//     min-width: 1490px;
+//     height: 900px;
+//     background-color: #b8b7b7;
+//   }
+
+//   .login-container {
+//     left: 780px;
+//     bottom: 520px;
+//   }
+
+//   .icon-container {
+//     left: 40px;
+//   }
+// }
+@media only screen and (min-width: 1600px) {
   .profile-container {
-    min-width: 1609px;
-    height: 950px;
-  }
-
-  .icon-container {
-    width: 600px;
-    top: 200px;
+    width: 1940px;
+    height: 900px;
   }
 
   .login-container {
-    width: 450px;
-    right: 400px;
-    
+    left: 1080px;
+    bottom: 520px;
   }
 
+  .icon-container {
+    left: 40px;
+  }
 }
+
+/* ===== Normal Laptop (1280px) ===== */
+@media only screen and (max-width: 1280px) {
+  .profile-container {
+    width: 1100px;
+    height: 820px;
+    padding-left: 70px;
+  }
+
+  .login-container {
+    width: 360px;
+    left: 600px;
+    bottom: 470px;
+  }
+
+  .icon-container {
+    width: 420px;
+    left: 0px;
+  }
+}
+
+/* ===== Tablet (768px) ===== */
+@media only screen and (max-width: 768px) {
+  .profile-container {
+    width: 90%;
+    height: auto;
+    padding-left: 30px;
+  }
+
+  .icon-container {
+    display: none;
+  }
+
+  .login-container {
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+/* ===== Mobile (480px) ===== */
+@media only screen and (max-width: 480px) {
+  .profile-container {
+    width: 95%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .login-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .login-btn {
+    width: 100%;
+  }
+}
+
+
+
+
