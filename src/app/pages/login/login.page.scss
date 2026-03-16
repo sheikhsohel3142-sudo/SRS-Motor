@@ -232,37 +232,28 @@ small {
 //   }
 // }
 /* Samsung Galaxy A8 Tablet */
-@media (max-width: 800px) {
+@media (min-width: 780px) and (max-width: 800px){
 
   .profile-container{
     width: 95%;
     height: auto;
-    padding-left: 20px;
-    margin: auto;
+    margin: 30px auto;
+    padding-left: 30px;
   }
 
   .icon-container{
-    width: 320px;
-    height: auto;
-    top: 100px;
-    left: 0;
+    display: none;
   }
 
   .login-container{
-    width: 100%;
     position: relative;
     left: 0;
     bottom: 0;
+    width: 100%;
     margin-top: 40px;
   }
 
-  .title{
-    font-size: 26px;
-  }
-
-  .login-btn{
-    width: 100%;
-  }
+}
 
 }
 @media only screen and (min-width: 1024px) {
@@ -271,7 +262,7 @@ small {
     height: auto;
   }
   .login-container {
-    left: -50px;
+    left: 750px;
     bottom: 520px;
   }
   .icon-container {
