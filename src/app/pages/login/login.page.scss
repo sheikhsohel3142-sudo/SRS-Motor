@@ -231,17 +231,54 @@ small {
 //     left: 40px;
 //   }
 // }
+@media only screen and (min-width: 1024px) {
+  .profile-container {
+    width: 98%;
+    height: auto;
+  }
+  .login-container {
+    left: -50px;
+    bottom: 520px;
+  }
+  .icon-container {
+    left: 40px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .profile-container {
+    width: 98%;
+    height: auto;
+  }
+  .login-container {
+    left: 680px;
+    bottom: 520px;
+  }
+  .icon-container {
+    left: 40px;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .profile-container {
+    width: 98%;
+    height: auto;
+  }
+  .login-container {
+    left: 880px;
+    bottom: 520px;
+  }
+  .icon-container {
+    left: 40px;
+  }
+}
 @media only screen and (min-width: 1600px) {
   .profile-container {
-    width: 1940px;
-    height: 900px;
+    width: 99%;
+    height: auto;
   }
-
   .login-container {
     left: 1080px;
     bottom: 520px;
   }
-
   .icon-container {
     left: 40px;
   }
@@ -250,14 +287,14 @@ small {
 /* ===== Normal Laptop (1280px) ===== */
 @media only screen and (max-width: 1280px) {
   .profile-container {
-    width: 1100px;
-    height: 820px;
+    width: 98%;
+    height: auto;
     padding-left: 70px;
   }
 
   .login-container {
     width: 360px;
-    left: 600px;
+    left: 700px;
     bottom: 470px;
   }
 
