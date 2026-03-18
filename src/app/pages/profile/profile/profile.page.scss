@@ -6,7 +6,8 @@
   position: relative;
   top: 20px;
   right: 80px;
-  width: 115px;
+  width: 100%;
+  max-width: 115px;
   height: 48px;
   border-radius: 8px;
   padding: 5px;
@@ -25,8 +26,10 @@
 
 ion-card {
   // border: 2px solid black;
-  width: 880px;
-  height: 785px;
+  width: 100%;
+  min-width: 880px;
+  // height: 785px;
+  height: auto;
   position: relative;
   top: 98px;
   right: 80px;
@@ -37,15 +40,15 @@ ion-card {
   border-radius: 12px;
   padding: 24px 32px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
- 
 }
+
 .form-head {
   position: relative;
   top: 17px;
   font-weight: 900;
   margin-bottom: 50px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #E5E3DC;
+  border-bottom: 1px solid #e5e3dc;
 }
 ion-grid {
   // margin-bottom: 70px;
@@ -59,7 +62,7 @@ ion-grid {
 }
 
 // .Profile-container {
-//   --background: #181e28; 
+//   --background: #181e28;
 //   width: 100%;
 // }
 
@@ -89,7 +92,7 @@ ion-grid {
 }
 
 .profile-item ion-label {
-  font-size: 19px;
+  font-size: 99x;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   color: #8a8a8a;
@@ -100,7 +103,8 @@ ion-grid {
   background: #f5f6f8;
   border-radius: 8px;
   padding: 12px 14px;
-  width: 372px;
+  width: 100%;
+  min-width: 372px;
   height: 50px;
   margin-bottom: 9px;
   line-height: 150%;
@@ -125,9 +129,11 @@ ion-item::part(native) {
 
 /* White card */
 .profile-container {
-  background: #F2F2F2;
-  width: 910px;
+  background: #f2f2f2;
+  width: 100%;
+  max-width: 1910px;
   height: 885px;
+  // height: 100px;
   position: relative;
   top: 10px;
 
@@ -135,239 +141,296 @@ ion-item::part(native) {
   border-radius: 14px;
   padding-left: 100px;
 }
-
-
 ion-button {
-
   height: 52px;
-  width: 790px;
+  width: 100%;
+  min-width: 790px;
   border-radius: 12px;
   position: relative;
   left: 8px;
   top: 15px;
   text-transform: none;
-  background-color: #4F8CFF;
+  background-color: #4f8cff;
   color: #ffffff;
 
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
-  font-weight: -300;        /* Regular */
-  line-height: 145%;       /* 18px × 1.45 = ~26px */
+  font-weight: -300; /* Regular */
+  line-height: 145%; /* 18px × 1.45 = ~26px */
   letter-spacing: 0px;
   text-align: center;
 }
-ion-content{
-
- --padding-start:0;
- --padding-end:0;
- --background: #0F172A;
+ion-content {
+  --padding-start: 0;
+  --padding-end: 0;
+  --background: #0f172a;
 }
-.danger{
+.danger {
   color: red;
 }
 
+/* ================== Desktop (1600px and above) ================== */
+// @media only screen and (min-width: 1300px) {
+//   .profile-container {
+//     width: 99%;
 
-/* MAIN CONTAINER */
-// .title-container {
-//   position: relative;
-//   top: 20px;
-//   right: 0;
-//   width: 115px;
-//   height: 48px;
-//   border-radius: 8px;
-//   padding: 5px 8px;
-//   background-color: #b3cbf9;
+//     // padding-left: 100px;
+//   }
+
+//   ion-card {
+//     width: 96%;
+//     // height: auto;
+//     // left:5px;
+//   }
+//   .profile-item ion-input{
+//     width:99%;
+//   }
+
+//   ion-button {
+//     width: 95%;
+//   }
+// }
+@media only screen and (min-width: 1600px) {
+  .profile-container {
+    width: 99%;
+
+    // left: 20px;
+    // padding-left: 120px;
+  }
+
+  .right-col {
+    left: 35px;
+  }
+
+  .profile-item ion-input{
+    width:95%;
+  }
+
+  ion-card {
+    width: 106%;
+    height: auto;
+  }
+
+  ion-button {
+    width: 95%;
+  }
+}
+
+/* ================== Laptop (1280px – 1599px) ================== */
+@media only screen and (max-width: 1599px) and (min-width: 1280px) {
+  .profile-container {
+    width: 99%;
+
+    // padding-left: 140px;
+  }
+
+  ion-card {
+    width: 108%;
+    
+    height: 780px;
+  }
+
+  .profile-item ion-input {
+    width: 91%;
+  }
+
+  ion-button {
+    width: 100%;
+    min-width: 400px;
+    top: 60px;
+  }
+}
+
+// /* ================== Tablet (768px – 1279px) ================== */
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  .profile-container {
+    width: 99.5%;
+  }
+
+  ion-card {
+    width: 100%;
+    height: 780px;
+
+    // right: 0;
+    // top: 60px;
+  }
+  .title-container {
+    margin-left: 50;
+  }
+
+  ion-grid {
+    display: block;
+  }
+
+  .right-col {
+  }
+
+  .profile-item ion-input {
+    width: 81%;
+  }
+
+  ion-button {
+    width: 100%;
+    min-width: 400px;
+    top: 60px;
+  }
+}
+// @media only screen and (max-width: 1024px) and (min-width: 820px) {
+//   .profile-container {
+//     width: 99.5%;
+//   }
+
+//   ion-card {
+//     width: 65%;
+//     min-width: 300px;
+//     height: 780px;
+
+//     // right: 0;
+//     // top: 60px;
+//   }
+//   .title-container {
+//     margin-left: 50;
+//   }
+
+//   ion-grid {
+//     display: block;
+//   }
+
+//   .right-col {
+//   }
+
+//   .profile-item ion-input {
+//     width: 81%;
+//   }
+
+//   ion-button {
+//     width: 100%;
+//     min-width: 300px;
+//     top: 60px;
+//   }
 // }
 
-// .title-container div {
-//   position: relative;
-//   font-family: "Urbanist", sans-serif;
-//   font-weight: 500;
-//   top: 10px;
-//   left: 16px;
-//   font-size: 16px;
+/* ================== Mobile (below 768px) ================== */
+// @media only screen and (max-width: 767px) {
+//   .profile-container {
+//     width:99%;
+//     padding-left: 20px;
+//     border-radius: 0;
+//   }
+
+//   ion-card {
+//     width: 106%;
+//     top: 40px;
+//     right: 0;
+//     padding: 20px;
+//   }
+
+//   .title-container {
+//     right: 0;
+//     margin: 0 auto;
+//   }
+
+//   ion-grid {
+//     display: block;
+//   }
+
+//   .right-col {
+//     left: 0;
+//   }
+
+//   .profile-item ion-input {
+//     width: 99%;
+//   }
+
+//   ion-button {
+//     width: 100%;
+//     left: 0;
+//   }
 // }
+@media only screen and (max-width: 767px) {
+  /* Outer container */
+  .profile-container {
+    width: 100%;
+    height: 1300px;
+    padding: 10px;
+    background: #f2f2f2;
+  }
 
-// /* CARD */
-// ion-card {
-//   width: 100%;
-//   max-width: 880px;
-//   min-height: 785px;
+  /* Card */
+  ion-card {
+    min-width: 390px;
+    height: 1050px;
+    margin: 0;
+    padding: 16px;
+    border-radius: 12px;
+    top: 30px;
+    right: 0;
+  }
 
-//   position: relative;
-//   top: 98px;
-//   right: 0;
+  /* Top button (My profile) */
+  .title-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    right: 0;
+  }
 
-//   margin: -60px auto 24px;
-//   background: #ffffff;
-//   border-radius: 12px;
+  /* Heading */
+  .form-head {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
 
-//   padding: 24px 32px;
-//   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  /* 🔥 GRID → SINGLE COLUMN */
+  ion-grid {
+    display: block;
+  }
 
-//   box-sizing: border-box;
-// }
+  ion-row {
+    display: block;
+  }
 
-// .form-head {
-//   position: relative;
-//   top: 17px;
-//   font-weight: 900;
-//   margin-bottom: 50px;
-//   padding-bottom: 8px;
-//   border-bottom: 1px solid #E5E3DC;
-// }
+  ion-col {
+    width: 100%;
+    padding: 0;
+  }
 
-// /* GRID */
-// ion-grid {
-//   position: relative;
-//   top: 10px;
-//   width: 100%;
-//   row-gap: 20px;
-// }
+  /* Remove right side shift */
+  .right-col {
+    left: 0;
+    margin-top: 10px;
+  }
 
-// .right-col {
-//   position: relative;
-//   left: 0;
-// }
+  /* Form fields */
+  .profile-item {
+    margin-bottom: 12px;
+  }
 
-// /* PROFILE ITEM */
-// .profile-item {
-//   --background: transparent;
-//   --inner-padding-end: 0;
-//   --inner-padding-start: 0;
-//   --padding-start: 0;
-//   --padding-end: 0;
-//   margin-bottom: 14px;
-// }
+  .profile-item ion-label {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
 
-// .profile-item ion-label {
-//   font-size: 18px;
-//   font-family: "Space Grotesk", sans-serif;
-//   font-weight: 500;
-//   color: #8a8a8a;
-//   margin-bottom: 6px;
-// }
+  .profile-item ion-input {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+  }
 
-// .profile-item ion-input {
-//   background: #f5f6f8;
-//   border-radius: 8px;
-//   padding: 12px 14px;
+  /* Button */
+  ion-button {
+    width: 100%;
+    min-width: 320px;
+    height: 48px;
+    margin-top: 16px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
 
-//   width: 100%;
-//   max-width: 372px;
-//   height: 50px;
-
-//   margin-bottom: 9px;
-//   line-height: 150%;
-//   font-size: 16px;
-//   color: #333;
-
-//   --placeholder-color: #aaa;
-// }
-
-// /* REMOVE DEFAULT BORDER */
-// ion-item::part(native) {
-//   border: none;
-// }
-
-// /* MAIN CONTAINER */
-// .profile-container {
-//   background: #F2F2F2;
-//   width: 100%;
-//   max-width: 910px;
-//   min-height: 885px;
-
-//   position: relative;
-//   top: 10px;
-//   right: 0;
-
-//   border-radius: 14px;
-
-//   padding-left: 100px;
-//   padding-right: 20px;
-//   padding-bottom: 20px;
-
-//   margin: auto;
-//   box-sizing: border-box;
-// }
-
-// /* BUTTON */
-// ion-button {
-//   height: 52px;
-//   width: 100%;
-//   max-width: 790px;
-
-//   border-radius: 12px;
-//   position: relative;
-//   left: 0;
-//   top: 15px;
-
-//   text-transform: none;
-//   background-color: #4F8CFF;
-//   color: #ffffff;
-
-//   font-family: 'Space Grotesk', sans-serif;
-//   font-size: 18px;
-//   line-height: 145%;
-//   letter-spacing: 0px;
-//   text-align: center;
-
-//   margin: 20px auto 0 auto;
-//   display: block;
-// }
-
-// ion-content {
-//  --padding-start:0;
-//  --padding-end:0;
-//  --background: #0F172A;
-// }
-
-// .danger{
-//   color:red;
-// }
-
-// /* ===================== */
-// /* TABLET RESPONSIVE */
-// /* ===================== */
-
-// @media (max-width:768px){
-
-// .profile-container{
-//   padding-left:40px;
-// }
-
-// .profile-item ion-input{
-//   max-width:100%;
-// }
-
-// ion-card{
-//   padding:20px;
-// }
-
-// }
-
-// /* ===================== */
-// /* MOBILE RESPONSIVE */
-// /* ===================== */
-
-// @media (max-width:480px){
-
-// .profile-container{
-//   padding-left:20px;
-// }
-
-// .title-container{
-//   width:100px;
-// }
-
-// .profile-item ion-label{
-//   font-size:16px;
-// }
-
-// ion-button{
-//   font-size:16px;
-// }
-
-// }
-
-
+  /* Remove extra spacing issue */
+  body {
+    overflow-x: hidden;
+  }
+}

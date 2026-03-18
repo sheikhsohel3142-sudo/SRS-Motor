@@ -6,69 +6,6 @@
       </div>
       <ion-card class="local-information">
         <h2 class="form-head">Local Information</h2>
-        <!-- <form action="">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="6">
-            <ion-list lines="none">
-              <ion-item class="profile-item">
-                <ion-label position="stacked">Name</ion-label>
-                <ion-input value="Ripleu Transports"></ion-input>
-              </ion-item>
-
-              <ion-item class="profile-item">
-                <ion-label position="stacked">Registered Address</ion-label>
-                <ion-input value="Main Street"></ion-input>
-              </ion-item>
-
-              <ion-item class="profile-item">
-                <ion-label position="stacked">Email</ion-label>
-                <ion-input value="ripleuenterprises@gmail.com"></ion-input>
-              </ion-item>
-
-              <ion-item class="profile-item">
-                <ion-label position="stacked">Bank Account Details</ion-label>
-                <ion-input value="ripleuenterprises@gmail.com"></ion-input>
-              </ion-item>
-
-              <ion-item class="profile-item">
-                <ion-label position="stacked">Currency</ion-label>
-                <ion-input value="INR"></ion-input>
-              </ion-item>
-            </ion-list>
-          </ion-col>
-
-          <ion-col size="6">
-            <ion-list lines="none">
-              <ion-item class="profile-item">
-                <ion-label position="stacked">Contact Phone Number</ion-label>
-                <ion-input value="96293 75867"></ion-input>
-              </ion-item>
-
-              <ion-item class="profile-item">
-                <ion-label position="stacked">Primary Contact Name</ion-label>
-                <ion-input value="349 086"></ion-input>
-              </ion-item>
-
-              <ion-item class="profile-item">
-                <ion-label position="stacked">Tax/GST Number</ion-label>
-                <ion-input value="45374154791"></ion-input>
-              </ion-item>
-
-              <ion-item class="profile-item">
-                <ion-label position="stacked">Time Zone</ion-label>
-                <ion-input value="349 086"></ion-input>
-              </ion-item>
-
-              <ion-item class="profile-item">
-                <ion-label position="stacked">Postal Code</ion-label>
-                <ion-input value="349 086"></ion-input>
-              </ion-item>
-            </ion-list>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </form> -->
 
         <form [formGroup]="profileForm" (ngSubmit)="submitForm()">
           <ion-grid>
@@ -89,12 +26,6 @@
                     </ion-label>
                     <ion-input formControlName="name"></ion-input>
                   </ion-item>
-                  <!-- <ion-text
-                    color="danger"
-                    *ngIf="profileForm.get('name')?.touched && profileForm.get('name')?.errors"
-                  >
-                    Name is required
-                  </ion-text> -->
 
                   <!-- Address -->
                   <ion-item class="profile-item">
@@ -109,12 +40,6 @@
                     </ion-label>
                     <ion-input formControlName="address"></ion-input>
                   </ion-item>
-                  <!-- <ion-text
-                    color="danger"
-                    *ngIf="profileForm.get('address')?.touched && profileForm.get('address')?.errors"
-                  >
-                    Address is required
-                  </ion-text> -->
 
                   <!-- Email -->
                   <ion-item class="profile-item">
@@ -136,17 +61,6 @@
                     </ion-label>
                     <ion-input type="email" formControlName="email"></ion-input>
                   </ion-item>
-                  <!-- <ion-text
-                    color="danger"
-                    *ngIf="profileForm.get('email')?.touched && profileForm.get('email')?.errors"
-                  >
-                    <span *ngIf="profileForm.get('email')?.errors?.['required']"
-                      >Email is required</span
-                    >
-                    <span *ngIf="profileForm.get('email')?.errors?.['email']"
-                      >Invalid email format</span
-                    >
-                  </ion-text> -->
 
                   <!-- Bank Details -->
                   <ion-item class="profile-item">
@@ -181,12 +95,6 @@
                     </ion-label>
                     <ion-input formControlName="currency"></ion-input>
                   </ion-item>
-                  <!-- <ion-text
-                    color="danger"
-                    *ngIf="profileForm.get('currency')?.touched && profileForm.get('currency')?.errors"
-                  >
-                    Currency is required
-                  </ion-text> -->
                 </ion-list>
               </ion-col>
 
@@ -206,12 +114,6 @@
                     </ion-label>
                     <ion-input type="tel" formControlName="phone"></ion-input>
                   </ion-item>
-                  <!-- <ion-text
-                    color="danger"
-                    *ngIf="profileForm.get('phone')?.touched && profileForm.get('phone')?.errors"
-                  >
-                    Enter valid 10 digit phone number
-                  </ion-text> -->
 
                   <!-- Primary Contact -->
                   <ion-item class="profile-item">
@@ -226,12 +128,6 @@
                     </ion-label>
                     <ion-input formControlName="primaryContact"></ion-input>
                   </ion-item>
-                  <!-- <ion-text
-                    color="danger"
-                    *ngIf="profileForm.get('primaryContact')?.touched && profileForm.get('primaryContact')?.errors"
-                  >
-                    Primary contact is required
-                  </ion-text> -->
 
                   <!-- GST -->
                   <ion-item class="profile-item">
@@ -246,12 +142,6 @@
                     </ion-label>
                     <ion-input formControlName="gst"></ion-input>
                   </ion-item>
-                  <!-- <ion-text
-                    color="danger"
-                    *ngIf="profileForm.get('gst')?.touched && profileForm.get('gst')?.errors"
-                  >
-                    GST number is required
-                  </ion-text> -->
 
                   <!-- Time Zone -->
                   <ion-item class="profile-item">
@@ -266,12 +156,6 @@
                     </ion-label>
                     <ion-input formControlName="timeZone"></ion-input>
                   </ion-item>
-                  <!-- <ion-text
-                    color="danger"
-                    *ngIf="profileForm.get('timeZone')?.touched && profileForm.get('timeZone')?.errors"
-                  >
-                    Time zone is required
-                  </ion-text> -->
 
                   <!-- Postal Code -->
                   <ion-item class="profile-item">
@@ -286,12 +170,6 @@
                     </ion-label>
                     <ion-input formControlName="postalCode"></ion-input>
                   </ion-item>
-                  <!-- <ion-text
-                    color="danger"
-                    *ngIf="profileForm.get('postalCode')?.touched && profileForm.get('postalCode')?.errors"
-                  >
-                    Enter valid 6 digit postal code
-                  </ion-text> -->
                 </ion-list>
               </ion-col>
             </ion-row>
