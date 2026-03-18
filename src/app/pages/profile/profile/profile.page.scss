@@ -27,7 +27,7 @@
 ion-card {
   // border: 2px solid black;
   width: 100%;
-  min-width: 880px;
+  min-width: 480px;
   // height: 785px;
   height: auto;
   position: relative;
@@ -103,8 +103,8 @@ ion-grid {
   background: #f5f6f8;
   border-radius: 8px;
   padding: 12px 14px;
-  width: 100%;
-  min-width: 372px;
+  // width: 100%;
+  // min-width: 372px;
   height: 50px;
   margin-bottom: 9px;
   line-height: 150%;
@@ -248,7 +248,7 @@ ion-content {
   }
 
   ion-card {
-    width: 100%;
+    width: 109%;
     height: 780px;
 
     // right: 0;
@@ -266,7 +266,7 @@ ion-content {
   }
 
   .profile-item ion-input {
-    width: 81%;
+    width: 91%;
   }
 
   ion-button {
