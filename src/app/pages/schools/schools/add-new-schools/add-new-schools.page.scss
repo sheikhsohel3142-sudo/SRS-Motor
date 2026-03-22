@@ -1,7 +1,4 @@
 ion-content {
-  --padding-start: 100px;
-  --padding-end: 100px;
-  width: 100%;
   --background: #0f172a;
 }
 
@@ -13,15 +10,16 @@ ion-content {
   position: relative;
   top: 10px;
 
-  right: 100px;
+  // right: 100px;
   border-radius: 14px;
   padding-left: 100px;
 }
 
 ion-card {
   // border: 2px solid black;
-  // width: 880px;
-  height: 1258px;
+  // width: 100%;
+  // min-width: 880px;
+  height: 1058px;
   position: relative;
   top: 90px;
   right: 80px;
@@ -56,7 +54,8 @@ ion-card {
   background: #f5f6f8;
   border-radius: 8px;
   padding: 12px 14px;
-  width: 372px;
+  // width: 100%;
+  // min-width: 372px;
   height: 50px;
   margin-top: 10px;
   margin-bottom: 19px;
@@ -76,10 +75,9 @@ ion-card {
   }
   --highlight-height: 0; /* red underline remove */
   --border-width: 0;
-
 }
 .add-new-schools ion-label {
-  font-size: 19px;
+  font-size: 14px;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   color: #8a8a8a;
@@ -87,7 +85,8 @@ ion-card {
 }
 ion-button {
   height: 52px;
-  width: 770px;
+  width: 100%;
+  min-width: 770px;
   border-radius: 12px;
   position: relative;
   left: -1px;
@@ -122,11 +121,10 @@ ion-button {
     left: 25px;
     font-style: 16px;
     cursor: pointer;
-    P{
+    P {
       position: relative;
-      bottom:21px;
+      bottom: 21px;
       left: 25px;
-      
     }
   }
 }
@@ -142,12 +140,12 @@ ion-icon {
 .input {
   background: #f5f6f8;
   border-radius: 8px;
-  width: 372px;
+  // max-width: 372px;
   height: 50px;
   margin-top: 10px;
   margin-bottom: 19px;
   font-size: 16px;
-  margin-left: 20px;
+  // margin-left: 20px;
 
   display: flex;
   align-items: center; // vertical center
@@ -185,45 +183,57 @@ ion-icon {
   }
 }
 
-
 @media only screen and (min-width: 1600px) {
   .add-new-schools {
-    width: 110%;
+    width: 99%;
 
     // left: 20px;
     // padding-left: 120px;
   }
 
-  .right-col {
-    left: 35px;
+  .right-side {
+    
+    left: 30px
   }
-
-  .add-new-schools ion-input{
-    width:95%;
+  .input {
+    width: 91%;
+  }
+  .add-new-schools ion-input {
+    width: 91%;
   }
 
   ion-card {
-    width: 106%;
-    height: 1000px;;
+    width: 105%;
+    height: 1050px;
   }
 
   ion-button {
-    width: 95%;
+    width: 100%;
+    min-width: 400px;
+    top: 60px;
   }
 }
 
 /* ================== Laptop (1280px – 1599px) ================== */
 @media only screen and (max-width: 1599px) and (min-width: 1280px) {
   .add-new-schools {
-    width: 110%;
+    width: 99%;
 
     // padding-left: 140px;
   }
+  .input {
+    width: 91%;
+  }
+
+  .right-side {
+    
+    left: 30px
+  }
 
   ion-card {
-    width: 108%;
-    
-    height: 1000px;
+    width: 107%;
+
+    height: 1050px;
   }
 
   .add-new-schools ion-input {
@@ -240,12 +250,20 @@ ion-icon {
 // /* ================== Tablet (768px – 1279px) ================== */
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
   .add-new-schools {
-    width: 116%;
+    width: 99%;
+  }
+  .input {
+    width: 91%;
+  }
+
+  .right-side {
+    
+    left: 30px
   }
 
   ion-card {
-    width: 109%;
-    height: 1000px;
+    width: 108%;
+    height: 1050px;
 
     // right: 0;
     // top: 60px;
@@ -271,14 +289,22 @@ ion-icon {
     top: 60px;
   }
 }
-@media only screen and (max-width: 1024px) and (min-width: 995px) {
+@media only screen and (max-width: 1024px) and (min-width: 900px) {
   .add-new-schools {
-    width: 100%;
+    width: 99.5%;
+  }
+  .input {
+    width: 91%;
+  }
+
+  .right-side {
+    
+    left: 30px
   }
 
   ion-card {
-    width: 111%;
-    height: 1000px;
+    width: 107%;
+    height: 1050px;
 
     // right: 0;
     // top: 60px;
@@ -307,17 +333,21 @@ ion-icon {
 @media only screen and (max-width: 767px) {
   /* Outer container */
   .add-new-schools {
-    width: 100%;
-    height: 1300px;
-    padding: 10px;
+    width: 99%;
+    height: 1550px;
+    // padding: 10px;
     background: #f2f2f2;
+    padding: 8px 10px;
+  }
+  .input {
+    width: 91%;
   }
 
   /* Card */
   ion-card {
     min-width: 300px;
-    height: 1550px;
-    margin: 0;
+    height: 1400px;
+    margin: 5px;
     padding: 16px;
     border-radius: 12px;
     top: 30px;
@@ -345,6 +375,7 @@ ion-icon {
 
   ion-row {
     display: block;
+    
   }
 
   ion-col {
@@ -369,7 +400,8 @@ ion-icon {
   }
 
   .add-new-schools ion-input {
-    width: 100%;
+    width: 91%;
+    // min-width: 31%;
     height: 44px;
     font-size: 14px;
     padding: 10px;
@@ -379,12 +411,11 @@ ion-icon {
   /* Button */
   ion-button {
     width: 100%;
-    min-width: 320px;
+    min-width: 300px;
     height: 48px;
     margin-top: 16px;
     border-radius: 10px;
     font-size: 15px;
-    margin-right: 70px;
   }
 
   /* Remove extra spacing issue */
@@ -393,4 +424,55 @@ ion-icon {
   }
 }
 
+// @media only screen and (max-width: 767px) {
 
+//   /* Outer container */
+//   .add-new-schools {
+//     padding: 8px 10px;
+//   }
+
+//   /* Card */
+//   ion-card {
+//     width: 100%;
+//     padding: 12px;
+//     margin: 0;
+//   }
+
+//   /* 🔥 Remove grid spacing */
+//   ion-grid {
+//     padding: 0 !important;
+//   }
+
+//   ion-row {
+//     margin: 0 !important;
+//   }
+
+//   ion-col {
+//     padding: 0 !important;
+//     margin: 0 !important;
+//   }
+
+//   /* Labels */
+//   .add-new-schools label,
+//   ion-label {
+//     display: block;
+//     margin-left: 0;
+//     padding-left: 0;
+//   }
+
+//   /* Inputs */
+//   .add-new-schools input,
+//   .add-new-schools ion-input {
+//     width: 100%;
+//     margin-left: 0;
+//     padding-left: 10px; /* thoda inner spacing */
+//     box-sizing: border-box;
+//   }
+
+//   /* Title */
+//   .title-container {
+//     margin-left: 0;
+//     padding-left: 0;
+//   }
+
+// }
