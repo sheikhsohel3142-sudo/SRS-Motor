@@ -346,7 +346,7 @@ ion-icon {
   /* Card */
   ion-card {
     min-width: 300px;
-    height: 1400px;
+    height: auto;
     margin: 5px;
     padding: 16px;
     border-radius: 12px;
@@ -401,7 +401,7 @@ ion-icon {
 
   .add-new-schools ion-input {
     width: 91%;
-    // min-width: 31%;
+    min-width: 31%;
     height: 44px;
     font-size: 14px;
     padding: 10px;
@@ -411,7 +411,7 @@ ion-icon {
   /* Button */
   ion-button {
     width: 100%;
-    min-width: 100px;
+    min-width: 200px;
     height: 48px;
     margin-top: 16px;
     border-radius: 10px;
