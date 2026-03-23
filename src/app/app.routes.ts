@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomePage } from './home/home.page';
 import { SidebarComponent } from './component/layout/sidebar/sidebar.component';
-import { SchoolsPage } from './pages/schools/schools/schools.page';
+
 
 export const routes: Routes = [
   // {
@@ -57,24 +57,28 @@ export const routes: Routes = [
     component: SidebarComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'profile',
+        pathMatch: 'full',
+      },
+      {
         path: 'profile',
         loadComponent: () =>
-          import('./pages/profile/profile/profile.page').then(
+          import('./pages/profile/profile.page').then(
             (m) => m.ProfilePage,
           ),
       },
-
       {
         path: 'schools',
         loadComponent: () =>
-          import('./pages/schools/schools/schools.page').then(
+          import('./pages/schools/schools.page').then(
             (m) => m.SchoolsPage,
           ),
       },
       {
         path: 'configration',
         loadComponent: () =>
-          import('./pages/configration/configration/configration.page').then(
+          import('./pages/configration/configration.page').then(
             (m) => m.ConfigrationPage,
           ),
       },
@@ -82,21 +86,21 @@ export const routes: Routes = [
       {
         path: 'schools/add-new-schools',
         loadComponent: () =>
-          import('./pages/schools/schools/add-new-schools/add-new-schools.page').then(
+          import('./pages/schools/add-new-schools/add-new-schools.page').then(
             (m) => m.AddNewSchoolsPage,
           ),
       },
       {
         path: 'schools/school-detail',
         loadComponent: () =>
-          import('./pages/schools/schools/school-detail/school-detail.page').then(
+          import('./pages/schools/school-detail/school-detail.page').then(
             (m) => m.SchoolDetailPage,
           ),
       },
       {
         path: 'schools/add-expense',
         loadComponent: () =>
-          import('./pages/schools/schools/add-expense/add-expense.page').then(
+          import('./pages/schools/add-expense/add-expense.page').then(
             (m) => m.AddExpensePage,
           ),
       },
@@ -143,7 +147,7 @@ export const routes: Routes = [
       {
         path: 'schools/add-advance',
         loadComponent: () =>
-          import('./pages/schools/schools/add-advance/add-advance.page').then(
+          import('./pages/schools/add-advance/add-advance.page').then(
             (m) => m.AddAdvancePage,
           ),
       },

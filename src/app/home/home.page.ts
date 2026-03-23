@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonRouterOutlet, IonButtons, IonButton, IonItem, IonIcon, IonLabel, IonMenu, IonSplitPane, IonApp, IonList } from '@ionic/angular/standalone';
 import { SidebarComponent } from "../component/layout/sidebar/sidebar.component";
-import { ProfilePage } from "../pages/profile/profile/profile.page";
+import { ProfilePage } from "../pages/profile/profile.page";
 import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({

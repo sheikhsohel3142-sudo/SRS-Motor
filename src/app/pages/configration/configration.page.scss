@@ -1,7 +1,4 @@
-ion-content {
-  --background: #0f172a;
- 
-}
+
 .root{
   height:1620px;
 }
@@ -35,7 +32,8 @@ ion-content {
   right: 10px;
   border-radius: 14px;
   padding-left: 100px;
-  overflow-x: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
   margin-bottom: 10px;
 }
 ion-card {

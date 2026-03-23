@@ -11,6 +11,9 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardHeader, Io
   imports: [IonContent, IonHeader,IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonGrid, IonRow, IonCol, IonLabel, IonItem, IonButton, IonInput, IonList, ReactiveFormsModule, NgIf, IonText]
 })
 export class ProfilePage implements OnInit {
+isInvalid(arg0: string): any {
+throw new Error('Method not implemented.');
+}
 
  profileForm!: FormGroup;
 

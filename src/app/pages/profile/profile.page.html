@@ -21,7 +21,7 @@
                       <span
                         class="danger"
                         *ngIf="profileForm.get('name')?.touched && profileForm.get('name')?.errors"
-                        >*</span
+                        >Name is required</span
                       >
                     </ion-label>
                     <ion-input formControlName="name"></ion-input>
@@ -35,7 +35,7 @@
                         class="danger"
                         *ngIf="profileForm.get('address')?.touched && profileForm.get('address')?.errors"
                       >
-                        *
+                        Address is required
                       </span>
                     </ion-label>
                     <ion-input formControlName="address"></ion-input>
@@ -51,11 +51,11 @@
                       >
                         <span
                           *ngIf="profileForm.get('email')?.errors?.['required']"
-                          >*</span
+                          >Email is required</span
                         >
                         <span
                           *ngIf="profileForm.get('email')?.errors?.['email']"
-                          >*</span
+                          >Please enter a valid email address</span
                         >
                       </span>
                     </ion-label>
@@ -70,7 +70,7 @@
                         class="danger"
                         *ngIf="profileForm.get('bankDetails')?.touched && profileForm.get('bankDetails')?.errors"
                       >
-                        *
+                        Bank details are required
                       </span>
                     </ion-label>
                     <ion-input formControlName="bankDetails"></ion-input>
@@ -90,7 +90,7 @@
                         class="danger"
                         *ngIf="profileForm.get('currency')?.touched && profileForm.get('currency')?.errors"
                       >
-                        *
+                        Please select currency
                       </span>
                     </ion-label>
                     <ion-input formControlName="currency"></ion-input>
@@ -109,9 +109,8 @@
                         class="danger"
                         *ngIf="profileForm.get('phone')?.touched && profileForm.get('phone')?.errors"
                       >
-                        *
-                      </span>
-                    </ion-label>
+                        Enter a valid phone number
+                      </span>                    </ion-label>
                     <ion-input type="tel" formControlName="phone"></ion-input>
                   </ion-item>
 
@@ -123,7 +122,7 @@
                         class="danger"
                         *ngIf="profileForm.get('primaryContact')?.touched && profileForm.get('primaryContact')?.errors"
                       >
-                        *
+                       Enter a valid phone number
                       </span>
                     </ion-label>
                     <ion-input formControlName="primaryContact"></ion-input>
@@ -137,7 +136,7 @@
                         class="danger"
                         *ngIf="profileForm.get('gst')?.touched && profileForm.get('gst')?.errors"
                       >
-                        *
+                        Please enter a valid GST number
                       </span>
                     </ion-label>
                     <ion-input formControlName="gst"></ion-input>
@@ -151,7 +150,7 @@
                         class="danger"
                         *ngIf="profileForm.get('timeZone')?.touched && profileForm.get('timeZone')?.errors"
                       >
-                        *
+                        Please select a time zone
                       </span>
                     </ion-label>
                     <ion-input formControlName="timeZone"></ion-input>
@@ -165,7 +164,7 @@
                         class="danger"
                         *ngIf="profileForm.get('postalCode')?.touched && profileForm.get('postalCode')?.errors"
                       >
-                        *
+                        Please enter a valid 6-digit postal code
                       </span>
                     </ion-label>
                     <ion-input formControlName="postalCode"></ion-input>

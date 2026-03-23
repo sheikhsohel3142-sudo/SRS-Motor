@@ -1,6 +1,4 @@
-ion-content {
-  --background: #0f172a;
-}
+
 
 .add-new-schools {
   background: #f2f2f2;
@@ -371,11 +369,12 @@ ion-icon {
   /* 🔥 GRID → SINGLE COLUMN */
   ion-grid {
     display: block;
+    
   }
 
   ion-row {
     display: block;
-    
+    left: 20px;
   }
 
   ion-col {
@@ -423,56 +422,3 @@ ion-icon {
     overflow-x: hidden;
   }
 }
-
-// @media only screen and (max-width: 767px) {
-
-//   /* Outer container */
-//   .add-new-schools {
-//     padding: 8px 10px;
-//   }
-
-//   /* Card */
-//   ion-card {
-//     width: 100%;
-//     padding: 12px;
-//     margin: 0;
-//   }
-
-//   /* 🔥 Remove grid spacing */
-//   ion-grid {
-//     padding: 0 !important;
-//   }
-
-//   ion-row {
-//     margin: 0 !important;
-//   }
-
-//   ion-col {
-//     padding: 0 !important;
-//     margin: 0 !important;
-//   }
-
-//   /* Labels */
-//   .add-new-schools label,
-//   ion-label {
-//     display: block;
-//     margin-left: 0;
-//     padding-left: 0;
-//   }
-
-//   /* Inputs */
-//   .add-new-schools input,
-//   .add-new-schools ion-input {
-//     width: 100%;
-//     margin-left: 0;
-//     padding-left: 10px; /* thoda inner spacing */
-//     box-sizing: border-box;
-//   }
-
-//   /* Title */
-//   .title-container {
-//     margin-left: 0;
-//     padding-left: 0;
-//   }
-
-// }

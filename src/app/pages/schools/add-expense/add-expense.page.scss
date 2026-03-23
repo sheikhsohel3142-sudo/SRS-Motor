@@ -1,6 +1,4 @@
-Ion-content{
-    --background: #0f172a;
-}
+
 .title-container {
   position: relative;
   top: 20px;
@@ -30,8 +28,7 @@ Ion-content{
     }
   }
 }
-
-.add-advance{
+.add-new-bus-container {
   background: #f2f2f2;
   width: 910px;
   height: 880px;
@@ -46,10 +43,15 @@ Ion-content{
   overflow-x: hidden;
   margin-bottom: 10px;
 }
+.align-right-field{
+  position: relative;
+  left: 40px;
+}
+
 ion-card {
   // border: 2px solid black;
   width: 880px;
-  height: 450px;
+  height: 621px;
   position: relative;
   top: 100px;
   right: 80px;
@@ -68,7 +70,7 @@ ion-card {
     }
   }
 }
-.add-advance ion-input {
+.add-new-bus-container ion-input {
   background: #f5f6f8;
   border-radius: 8px;
   padding: 12px 14px;
@@ -95,13 +97,14 @@ ion-card {
 }
 ion-button {
   height: 52px;
-  width: 740px;
+  width: 800px;
   border-radius: 12px;
   position: relative;
-  left: 33px;
-  top: 80px;
+  left: 12px;
+  top: 100px;
   text-transform: none;
   background-color: #4f8cff;
+  color: #ffffff;
 
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
