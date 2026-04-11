@@ -16,7 +16,15 @@
             <ion-row>
               <!-- Driver Name -->
               <ion-col size="12" size-md="6">
-                <ion-label>Driver Name</ion-label>
+                <ion-label
+                  >Driver Name
+                  <ion-text
+                    color="danger"
+                    *ngIf="driverForm.get('driverName')?.touched && driverForm.get('driverName')?.errors"
+                  >
+                    Driver Name is required
+                  </ion-text>
+                </ion-label>
                 <ion-input
                   formControlName="driverName"
                   placeholder="Eg: Michael"
@@ -25,7 +33,15 @@
 
               <!-- Phone Number -->
               <ion-col size="12" size-md="6" class="align-right-field">
-                <ion-label>Phone Number</ion-label>
+                <ion-label
+                  >Phone Number
+                  <ion-text
+                    color="danger"
+                    *ngIf="driverForm.get('phoneNumber')?.touched && driverForm.get('phoneNumber')?.errors"
+                  >
+                    Phone Number is required
+                  </ion-text>
+                </ion-label>
                 <ion-input
                   type="tel"
                   formControlName="phoneNumber"
@@ -35,7 +51,15 @@
 
               <!-- Emergency Contact -->
               <ion-col size="12" size-md="6">
-                <ion-label>Emergency Contact</ion-label>
+                <ion-label
+                  >Emergency Contact
+                  <ion-text
+                    color="danger"
+                    *ngIf="driverForm.get('emergencyContact')?.touched && driverForm.get('emergencyContact')?.errors"
+                  >
+                    Emergency Contact is required
+                  </ion-text>
+                </ion-label>
                 <ion-input
                   type="tel"
                   formControlName="emergencyContact"
@@ -45,7 +69,15 @@
 
               <!-- Address -->
               <ion-col size="12" size-md="6" class="align-right-field">
-                <ion-label>Address</ion-label>
+                <ion-label
+                  >Address
+                  <ion-text
+                    color="danger"
+                    *ngIf="driverForm.get('address')?.touched && driverForm.get('address')?.errors"
+                  >
+                    Address is required
+                  </ion-text>
+                </ion-label>
                 <ion-input
                   formControlName="address"
                   placeholder="Eg: No 389, New York..."
@@ -53,12 +85,20 @@
               </ion-col>
 
               <!-- Driving License -->
-        
+
               <ion-col size="12" size-md="6">
                 <!-- <ion-label>Driving License</ion-label> -->
 
                 <div class="upload-container">
-                  <label class="upload-label">Driving License</label>
+                  <label class="upload-label"
+                    >Driving License
+                    <ion-text
+                      color="danger"
+                      *ngIf="driverForm.get('license')?.touched && !selectedFiles['license']?.length"
+                    >
+                      Driving License is required
+                    </ion-text>
+                  </label>
 
                   <div class="upload-box">
                     <input
@@ -100,13 +140,19 @@
                   </div>
                 </div>
               </ion-col>
-    
-          
 
               <!-- Aadhaar -->
               <ion-col size="12" size-md="6" class="align-right-field">
                 <div class="upload-container">
-                  <label class="upload-label">Aadhaar / ID Proof</label>
+                  <label class="upload-label"
+                    >Aadhaar / ID Proof
+                    <ion-text
+                      color="danger"
+                      *ngIf="driverForm.get('aadhaar')?.touched && !selectedFiles['aadhaar']?.length"
+                    >
+                      Aadhaar / ID Proof is required
+                    </ion-text>
+                  </label>
 
                   <div class="upload-box">
                     <input
@@ -154,7 +200,15 @@
                 <!-- <ion-label>Police Verification</ion-label> -->
 
                 <div class="upload-container">
-                  <label class="upload-label">Police Verification</label>
+                  <label class="upload-label"
+                    >Police Verification
+                    <ion-text
+                      color="danger"
+                      *ngIf="driverForm.get('policeVerification')?.touched && !selectedFiles['policeVerification']?.length"
+                    >
+                      Police Verification is required
+                    </ion-text>
+                  </label>
 
                   <div class="upload-box">
                     <input
@@ -201,8 +255,15 @@
               <ion-col size="12" size-md="6" class="align-right-field">
                 <!-- <ion-label>Medical Certificate</ion-label> -->
                 <div class="upload-container">
-               
-                  <label class="upload-label">Medical Certificate</label>
+                  <label class="upload-label"
+                    >Medical Certificate
+                    <ion-text
+                      color="danger"
+                      *ngIf="driverForm.get('medicalCertificate')?.touched && !selectedFiles['medicalCertificate']?.length"
+                    >
+                      Medical Certificate is required
+                    </ion-text>
+                  </label>
 
                   <div class="upload-box">
                     <input
@@ -242,14 +303,21 @@
                       <ion-icon name="add-circle-outline"></ion-icon>
                     </div>
                   </div>
-                  </div>
-             
+                </div>
               </ion-col>
 
               <!-- Date of Joining -->
               <ion-col size="12" size-md="6">
                 <div class="file-container">
-                  <ion-label>Date of Joining</ion-label>
+                  <ion-label
+                    >Date of Joining
+                    <ion-text
+                      color="danger"
+                      *ngIf="driverForm.get('dateOfJoining')?.touched && driverForm.get('dateOfJoining')?.errors"
+                    >
+                      Date of Joining is required
+                    </ion-text>
+                  </ion-label>
                   <ion-input
                     type="date"
                     formControlName="dateOfJoining"
@@ -260,7 +328,15 @@
               <!-- Employment Type -->
               <ion-col size="12" size-md="6" class="align-right-field">
                 <div class="file-container">
-                  <ion-label>Employment Type</ion-label>
+                  <ion-label
+                    >Employment Type
+                    <ion-text
+                      color="danger"
+                      *ngIf="driverForm.get('employmentType')?.touched && driverForm.get('employmentType')?.errors"
+                    >
+                      Employment Type is required
+                    </ion-text>
+                  </ion-label>
 
                   <div class="input">
                     <ion-select
@@ -313,7 +389,16 @@
 
               <!-- Monthly Salary -->
               <ion-col size="12" size-md="6">
-                <ion-label>Monthly Salary</ion-label>
+                <ion-label
+                  >Monthly Salary
+
+                  <ion-text
+                    color="danger"
+                    *ngIf="driverForm.get('monthlySalary')?.touched && driverForm.get('monthlySalary')?.errors"
+                  >
+                    Monthly Salary is required
+                  </ion-text>
+                </ion-label>
                 <!-- <ion-input
                 type="number"
                 formControlName="monthlySalary"
@@ -342,6 +427,6 @@
           </ion-button>
         </form>
       </ion-card>
-      </div>
+    </div>
   </div>
 </ion-content>

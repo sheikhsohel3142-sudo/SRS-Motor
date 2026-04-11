@@ -1,45 +1,42 @@
-
-
 <ion-content>
- <div class="profile-container">
+  <div class="profile-container">
     <div class="header">
       <div class="title-container">
         <div>Driver</div>
       </div>
-      <ion-button (click)="addNewSchool()"
-  fill="clear" fill="clear"><span>+</span> Add New Driver</ion-button>
-       
-   </div>
-   <div class="table-container">
-    <div class="head-container">
-   <div class="table-head-wrap">
-      <div class="table-head">
+      <ion-button (click)="addNewSchool()" fill="clear" fill="clear"
+        ><span>+</span> Add New Driver</ion-button
+      >
+    </div>
+    <div class="table-container">
+      <div class="head-container">
+        <!-- <div class="table-head-wrap">
+      <div class="table-head"> -->
         <span class="s-no">S.no</span>
         <span class="school-name">Driver Name</span>
         <span class="buses">Assigned Bus</span>
         <span class="A-route">Assigned Route</span>
-        <span class="advance">Outstanding <br>&nbsp;&nbsp;&nbsp;Advance</span>
+        <span class="advance">Outstanding <br />Advance</span>
         <span class="status">Status</span>
+        <!-- </div>
+      </div> -->
       </div>
-      </div>
-    </div>
 
-
-    <div class="table-card">
-      <div>
-        <div class="table-row" *ngFor="let s of schools; let i = index">
-          <span class="c-no">{{ i + 1 }}</span>
-          <span class="driver-name">{{ s.name }}</span>
-          <span class="buses-no">{{ s.buses }}</span>
-          <span class="route">{{s.route}}</span>
-          <span class="Advance-amount">{{ s.outstandingAdvance }}</span>
-          <span class="active">{{ s.status }}</span>
-          <span class="view" [routerLink]="['/admin/driver/driver-profile']">View ››</span>
-
+      <div class="table-card">
+        <div>
+          <div class="table-row" *ngFor="let s of schools; let i = index">
+            <span class="c-no">{{ i + 1 }}</span>
+            <span class="driver-name">{{ s.name }}</span>
+            <span class="buses-no">{{ s.buses }}</span>
+            <span class="route">{{s.route}}</span>
+            <span class="Advance-amount">{{ s.outstandingAdvance }}</span>
+            <span class="active">{{ s.status }}</span>
+            <span class="view" [routerLink]="['/admin/driver/driver-profile']"
+              >View ››</span
+            >
+          </div>
         </div>
       </div>
     </div>
-   
   </div>
-   </div>
 </ion-content>

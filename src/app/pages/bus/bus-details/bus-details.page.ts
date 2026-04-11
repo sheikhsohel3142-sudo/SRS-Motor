@@ -23,8 +23,7 @@ import {
   IonInput,
   IonItem,
   IonLabel,
-  IonTabButton,
-} from '@ionic/angular/standalone';
+  IonTabButton, IonText } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 
 @Component({
@@ -32,7 +31,7 @@ import { Router } from '@angular/router';
   templateUrl: './bus-details.page.html',
   styleUrls: ['./bus-details.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonText, 
     IonTabButton,
     IonLabel,
     IonItem,
@@ -157,6 +156,11 @@ export class BusDetailsPage implements OnInit {
     // private toastCtrl: ToastController
     private router: Router,
   ) {}
+
+  isInvalid(controlName: string) {
+  const control = this.busForm.get(controlName);
+  return control && control.invalid && (control.touched || control.dirty);
+}
 
   ngOnInit() {
     this.initForm();

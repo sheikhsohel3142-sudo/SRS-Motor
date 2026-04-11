@@ -1,4 +1,3 @@
-
 .title-container {
   position: relative;
   top: 20px;
@@ -17,28 +16,13 @@
     top: 10px;
     left: 16px;
     font-style: 16px;
-   
   }
-  ion-icon{
+  ion-icon {
     position: relative;
     right: 10px;
   }
 }
-ion-card {
-  // border: 2px solid black;
-  width: 880px;
-  height: 500px;
-  position: relative;
-  top: 98px;
-  right: 80px;
-  padding-top: 30%;
 
-  margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px 32px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-}
 .profile-container {
   background: #f2f2f2;
   width: 910px;
@@ -46,15 +30,14 @@ ion-card {
   position: relative;
   top: 10px;
 
-  
   border-radius: 14px;
   padding-left: 100px;
 }
 
 ion-button {
-  position: relative;
-  left: 610px;
-  bottom: 35px;
+  position: absolute;
+  right: 2%;
+  top: 2%;
   width: 205px;
   height: 44px;
   border-radius: 10px;
@@ -72,109 +55,137 @@ ion-button {
     right: 9px;
     color: #0f172a;
     border-radius: 3px;
-    p{
+    p {
       position: relative;
       bottom: 2px;
     }
-
   }
 }
 
-.table-head-wrap {
-  padding: 0 10px;
-  position: relative;
-  right: 70px;
-}
-.s-no{
-  position: relative;
-  right: -5px;
-}
-.school-name{
-  position: relative;
-  left: -4px;
-}
-.school{
-  position: relative;
-  right: 2px;
-}
-.buses{
-  position: relative;
-  left: -2px;
-}
-.A-route{
-  position: relative;
-  left: 26px;
-}
-.status{
-  position: relative;
-  left: 10px;
-}
-.advance{
-  position: relative;
-  left: 35px;
-}
+// .table-head-wrap {
+//   padding: 0 10px;
+//   position: relative;
+//   right: 70px;
+// }
+// .s-no {
+//   position: relative;
+//   right: -5px;
+// }
+// .school-name {
+//   position: relative;
+//   left: -4px;
+// }
+// .school {
+//   position: relative;
+//   right: 2px;
+// }
+// .buses {
+//   position: relative;
+//   left: -2px;
+// }
+// .A-route {
+//   position: relative;
+//   left: 26px;
+// }
+// .status {
+//   position: relative;
+//   left: 10px;
+// }
+// .advance {
+//   position: relative;
+//   left: 35px;
+// }
 .table-container {
-  width: 890px;
+  // width: 890px;
+  width: 100%;
   padding: 10px;
   border-radius: 12px;
-  
 
   position: relative;
   right: 86px;
+  top: 80px;
+  box-sizing: border-box;
 
   border: 1px solid #ffffff;
 }
-.head-container {
-  width: 870px;
-  border-radius: 12px;
-  height: 60px;
+// .head-container {
+//   width: 870px;
+//   border-radius: 12px;
+//   height: 60px;
 
-  border: 1px solid #ffffff;
-}
-.table-head {
-  // display: grid;
-  // grid-template-columns: 60px 1.5fr 80px 1fr 100px 80px;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 12px 0;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 145%;
-  letter-spacing: 0%;
-  color: #0F172A;
-  position: relative;
-  left: 20px;
-  white-space: wrap;
-}
+//   border: 1px solid #ffffff;
+// }
+// .table-head {
+//   // display: grid;
+//   // grid-template-columns: 60px 1.5fr 80px 1fr 100px 80px;
+//   display: flex;
+//   justify-content: space-evenly;
+//   padding: 12px 0;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 145%;
+//   letter-spacing: 0%;
+//   color: #0f172a;
+//   position: relative;
+//   left: 20px;
+//   white-space: wrap;
+// }
 
 /* CARD */
 .table-card {
   background-color: #ffffff;
   margin: 8px 16px 4px;
-  width: 870px;
+  width: 100%;
 
   position: relative;
   top: 5px;
   right: 18px;
-  padding-left: 20px;
-  padding-right: 10px;
+  // padding-left: 20px;
+  // padding-right: 10px;
   border-radius: 12px;
 }
 
 /* ROWS */
+// .table-row {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 12px 0;
+//   font-size: 16px;
+//   border-bottom: 1px solid #f5f2f2;
+//   font-family: "Space Grotesk", sans-serif;
+// }
+.special{
+  // border: 1px solid black;
+}
+.special3{
+  // border: 1px solid black;
+}
+
+.head-container,
 .table-row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  // grid-template-columns: 110px 1fr 1fr 0.5fr 0.5fr  0.5fr 295px;
+  grid-template-columns:
+    1fr /* S.no */
+    1.5fr /* Student Name */
+    1fr /* School */
+    1.8fr /* Assigned Bus */
+    2.5fr /* Assigned Route */
+    1.2fr /* Assigned Stop */
+    1fr /* Status */
+    0.7fr; /* View */
+
   align-items: center;
-  padding: 12px 0;
-  font-size: 16px;
-  border-bottom: 1px solid #f5f2f2;
-   font-family: "Space Grotesk", sans-serif;
+  padding: 12px 16px;
+  width: 100%;
 }
 
 .active {
-  position: relative;
-  left: 15px;
+  color: #16a34a;
+  font-weight: 500;
+  // position: relative;
+  // left: 35px;
 }
 
 .view {
@@ -182,27 +193,234 @@ ion-button {
   cursor: pointer;
   font-weight: 500;
 }
-.driver-name{
-  position: relative;
-  right: -42px;
+// .driver-name {
+//   position: relative;
+//   right: -42px;
+// }
+// .buses-no {
+//   position: relative;
+//   left: 70px;
+// }
+// .route {
+//   position: relative;
+//   left: 45px;
+// }
+// .c-no {
+//   position: relative;
+//   left: 12px;
+// }
+// .Advance-amount {
+//   position: relative;
+//   left: 35px;
+// }
+// .school-N {
+//   position: relative;
+//   left: 70px;
+// }
+
+@media only screen and (min-width: 1600px) {
+  .profile-container {
+    width: 99%;
+
+    // left: 20px;
+    // padding-left: 120px;
+  }
+
+  .table-card {
+    width: 100%;
+  }
+  .table-container {
+    width: 106%;
+  }
+  .head-container {
+    width: 100%;
+  }
+
+  // ion-button {
+  //   width: 100%;
+  //   min-width: 400px;
+  //   top: 60px;
+  // }
 }
-.buses-no{
-  position: relative;
-  left: 70px;
+@media only screen and (max-width: 1599px) and (min-width: 1280px) {
+  .profile-container {
+    width: 99%;
+
+    // left: 20px;
+    // padding-left: 120px;
+  }
+
+  .right-side {
+    // ion-input{
+    //   width: 81%;
+    // }
+  }
+  .input {
+    width: 81%;
+  }
+
+  .table-card {
+    width: 102%;
+  }
+  .table-container {
+    width: 108%;
+  }
+  .head-container {
+    width: 101%;
+  }
+  .table-head {
+    width: 101%;
+  }
 }
-.route{
-  position: relative;
-  left: 45px;
+
+// /* ================== Tablet (768px – 1279px) ================== */
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  .profile-container {
+    width: 99%;
+
+    // left: 20px;
+    // padding-left: 120px;
+  }
+
+  .right-side {
+    // ion-input{
+    //   width: 81%;
+    // }
+  }
+  .input {
+    width: 81%;
+  }
+
+  .table-card {
+    width: 101%;
+  }
+  .table-container {
+    width: 107%;
+  }
+  .head-container {
+    width: 101%;
+  }
+  .table-head {
+    width: 101%;
+  }
 }
-.c-no{
-  position: relative;
-  left: 12px;
+@media only screen and (max-width: 1024px) and (min-width: 900px) {
+  .profile-container {
+    width: 99%;
+
+    // left: 20px;
+    // padding-left: 120px;
+  }
+
+  .right-side {
+    // ion-input{
+    //   width: 81%;
+    // }
+  }
+  .input {
+    width: 81%;
+  }
+
+  .table-card {
+    width: 101%;
+  }
+  .table-container {
+    width: 107%;
+  }
+  .head-container {
+    width: 101%;
+  }
+  .table-head {
+    width: 101%;
+  }
 }
-.Advance-amount{
-  position: relative;
-  left: 35px;
-}
-.school-N{
-  position: relative;
-  left: 70px;
+
+// /* ================= MOBILE ================= */
+// /* MOBILE DESIGN */
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Title */
+  .title-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .title-container div {
+    left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* TABLE HEAD (Stylish) */
+  .table-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    padding: 8px 10px;
+    background: #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  /* CARD */
+  .table-card {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  /* ROW */
+  .table-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* EACH FIELD */
+  .table-row div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 6px 0;
+    border-bottom: 1px dashed #e5e7eb;
+  }
+
+  .table-row div:last-child {
+    border-bottom: none;
+  }
+
+  /* LABEL */
+  .table-row div::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6b7280;
+  }
+
+  /* STATUS */
+  .active {
+    color: #16a34a;
+    font-weight: 600;
+  }
+
+  /* VIEW BUTTON STYLE */
+  .view {
+    color: #2563eb;
+    font-weight: 600;
+  }
+
+  /* BUTTON FIX */
+  ion-button {
+    position: static;
+    width: 100%;
+    margin-bottom: 12px;
+  }
 }

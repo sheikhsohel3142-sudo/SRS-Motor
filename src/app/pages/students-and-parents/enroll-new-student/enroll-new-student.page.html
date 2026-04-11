@@ -1,5 +1,4 @@
 <ion-content mode="ios">
-  
   <div class="enroll-new-student-container">
     <div class="title-container">
       <div routerLink="/admin/students-and-parents">
@@ -16,7 +15,15 @@
           <!-- Row 1 -->
           <ion-row>
             <ion-col size="6">
-              <label>Student Name</label>
+              <ion-label
+                >Student Name
+                <ion-text
+                  color="danger"
+                  *ngIf="enrollForm.get('studentName')?.touched && enrollForm.get('studentName')?.invalid"
+                >
+                  Student name is required
+                </ion-text>
+              </ion-label>
               <ion-input
                 fill="outline"
                 formControlName="studentName"
@@ -25,7 +32,7 @@
             </ion-col>
 
             <ion-col size="6" class="align-right-field">
-              <label>Admission Number (optional)</label>
+              <ion-label>Admission Number (optional)</ion-label>
               <ion-input
                 fill="outline"
                 formControlName="admissionNumber"
@@ -37,7 +44,15 @@
           <!-- Row 2 -->
           <ion-row>
             <ion-col size="6">
-              <label>Grade / Class</label>
+              <ion-label
+                >Grade / Class
+                <ion-text
+                  color="danger"
+                  *ngIf="enrollForm.get('gradeClass')?.touched && enrollForm.get('gradeClass')?.invalid"
+                >
+                  Class is required
+                </ion-text>
+              </ion-label>
               <div class="input">
                 <ion-select
                   fill="outline"
@@ -48,8 +63,8 @@
               </div>
             </ion-col>
 
-            <ion-col size="6"class="align-right-field">
-              <label>Section (optional)</label>
+            <ion-col size="6" class="align-right-field">
+              <ion-label>Section (optional)</ion-label>
               <ion-input
                 fill="outline"
                 formControlName="section"
@@ -61,7 +76,15 @@
           <!-- Row 3 -->
           <ion-row>
             <ion-col size="6">
-              <label>School</label>
+              <ion-label
+                >School
+                <ion-text
+                  color="danger"
+                  *ngIf="enrollForm.get('school')?.touched && enrollForm.get('school')?.invalid"
+                >
+                  School is required
+                </ion-text>
+              </ion-label>
               <div class="input">
                 <ion-select
                   fill="outline"
@@ -73,7 +96,7 @@
             </ion-col>
 
             <ion-col size="6" class="align-right-field">
-              <label>Route</label>
+              <ion-label>Route</ion-label>
               <div class="input">
                 <ion-select
                   fill="outline"
@@ -88,7 +111,7 @@
           <!-- Row 4 -->
           <ion-row>
             <ion-col size="6">
-              <label>Pickup / Drop Stop</label>
+              <ion-label>Pickup / Drop Stop</ion-label>
               <div class="input">
                 <ion-select
                   fill="outline"
@@ -100,7 +123,7 @@
             </ion-col>
 
             <ion-col size="6" class="align-right-field">
-              <label>Assign Bus</label>
+              <ion-label>Assign Bus</ion-label>
               <div class="input">
                 <ion-select
                   fill="outline"
@@ -115,7 +138,15 @@
           <!-- Row 5 -->
           <ion-row>
             <ion-col size="6">
-              <label>Parent Name</label>
+              <ion-label
+                >Parent Name
+                <ion-text
+                  color="danger"
+                  *ngIf="enrollForm.get('parentName')?.touched && enrollForm.get('parentName')?.invalid"
+                >
+                  Parent name is required
+                </ion-text>
+              </ion-label>
               <ion-input
                 fill="outline"
                 formControlName="parentName"
@@ -124,7 +155,7 @@
             </ion-col>
 
             <ion-col size="6" class="align-right-field">
-              <label>Relationship</label>
+              <ion-label>Relationship</ion-label>
               <ion-input
                 fill="outline"
                 formControlName="relationship"
@@ -136,16 +167,31 @@
           <!-- Row 6 -->
           <ion-row>
             <ion-col size="6">
-              <label>Phone Number</label>
+              <ion-label>Phone Number
+                  <ion-text
+                color="danger"
+                *ngIf="enrollForm.get('phoneNumber')?.touched && enrollForm.get('phoneNumber')?.errors"
+              >
+                <span
+                  *ngIf="enrollForm.get('phoneNumber')?.errors?.['required']"
+                  >Phone number is required</span
+                >
+                <span
+                  *ngIf="enrollForm.get('phoneNumber')?.errors?.['minlength']"
+                  >Minimum 10 digits required</span
+                >
+              </ion-text>
+              </ion-label>
               <ion-input
                 fill="outline"
                 formControlName="phoneNumber"
                 placeholder="Eg: 9876537***"
               ></ion-input>
+            
             </ion-col>
 
             <ion-col size="6" class="align-right-field">
-              <label>Email Address (optional)</label>
+              <ion-label>Email Address (optional)</ion-label>
               <ion-input
                 fill="outline"
                 formControlName="email"
@@ -157,7 +203,7 @@
           <!-- Row 7 -->
           <ion-row>
             <ion-col size="6">
-              <label>Billing Start Date</label>
+              <ion-label>Billing Start Date</ion-label>
               <ion-input
                 type="date"
                 formControlName="billingStartDate"
@@ -166,7 +212,7 @@
             </ion-col>
 
             <ion-col size="6" class="toggle-row" class="align-right-field">
-               <label>Recieve Notice</label>
+              <ion-label>Recieve Notice</ion-label>
               <div class="setting-box">
                 <div class="toggle">
                   <span>{{enrollForm.value.receiveNotice}}</span>
@@ -183,7 +229,7 @@
           <!-- Row 8 -->
           <ion-row>
             <ion-col size="6" class="toggle-row">
-               <label>Complimentary Student</label>
+              <ion-label>Complimentary Student</ion-label>
               <div class="setting-box">
                 <div class="toggle">
                   <span>{{enrollForm.value.complimentaryStudent}}</span>
@@ -197,7 +243,7 @@
             </ion-col>
 
             <ion-col size="6" class="toggle-row" class="align-right-field">
-              <label>Maintenance Alerts</label>
+              <ion-label>Maintenance Alerts</ion-label>
               <div class="setting-box">
                 <div class="toggle">
                   <span>{{enrollForm.value.disableNotice}}</span>
@@ -212,9 +258,8 @@
           </ion-row>
         </ion-grid>
 
-        <ion-button  fill="clear" (click)="saveStudent()">Save</ion-button>
+        <ion-button fill="clear" (click)="saveStudent()">Save</ion-button>
       </form>
     </ion-card>
   </div>
- 
 </ion-content>

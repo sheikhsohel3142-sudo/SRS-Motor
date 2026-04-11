@@ -12,9 +12,10 @@ import { RouterLink } from '@angular/router';
   imports: [IonBackButton, IonButtons, IonText, IonIcon, IonInput, IonItem, IonList, IonCard, IonButton, IonLabel, IonCol, IonRow, IonCardContent, IonCardSubtitle, IonCardTitle, IonCardHeader, IonContent, IonGrid, CommonModule, FormsModule, ReactiveFormsModule, IonSelectOption, IonSelect,RouterLink]
 })
 export class AddNewSchoolsPage {
-isInvalid(school:any){
-
-}
+  isInvalid(controlName: string) {
+    const control = this.schoolForm.get(controlName);
+    return control && control.invalid && (control.dirty || control.touched);
+  }
   schoolForm!: FormGroup;
 
   constructor(private fb: FormBuilder) {}

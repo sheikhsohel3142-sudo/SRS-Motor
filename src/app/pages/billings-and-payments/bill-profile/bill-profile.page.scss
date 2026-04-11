@@ -1,4 +1,3 @@
-
 .title-container {
   position: relative;
   top: 20px;
@@ -29,7 +28,7 @@
     }
   }
 }
-.add-new-bus-container {
+.bill-profile-container {
   background: #f2f2f2;
   width: 910px;
   height: 2650px;
@@ -44,7 +43,7 @@
   right: 10px;
   border-radius: 14px;
   padding-left: 100px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   // overflow-y: hidden;
   margin-bottom: 10px;
 }
@@ -71,7 +70,7 @@ ion-card {
   height: 550px;
   position: relative;
   top: 100px;
-  right: 80px;
+  right: 85px;
   padding-top: 30%;
 
   margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
@@ -87,7 +86,7 @@ ion-card {
     }
   }
 }
-.add-new-bus-container ion-input {
+.bill-profile-container ion-input {
   background: #f5f6f8;
   border-radius: 8px;
   padding: 12px 14px;
@@ -321,7 +320,7 @@ ion-card {
 
 .payment-recording {
   width: 880px;
-  height: 850px;
+  height: 8700px;
   position: relative;
   top: 220px;
   right: 80px;
@@ -342,6 +341,7 @@ ion-card {
 }
 .btn-row {
   margin-top: 20px;
+  margin-right: 30px;
 }
 
 .payment-history {
@@ -513,7 +513,7 @@ ion-card {
 
 .due-and-reminder-managment {
   width: 880px;
-  height: 350px;
+  height: 3500px;
   position: relative;
   top: 330px;
   right: 80px;
@@ -539,9 +539,10 @@ ion-card {
     height: 52px;
     width: 390px;
     border-radius: 12px;
-    position: relative;
-    left: 25px;
-    top: 20px;
+    // position: relative;
+    // left: 25px;
+    // top: 20px;
+    margin-top: 20px;
     text-transform: none;
     background-color: #ffffff;
     font-family: "Space Grotesk", sans-serif;
@@ -559,9 +560,11 @@ ion-card {
     height: 53px;
     width: 390px;
     border-radius: 12px;
-    position: relative;
-    left: 13px;
-    top: 20px;
+    // position: relative;
+    // left: 13px;
+    // top: 20px;
+    margin-top: 20px;
+    margin-left: 6%;
     text-transform: none;
     background-color: #4f8cff;
     font-family: "Space Grotesk", sans-serif;
@@ -578,7 +581,7 @@ ion-card {
   width: 390px;
   border-radius: 12px;
   position: relative;
-  left: 16px;
+  left: -6px;
   top: 40px;
   text-transform: none;
   font-family: "Space Grotesk", sans-serif;
@@ -595,8 +598,9 @@ ion-card {
   width: 390px;
   border-radius: 12px;
   position: relative;
-  left: 11px;
+  left: -4px;
   top: 40px;
+  margin-left: 20px;
   text-transform: none;
   background-color: #4f8cff;
   font-family: "Space Grotesk", sans-serif;
@@ -731,5 +735,529 @@ ion-card {
       bottom: 2px;
       color: #4f8cff;
     }
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .bill-profile-container {
+    width: 99%;
+    height: 2800px;
+    // overflow: auto;
+
+    // left: 20px;
+    // padding-left: 120px;
+  }
+
+  .right-side {
+    left: 30px;
+  }
+  .setting-box {
+    width: 91%;
+  }
+  .input {
+    width: 91%;
+  }
+  .billing-breakdown {
+    width: 107%;
+    height: auto;
+  }
+  .bill-profile-container ion-input {
+    width: 91%;
+  }
+
+  ion-card {
+    width: 106%;
+    height: 550px;
+  }
+  .billing-breakdown {
+    width: 105%;
+    height: auto;
+  }
+  .payment-recording {
+    width: 105%;
+    height: 900px;
+  }
+  .payment-history {
+    width: 105%;
+    height: auto;
+  }
+  .due-and-reminder-managment {
+    width: 105%;
+    height: 500px;
+  }
+  .first-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .recored-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .recored-btn2 {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+    .dRM-btn,
+  .dRM-btn2 {
+    width: 100%;
+    min-width: 400px;
+    top: 60px;
+  }
+}
+
+/* ================== Laptop (1280px – 1599px) ================== */
+@media only screen and (max-width: 1599px) and (min-width: 1280px) {
+  .bill-profile-container {
+    width: 99%;
+    height: 2800px;
+
+    // padding-left: 140px;
+  }
+  .setting-box {
+    width: 91%;
+  }
+  .input {
+    width: 91%;
+  }
+
+  .right-side {
+    left: 30px;
+  }
+
+  ion-card {
+    width: 107%;
+
+    height: 550px;
+  }
+  .billing-breakdown {
+    width: 107%;
+
+    height: auto;
+  }
+
+  .bill-profile-container ion-input {
+    width: 91%;
+  }
+  .billing-breakdown {
+    width: 107%;
+
+    height: auto;
+  }
+  .payment-recording {
+    width: 107%;
+    height: 900px;
+  }
+  .payment-history {
+    width: 107%;
+    height: auto;
+  }
+  .due-and-reminder-managment {
+    width: 107%;
+    height: 500px;
+  }
+
+  .first-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .recored-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .recored-btn2 {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+    .dRM-btn,
+  .dRM-btn2 {
+    width: 100%;
+    min-width: 400px;
+    top: 60px;
+  }
+}
+
+// /* ================== Tablet (768px – 1279px) ================== */
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  .bill-profile-container {
+    width: 99%;
+    height: 2800px;
+  }
+  .input {
+    width: 91%;
+  }
+  .setting-box {
+    width: 91%;
+  }
+
+  .right-side {
+    left: 30px;
+  }
+
+  ion-card {
+    width: 110%;
+    height: 550px;
+
+    // right: 0;
+    // top: 60px;
+  }
+  .title-container {
+    margin-left: 50;
+  }
+
+  ion-grid {
+    display: block;
+  }
+
+  .right-col {
+  }
+
+  .billing-breakdown {
+    width: 110%;
+
+    height: auto;
+  }
+  .payment-recording {
+    width: 110%;
+    height: 900px;
+  }
+  .payment-history {
+    width: 110%;
+    height: auto;
+  }
+  .due-and-reminder-managment {
+    width: 110%;
+    height: 500px;
+  }
+  .bill-profile-container ion-input {
+    width: 91%;
+  }
+
+  .first-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .recored-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .recored-btn2 {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+    .dRM-btn,
+  .dRM-btn2 {
+  
+    width: 100%;
+    min-width: 400px;
+    top: 60px;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 900px) {
+  .bill-profile-container {
+    width: 99.5%;
+    height: 3500px;
+  }
+  .input {
+    width: 91%;
+  }
+  .setting-box {
+    width: 91%;
+  }
+
+  .right-side {
+    left: 30px;
+  }
+  .billing-breakdown {
+    width: 107%;
+
+    height: auto;
+  }
+  .payment-recording {
+    width: 107%;
+    height: 900px;
+  }
+  .payment-history {
+    width: 107%;
+    height: auto;
+  }
+  .due-and-reminder-managment {
+    width: 107%;
+    height: 500px;
+  }
+
+  ion-card {
+    width: 107%;
+    height: 550px;
+
+    // right: 0;
+    // top: 60px;
+  }
+  .title-container {
+    margin-left: 50;
+  }
+
+  ion-grid {
+    display: block;
+  }
+
+  .right-col {
+  }
+
+  .bill-profile-container ion-input {
+    width: 91%;
+  }
+
+  .first-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .recored-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .recored-btn2 {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .dRM-btn,
+  .dRM-btn2 {
+    width: 100%;
+    min-width: 400px;
+    top: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* Outer container */
+  .bill-profile-container {
+    width: 99%;
+    height: 3400px;
+    // padding: 10px;
+    background: #f2f2f2;
+    padding: 8px 10px;
+  }
+  .input {
+    width: 91%;
+    margin-left: 20px;
+  }
+  .input-count {
+    margin-left: 20px;
+  }
+  .setting-box {
+    width: 91%;
+    margin-left: 20px;
+  }
+
+  /* Card */
+  // ion-card {
+  //   min-width: 300px;
+  //   height: 800px;
+  //   margin: 5px;
+  //   padding: 16px;
+  //   border-radius: 12px;
+  //   top: 30px;
+  //   right: 0;
+  // }
+  ion-card {
+    width: 100%;
+    height: 790px;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+  }
+  .align-right-field {
+    left: 0;
+  }
+
+  /* Top button (My profile) */
+  .title-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    right: 0;
+  }
+
+  /* Heading */
+  .form-head {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  /* 🔥 GRID → SINGLE COLUMN */
+  ion-grid {
+    display: block;
+  }
+
+  ion-row {
+    display: block;
+    left: 20px;
+  }
+
+  ion-col {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Remove right side shift */
+  // .right-col {
+  //   left: 0;
+  //   margin-top: 10px;
+  // }
+
+  /* Form fields */
+  .bill-profile-container {
+    margin-bottom: 12px;
+  }
+
+  .bill-profile-container ion-label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    margin-left: 20px;
+  }
+
+  .bill-profile-container ion-input {
+    width: 91%;
+    min-width: 31%;
+    height: 44px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .billing-breakdown {
+    // width: 117%;
+    width: 100%;
+    height: 790px;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+
+    height: auto;
+  }
+  .payment-recording {
+    width: 100%;
+    height: 1100px;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+    // height: 900px;
+  }
+  .payment-history {
+    width: 100%;
+    height: 400px;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+    // height: auto;
+  }
+  .due-and-reminder-managment {
+    width: 107%;
+    width: 100%;
+    height: 400px;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+    // height: 5500px;
+  }
+
+  /* Button */
+  .first-btn {
+    ion-button {
+      width: 100%;
+      min-width: 200px;
+      height: 48px;
+      margin-top: 16px;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+  }
+  // .recored-btn {
+  //   ion-button {
+  //     width: 100%;
+  //     min-width: 250px;
+  //     height: 48px;
+  //     margin-top: 16px;
+  //     border-radius: 10px;
+  //     font-size: 15px;
+  //     left: 0;
+  //   }
+  // }
+  // .recored-btn2 {
+  //   ion-button {
+  //     width: 100%;
+  //     min-width: 250px;
+  //     height: 48px;
+  //     margin-top: 16px;
+  //     margin-left: 260px;
+  //     border-radius: 10px;
+  //     font-size: 15px;
+  //     left: 0;
+  //   }
+  // }
+  .btn-row {
+    display: flex;
+    gap: 16px; // buttons ke beech spacing
+    flex-wrap: nowrap; // small screen pe neeche aa jayega
+  }
+
+  .recored-btn,
+  .recored-btn2 {
+    flex: 1; // dono equal width lenge
+    min-width: 250px;
+
+    ion-button {
+      width: 100%;
+      height: 48px;
+      margin-top: 16px;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+  }
+  .dRM-btn,
+  .dRM-btn2 {
+    flex: 1 1 300px; // grow + shrink + base width
+    width: 100%;
+    height: 48px;
+    margin-top: 16px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  /* Remove extra spacing issue */
+  body {
+    overflow-x: hidden;
   }
 }

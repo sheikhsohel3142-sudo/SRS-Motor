@@ -1,4 +1,3 @@
-
 .title-container {
   position: relative;
   top: 20px;
@@ -23,25 +22,11 @@
     right: 10px;
   }
 }
-ion-card {
-  // border: 2px solid black;
-  width: 880px;
-  height: 500px;
-  position: relative;
-  top: 98px;
-  right: 80px;
-  padding-top: 30%;
 
-  margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 24px 32px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-}
 .profile-container {
   background: #f2f2f2;
   width: 910px;
-  min-height:  1000px;
+  min-height: 1000px;
   position: relative;
   top: 10px;
 
@@ -50,9 +35,9 @@ ion-card {
 }
 
 ion-button {
-  position: relative;
-  left: 650px;
-  bottom: 75px;
+  position: absolute;
+  right: 2%;
+  top: 2%;
   width: 150px;
   height: 44px;
   border-radius: 10px;
@@ -77,101 +62,136 @@ ion-button {
   }
 }
 
-.table-head-wrap {
-  padding: 0 10px;
-  position: relative;
-  right: 70px;
-}
-.s-no {
-  position: relative;
-  right: -5px;
-}
-.school-name {
-  position: relative;
-  left: 14px;
-}
-.school {
-  position: relative;
-  left: 20px;
-}
-.buses {
-  position: relative;
-  left: 32px;
-}
-.total-Bill {
-  position: relative;
-  left: 55px;
-}
-.outstanding{
-  position: relative;
-  left: 35px;
-}
-.paid-amount {
-  position: relative;
-  left: 50px;
-}
-.status {
-  position: relative;
-  left: 10px;
-}
+// .table-head-wrap {
+//   padding: 0 10px;
+//   position: relative;
+//   right: 70px;
+// }
+// .s-no {
+//   position: relative;
+//   right: -5px;
+// }
+// .school-name {
+//   position: relative;
+//   left: 14px;
+// }
+// .school {
+//   position: relative;
+//   left: 20px;
+// }
+// .buses {
+//   position: relative;
+//   left: 32px;
+// }
+// .total-Bill {
+//   position: relative;
+//   left: 55px;
+// }
+// .outstanding {
+//   position: relative;
+//   left: 35px;
+// }
+// .paid-amount {
+//   position: relative;
+//   left: 50px;
+// }
+// .status {
+//   position: relative;
+//   left: 10px;
+// }
 .table-container {
-  width: 890px;
-  height: 610px;
+  // width: 890px;
+  width: 100%;
   padding: 10px;
   border-radius: 12px;
 
   position: relative;
   right: 86px;
+  top: 80px;
+  box-sizing: border-box;
 
   border: 1px solid #ffffff;
 }
-.head-container {
-  width: 870px;
-  border-radius: 12px;
-  height: 60px;
+// .head-container {
+//   width: 870px;
+//   border-radius: 12px;
+//   height: 60px;
 
-  border: 1px solid #ffffff;
-}
-.table-head {
-  // display: grid;
-  // grid-template-columns: 60px 1.5fr 80px 1fr 100px 80px;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 12px 0;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 145%;
-  letter-spacing: 0%;
-  color: #0f172a;
-  position: relative;
-  left: 20px;
-  white-space: wrap;
-}
+//   border: 1px solid #ffffff;
+// }
+// .table-head {
+//   // display: grid;
+//   // grid-template-columns: 60px 1.5fr 80px 1fr 100px 80px;
+//   display: flex;
+//   justify-content: space-evenly;
+//   padding: 12px 0;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 145%;
+//   letter-spacing: 0%;
+//   color: #0f172a;
+//   position: relative;
+//   left: 20px;
+//   white-space: wrap;
+// }
 
 /* CARD */
 .table-card {
   background-color: #ffffff;
   margin: 8px 16px 4px;
-  width: 870px;
+  width: 100%;
 
   position: relative;
   top: 5px;
   right: 18px;
-  padding-left: 20px;
-  padding-right: 10px;
+  // padding-left: 20px;
+  // padding-right: 10px;
   border-radius: 12px;
 }
-
-/* ROWS */
-.table-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-  font-size: 16px;
-  border-bottom: 1px solid #f5f2f2;
+.table-row span {
+  font-size: 14px;
   font-family: "Space Grotesk", sans-serif;
 }
+.head-container span {
+  font-weight: 600;
+  font-size: 13px;
+  color: #0f172a;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 145%;
+  letter-spacing: 0%;
+}
+.head-container,
+.table-row {
+  display: grid;
+  // grid-template-columns: 110px 1fr 1fr 0.5fr 0.5fr  0.5fr 295px;
+  grid-template-columns: 
+   60px        /* S.no */
+    1.5fr       /* Student Name */
+    1fr         /* School */
+    1.2fr       /* Billing Month */
+    1fr         /* Total Bill */
+    1fr         /* Paid Amount */
+    1fr         /* Outstanding */
+    0.8fr       /* Status */
+    0.8fr;      /* View */
+
+  align-items: center;
+  padding: 12px 16px;
+  width: 100%;
+}
+
+
+/* ROWS */
+// .table-row {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 12px 0;
+//   font-size: 16px;
+//   border-bottom: 1px solid #f5f2f2;
+//   font-family: "Space Grotesk", sans-serif;
+// }
 
 .active {
   position: relative;
@@ -183,38 +203,37 @@ ion-button {
   cursor: pointer;
   font-weight: 500;
 }
-.student-name {
-  position: relative;
-  left: 20px;
-  
-}
-.billing-M {
-  position: relative;
-  left: 40px;
-}
-.t-bill {
-  position: relative;
-  left: 30px;
-}
-.c-no {
-  width: 20px;
-  position: relative;
-  left: -1px;
-  display: flex;
-  justify-content: center;
-}
-.paid2-amount {
-  position: relative;
-  left: 30px;
-}
-.outstanding-amount{
-  position: relative;
-  left: 30px;
-}
-.school-N {
-  position: relative;
-  left: 34px;
-}
+// .student-name {
+//   position: relative;
+//   left: 20px;
+// }
+// .billing-M {
+//   position: relative;
+//   left: 40px;
+// }
+// .t-bill {
+//   position: relative;
+//   left: 30px;
+// }
+// .c-no {
+//   width: 20px;
+//   position: relative;
+//   left: -1px;
+//   display: flex;
+//   justify-content: center;
+// }
+// .paid2-amount {
+//   position: relative;
+//   left: 30px;
+// }
+// .outstanding-amount {
+//   position: relative;
+//   left: 30px;
+// }
+// .school-N {
+//   position: relative;
+//   left: 34px;
+// }
 .search-box {
   display: flex;
   align-items: center;
@@ -227,9 +246,9 @@ ion-button {
   padding: 8px 12px;
   width: 150px;
 
-  position: relative;
-  left: 490px;
-  bottom: 31px;
+  position: absolute;
+  right: 15%;
+  top: 2%;
   input {
     background-color: #b3cbf933;
   }
@@ -351,7 +370,6 @@ button {
   border-radius: 4px;
   position: relative;
   right: 20px;
-  
 }
 
 button:disabled {
@@ -397,7 +415,6 @@ select {
   // text-align: center;
   padding-left: 15px;
   font-weight: 500;
-  
 
   cursor: pointer;
   font-weight: 400;
@@ -415,4 +432,302 @@ ion-icon {
 
   left: 35px;
   bottom: 35px;
+}
+@media only screen and (min-width: 1600px) {
+  .profile-container {
+    width: 99%;
+
+    // left: 20px;
+    // padding-left: 120px;
+  }
+
+  
+
+  .table-card {
+    width: 100%;
+  }
+  .table-container {
+    width: 106%;
+  }
+  .head-container {
+    width: 100%;
+  }
+
+  // ion-button {
+  //   width: 100%;
+  //   min-width: 400px;
+  //   top: 60px;
+  // }
+}
+@media only screen and (max-width: 1599px) and (min-width: 1280px) {
+  .profile-container {
+    width: 99%;
+
+    // left: 20px;
+    // padding-left: 120px;
+  }
+
+  .right-side {
+    // ion-input{
+    //   width: 81%;
+    // }
+  }
+  .input {
+    width: 81%;
+  }
+
+  .table-card {
+    width: 102%;
+  }
+  .table-container {
+    width: 108%;
+  }
+  .head-container {
+    width: 101%;
+  }
+  .table-head {
+    width: 101%;
+  }
+}
+
+// /* ================== Tablet (768px – 1279px) ================== */
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  .profile-container {
+    width: 99%;
+
+    // left: 20px;
+    // padding-left: 120px;
+  }
+
+  .right-side {
+    // ion-input{
+    //   width: 81%;
+    // }
+  }
+  .input {
+    width: 81%;
+  }
+
+  .table-card {
+    width: 101%;
+  }
+  .table-container {
+    width: 107%;
+  }
+  .head-container {
+    width: 101%;
+  }
+  .table-head {
+    width: 101%;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 900px) {
+  .profile-container {
+    width: 99%;
+
+    // left: 20px;
+    // padding-left: 120px;
+  }
+
+  .right-side {
+    // ion-input{
+    //   width: 81%;
+    // }
+  }
+  .input {
+    width: 81%;
+  }
+
+  .table-card {
+    width: 101%;
+  }
+  .table-container {
+    width: 107%;
+  }
+  .head-container {
+    width: 101%;
+  }
+  .table-head {
+    width: 101%;
+  }
+}
+
+// /* ================= MOBILE ================= */
+// /* MOBILE DESIGN */
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Title */
+  .title-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .title-container div {
+    left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* TABLE HEAD (Stylish) */
+  .table-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    padding: 8px 10px;
+    background: #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  /* CARD */
+  .table-card {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  /* ROW */
+  .table-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* EACH FIELD */
+  .table-row div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 6px 0;
+    border-bottom: 1px dashed #e5e7eb;
+  }
+
+  .table-row div:last-child {
+    border-bottom: none;
+  }
+
+  /* LABEL */
+  .table-row div::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6b7280;
+  }
+
+  /* STATUS */
+  .active {
+    color: #16a34a;
+    font-weight: 600;
+  }
+
+  /* VIEW BUTTON STYLE */
+  .view {
+    color: #2563eb;
+    font-weight: 600;
+  }
+
+  /* BUTTON FIX */
+  ion-button {
+    position: static;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+
+// /* ================= MOBILE ================= */
+// /* MOBILE DESIGN */
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Title */
+  .title-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .title-container div {
+    left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /* TABLE HEAD (Stylish) */
+  .table-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    padding: 8px 10px;
+    background: #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  /* CARD */
+  .table-card {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  /* ROW */
+  .table-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* EACH FIELD */
+  .table-row div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 6px 0;
+    border-bottom: 1px dashed #e5e7eb;
+  }
+
+  .table-row div:last-child {
+    border-bottom: none;
+  }
+
+  /* LABEL */
+  .table-row div::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6b7280;
+  }
+
+  /* STATUS */
+  .active {
+    color: #16a34a;
+    font-weight: 600;
+  }
+
+  /* VIEW BUTTON STYLE */
+  .view {
+    color: #2563eb;
+    font-weight: 600;
+  }
+
+  /* BUTTON FIX */
+  ion-button {
+    position: static;
+    width: 100%;
+    margin-bottom: 12px;
+  }
 }

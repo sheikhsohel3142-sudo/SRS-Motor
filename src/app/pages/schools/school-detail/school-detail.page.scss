@@ -16,10 +16,13 @@
 }
 
 .input-count {
-  ion-input {
+  
+}
+.input-2{
+ion-input {
     background: #ffffff;
     border-radius: 8px;
-    // width: 372px;
+    // width: 472px;
     height: 50px;
     margin-top: 10px;
     margin-bottom: 19px;
@@ -84,6 +87,7 @@ ion-card {
   font-size: 16px;
   color: #333;
   --placeholder-color: #aaa;
+  --padding-start: 25px;
 
   ion-select::part(icon) {
     display: none;
@@ -103,7 +107,7 @@ ion-button {
   // width: 740px;
   border-radius: 12px;
   position: relative;
-  left: 33px;
+  // left: 33px;
   top: 15px;
   text-transform: none;
   background-color: #4f8cff;
@@ -228,18 +232,22 @@ ion-icon {
   // .status-container {
   //   margin-left: 35%;
   // }
+  .input-2 {
+    ion-input{
+      width: 100%;
+    }
+  }
 
   .right-side {
     left: 30px;
   }
-
+  .input{
+    width: 90%;
+  }
   .profile-container ion-input {
     width: 91%;
   }
-  .input-count ion-input {
-    width: 91%;
-  }
-
+ 
   ion-card {
     width: 105%;
     height: 1050px;
@@ -265,6 +273,11 @@ ion-icon {
   // .status-container {
   //   margin-left: -50%;
   // }
+   .input-count {
+    ion-input{
+      width: 100%;
+    }
+  }
 
   .right-side {
     left: 30px;
@@ -291,6 +304,53 @@ ion-icon {
   }
 }
 
+.input {
+  background: #f5f6f8;
+  border-radius: 8px;
+  // max-width: 372px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  font-size: 16px;
+  // margin-left: 20px;
+
+  display: flex;
+  align-items: center; // vertical center
+  justify-content: center; // horizontal center
+  text-align: center;
+
+  ion-icon {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+
+   
+    left: 79%;
+    top: 40%;
+  }
+
+  ion-select {
+    width: 100%;
+    text-align: center;
+    --highlight-height: 0;
+    --border-width: 0;
+    --border-style: none;
+  }
+
+  ion-select::part(text) {
+    text-align: center;
+    width: 100%;
+  }
+  ion-select {
+    padding-left: 25px;
+    --placeholder-color: #0f172abf;
+  }
+
+  ion-select::part(icon) {
+    display: none;
+  }
+}
+
 // /* ================== Tablet (768px – 1279px) ================== */
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
   .profile-container {
@@ -302,6 +362,11 @@ ion-icon {
 
   .right-side {
     left: 30px;
+  }
+   .input-count {
+    ion-input{
+      width: 100%;
+    }
   }
 
   // .status-container {
@@ -349,6 +414,11 @@ ion-icon {
   .right-side {
     left: 30px;
   }
+   .input-count {
+    ion-input{
+      width: 100%;
+    }
+  }
 
   ion-card {
     width: 111%;
@@ -382,13 +452,14 @@ ion-icon {
   /* Outer container */
   .profile-container {
     width: 99%;
-    height: 1550px;
+    height: 1850px;
     // padding: 10px;
     background: #f2f2f2;
     padding: 8px 10px;
   }
   .input {
     width: 91%;
+    margin-left: 25px;
   }
   // .status-container {
   //   margin-left: -30%;
@@ -397,12 +468,17 @@ ion-icon {
   /* Card */
   ion-card {
     min-width: 300px;
-    height: 1400px;
+    height: 1650px;
     margin: 5px;
     padding: 16px;
     border-radius: 12px;
     top: 30px;
     right: 0;
+  }
+   .input-count {
+    ion-input{
+      width: 100%;
+    }
   }
 
   /* Top button (My profile) */
@@ -434,7 +510,7 @@ ion-icon {
   }
 
   /* Remove right side shift */
-  .right-col {
+  .right-side-column {
     left: 0;
     margin-top: 10px;
   }
@@ -447,6 +523,7 @@ ion-icon {
   .profile-container ion-label {
     font-size: 13px;
     margin-bottom: 4px;
+    margin-left: 21px;
   }
 
   .profile-container ion-input {
@@ -456,6 +533,7 @@ ion-icon {
     font-size: 14px;
     padding: 10px;
     border-radius: 8px;
+    margin-left: 21px;
   }
 
   /* Button */
@@ -466,7 +544,9 @@ ion-icon {
     margin-top: 16px;
     border-radius: 10px;
     font-size: 15px;
+    margin-right: 80px;
   }
+
 
   /* Remove extra spacing issue */
   body {

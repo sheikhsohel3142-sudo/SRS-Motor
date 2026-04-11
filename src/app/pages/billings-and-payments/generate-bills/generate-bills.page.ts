@@ -22,8 +22,7 @@ import {
   IonSelect,
   IonInput,
   IonRow,
-  IonToggle,
-} from '@ionic/angular/standalone';
+  IonToggle, IonText } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -31,7 +30,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './generate-bills.page.html',
   styleUrls: ['./generate-bills.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonText, 
     IonToggle,
     IonInput,
     IonButton,
@@ -52,7 +51,7 @@ import { RouterLink } from '@angular/router';
   ],
 })
 export class GenerateBillsPage implements OnInit {
-  busForm!: FormGroup;
+  genrateBills!: FormGroup;
   selectedFile: any;
 
   fuelTypes = ['Petrol', 'Diesel', 'CNG', 'Electric'];
@@ -62,7 +61,7 @@ export class GenerateBillsPage implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.busForm = this.fb.group({
+    this.genrateBills = this.fb.group({
       billingMonth: ['', Validators.required],
       school: ['', Validators.required],
       totalStudents: ['', Validators.required],
@@ -79,10 +78,10 @@ export class GenerateBillsPage implements OnInit {
   }
 
   submitForm() {
-    if (this.busForm.valid) {
-      console.log(this.busForm.value);
+    if (this.genrateBills.valid) {
+      console.log(this.genrateBills.value);
     } else {
-      this.busForm.markAllAsTouched();
+      this.genrateBills.markAllAsTouched();
     }
   }
 
@@ -99,13 +98,13 @@ export class GenerateBillsPage implements OnInit {
   }
 
   toggleChange(event: any, control: string) {
-    this.busForm.patchValue({
+    this.genrateBills.patchValue({
       [control]: event.detail.checked ? 'Yes' : 'No',
     });
   }
 
   // Toggle checked condition
   isChecked(control: string) {
-    return this.busForm.get(control)?.value === 'Yes';
+    return this.genrateBills.get(control)?.value === 'Yes';
   }
 }

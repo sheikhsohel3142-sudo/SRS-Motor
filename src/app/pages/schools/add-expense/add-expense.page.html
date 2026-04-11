@@ -1,12 +1,12 @@
 <ion-content>
-  <div class="add-new-bus-container">
+  <div class="add-advance-container">
     <div class="title-container">
       <div routerLink="/admin/bus">
         <ion-icon name="chevron-back-outline"></ion-icon>Add Expenese
       </div>
     </div>
     <ion-card>
-      <form [formGroup]="busForm">
+      <form [formGroup]="addExpense">
         <div class="header-container">
           <h2>Add Expenese</h2>
         </div>
@@ -14,7 +14,15 @@
           <ion-row>
             <!-- Bus Registration -->
             <ion-col size="12" size-md="6">
-              <label>Expense Category</label>
+              <label
+                >Expense Category
+                <ion-text
+                  color="danger"
+                  *ngIf="addExpense.get('expenseCategory')?.touched && addExpense.get('expenseCategory')?.invalid"
+                >
+                  Category is required
+                </ion-text>
+              </label>
 
               <div class="input">
                 <ion-select
@@ -34,7 +42,15 @@
 
             <!-- Seating Capacity -->
             <ion-col class="align-right-field" size="12" size-md="6">
-              <label>Expense Date</label>
+              <label
+                >Expense Date
+                <ion-text
+                  color="danger"
+                  *ngIf="addExpense.get('expenseDate')?.touched && addExpense.get('expenseDate')?.invalid"
+                >
+                  Date is required
+                </ion-text>
+              </label>
               <ion-input
                 formControlName="expenseDate"
                 type="data"
@@ -45,23 +61,33 @@
 
             <!-- Fuel Type -->
             <ion-col size="12" size-md="6">
-              <label>Amount</label>
-              <ion-input
-                formControlName="amount"
-                placeholder="Eg: $ 45.00"
-              >
+              <label
+                >Amount
+                <ion-text
+                  color="danger"
+                  *ngIf="addExpense.get('amount')?.touched && addExpense.get('amount')?.invalid"
+                >
+                  Amount is required
+                </ion-text>
+              </label>
+              <ion-input formControlName="amount" placeholder="Eg: $ 45.00">
               </ion-input>
             </ion-col>
 
             <!-- Assign School -->
             <ion-col class="align-right-field" size="12" size-md="6">
-              <label>Paid by</label>
+              <label
+                >Paid by
+                <ion-text
+                  color="danger"
+                  *ngIf="addExpense.get('paidBy')?.touched && addExpense.get('paidBy')?.invalid"
+                >
+                  Paid By is required
+                </ion-text>
+              </label>
 
               <div class="input">
-                <ion-select
-                  formControlName="paidBy"
-                  placeholder="Eg:vender..."
-                >
+                <ion-select formControlName="paidBy" placeholder="Eg:vender...">
                   <ion-select-option
                     *ngFor="let fuel of fuelTypes"
                     [value]="fuel"
@@ -89,9 +115,18 @@
               </div> -->
 
               <div class="upload-container">
-                <label class="upload-label">Upload Invoice</label>
+                <label class="upload-label"
+                  >Upload Invoice
 
-                <div class="upload-box">
+                  <ion-text
+                    color="danger"
+                    *ngIf="addExpense.get('uploadInvoice')?.touched && addExpense.get('uploadInvoice')?.invalid"
+                  >
+                    Invoice is required
+                  </ion-text>
+                </label>
+
+                <div color="upload-box">
                   <!-- Hidden File Input -->
                   <input
                     type="file"
@@ -103,7 +138,7 @@
 
                   <!-- Left Side File Name -->
                   <div
-                    class="file-pill"
+                    color="file-pill"
                     *ngIf="selectedFile"
                     (click)="fileInput.click()"
                   >
@@ -135,7 +170,12 @@
         </ion-grid>
 
         <!-- Confirm Button -->
-        <ion-button fill="clear" [disabled]="busForm.invalid" class="confirm-btn" (click)="submitForm()">
+        <ion-button
+          fill="clear"
+          [disabled]="addExpense.invalid"
+          class="confirm-btn"
+          (click)="submitForm()"
+        >
           Save
         </ion-button>
       </form>

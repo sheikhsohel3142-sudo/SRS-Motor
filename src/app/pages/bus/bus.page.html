@@ -10,15 +10,15 @@
    </div>
    <div class="table-container">
     <div class="head-container">
-   <div class="table-head-wrap">
-      <div class="table-head">
+   <!-- <div class="table-head-wrap">
+      <div class="table-head"> -->
         <span class="s-no">S.no</span>
-        <span class="school-name">School Name</span>
-        <span class="buses">Buses</span>
+        <span class="school-name"><div class="special2">School Name</div></span>
+        <span class="buses">No of Buses</span>
         <span class="location">Location</span>
         <span class="status">Status</span>
-      </div>
-      </div>
+      <!-- </div>
+      </div> -->
     </div>
 
 
@@ -27,7 +27,7 @@
         <div class="table-row" *ngFor="let s of schools; let i = index">
           <span>{{ i + 1 }}</span>
           <span>{{ s.name }}</span>
-          <span>{{ s.buses }}</span>
+          <span><div class="special">{{ s.buses }}</div></span>
           <span>{{ s.location }}</span>
           <span class="active">{{ s.status }}</span>
           <span class="view" [routerLink]="['/admin/bus/bus-details']">View ››</span>

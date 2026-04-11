@@ -65,7 +65,7 @@ export class SchoolDetailPage {
       ],
       email: ['', [Validators.required, Validators.email]],
       operatingDays: ['', Validators.required],
-      schoolTimings: ['', Validators.required],
+      schoolTimings: ['', Validators.required], 
       activeDrivers: ['', Validators.required],
       routesAssigned: ['', Validators.required],
     });

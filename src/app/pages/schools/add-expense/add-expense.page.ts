@@ -7,21 +7,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import {
-  IonContent,
-  IonHeader,
-  IonTitle,
-  IonToolbar,
-  IonButton,
-  IonCol,
-  IonSelectOption,
-  IonIcon,
-  IonGrid,
-  IonRow,
-  IonCard,
-  IonInput,
-  IonSelect,
-} from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonCol, IonSelectOption, IonIcon, IonGrid, IonRow, IonCard, IonInput, IonSelect, IonText } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -45,10 +31,11 @@ import { RouterLink } from '@angular/router';
     IonSelectOption,
     RouterLink,
     IonSelect,
-  ],
+    IonText
+],
 })
 export class AddExpensePage implements OnInit {
-  busForm!: FormGroup;
+  addExpense!: FormGroup;
   selectedFile:any;
 
   fuelTypes = ['Petrol', 'Diesel', 'CNG', 'Electric'];
@@ -58,7 +45,7 @@ export class AddExpensePage implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.busForm = this.fb.group({
+    this.addExpense = this.fb.group({
       expenseCategory: ['', Validators.required],
       expenseDate: ['', Validators.required],
       amount: ['', Validators.required],
@@ -75,10 +62,10 @@ export class AddExpensePage implements OnInit {
   }
 
   submitForm() {
-    if (this.busForm.valid) {
-      console.log(this.busForm.value);
+    if (this.addExpense.valid) {
+      console.log(this.addExpense.value);
     } else {
-      this.busForm.markAllAsTouched();
+      this.addExpense.markAllAsTouched();
     }
   }
 

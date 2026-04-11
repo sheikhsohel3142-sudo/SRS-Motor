@@ -65,6 +65,71 @@ export class SchoolsPage implements OnInit {
       email: 'srvm@school.com',
       timing: '09:00 - 16:30'
     },
+    {
+      id: 1,
+      name: 'SRV Matriculation',
+      buses: 5,
+      location: 'New York',
+      status: 'Active',
+      board: 'CBSE',
+      address: 'Triplicane, Chennai',
+      state: 'Jharkhand',
+      contact: 'Russel',
+      email: 'srvm@school.com',
+      timing: '09:00 - 16:30'
+    },
+    {
+      id: 1,
+      name: 'SRV Matriculation',
+      buses: 5,
+      location: 'New York',
+      status: 'Active',
+      board: 'CBSE',
+      address: 'Triplicane, Chennai',
+      state: 'Jharkhand',
+      contact: 'Russel',
+      email: 'srvm@school.com',
+      timing: '09:00 - 16:30'
+    },
+    {
+      id: 1,
+      name: 'SRV Matriculation',
+      buses: 5,
+      location: 'New York',
+      status: 'Active',
+      board: 'CBSE',
+      address: 'Triplicane, Chennai',
+      state: 'Jharkhand',
+      contact: 'Russel',
+      email: 'srvm@school.com',
+      timing: '09:00 - 16:30'
+    },
+    {
+      id: 1,
+      name: 'SRV Matriculation',
+      buses: 5,
+      location: 'New York',
+      status: 'Active',
+      board: 'CBSE',
+      address: 'Triplicane, Chennai',
+      state: 'Jharkhand',
+      contact: 'Russel',
+      email: 'srvm@school.com',
+      timing: '09:00 - 16:30'
+    },
+    {
+      id: 1,
+      name: 'SRV Matriculation',
+      buses: 5,
+      location: 'New York',
+      status: 'Active',
+      board: 'CBSE',
+      address: 'Triplicane, Chennai',
+      state: 'Jharkhand',
+      contact: 'Russel',
+      email: 'srvm@school.com',
+      timing: '09:00 - 16:30'
+    },
 
   ];
 

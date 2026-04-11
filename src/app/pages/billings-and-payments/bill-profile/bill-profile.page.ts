@@ -23,6 +23,7 @@ import {
   IonSelect,
   IonItem,
   IonLabel,
+  IonText,
 } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 import jsPDF from 'jspdf';
@@ -33,6 +34,7 @@ import jsPDF from 'jspdf';
   styleUrls: ['./bill-profile.page.scss'],
   standalone: true,
   imports: [
+    IonText,
     IonLabel,
     IonItem,
     IonInput,
@@ -53,7 +55,7 @@ import jsPDF from 'jspdf';
   ],
 })
 export class BillProfilePage implements OnInit {
-  busForm!: FormGroup;
+  billDetailsForm!: FormGroup;
   selectedFile: any;
   billingForm!: FormGroup;
   paymentForm!: FormGroup;
@@ -88,7 +90,7 @@ export class BillProfilePage implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
-    this.busForm = this.fb.group({
+    this.billDetailsForm = this.fb.group({
       studentName: ['', Validators.required],
       parentsName: ['', Validators.required],
       phoneNumber: ['', Validators.required],
@@ -97,10 +99,30 @@ export class BillProfilePage implements OnInit {
     });
 
     this.billingForm = this.fb.group({
-      transportFare: [1000],
-      previousDue: [0],
-      lateFee: [0],
-      totalAmount: [1000],
+      transportFare: [
+        1000,
+        [
+          Validators.required,
+          Validators.min(0),
+          Validators.pattern(/^\d+(\.\d{1,2})?$/),
+        ],
+      ],
+      previousDue: [
+        0,
+        [Validators.min(0), Validators.pattern(/^\d+(\.\d{1,2})?$/)],
+      ],
+      lateFee: [
+        0,
+        [Validators.min(0), Validators.pattern(/^\d+(\.\d{1,2})?$/)],
+      ],
+      totalAmount: [
+        1000,
+        [
+          Validators.required,
+          Validators.min(0),
+          Validators.pattern(/^\d+(\.\d{1,2})?$/),
+        ],
+      ],
     });
 
     this.billingForm.valueChanges.subscribe((val) => {
@@ -113,20 +135,30 @@ export class BillProfilePage implements OnInit {
     });
 
     this.paymentForm = this.fb.group({
-      amount: [1000],
-      mode: ['upi'],
-      date: ['2026-01-01'],
-      reference: ['aravin@axi123'],
-      notes: ['parent'],
+      amount: [1000, [Validators.required, Validators.min(1)]],
 
-      totalBill: [1500],
-      paid: [1000],
-      balance: [500],
+      mode: ['upi', [Validators.required]],
+
+      date: ['2026-01-01', [Validators.required]],
+
+      reference: [
+        'aravin@axi123',
+        [Validators.required, Validators.minLength(3)],
+      ],
+
+      notes: ['parent', [Validators.maxLength(100)]],
+
+      totalBill: [1500, [Validators.required, Validators.min(1)]],
+
+      paid: [1000, [Validators.required, Validators.min(0)]],
+
+      balance: [500, [Validators.required, Validators.min(0)]],
     });
 
     this.dueForm = this.fb.group({
-      currentDue: [''],
-      dueSince: [''],
+      currentDue: ['', [Validators.required, Validators.min(0)]],
+
+      dueSince: ['', [Validators.required]],
     });
   }
 
@@ -159,10 +191,10 @@ export class BillProfilePage implements OnInit {
   }
 
   submitForm() {
-    if (this.busForm.valid) {
-      console.log(this.busForm.value);
+    if (this.billDetailsForm.valid) {
+      console.log(this.billDetailsForm.value);
     } else {
-      this.busForm.markAllAsTouched();
+      this.billDetailsForm.markAllAsTouched();
     }
   }
 

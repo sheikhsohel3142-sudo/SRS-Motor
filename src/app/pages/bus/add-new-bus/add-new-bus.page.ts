@@ -26,8 +26,7 @@ import {
   IonIcon,
   IonInput,
   IonSelect,
-  IonItem,
-} from '@ionic/angular/standalone';
+  IonItem, IonText } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -35,7 +34,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './add-new-bus.page.html',
   styleUrls: ['./add-new-bus.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonText, 
     IonItem,
     IonInput,
     IonButton,
@@ -55,6 +54,10 @@ import { RouterLink } from '@angular/router';
   ],
 })
 export class AddNewBusPage implements OnInit {
+  isInvalid(controlName: string) {
+    const control = this.busForm.get(controlName);
+    return control && control.invalid && (control.dirty || control.touched);
+  }
   busForm!: FormGroup;
 
   fuelTypes = ['Petrol', 'Diesel', 'CNG', 'Electric'];

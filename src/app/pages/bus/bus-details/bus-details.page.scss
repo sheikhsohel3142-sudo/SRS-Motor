@@ -1,8 +1,7 @@
-
-.root-container{
-   width: 960px;
-  height: 2570px;
-}
+// .root-container{
+//    width: 960px;
+//   height: 2570px;
+// }
 
 .status-container {
   display: flex;
@@ -11,14 +10,11 @@
 
   position: relative;
   left: 700px;
-  bottom: 50px; 
-  ion-toggle{
-    
+  bottom: 50px;
+  ion-toggle {
     transform: scale(0.5);
     font-size: 40px;
     font-weight: 700;
-
-   
   }
 }
 .title-container {
@@ -39,7 +35,7 @@
     top: 10px;
     left: 30px;
     font-style: 16px;
-    ion-icon{
+    ion-icon {
       position: relative;
       right: 10px;
       top: 1px;
@@ -48,17 +44,17 @@
     }
   }
 }
-.align-field{
+.align-field {
   position: relative;
   left: 50px;
 }
-.align-right-field{
+.align-right-field {
   position: relative;
   left: 8px;
 }
-.add-new-bus-container {
+.bus-details-container {
   background: #f2f2f2;
-  width: 910px;
+  // width: 1910px;
   height: 2550px;
   position: relative;
   top: 10px;
@@ -85,7 +81,7 @@
   background: #ffffff;
   border-radius: 12px;
   padding: 24px 32px;
- box-shadow: 0 12px 30px rgba(253, 251, 251, 0);
+  box-shadow: 0 12px 30px rgba(253, 251, 251, 0);
   ion-grid {
     position: relative;
     top: 50px;
@@ -94,7 +90,7 @@
     }
   }
 }
-.add-new-bus-container ion-input {
+.bus-details-container ion-input {
   background: #f5f6f8;
   border-radius: 8px;
   padding: 12px 14px;
@@ -125,7 +121,7 @@
     width: 790px;
     border-radius: 12px;
     position: relative;
-    left: 28px;
+    // left: 28px;
     top: 100px;
     text-transform: none;
     background-color: #4f8cff;
@@ -246,29 +242,29 @@
   padding: 24px 32px;
   box-shadow: 0 12px 30px rgba(253, 251, 251, 0);
 }
-.table-head-wrap {
-  padding: 0 10px;
-  position: relative;
-  right: 70px;
-}
-.year {
-  position: relative;
-  left: 18px;
-}
-.month {
-  position: relative;
-  left: 105px;
-}
-.amount {
-  position: relative;
-  left: 171px;
-}
-.type {
-  position: relative;
-  left: 235px;
-}
+// .table-head-wrap {
+//   padding: 0 10px;
+//   position: relative;
+//   right: 70px;
+// }
+// .year {
+//   position: relative;
+//   left: 18px;
+// }
+// .month {
+//   position: relative;
+//   left: 105px;
+// }
+// .amount {
+//   position: relative;
+//   left: 171px;
+// }
+// .type {
+//   position: relative;
+//   left: 235px;
+// }
 
-.table-container {
+.Revenu-table-container {
   width: 810px;
   padding: 10px;
   border-radius: 12px;
@@ -279,85 +275,112 @@
 
   background-color: #f8fafc;
 }
-.head-container {
-  width: 793px;
-  border-radius: 12px;
-  position: relative;
-  right: 2px;
+// .head-container {
+//   width: 793px;
+//   border-radius: 12px;
+//   position: relative;
+//   right: 2px;
 
-  border: 1px solid #ffffff;
+//   border: 1px solid #ffffff;
+// }
+// .table-head {
+//   // display: grid;
+//   // grid-template-columns: 60px 1.5fr 80px 1fr 100px 80px;
+//   display: flex;
+//   justify-content: space-evenly;
+//   padding: 12px 0;
+//   font-weight: 500;
+//   font-family: "Urbanist", sans-serif;
+//   font-size: 16px;
+//   line-height: 145%;
+//   letter-spacing: 0%;
+//   width: 500px;
+//   color: #0f172a;
+//   position: relative;
+//   left: 40px;
+// }
+
+// For Revenu Tracking
+.Revenue-head-container2,
+.revenue-table-row2{
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr 1.2fr 1.5fr;
+  align-items: center;
+  padding: 12px 16px;
+  width: 100%;
 }
-.table-head {
-  // display: grid;
-  // grid-template-columns: 60px 1.5fr 80px 1fr 100px 80px;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 12px 0;
-  font-weight: 500;
-  font-family: "Urbanist", sans-serif;
-  font-size: 16px;
-  line-height: 145%;
-  letter-spacing: 0%;
-  width: 500px;
-  color: #0f172a;
-  position: relative;
-  left: 40px;
+.head-container,
+.table-row {
+  display: grid;
+  grid-template-columns: 110px 1.5fr 1.2fr 1.5fr 1fr 45px;
+  align-items: center;
+  padding: 12px 16px;
+  width: 100%;
+}
+
+.table-row span {
+  font-size: 14px;
+}
+.head-container span {
+  font-weight: 600;
+  font-size: 13px;
+  color: #6b7280;
 }
 
 /* CARD */
 .table-card {
   background-color: #ffffff;
   margin: 8px 16px 4px;
-  width: 796px;
+  width: 100%;
 
   position: relative;
   top: 5px;
-  left: -18px;
-  padding-left: 20px;
-  padding-right: 10px;
+  right: 18px;
+  // padding-left: 20px;
+  // padding-right: 10px;
   border-radius: 12px;
 }
 
 /* ROWS */
-.table-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 400;
-  color: #1f1f1f;
-  line-height: 145%;
+// .table-row {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   font-family: "Space Grotesk", sans-serif;
+//   font-weight: 400;
+//   color: #1f1f1f;
+//   line-height: 145%;
 
-  letter-spacing: 0%;
-  padding: 12px 0;
-  font-size: 16px;
-  border-bottom: 1px solid #f5f2f2;
-}
+//   letter-spacing: 0%;
+//   padding: 12px 0;
+//   font-size: 16px;
+//   border-bottom: 1px solid #f5f2f2;
+// }
 
-.table-content {
-  border: 1px solid #ffffff;
-  width: 100px;
-  display: flex;
-  position: relative;
-  right: 10px;
-  justify-content: space-around;
-}
-.content-year {
-  position: relative;
-  left: 30px;
-}
-.content-month {
-  position: relative;
-  right: 15px;
-}
-.content-amount {
-  position: relative;
-  right: 110px;
-}
-.content-type {
-  position: relative;
-  right: 125px;
-}
+// .table-content {
+//   border: 1px solid #ffffff;
+//   width: 100px;
+//   display: flex;
+//   position: relative;
+//   right: 10px;
+//   justify-content: space-around;
+// }
+// .content-year {
+//   position: relative;
+//   left: 30px;
+// }
+// .content-month {
+//   position: relative;
+//   right: 15px;
+// }
+// .content-amount {
+//   position: relative;
+//   right: 110px;
+// }
+// .content-type {
+//   position: relative;
+//   right: 125px;
+// }
 
 .active {
   color: #16a34a;
@@ -385,29 +408,29 @@
   background: #ffffff;
   border-radius: 12px;
   padding: 24px 32px;
- box-shadow: 0 12px 30px rgba(253, 251, 251, 0);
+  box-shadow: 0 12px 30px rgba(253, 251, 251, 0);
 }
 
 .button {
-  position: absolute;
-  top: 12px;
- 
- 
+  //  position: absolute;
+  // // right: 2%;
+
   ion-button {
-    position: relative;
-    top: 10px;
-    left: 648px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+
     bottom: 400px;
     width: 168px;
     height: 38px;
-    
+
     border-radius: 10px;
     text-transform: none;
     background-color: #ffffff;
     color: #4f8cff;
     border: 1px dashed #4f8cff;
     white-space: nowrap;
-    div{
+    div {
       position: relative;
       right: 10px;
       font-size: 18px;
@@ -415,7 +438,7 @@
     .plus {
       width: 21px;
       height: 21px;
-      transform: scale(2.0);
+      transform: scale(2);
       width: 14px;
       height: 15px;
       position: relative;
@@ -451,26 +474,26 @@
 
   background-color: #f8fafc;
 }
-.date {
-  position: relative;
-  left: 20px;
-}
-.category {
-  position: relative;
-  left: 130px;
-}
-.amount2 {
-  position: relative;
-  left: 210px;
-}
-.paid {
-  position: relative;
-  left: 275px;
-}
-.invoice {
-  position: relative;
-  left: 340px;
-}
+// .date {
+//   position: relative;
+//   left: 20px;
+// }
+// .category {
+//   position: relative;
+//   left: 130px;
+// }
+// .amount2 {
+//   position: relative;
+//   left: 210px;
+// }
+// .paid {
+//   position: relative;
+//   left: 275px;
+// }
+// .invoice {
+//   position: relative;
+//   left: 340px;
+// }
 .table-profit-container {
   width: 810px;
 
@@ -544,6 +567,7 @@
 
   background-color: #f8fafc;
 }
+.Profitability-head-container,
 .profitability-content-container {
   // display: flex;
   // justify-content: space-evenly;
@@ -560,57 +584,57 @@
   font-size: 16px;
   border-bottom: 1px solid #f5f2f2;
 }
-.table-month {
-  // border: 1px solid black;
-  width: 90px;
-  display: flex;
-  position: relative;
-  right: 13px;
-  justify-content: space-around;
-}
-.month2 {
-  position: relative;
-  left: 30px;
-}
-.total-revenue {
-  position: relative;
-  left: 120px;
-}
-.total-Expenses {
-  position: relative;
-  left: 180px;
-}
-.net-profit {
-  position: relative;
-  left: 230px;
-}
-.status {
-  position: relative;
-  left: 310px;
-}
-.total-revenue-content {
-  position: relative;
-  right: -10px;
-}
-.total-Expenses-content {
-  position: relative;
-  left: 40px;
-}
-.net-profit-content {
-  position: relative;
-  left: 50px;
-}
-.net-profit-content {
-  position: relative;
-  left: 50px;
-}
-.status-content {
-  position: relative;
-  left: 65px;
-}
-.upload-container {
-  width: 30%;
-}
+// .table-month {
+//   // border: 1px solid black;
+//   width: 90px;
+//   display: flex;
+//   position: relative;
+//   right: 13px;
+//   justify-content: space-around;
+// }
+// .month2 {
+//   position: relative;
+//   left: 30px;
+// }
+// .total-revenue {
+//   position: relative;
+//   left: 120px;
+// }
+// .total-Expenses {
+//   position: relative;
+//   left: 180px;
+// }
+// .net-profit {
+//   position: relative;
+//   left: 230px;
+// }
+// .status {
+//   position: relative;
+//   left: 310px;
+// }
+// .total-revenue-content {
+//   position: relative;
+//   right: -10px;
+// }
+// .total-Expenses-content {
+//   position: relative;
+//   left: 40px;
+// }
+// .net-profit-content {
+//   position: relative;
+//   left: 50px;
+// }
+// .net-profit-content {
+//   position: relative;
+//   left: 50px;
+// }
+// .status-content {
+//   position: relative;
+//   left: 65px;
+// }
+// .upload-container {
+//   width: 30%;
+// }
 
 .upload-label {
   font-size: 14px;
@@ -676,4 +700,314 @@
   position: absolute;
   left: 335px;
   bottom: 15px;
+}
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transform-origin: top center;
+}
+@media only screen and (min-width: 1600px) {
+  .bus-details-container {
+    width: 99%;
+
+    // left: 20px;
+    // padding-left: 120px;
+  }
+  // .root-container {
+  //   width: 99%;
+
+  //   // left: 20px;
+  //   // padding-left: 120px;
+  // }
+
+  .right-side {
+    left: 30px;
+  }
+  .input {
+    width: 91%;
+  }
+  .bus-details-container ion-input {
+    width: 91%;
+  }
+
+  .bus-details {
+    width: 105%;
+  }
+  .All-list {
+    width: 105%;
+  }
+  .expense-container {
+    width: 105%;
+  }
+  .Revenu-table-container {
+    width: 105%;
+  }
+ .table-profitability-container {
+    width: 105%;
+  }
+ .table-expense-container {
+    width: 105%;
+  }
+  .profitability-summary-container {
+    width: 105%;
+  }
+  .confirm-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+}
+
+/* ================== Laptop (1280px – 1599px) ================== */
+@media only screen and (max-width: 1599px) and (min-width: 1280px) {
+  .bus-details-container {
+    width: 99%;
+
+    // padding-left: 140px;
+  }
+  .input {
+    width: 91%;
+  }
+
+  .right-side {
+    left: 30px;
+  }
+
+  .bus-details {
+    width: 107%;
+  }
+  .All-list {
+    width: 105%;
+  }
+  .expense-container {
+    width: 105%;
+  }
+    .Revenu-table-container {
+    width: 105%;
+  }
+ .table-profitability-container {
+    width: 105%;
+  }
+ .table-expense-container {
+    width: 105%;
+  }
+  .profitability-summary-container {
+    width: 105%;
+  }
+
+  .bus-details-container ion-input {
+    width: 91%;
+  }
+  .confirm-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+}
+
+// /* ================== Tablet (768px – 1279px) ================== */
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  .bus-details-container {
+    width: 99%;
+  }
+  .input {
+    width: 95%;
+  }
+
+  // .right-side {
+
+  //   left: 30px
+  // }
+
+  .bus-details {
+    width: 108%;
+
+    // right: 0;
+    // top: 60px;
+  }
+  .All-list {
+    width: 105%;
+  }
+  .expense-container {
+    width: 105%;
+  }
+    .Revenu-table-container {
+    width: 105%;
+  }
+ .table-profitability-container {
+    width: 105%;
+  }
+ .table-expense-container {
+    width: 105%;
+  }
+  .profitability-summary-container {
+    width: 105%;
+  }
+  .title-container {
+    margin-left: 50;
+  }
+
+  ion-grid {
+    display: block;
+  }
+
+  .right-col {
+  }
+
+  .bus-details-container ion-input {
+    width: 91%;
+  }
+  .confirm-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 900px) {
+  .bus-details-container {
+    width: 99.5%;
+  }
+  .input {
+    width: 91%;
+  }
+
+  .right-side {
+    left: 30px;
+  }
+
+
+  .bus-details {
+    width: 116%;
+
+    // right: 0;
+    // top: 60px;
+  }
+  .title-container {
+    margin-left: 50;
+  }
+
+  ion-grid {
+    display: block;
+  }
+
+  .right-col {
+  }
+
+  .bus-details-container ion-input {
+    width: 91%;
+  }
+  .confirm-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* Outer container */
+  .bus-details-container {
+    width: 99%;
+
+    // padding: 10px;
+    background: #f2f2f2;
+    padding: 8px 10px;
+  }
+  .input {
+    width: 91%;
+    margin-left: 21px;
+  }
+
+  /* Card */
+  .bus-details {
+    width: 100%;
+    height: 1300px;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+  }
+
+  /* Top button (My profile) */
+  .title-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    right: 0;
+  }
+
+  /* Heading */
+  .form-head {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  /* 🔥 GRID → SINGLE COLUMN */
+  ion-grid {
+    display: block;
+  }
+
+  ion-row {
+    display: block;
+    left: 20px;
+  }
+
+  ion-col {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Remove right side shift */
+  .align-field {
+    left: 0;
+    margin-top: 10px;
+  }
+  .align-right-field {
+    left: 0;
+    margin-top: 10px;
+  }
+
+  /* Form fields */
+  .bus-details-container {
+    margin-bottom: 12px;
+  }
+
+  .bus-details-container label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    margin-left: 21px;
+  }
+
+  .bus-details-container ion-input {
+    width: 91%;
+    min-width: 31%;
+    height: 44px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 21px;
+  }
+  .confirm-btn {
+    /* Button */
+    ion-button {
+      width: 100%;
+      min-width: 200px;
+      height: 48px;
+      margin-top: 16px;
+      margin-right: 20px;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+  }
+
+  /* Remove extra spacing issue */
+  body {
+    overflow-x: hidden;
+  }
 }

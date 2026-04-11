@@ -1,12 +1,12 @@
 <ion-content>
-  <div class="add-new-bus-container">
+  <div class="bill-profile-container">
     <div class="title-container">
       <div routerLink="/admin/bus">
         <ion-icon name="chevron-back-outline"></ion-icon>Billing & Payments
       </div>
     </div>
     <ion-card>
-      <form [formGroup]="busForm">
+      <form [formGroup]="billDetailsForm">
         <div class="header-container">
           <h2>Bill Details</h2>
         </div>
@@ -14,7 +14,24 @@
           <ion-row>
             <!-- Bus Registration -->
             <ion-col size="12" size-md="6">
-              <label>Student Name</label>
+              <label
+                >Student Name
+                <ion-text
+                  color="danger"
+                  *ngIf="billDetailsForm.get('studentName')?.touched && billDetailsForm.get('studentName')?.invalid"
+                >
+                  <small
+                    *ngIf="billDetailsForm.get('studentName')?.errors?.['required']"
+                  >
+                    Student name is required
+                  </small>
+                  <small
+                    *ngIf="billDetailsForm.get('studentName')?.errors?.['pattern']"
+                  >
+                    Only letters allowed
+                  </small>
+                </ion-text>
+              </label>
               <div class="input-count">
                 <ion-input
                   placeholder="Eg: New Tyre has been changed"
@@ -26,7 +43,24 @@
 
             <!-- Seating Capacity -->
             <ion-col class="align-right-field" size="12" size-md="6">
-              <label>Parents Name</label>
+              <label
+                >Parents Name
+                <ion-text
+                  color="danger"
+                  *ngIf="billDetailsForm.get('parentsName')?.touched && billDetailsForm.get('parentsName')?.invalid"
+                >
+                  <small
+                    *ngIf="billDetailsForm.get('parentsName')?.errors?.['required']"
+                  >
+                    Parents name is required
+                  </small>
+                  <small
+                    *ngIf="billDetailsForm.get('parentsName')?.errors?.['pattern']"
+                  >
+                    Only letters allowed
+                  </small>
+                </ion-text>
+              </label>
               <div class="input-count">
                 <ion-input
                   type="data"
@@ -39,7 +73,24 @@
 
             <!-- Fuel Type -->
             <ion-col size="12" size-md="6">
-              <label>Phone Number</label>
+              <label
+                >Phone Number
+                <ion-text
+                  color="danger"
+                  *ngIf="billDetailsForm.get('phoneNumber')?.touched && billDetailsForm.get('phoneNumber')?.invalid"
+                >
+                  <small
+                    *ngIf="billDetailsForm.get('phoneNumber')?.errors?.['required']"
+                  >
+                    Phone number is required
+                  </small>
+                  <small
+                    *ngIf="billDetailsForm.get('phoneNumber')?.errors?.['pattern']"
+                  >
+                    Enter valid 10 digit number
+                  </small>
+                </ion-text>
+              </label>
               <div class="input-count">
                 <ion-input
                   placeholder="Eg: $ 45.00"
@@ -51,7 +102,15 @@
 
             <!-- Assign School -->
             <ion-col class="align-right-field" size="12" size-md="6">
-              <label>School</label>
+              <label
+                >School
+                <ion-text
+                  color="danger"
+                  *ngIf="billDetailsForm.get('school')?.touched && billDetailsForm.get('school')?.invalid"
+                >
+                  <small>School is required</small>
+                </ion-text>
+              </label>
               <div class="input-count">
                 <ion-input
                   placeholder="Eg: New Tyre has been changed"
@@ -63,7 +122,15 @@
 
             <!-- Route -->
             <ion-col size="12" size-md="6">
-              <label>School</label>
+              <label
+                >School
+                <ion-text
+                  color="danger"
+                  *ngIf="billDetailsForm.get('school')?.touched && billDetailsForm.get('school')?.invalid"
+                >
+                  <small>School is required</small>
+                </ion-text>
+              </label>
               <div class="input-count">
                 <ion-input
                   placeholder="Eg: New Tyre has been changed"
@@ -75,7 +142,15 @@
 
             <!-- Service Start Date -->
             <ion-col class="align-right-field" size="12" size-md="6">
-              <label>Billing Month</label>
+              <label
+                >Billing Month
+                <ion-text
+                  color="danger"
+                  *ngIf="billDetailsForm.get('billingMonth')?.touched && billDetailsForm.get('billingMonth')?.invalid"
+                >
+                  <small>Billing month is required</small>
+                </ion-text>
+              </label>
               <div class="input-count">
                 <ion-input
                   placeholder="Eg: New Tyre has been changed"
@@ -91,7 +166,7 @@
         <div class="first-btn">
           <ion-button
             expand="block"
-            [disabled]="busForm.invalid"
+            [disabled]="billDetailsForm.invalid"
             class="confirm-btn"
             fill="clear"
             (click)="submitForm()"
@@ -112,7 +187,31 @@
             <!-- Transport Fare -->
             <ion-col size="6">
               <div class="input-count">
-                <label>Transport Fare</label>
+                <label
+                  >Transport Fare
+                  <ion-text
+                    color="danger"
+                    *ngIf="billingForm.get('transportFare')?.touched && billingForm.get('transportFare')?.invalid"
+                  >
+                    <small
+                      *ngIf="billingForm.get('transportFare')?.errors?.['required']"
+                    >
+                      Transport fare is required
+                    </small>
+
+                    <small
+                      *ngIf="billingForm.get('transportFare')?.errors?.['min']"
+                    >
+                      Amount cannot be negative
+                    </small>
+
+                    <small
+                      *ngIf="billingForm.get('transportFare')?.errors?.['pattern']"
+                    >
+                      Enter valid amount (max 2 decimal)
+                    </small>
+                  </ion-text>
+                </label>
 
                 <ion-label slot="start">$</ion-label>
                 <ion-input
@@ -125,7 +224,25 @@
             <!-- Previous Due -->
             <ion-col size="6" class="align-right-field">
               <div class="input-count">
-                <label>Previous Due</label>
+                <label
+                  >Previous Due
+                  <ion-text
+                    color="danger"
+                    *ngIf="billingForm.get('previousDue')?.touched && billingForm.get('previousDue')?.invalid"
+                  >
+                    <small
+                      *ngIf="billingForm.get('previousDue')?.errors?.['min']"
+                    >
+                      Amount cannot be negative
+                    </small>
+
+                    <small
+                      *ngIf="billingForm.get('previousDue')?.errors?.['pattern']"
+                    >
+                      Enter valid amount (max 2 decimal)
+                    </small>
+                  </ion-text>
+                </label>
 
                 <ion-label slot="start">$</ion-label>
                 <ion-input
@@ -140,7 +257,23 @@
             <!-- Late Fee -->
             <ion-col size="6">
               <div class="input-count">
-                <label>Late Fee</label>
+                <label
+                  >Late Fee
+                  <ion-text
+                    color="danger"
+                    *ngIf="billingForm.get('lateFee')?.touched && billingForm.get('lateFee')?.invalid"
+                  >
+                    <small *ngIf="billingForm.get('lateFee')?.errors?.['min']">
+                      Amount cannot be negative
+                    </small>
+
+                    <small
+                      *ngIf="billingForm.get('lateFee')?.errors?.['pattern']"
+                    >
+                      Enter valid amount (max 2 decimal)
+                    </small>
+                  </ion-text>
+                </label>
 
                 <ion-label slot="start">$</ion-label>
                 <ion-input type="number" formControlName="lateFee"></ion-input>
@@ -150,7 +283,31 @@
             <!-- Total Amount -->
             <ion-col size="6" class="align-right-field">
               <div class="input-count">
-                <label>Total Amount</label>
+                <label
+                  >Total Amount
+                  <ion-text
+                    color="danger"
+                    *ngIf="billingForm.get('totalAmount')?.touched && billingForm.get('totalAmount')?.invalid"
+                  >
+                    <small
+                      *ngIf="billingForm.get('totalAmount')?.errors?.['required']"
+                    >
+                      Total amount is required
+                    </small>
+
+                    <small
+                      *ngIf="billingForm.get('totalAmount')?.errors?.['min']"
+                    >
+                      Amount cannot be negative
+                    </small>
+
+                    <small
+                      *ngIf="billingForm.get('totalAmount')?.errors?.['pattern']"
+                    >
+                      Enter valid amount
+                    </small>
+                  </ion-text>
+                </label>
 
                 <ion-label slot="start">$</ion-label>
                 <ion-input
@@ -179,14 +336,37 @@
             <!-- Row 1 -->
             <ion-row>
               <ion-col size="6">
-                <label>Payment Amount</label>
+                <label
+                  >Payment Amount
+                  <ion-text
+                    color="danger"
+                    *ngIf="paymentForm.get('amount')?.touched && paymentForm.get('amount')?.invalid"
+                  >
+                    <small
+                      *ngIf="paymentForm.get('amount')?.errors?.['required']"
+                    >
+                      Amount is required
+                    </small>
+                    <small *ngIf="paymentForm.get('amount')?.errors?.['min']">
+                      Amount must be greater than 0
+                    </small>
+                  </ion-text>
+                </label>
 
                 <ion-label slot="start">$</ion-label>
                 <ion-input type="number" formControlName="amount"></ion-input>
               </ion-col>
 
-              <ion-col size="6" class="align-right-field">
-                <label>Payment Mode</label>
+              <ion-col size="6"class="align-right-field">
+                <label
+                  >Payment Mode
+                  <ion-text
+                    color="danger"
+                    *ngIf="paymentForm.get('mode')?.touched && paymentForm.get('mode')?.invalid"
+                  >
+                    <small>Payment mode is required</small>
+                  </ion-text>
+                </label>
                 <div class="input">
                   <ion-select formControlName="mode">
                     <ion-select-option value="upi">UPI</ion-select-option>
@@ -201,7 +381,15 @@
             <!-- Row 2 -->
             <ion-row>
               <ion-col size="6">
-                <label>Payment Date</label>
+                <label
+                  >Payment Date
+                  <ion-text
+                    color="danger"
+                    *ngIf="paymentForm.get('date')?.touched && paymentForm.get('date')?.invalid"
+                  >
+                    <small>Date is required</small>
+                  </ion-text>
+                </label>
 
                 <ion-input formControlName="date" type="date"></ion-input>
                 <ion-icon name="calendar-outline" slot="end"></ion-icon>
@@ -216,11 +404,9 @@
 
             <!-- Row 3 -->
             <ion-row>
-              <ion-col size="12">
+              <ion-col size="12" >
                 <label>Notes (optional)</label>
                 <div class="input">
-               
-
                   <ion-select formControlName="notes">
                     <ion-select-option value="parent">
                       Payment made from parent’s phone
@@ -434,7 +620,23 @@
           <ion-row>
             <!-- Current Due -->
             <ion-col size="6">
-              <ion-label>Current Due</ion-label>
+              <ion-label
+                >Current Due
+                <ion-text
+                  color="danger"
+                  *ngIf="dueForm.get('currentDue')?.touched && dueForm.get('currentDue')?.invalid"
+                >
+                  <small
+                    *ngIf="dueForm.get('currentDue')?.errors?.['required']"
+                  >
+                    Current due is required
+                  </small>
+
+                  <small *ngIf="dueForm.get('currentDue')?.errors?.['min']">
+                    Value cannot be negative
+                  </small>
+                </ion-text>
+              </ion-label>
               <div class="input-count">
                 <ion-input
                   type="number"
@@ -447,7 +649,23 @@
 
             <!-- Due Since -->
             <ion-col size="6" class="align-right-field">
-              <ion-label>Due Since</ion-label>
+              <ion-label
+                >Due Since
+                <ion-text
+                  color="danger"
+                  *ngIf="dueForm.get('dueSince')?.touched && dueForm.get('dueSince')?.invalid"
+                >
+                  <small *ngIf="dueForm.get('dueSince')?.errors?.['required']">
+                    Date is required
+                  </small>
+
+                  <small
+                    *ngIf="dueForm.get('dueSince')?.errors?.['futureDate']"
+                  >
+                    Future date not allowed
+                  </small>
+                </ion-text>
+              </ion-label>
               <div class="input-count">
                 <ion-input formControlName="dueSince" type="date"> </ion-input>
               </div>

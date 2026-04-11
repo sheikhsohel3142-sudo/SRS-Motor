@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonButton, IonCol, IonRow, IonGrid, IonIcon, IonToggle, IonSelect, IonInput } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonButton, IonCol, IonRow, IonGrid, IonIcon, IonToggle, IonSelect, IonInput, IonText, IonLabel } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './enroll-new-student.page.html',
   styleUrls: ['./enroll-new-student.page.scss'],
   standalone: true,
-  imports: [IonInput, IonToggle, IonIcon, IonGrid, IonRow, IonCol, IonButton, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, ReactiveFormsModule, IonSelect,RouterLink]
+  imports: [IonLabel, IonText, IonInput, IonToggle, IonIcon, IonGrid, IonRow, IonCol, IonButton, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, ReactiveFormsModule, IonSelect,RouterLink]
 })
 export class EnrollNewStudentPage implements OnInit {
  enrollForm!: FormGroup;

@@ -1,49 +1,46 @@
-
-
-
-
 <ion-content>
- <div class="profile-container">
+  <div class="profile-container">
     <div class="header">
       <div class="title-container">
         <div>Students & Parents</div>
       </div>
-      <ion-button (click)="addNewSchool()"
-  fill="clear" fill="clear"><span><p>+</p></span> Enroll New Student</ion-button>
-       
-   </div>
-   <div class="table-container">
-    <div class="head-container">
-   <div class="table-head-wrap">
-      <div class="table-head">
-        <span class="s-no">S.no</span>
-        <span class="school-name">Students<br>&nbsp;&nbsp;&nbsp;Name</span>
-        <span class="school">School</span>
-        <span class="buses">Assigned<br>&nbsp;&nbsp;&nbsp;&nbsp;Bus</span>
-        <span class="A-route">Assigned<br>&nbsp;&nbsp;&nbsp;Route</span>
-        <span class="advance">Assigned <br>&nbsp;&nbsp;&nbsp;Stop</span>
-        <span class="status">Status</span>
-      </div>
-      </div>
+      <ion-button (click)="addNewSchool()" fill="clear" fill="clear"
+        ><span><p>+</p></span> Enroll New Student</ion-button
+      >
     </div>
+    <div class="table-container">
+      <div class="head-container">
+        <!-- <div class="table-head-wrap">
+          <div class="table-head"> -->
+        <span class="s-no">S.no</span>
+        <span class="school-name"><div class="special">Students<br />&nbsp;&nbsp;&nbsp;Name</div></span>
+        <span class="school">School</span>
+        <span class="buses">Assigned<br />&nbsp;&nbsp;&nbsp;&nbsp;Bus</span>
+        <span class="A-route">Assigned<br />&nbsp;&nbsp;&nbsp;Route</span>
+        <span class="advance"><div class="special3">Assigned <br />&nbsp;&nbsp;&nbsp;Stop</div></span>
+        <span class="status">Status</span>
+        <!-- </div>
+        </div> -->
+      </div>
 
-
-    <div class="table-card">
-      <div>
-        <div class="table-row" *ngFor="let s of schools; let i = index">
-          <span class="c-no">{{ i + 1 }}</span>
-          <span class="driver-name">{{ s.name }}</span>
-          <span class="school-N">{{ s.school }}</span>
-          <span class="buses-no">{{ s.buses }}</span>
-          <span class="route">{{s.route}}</span>
-          <span class="Advance-amount">{{ s.outstandingAdvance }}</span>
-          <span class="active">{{ s.status }}</span>
-          <span class="view" [routerLink]="['/admin/students-and-parents/student-profile']">View ››</span>
-
+      <div class="table-card">
+        <div>
+          <div class="table-row" *ngFor="let s of schools; let i = index">
+            <span class="c-no">{{ i + 1 }}</span>
+            <span class="driver-name">{{ s.name }}</span>
+            <span class="school-N">{{ s.school }}</span>
+            <span class="buses-no">{{ s.buses }}</span>
+            <span class="route">{{s.route}}</span>
+            <span class="Advance-amount">{{ s.outstandingAdvance }}</span>
+            <span class="active">{{ s.status }}</span>
+            <span
+              class="view"
+              [routerLink]="['/admin/students-and-parents/student-profile']"
+              >View ››</span
+            >
+          </div>
         </div>
       </div>
     </div>
-   
   </div>
-   </div>
 </ion-content>

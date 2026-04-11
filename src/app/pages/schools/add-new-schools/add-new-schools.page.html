@@ -1,4 +1,3 @@
-
 <ion-content>
   <div class="add-new-schools">
     <div class="title-container">
@@ -21,7 +20,15 @@
               <!-- LEFT COLUMN -->
               <ion-col size="12" size-md="6">
                 <ion-col size="12">
-                  <ion-label>School Name</ion-label>
+                  <ion-label
+                    >School Name
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('schoolName')?.touched && schoolForm.get('schoolName')?.invalid"
+                    >
+                      School name is required
+                    </ion-text>
+                  </ion-label>
                   <ion-input
                     placeholder="Eg: SRV Marticulation Higher Sec School"
                     formControlName="schoolName"
@@ -29,7 +36,15 @@
                 </ion-col>
 
                 <ion-col size="12">
-                  <ion-label>Affiliation Board</ion-label>
+                  <ion-label
+                    >Affiliation Board
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('affiliationBoard')?.touched && schoolForm.get('affiliationBoard')?.invalid"
+                    >
+                      Please select board
+                    </ion-text>
+                  </ion-label>
                   <div class="input">
                     <ion-select
                       formControlName="affiliationBoard"
@@ -53,7 +68,15 @@
                 </ion-col>
 
                 <ion-col size="12">
-                  <ion-label>State</ion-label>
+                  <ion-label
+                    >State
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('state')?.touched && schoolForm.get('state')?.invalid"
+                    >
+                      State is required
+                    </ion-text>
+                  </ion-label>
                   <ion-input
                     placeholder="Eg:Jharkhand"
                     formControlName="state"
@@ -61,7 +84,15 @@
                 </ion-col>
 
                 <ion-col size="12">
-                  <ion-label>Primary Contact Name</ion-label>
+                  <ion-label
+                    >Primary Contact Name
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('primaryContactName')?.touched && schoolForm.get('primaryContactName')?.invalid"
+                    >
+                      Contact name is required
+                    </ion-text>
+                  </ion-label>
                   <ion-input
                     placeholder="Russel"
                     formControlName="primaryContactName"
@@ -69,7 +100,15 @@
                 </ion-col>
 
                 <ion-col size="12">
-                  <ion-label>Email</ion-label>
+                  <ion-label
+                    >Email
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('email')?.touched && schoolForm.get('email')?.invalid"
+                    >
+                      Enter valid email
+                    </ion-text>
+                  </ion-label>
                   <ion-input
                     type="email"
                     placeholder="Eg: ripleyenterpraises@gmail.com"
@@ -78,7 +117,15 @@
                 </ion-col>
 
                 <ion-col size="12">
-                  <ion-label>School Timings</ion-label>
+                  <ion-label
+                    >School Timings
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('schoolTimings')?.touched && schoolForm.get('schoolTimings')?.invalid"
+                    >
+                      School timing is required
+                    </ion-text>
+                  </ion-label>
                   <ion-input
                     placeholder="Eg: 9.00 - 16.30"
                     formControlName="schoolTimings"
@@ -87,9 +134,17 @@
               </ion-col>
 
               <!-- RIGHT COLUMN -->
-              <ion-col size="12" size-md="6" >
+              <ion-col size="12" size-md="6">
                 <ion-col size="12" class="right-side">
-                  <ion-label>School Type</ion-label>
+                  <ion-label
+                    >School Type
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('schoolType')?.touched && schoolForm.get('schoolType')?.invalid"
+                    >
+                      Select school type
+                    </ion-text>
+                  </ion-label>
                   <div class="input">
                     <ion-select
                       formControlName="schoolType"
@@ -108,8 +163,16 @@
                   </div>
                 </ion-col>
 
-                <ion-col size="12"  class="right-side">
-                  <ion-label>Address Line 1</ion-label>
+                <ion-col size="12" class="right-side">
+                  <ion-label
+                    >Address Line 1
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('address1')?.touched && schoolForm.get('address1')?.invalid"
+                    >
+                      Address is required
+                    </ion-text>
+                  </ion-label>
                   <ion-input
                     placeholder="Eg: Redwood Building..."
                     formControlName="address1"
@@ -117,7 +180,15 @@
                 </ion-col>
 
                 <ion-col size="12" class="right-side">
-                  <ion-label>City</ion-label>
+                  <ion-label
+                    >City
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('city')?.touched && schoolForm.get('city')?.invalid"
+                    >
+                      City is required
+                    </ion-text>
+                  </ion-label>
                   <ion-input
                     placeholder="Eg: Delhi"
                     formControlName="city"
@@ -125,7 +196,15 @@
                 </ion-col>
 
                 <ion-col size="12" class="right-side">
-                  <ion-label>Postal Code</ion-label>
+                  <ion-label
+                    >Postal Code
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('postalCode')?.touched && schoolForm.get('postalCode')?.invalid"
+                    >
+                      Enter valid 6 digit PIN code
+                    </ion-text>
+                  </ion-label>
                   <ion-input
                     type="number"
                     placeholder="Eg: 349086"
@@ -134,7 +213,15 @@
                 </ion-col>
 
                 <ion-col size="12" class="right-side">
-                  <ion-label>Contact Phone</ion-label>
+                  <ion-label
+                    >Contact Phone
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('contactPhone')?.touched && schoolForm.get('contactPhone')?.invalid"
+                    >
+                      Enter valid 10 digit number
+                    </ion-text>
+                  </ion-label>
                   <ion-input
                     type="tel"
                     placeholder="Eg: 9629371***"
@@ -143,7 +230,15 @@
                 </ion-col>
 
                 <ion-col size="12" class="right-side">
-                  <ion-label>Operating Days</ion-label>
+                  <ion-label
+                    >Operating Days
+                    <ion-text
+                      color="danger"
+                      *ngIf="schoolForm.get('operatingDays')?.touched && schoolForm.get('operatingDays')?.invalid"
+                    >
+                      Select operating days
+                    </ion-text>
+                  </ion-label>
                   <div class="input">
                     <ion-select
                       formControlName="operatingDays"

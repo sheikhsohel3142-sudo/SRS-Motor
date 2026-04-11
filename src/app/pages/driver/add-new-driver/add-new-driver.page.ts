@@ -22,8 +22,11 @@ import {
   IonIcon,
   IonSelect,
   IonInput,
+  IonText,
+  
 } from '@ionic/angular/standalone';
 import { Router, RouterLink } from '@angular/router';
+import { text } from 'ionicons/icons';
 
 @Component({
   selector: 'app-add-new-driver',
@@ -33,6 +36,7 @@ import { Router, RouterLink } from '@angular/router';
   imports: [
     IonButton,
     IonLabel,
+    IonText,
 
     IonInput,
     IonCard,

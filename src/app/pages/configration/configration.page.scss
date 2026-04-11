@@ -1,6 +1,5 @@
-
-.root{
-  height:1620px;
+.root {
+  height: 1620px;
 }
 .title-container {
   position: relative;
@@ -13,7 +12,7 @@
   padding-right: 8px;
 
   background-color: #b3cbf9;
-  div{
+  div {
     position: relative;
     top: 10px;
     left: 10px;
@@ -52,7 +51,7 @@ ion-card {
   border-radius: 12px;
   margin-bottom: 18px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  width: 860px;
+  // width: 860px;
   position: relative;
   top: 30px;
   right: 70px;
@@ -83,8 +82,6 @@ ion-card h2 {
   margin-bottom: 12px;
   width: 362px;
   height: 50px;
-
- 
 }
 label {
   font-size: 14px;
@@ -102,11 +99,11 @@ label {
   width: 700px;
 }
 
-.toggle {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+// .toggle {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+// }
 .setting-box {
   display: flex;
   justify-content: space-between;
@@ -114,32 +111,75 @@ label {
   padding: 10px 0;
 }
 
+// .toggle {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+
+//   ion-toggle {
+//     // position: relative;
+//     // left: 280px;
+//     transform: scale(0.5);
+//     position: relative;
+//     top: 10px;
+//     right: 10px;
+//   }
+//   span {
+//     position: relative;
+//     left: 10px;
+//   }
+// }
+
 .toggle {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between; // 🔥 important
+  width: 100%;
+
+  // .input-box {
+  //   flex: 1; // input jitni space le sakta hai le
+  // }
+
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
   ion-toggle {
-    position: relative;
-    left: 280px;
     transform: scale(0.5);
   }
+
   span {
     position: relative;
     left: 10px;
+    color: #000000;
   }
 }
 
+// .toggle {
+//   display: flex;
+//   align-items: center;
+//   gap: 8px;
+// }
+
+// .toggle ion-toggle {
+//   // position: static;   // ❌ absolute हटाओ
+//   position: relative;
+//   left: 360%;
+//   transform: scale(0.5);
+// }
 ion-button {
   height: 26px;
   width: 820px;
   border-radius: 12px;
   position: relative;
-  right: 40px;
-  top: 40px;
-  
+  // right: 40px;
+  // top: 20px;
+
   text-transform: none;
-  background-color: #4F8CFF;
-  color: #FFFFFF;
+  background-color: #4f8cff;
+  color: #ffffff;
 
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
@@ -157,15 +197,15 @@ ion-button {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
-  width: 362px;
+  // width: 362px;
   height: 50px;
 
   ion-select::part(icon) {
     display: none;
   }
-  ion-icon{
+  ion-icon {
     position: absolute;
-    left: 330px;
+    right: 10%;
     font-size: larger;
   }
 }
@@ -185,20 +225,19 @@ ion-button {
 //   position: absolute;
 //   background: rgba(0, 0, 0, 0.25);
 // }
-.unsaved-modal{
+.unsaved-modal {
   --height: auto;
   --border-radius: 16px;
   --width: 595px;
   margin-left: 195px;
-  width: 900px;
+  width: 500px;
   transform: translateX(160px);
-    // backdrop-filter: blur(6px);
+  // backdrop-filter: blur(6px);
   background: rgba(0, 0, 0, 0.25);
-
-  
 }
 
-.model-container{
+
+.model-container {
   position: relative;
   left: 200px;
 }
@@ -208,13 +247,11 @@ ion-button {
 }
 
 .modal-header {
- 
- 
-  h2{
+  h2 {
     text-align: center;
     font-weight: 600;
   }
-  ion-icon{
+  ion-icon {
     border: 3px solid black;
     border-radius: 50%;
     position: relative;
@@ -224,14 +261,11 @@ ion-button {
   }
 }
 
-
-
 .modal-container p {
   color: #666;
   margin-bottom: 25px;
   font-size: 14px;
   font-family: "Space Grotesk", sans-serif;
-  
 }
 
 .modal-buttons {
@@ -242,13 +276,13 @@ ion-button {
 
 .discard-btn {
   background: #ff3b30;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 12px 22px;
   border-radius: 10px;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
-  width:261.5px;
+  width: 261.5px;
   height: 46px;
   position: relative;
   left: -3px;
@@ -258,14 +292,14 @@ ion-button {
 }
 
 .update-btn {
-  background: #4F8CFF;
+  background: #4f8cff;
   color: white;
   padding: 12px 22px;
   border-radius: 12px;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
-  width:261.5px;
+  width: 261.5px;
   height: 46px;
   position: relative;
   left: 5px;
@@ -273,12 +307,413 @@ ion-button {
   border: none;
   font-weight: 500;
 }
-.right-side{
+.right-side {
   position: relative;
   left: 40px;
 }
-.left-side{
-position: relative;
+.left-side {
+  position: relative;
   left: 20px;
 }
+@media only screen and (min-width: 1600px) {
+  .configration-container {
+    width: 99%;
+    height: 1800px;
 
+    // left: 20px;
+    // padding-left: 120px;
+  }
+  .unsaved-modal{
+    width: 72%;
+    margin-left: 18%;
+  }
+  .setting-box {
+    width: 91%;
+  }
+  .dropdown-input {
+    width: 91%;
+  }
+
+  .right-side {
+    left: 30px;
+  }
+  .input {
+    width: 91%;
+  }
+  .configration-container ion-input {
+    width: 91%;
+  }
+
+  ion-card {
+    width: 105%;
+    height: 300px;
+  }
+
+  ion-button {
+    width: 100%;
+    min-width: 400px;
+    top: 60px;
+    right: 40px;
+  }
+}
+
+/* ================== Laptop (1280px – 1599px) ================== */
+@media only screen and (max-width: 1599px) and (min-width: 1280px) {
+  .configration-container {
+    width: 99%;
+    height: 1800px;
+
+    // padding-left: 140px;
+  }
+  .input {
+    width: 91%;
+  }
+  .unsaved-modal{
+    width: 80%;
+  }
+
+  .right-side {
+    left: 30px;
+  }
+  .dropdown-input {
+    width: 91%;
+  }
+  .setting-box {
+    width: 91%;
+  }
+
+  ion-card {
+    width: 107%;
+
+    height: 300px;
+  }
+
+  .configration-container ion-input {
+    width: 91%;
+  }
+
+  ion-button {
+    width: 100%;
+    min-width: 400px;
+    top: 60px;
+  }
+}
+
+// /* ================== Tablet (768px – 1279px) ================== */
+@media only screen and (max-width: 1279px) and (min-width: 768px) {
+  .configration-container {
+    width: 99%;
+    height: 1800px;
+  }
+  .input {
+    width: 91%;
+  }
+  .dropdown-input {
+    width: 91%;
+  }
+  .unsaved-modal{
+    width: 80%;
+    margin-left: 50px;
+  }
+
+  .right-side {
+    left: 30px;
+  }
+  .setting-box {
+    width: 91%;
+  }
+
+  ion-card {
+    width: 108%;
+    height: 300px;
+
+    // right: 0;
+    // top: 60px;
+  }
+  .title-container {
+    margin-left: 50;
+  }
+
+  ion-grid {
+    display: block;
+  }
+
+  .right-col {
+  }
+
+  .configration-container ion-input {
+    width: 91%;
+  }
+
+  ion-button {
+    width: 100%;
+    min-width: 400px;
+    top: 60px;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 900px) {
+  .configration-container {
+    width: 99.5%;
+    height: 1800px;
+  }
+  .input {
+    width: 91%;
+  }
+  .dropdown-input {
+    width: 91%;
+  }
+  .unsaved-modal{
+    width: 80%;
+  }
+
+  .right-side {
+    left: 30px;
+  }
+  .setting-box {
+    width: 91%;
+  }
+
+  ion-card {
+    width: 107%;
+    height: 300px;
+
+    // right: 0;
+    // top: 60px;
+  }
+  .title-container {
+    margin-left: 50;
+  }
+
+  ion-grid {
+    display: block;
+  }
+
+  .right-col {
+  }
+
+  .configration-container ion-input {
+    width: 91%;
+  }
+
+  ion-button {
+    width: 100%;
+    min-width: 400px;
+    top: 60px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* Outer container */
+  .configration-container {
+    width: 99%;
+    height: 2200px;
+    // padding: 10px;
+
+    padding: 8px 10px;
+  }
+  
+  .input {
+    width: 91%;
+    
+  }
+ 
+  .dropdown-input {
+    width: 91%;
+    margin-left: 20px;
+  }
+  .setting-box {
+    width: 91%;
+    margin-left: 20px;
+  }
+  /* Card */
+  //  ion-card {
+  //   min-width: 300px;
+  //   height: auto;
+  //   margin: 5px;
+  //   padding: 16px;
+  //   border-radius: 12px;
+  //   top: 30px;
+  //   right: 0;
+  // }
+  ion-card {
+    width: 100%;
+    height: auto;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+  }
+
+  //   /* Top button (My profile) */
+  .title-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    right: 0;
+  }
+
+  //   /* Heading */
+  .form-head {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  //   /* 🔥 GRID → SINGLE COLUMN */
+  ion-grid {
+    display: block;
+  }
+
+  ion-row {
+    display: block;
+    left: 20px;
+  }
+
+  ion-col {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Remove right side shift */
+  .right-side {
+    left: 0;
+    margin-left: 20px;
+  }
+  .left-side {
+    left: 0;
+    margin-left: 20px;
+  }
+  /* Form fields */
+  .configration-container {
+    margin-bottom: 12px;
+  }
+
+  .configration-container ion-label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    margin-left: 25px;
+  }
+
+  .configration-container ion-input {
+    width: 91%;
+    min-width: 31%;
+    height: 44px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 25px;
+  }
+
+  //   /* Button */
+  ion-button {
+    width: 100%;
+    min-width: 200px;
+    height: 48px;
+    margin-top: 16px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  //   /* Remove extra spacing issue */
+  body {
+    overflow-x: hidden;
+  }
+}
+// @media only screen and (max-width: 767px) {
+
+//   /* Main Container */
+//   .configration-container {
+//     width: 100%;
+//     height: auto;
+//     padding: 10px;
+//     overflow-x: hidden;
+//   }
+
+//   /* Title */
+//   .title-container {
+//     position: static;
+//     width: auto;
+//     margin-bottom: 10px;
+//   }
+
+//   /* Card */
+//   ion-card {
+//     width: 100%;
+//     height: auto;
+//     position: static;
+//     margin: 10px 0;
+//   }
+
+//   /* Grid Fix (Single Column) */
+//   ion-grid {
+//     display: block;
+//   }
+
+//   ion-row {
+//     display: block;
+//   }
+
+//   ion-col {
+//     width: 100%;
+//     padding: 0;
+//   }
+
+//   /* Setting Box */
+//   .setting-box {
+//     width: 100%;
+//     height: auto;
+//     padding: 12px;
+//   }
+
+//   /* Dropdown */
+//   .dropdown-input {
+//     width: 100%;
+//   }
+
+//   .dropdown-input ion-icon {
+//     right: 10px;
+//     left: auto;
+//   }
+
+//   /* Toggle Fix */
+
+//   /* Button */
+//   ion-button {
+//     width: 100%;
+//     position: static;
+//     margin-top: 20px;
+//   }
+
+//   /* Update Button Container */
+//   .update-btn {
+//     width: 100%;
+//     position: static;
+//   }
+
+//   /* Modal Fix */
+//   .unsaved-modal {
+//     width: 95%;
+//     margin: auto;
+//     transform: none;
+//   }
+
+//   .model-container {
+//     left: 0;
+//   }
+
+//   /* Modal Buttons */
+//   .modal-buttons {
+//     flex-direction: column;
+//   }
+
+//   .discard-btn,
+//   .update-btn {
+//     width: 100%;
+//     left: 0;
+//   }
+
+//   /* Remove Left/Right shifts */
+//   .left-side,
+//   .right-side {
+//     left: 0;
+//   }
+
+// }

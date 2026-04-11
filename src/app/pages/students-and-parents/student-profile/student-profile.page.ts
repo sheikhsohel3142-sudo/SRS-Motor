@@ -5,6 +5,7 @@ import {
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
+  Validators,
 } from '@angular/forms';
 import {
   IonContent,
@@ -22,8 +23,7 @@ import {
   IonIcon,
   IonToggle,
   IonInput,
-  IonSelect,
-} from '@ionic/angular/standalone';
+  IonSelect, IonText } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -31,7 +31,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './student-profile.page.html',
   styleUrls: ['./student-profile.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonText, 
     IonInput,
     IonToggle,
     IonIcon,
@@ -52,7 +52,7 @@ import { RouterLink } from '@angular/router';
     ReactiveFormsModule,
     IonSelect,
     RouterLink,
-    FormsModule
+    FormsModule,
   ],
 })
 export class StudentProfilePage implements OnInit {
@@ -60,53 +60,67 @@ export class StudentProfilePage implements OnInit {
   studentForm!: FormGroup;
   billingForm!: FormGroup;
   activityLog = [
-  { date: '01 Sep 2024', message: 'Student enrolled' },
-  { date: '10 Oct 2024', message: 'Status changed to Paused' },
-  { date: '05 Nov 2024', message: 'Billing resumed' }
-];
+    { date: '01 Sep 2024', message: 'Student enrolled' },
+    { date: '10 Oct 2024', message: 'Status changed to Paused' },
+    { date: '05 Nov 2024', message: 'Billing resumed' },
+  ];
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
     this.studentForm = this.fb.group({
-      studentName: ['Michael'],
-      admissionNumber: ['AD579485'],
+      studentName: ['', Validators.required],
+      admissionNumber: [''],
 
-      grade: ['10th'],
-      section: ['A'],
+      grade: ['', Validators.required],
+      section: [''],
 
-      school: ['ARLM'],
-      route: ['Route 51'],
+      school: ['', Validators.required],
+      route: ['', Validators.required],
 
-      pickupStop: ['Triplicane'],
-      assignedBus: ['TN31BF8236'],
+      pickupStop: ['', Validators.required],
+      assignedBus: ['', Validators.required],
 
-      parentName: ['Grace'],
-      relationship: ['Mother'],
+      parentName: ['', Validators.required],
+      relationship: ['', Validators.required],
 
-      phoneNumber: ['9876537907'],
-      email: ['abc@gmail.com'],
+      phoneNumber: [
+        '',
+        [Validators.required, Validators.pattern(/^[0-9]{10}$/)],
+      ],
+      email: ['', Validators.email],
 
-      billingStartDate: ['01/01/2026'],
+      billingStartDate: ['', Validators.required],
 
       receiveNotice: ['Yes'],
-
       complimentaryStudent: ['Yes'],
-
       billingType: ['Billable'],
-
       studentStatus: ['Pause'],
-
       disableNotice: ['Yes'],
 
-      active: ['Yes'],
+      active: [true],
     });
     this.billingForm = this.fb.group({
-      monthlyFare: ['1000.00'],
-      billingStartDate: ['2026-01-01'],
-      outstandingDues: ['0'],
+      monthlyFare: [
+        '',
+        [
+          Validators.required,
+          Validators.min(1), // minimum amount
+          Validators.pattern('^[0-9]+(\\.[0-9]{1,2})?$'), // decimal allowed
+        ],
+      ],
+
+      billingStartDate: ['', [Validators.required]],
+
+      outstandingDues: [
+        '',
+        [Validators.min(0), Validators.pattern('^[0-9]+(\\.[0-9]{1,2})?$')],
+      ],
     });
   }
+  get f() {
+  return this.billingForm.controls;
+}
 
   updateStudent() {
     console.log(this.studentForm.value);
