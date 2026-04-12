@@ -101,7 +101,7 @@ ion-button {
 
   position: relative;
   right: 86px;
-  top: 70px;
+  top: 30px;
   box-sizing: border-box;
 
   border: 1px solid #ffffff;
@@ -351,37 +351,61 @@ ion-button {
     width: 101%;
   }
 }
-// @media only screen and (max-width: 767px) {
-//   /* Outer container */
-//   .profile-container {
-//     width: 99%;
+@media (max-width: 780px) {
 
-//     // left: 20px;
-//     // padding-left: 120px;
-//   }
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
 
-//   .right-side {
-//     // ion-input{
-//     //   width: 81%;
-//     // }
-//   }
-//   .input {
-//     width: 81%;
-//   }
+  /* 🔥 Header + Body same width */
+  .head-container,
+  .table-card {
+    min-width: 900px; /* jitne columns ho us hisaab se */
+  }
 
-//   .table-card {
-//     width: 104%;
-//   }
-//   .table-container {
-//     width: 104%;
-//   }
-//   .head-container {
-//     width: 104%;
-//   }
-//   .table-head {
-//     width: 104%;
-//   }
-// }
+  /* 🔥 Header row */
+  .head-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* 🔥 Data row */
+  .table-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* 🔥 MOST IMPORTANT (columns shrink na ho) */
+  .head-container span,
+  .table-row span,
+  .table-row p {
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+
+  /* specific columns (optional better alignment) */
+  // .s-no, .c-no {
+  //   min-width: 60px;
+  // }
+
+  // .student-name {
+  //   min-width: 160px;
+  // }
+
+  // .school, .school-N {
+  //   min-width: 160px;
+  // }
+
+  // .status {
+  //   min-width: 100px;
+  // }
+
+  // .view {
+  //   min-width: 80px;
+  // }
+}
 
 // /* ================= MOBILE ================= */
 // /* MOBILE DESIGN */

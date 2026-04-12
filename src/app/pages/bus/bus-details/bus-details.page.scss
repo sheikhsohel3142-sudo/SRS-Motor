@@ -302,7 +302,7 @@
 
 // For Revenu Tracking
 .Revenue-head-container2,
-.revenue-table-row2{
+.revenue-table-row2 {
   display: grid;
   grid-template-columns: 0.8fr 1.5fr 1.2fr 1.5fr;
   align-items: center;
@@ -743,10 +743,10 @@
   .Revenu-table-container {
     width: 105%;
   }
- .table-profitability-container {
+  .table-profitability-container {
     width: 105%;
   }
- .table-expense-container {
+  .table-expense-container {
     width: 105%;
   }
   .profitability-summary-container {
@@ -785,13 +785,13 @@
   .expense-container {
     width: 105%;
   }
-    .Revenu-table-container {
+  .Revenu-table-container {
     width: 105%;
   }
- .table-profitability-container {
+  .table-profitability-container {
     width: 105%;
   }
- .table-expense-container {
+  .table-expense-container {
     width: 105%;
   }
   .profitability-summary-container {
@@ -836,13 +836,13 @@
   .expense-container {
     width: 105%;
   }
-    .Revenu-table-container {
+  .Revenu-table-container {
     width: 105%;
   }
- .table-profitability-container {
+  .table-profitability-container {
     width: 105%;
   }
- .table-expense-container {
+  .table-expense-container {
     width: 105%;
   }
   .profitability-summary-container {
@@ -925,6 +925,30 @@
   }
 
   /* Card */
+  .All-list {
+    width: 100%;
+    height: auto;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+  }
+  .profitability-summary-container {
+    width: 100%;
+    height: auto;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+  }
+  .expense-container {
+    width: 100%;
+    height: auto;
+    position: relative; /* required */
+    margin: 10px 0;
+    margin-top: 30px;
+
+    top: 0; /* 🔥 reset kar do */
+    left: 0; /* 🔥 reset kar do */
+  }
   .bus-details {
     width: 100%;
     height: 1300px;
@@ -1009,4 +1033,66 @@
   body {
     overflow-x: hidden;
   }
+}
+@media (max-width: 780px) {
+  .table-profitability-container,
+  .Revenu-table-container,
+  .table-expense-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  /* 🔥 Header + Body same width */
+
+  .table-card {
+    min-width: 650px; /* jitne columns ho us hisaab se */
+  }
+
+  /* 🔥 Header row */
+  .Profitability-head-container,
+  .Revenue-head-container2,
+  .head-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* 🔥 Data row */
+  .profitability-content-container,
+  .table-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* 🔥 MOST IMPORTANT (columns shrink na ho) */
+  .profitability-content-container span,
+  .Profitability-head-container span,
+  .Revenue-head-container2 span,
+  .head-container span,
+  .table-row span,
+  .table-row p {
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+
+  /* specific columns (optional better alignment) */
+  // .s-no, .c-no {
+  //   min-width: 60px;
+  // }
+
+  // .student-name {
+  //   min-width: 160px;
+  // }
+
+  // .school, .school-N {
+  //   min-width: 160px;
+  // }
+
+  // .status {
+  //   min-width: 100px;
+  // }
+
+  // .view {
+  //   min-width: 80px;
+  // }
 }

@@ -199,13 +199,14 @@ ion-button {
   margin-bottom: 12px;
   // width: 362px;
   height: 50px;
+  position: relative;
 
   ion-select::part(icon) {
     display: none;
   }
   ion-icon {
     position: absolute;
-    right: 10%;
+    right: 5%;
     font-size: larger;
   }
 }
@@ -225,21 +226,44 @@ ion-button {
 //   position: absolute;
 //   background: rgba(0, 0, 0, 0.25);
 // }
-.unsaved-modal {
-  --height: auto;
-  --border-radius: 16px;
-  --width: 595px;
-  margin-left: 195px;
-  width: 500px;
-  transform: translateX(160px);
-  // backdrop-filter: blur(6px);
-  background: rgba(0, 0, 0, 0.25);
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.unsaved-modal {
+  --width: 90%;
+  --max-width: 600px;
+  --border-radius: 16px;
+  --height: 250px;
+  // backdrop-filter: blur(6px);
+  background: rgba(56, 56, 56, 0.2);
+}
+
+// .container {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 16px;
+// }
+
+// .unsaved-modal {
+//   width: 100%;
+//   max-width: 600px;
+//   margin: 0 auto;
+
+//   background: rgba(56, 56, 56, 0.25);
+//   backdrop-filter: blur(6px);
+//   border-radius: 16px;
+// }
 
 .model-container {
-  position: relative;
-  left: 200px;
+  // position: relative;
+  // left: 200px;
+  position: absolute;
+  left: 200%;
 }
 .modal-container {
   padding: 20px;
@@ -323,10 +347,10 @@ ion-button {
     // left: 20px;
     // padding-left: 120px;
   }
-  .unsaved-modal{
-    width: 72%;
-    margin-left: 18%;
+  .unsaved-modal {
+    width: 100%;
   }
+
   .setting-box {
     width: 91%;
   }
@@ -368,8 +392,8 @@ ion-button {
   .input {
     width: 91%;
   }
-  .unsaved-modal{
-    width: 80%;
+  .unsaved-modal {
+    width: 100%;
   }
 
   .right-side {
@@ -408,12 +432,16 @@ ion-button {
   .input {
     width: 91%;
   }
+  .unsaved-modal {
+    width: 100%;
+  }
+
   .dropdown-input {
     width: 91%;
   }
-  .unsaved-modal{
-    width: 80%;
-    margin-left: 50px;
+  .unsaved-modal {
+    width: 100%;
+    margin-left: 0;
   }
 
   .right-side {
@@ -463,9 +491,6 @@ ion-button {
   .dropdown-input {
     width: 91%;
   }
-  .unsaved-modal{
-    width: 80%;
-  }
 
   .right-side {
     left: 30px;
@@ -501,7 +526,6 @@ ion-button {
     min-width: 400px;
     top: 60px;
     right: 50px;
-   
   }
 }
 
@@ -514,12 +538,36 @@ ion-button {
 
     padding: 8px 10px;
   }
-  
+  ion-modal.unsaved-modal.modal-present {
+    opacity: 1;
+    pointer-events: auto;
+
+
+    --width: 90%;
+    --max-width: 500px;
+    --height: auto;
+    --border-radius: 12px;
+    align-items: center !important;   /* 🔥 main fix */
+  justify-content: center !important; /* horizontal center */
+
+  }
+  ion-modal.unsaved-modal::part(content) {
+  position: absolute;
+  top: 40%;
+  // left: -10%;
+  transform: translate(-50%, -50%); /* 🔥 perfect center */
+}
+
+
+  /* 🔥 Backdrop bhi auto hide */
+  ion-modal.unsaved-modal:not(.modal-present)::part(backdrop) {
+    display: none !important;
+  }
+
   .input {
     width: 91%;
-    
   }
- 
+
   .dropdown-input {
     width: 91%;
     margin-left: 20px;

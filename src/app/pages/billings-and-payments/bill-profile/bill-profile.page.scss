@@ -31,7 +31,11 @@
 .bill-profile-container {
   background: #f2f2f2;
   width: 910px;
-  height: 2650px;
+  // height: 2650px;
+  //  height: auto;
+  // min-height: 100px;
+  // display: flex;
+  // flex-direction: column;
 
   // min-height: 100%; /* container content के हिसाब से बढ़ेगा */
   // height: auto;
@@ -365,27 +369,27 @@ ion-card {
     }
   }
 }
-.table-head-wrap {
-  padding: 0 10px;
-  position: relative;
-  right: 70px;
-}
-.table-head {
-  // display: grid;
-  // grid-template-columns: 60px 1.5fr 80px 1fr 100px 80px;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 12px 0;
-  font-weight: 500;
-  font-family: "Urbanist", sans-serif;
-  font-size: 16px;
-  line-height: 145%;
-  letter-spacing: 0%;
-  width: 500px;
-  color: #0f172a;
-  position: relative;
-  left: 40px;
-}
+// .table-head-wrap {
+//   padding: 0 10px;
+//   position: relative;
+//   right: 70px;
+// }
+// .table-head {
+//   // display: grid;
+//   // grid-template-columns: 60px 1.5fr 80px 1fr 100px 80px;
+//   display: flex;
+//   justify-content: space-evenly;
+//   padding: 12px 0;
+//   font-weight: 500;
+//   font-family: "Urbanist", sans-serif;
+//   font-size: 16px;
+//   line-height: 145%;
+//   letter-spacing: 0%;
+//   width: 500px;
+//   color: #0f172a;
+//   position: relative;
+//   left: 40px;
+// }
 .head-container {
   width: 793px;
   border-radius: 12px;
@@ -395,26 +399,26 @@ ion-card {
 
   border: 1px solid #ffffff;
 }
-.date {
-  position: relative;
-  left: 3px;
-}
-.category {
-  position: relative;
-  left: 90px;
-}
-.amount2 {
-  position: relative;
-  left: 150px;
-}
-.paid {
-  position: relative;
-  left: 215px;
-}
-.invoice {
-  position: relative;
-  left: 340px;
-}
+// .date {
+//   position: relative;
+//   left: 3px;
+// }
+// .category {
+//   position: relative;
+//   left: 90px;
+// }
+// .amount2 {
+//   position: relative;
+//   left: 150px;
+// }
+// .paid {
+//   position: relative;
+//   left: 215px;
+// }
+// .invoice {
+//   position: relative;
+//   left: 340px;
+// }
 .table-profit-container {
   width: 810px;
 
@@ -450,65 +454,92 @@ ion-card {
 //   }
 // }
 
-.date2 {
-  // border: 1px solid black;
-  width: 90px;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  right: 50px;
-}
-.reason {
-  // border: 1px solid black;
-  width: 90px;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  right: 50px;
-}
-.amount {
-  // border: 1px solid black;
-  width: 90px;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  right: 80px;
-}
-.status {
-  // border: 1px solid black;
-  width: 90px;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  right: 90px;
-}
+// .date2 {
+//   // border: 1px solid black;
+//   width: 90px;
+//   display: flex;
+//   justify-content: space-around;
+//   position: relative;
+//   right: 50px;
+// }
+// .reason {
+//   // border: 1px solid black;
+//   width: 90px;
+//   display: flex;
+//   justify-content: space-around;
+//   position: relative;
+//   right: 50px;
+// }
+// .amount {
+//   // border: 1px solid black;
+//   width: 90px;
+//   display: flex;
+//   justify-content: space-around;
+//   position: relative;
+//   right: 80px;
+// }
+// .status {
+//   // border: 1px solid black;
+//   width: 90px;
+//   display: flex;
+//   justify-content: space-around;
+//   position: relative;
+//   right: 90px;
+// }
 .table-card {
   background-color: #ffffff;
   margin: 8px 16px 4px;
-  width: 796px;
+  width: 100%;
 
   position: relative;
   top: 5px;
-  left: -18px;
-  padding-left: 20px;
-  padding-right: 10px;
+  right: 18px;
+  // padding-left: 20px;
+  // padding-right: 10px;
   border-radius: 12px;
 }
 
 /* ROWS */
-.table-row {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 400;
-  color: #1f1f1f;
-  line-height: 145%;
+// .table-row {
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   font-family: "Space Grotesk", sans-serif;
+//   font-weight: 400;
+//   color: #1f1f1f;
+//   line-height: 145%;
 
-  letter-spacing: 0%;
-  padding: 12px 0;
+//   letter-spacing: 0%;
+//   padding: 12px 0;
+//   font-size: 16px;
+//   border-bottom: 1px solid #f5f2f2;
+// }
+.table-row span {
+  font-weight: 500;
+   font-size: 16px;
+   color: #1F1F1F;
+   line-height: 145%;
+   letter-spacing: 0%;
+   font-family: "Space Grotesk", sans-serif;
+}
+.head-container span {
+  font-weight: 600;
+  font-size: 13px;
+  color: #0f172a;
+  font-weight: 500;
   font-size: 16px;
-  border-bottom: 1px solid #f5f2f2;
+  line-height: 145%;
+  letter-spacing: 0%;
+}
+.head-container,
+.table-row {
+  display: grid;
+  // grid-template-columns: 110px 1fr 1fr 0.5fr 0.5fr  0.5fr 295px;
+  grid-template-columns: 1.2fr 1fr 1fr 1.5fr;      /* View */
+
+  align-items: center;
+  padding: 12px 16px;
+  width: 100%;
 }
 
 .due-and-reminder-managment {
@@ -654,13 +685,13 @@ ion-card {
 }
 
 .button {
-  position: absolute;
-  top: 12px;
+  // position: absolute;
+  // top: 12px;
 
   ion-button {
-    position: relative;
-    top: -20px;
-    left: 508px;
+    position: absolute;
+    top: 2%;
+    right: 18%;
     bottom: 400px;
     width: 168px;
     height: 38px;
@@ -696,13 +727,13 @@ ion-card {
   }
 }
 .button2 {
-  position: absolute;
-  top: 12px;
+  // position: absolute;
+  // top: 12px;
 
   ion-button {
-    position: relative;
-    top: -20px;
-    left: 680px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
     bottom: 400px;
     width: 168px;
     height: 38px;
@@ -740,8 +771,9 @@ ion-card {
 @media only screen and (min-width: 1600px) {
   .bill-profile-container {
     width: 99%;
-    height: 2800px;
-    // overflow: auto;
+    height: auto;
+   
+     overflow: auto;
 
     // left: 20px;
     // padding-left: 120px;
@@ -776,6 +808,11 @@ ion-card {
     width: 105%;
     height: 900px;
   }
+  .after-record {
+    width: 105%;
+    height: 900px;
+  }
+
   .payment-history {
     width: 105%;
     height: auto;
@@ -785,6 +822,13 @@ ion-card {
     height: 500px;
   }
   .first-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .add-new-recored-btn {
     ion-button {
       width: 100%;
       min-width: 400px;
@@ -805,7 +849,7 @@ ion-card {
       top: 60px;
     }
   }
-    .dRM-btn,
+  .dRM-btn,
   .dRM-btn2 {
     width: 100%;
     min-width: 400px;
@@ -817,7 +861,9 @@ ion-card {
 @media only screen and (max-width: 1599px) and (min-width: 1280px) {
   .bill-profile-container {
     width: 99%;
-    height: 2800px;
+    height: auto;
+   
+     overflow: auto;
 
     // padding-left: 140px;
   }
@@ -855,6 +901,10 @@ ion-card {
     width: 107%;
     height: 900px;
   }
+  .after-record {
+    width: 105%;
+    height: 900px;
+  }
   .payment-history {
     width: 107%;
     height: auto;
@@ -865,6 +915,13 @@ ion-card {
   }
 
   .first-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .add-new-recored-btn {
     ion-button {
       width: 100%;
       min-width: 400px;
@@ -885,7 +942,7 @@ ion-card {
       top: 60px;
     }
   }
-    .dRM-btn,
+  .dRM-btn,
   .dRM-btn2 {
     width: 100%;
     min-width: 400px;
@@ -897,7 +954,9 @@ ion-card {
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
   .bill-profile-container {
     width: 99%;
-    height: 2800px;
+    height: auto;
+   
+     overflow: auto;
   }
   .input {
     width: 91%;
@@ -937,10 +996,15 @@ ion-card {
     width: 110%;
     height: 900px;
   }
+  .after-record {
+    width: 105%;
+    height: 900px;
+  }
   .payment-history {
     width: 110%;
     height: auto;
   }
+
   .due-and-reminder-managment {
     width: 110%;
     height: 500px;
@@ -950,6 +1014,13 @@ ion-card {
   }
 
   .first-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .add-new-recored-btn {
     ion-button {
       width: 100%;
       min-width: 400px;
@@ -970,9 +1041,8 @@ ion-card {
       top: 60px;
     }
   }
-    .dRM-btn,
+  .dRM-btn,
   .dRM-btn2 {
-  
     width: 100%;
     min-width: 400px;
     top: 60px;
@@ -981,7 +1051,9 @@ ion-card {
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
   .bill-profile-container {
     width: 99.5%;
-    height: 3500px;
+    height: auto;
+   
+     overflow: auto;
   }
   .input {
     width: 91%;
@@ -1000,6 +1072,10 @@ ion-card {
   }
   .payment-recording {
     width: 107%;
+    height: 900px;
+  }
+  .after-record {
+    width: 105%;
     height: 900px;
   }
   .payment-history {
@@ -1034,6 +1110,13 @@ ion-card {
   }
 
   .first-btn {
+    ion-button {
+      width: 100%;
+      min-width: 400px;
+      top: 60px;
+    }
+  }
+  .add-new-recored-btn {
     ion-button {
       width: 100%;
       min-width: 400px;
@@ -1065,7 +1148,9 @@ ion-card {
   /* Outer container */
   .bill-profile-container {
     width: 99%;
-    height: 3400px;
+    height: auto;
+   
+     overflow: auto;
     // padding: 10px;
     background: #f2f2f2;
     padding: 8px 10px;
@@ -1175,6 +1260,13 @@ ion-card {
     margin-top: 30px;
     // height: 900px;
   }
+  .after-record {
+    width: 100%;
+    height: 1100px;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+  }
   .payment-history {
     width: 100%;
     height: 400px;
@@ -1195,6 +1287,16 @@ ion-card {
 
   /* Button */
   .first-btn {
+    ion-button {
+      width: 100%;
+      min-width: 200px;
+      height: 48px;
+      margin-top: 16px;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+  }
+  .add-new-recored-btn {
     ion-button {
       width: 100%;
       min-width: 200px;
@@ -1235,8 +1337,8 @@ ion-card {
 
   .recored-btn,
   .recored-btn2 {
-    flex: 1; // dono equal width lenge
-    min-width: 250px;
+    flex: 1 1 300px;; // dono equal width lenge
+    // min-width: 250px;
 
     ion-button {
       width: 100%;
@@ -1246,6 +1348,20 @@ ion-card {
       font-size: 15px;
     }
   }
+  // .button,
+  // .button2 {
+  //   flex: 1; // dono equal width lenge
+  //   min-width: 1px;
+
+  //   ion-button {
+  //     width: 60%;
+  //     height: 48px;
+  //     margin-top: 16px;
+  //     border-radius: 10px;
+  //     font-size: 15px;
+  //   }
+  // }
+
   .dRM-btn,
   .dRM-btn2 {
     flex: 1 1 300px; // grow + shrink + base width
@@ -1259,5 +1375,40 @@ ion-card {
   /* Remove extra spacing issue */
   body {
     overflow-x: hidden;
+  }
+}
+
+@media (max-width: 780px) {
+
+  .payment-history {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  /* 🔥 Header + Body same width */
+  .head-container,
+  .table-card {
+    min-width: 750px; /* jitne columns ho us hisaab se */
+  }
+
+  /* 🔥 Header row */
+  .head-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* 🔥 Data row */
+  .table-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* 🔥 MOST IMPORTANT (columns shrink na ho) */
+  .head-container span,
+  .table-row span,
+  .table-row p {
+    min-width: 130px;
+    flex-shrink: 0;
   }
 }

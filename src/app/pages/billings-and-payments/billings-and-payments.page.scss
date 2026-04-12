@@ -107,9 +107,9 @@ ion-button {
 
   position: relative;
   right: 86px;
+  top: 40px;
   
   box-sizing: border-box;
-
   border: 1px solid #ffffff;
 }
 // .head-container {
@@ -563,6 +563,62 @@ ion-icon {
   }
 }
 
+@media (max-width: 780px) {
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  /* 🔥 Header + Body same width */
+  .head-container,
+  .table-card {
+    min-width: 1650px; /* jitne columns ho us hisaab se */
+  }
+
+  /* 🔥 Header row */
+  .head-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* 🔥 Data row */
+  .table-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* 🔥 MOST IMPORTANT (columns shrink na ho) */
+  .head-container span,
+  .table-row span,
+  .table-row p {
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+
+  /* specific columns (optional better alignment) */
+  // .s-no, .c-no {
+  //   min-width: 60px;
+  // }
+
+  // .student-name {
+  //   min-width: 160px;
+  // }
+
+  // .school, .school-N {
+  //   min-width: 160px;
+  // }
+
+  // .status {
+  //   min-width: 100px;
+  // }
+
+  // .view {
+  //   min-width: 80px;
+  // }
+}
+
 // /* ================= MOBILE ================= */
 // /* MOBILE DESIGN */
 // @media (max-width: 480px) {
@@ -658,29 +714,32 @@ ion-icon {
 
 // /* ================= MOBILE ================= */
 // /* MOBILE DESIGN */
-@media (max-width: 780px) {
+// @media (max-width: 780px) {
 
-  .profile-container {
-    padding: 10px;
-  }
+//   .profile-container {
+//     padding: 10px;
+//   }
 
-  .table-container {
-    width: 100%;
-    overflow-x: auto; /* ✅ scroll yaha aayega */
-  }
+//   .table-container {
+//     width: 100%;
+//     overflow-x: auto;
+//   }
 
-  .table-container {
-    min-width: 600px; /* 🔥 scroll trigger */
-  }
+//   .border-table,
+//   .table-card,
+//   .head-container {
+//     min-width: 1000px; /* 🔥 full scroll ke liye */
+//   }
 
-  .table-head,
-  .table-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
+//   .table-head,
+//   .table-row {
+//     display: flex;
+//     gap: 20px;
+//   }
 
-  .table-row div {
-    min-width: 120px; /* columns fixed width */
-  }
-}
+//   .table-row span,
+//   .head-container span {
+//     min-width: 120px;
+//     flex-shrink: 0;
+//   }
+// }

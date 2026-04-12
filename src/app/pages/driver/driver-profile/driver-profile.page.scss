@@ -503,7 +503,7 @@ ion-card {
     position: absolute;
     right: 2%;
     top: 2%;
-    bottom: 400px;
+   
     width: 168px;
     height: 38px;
 
@@ -1201,6 +1201,7 @@ ion-card {
       width: 100%;
       min-width: 200px;
       height: 48px;
+      top: 50%;
       margin-top: 16px;
       border-radius: 10px;
       font-size: 15px;
@@ -1216,5 +1217,39 @@ ion-card {
   /* Remove extra spacing issue */
   body {
     overflow-x: hidden;
+  }
+}
+@media (max-width: 780px) {
+
+  .table-expense-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  /* 🔥 Header + Body same width */
+  .head-container,
+  .table-card {
+    min-width: 600px; /* jitne columns ho us hisaab se */
+  }
+
+  /* 🔥 Header row */
+  .head-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* 🔥 Data row */
+  .table-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* 🔥 MOST IMPORTANT (columns shrink na ho) */
+  .head-container span,
+  .table-row span,
+  .table-row p {
+    min-width: 130px;
+    flex-shrink: 0;
   }
 }
