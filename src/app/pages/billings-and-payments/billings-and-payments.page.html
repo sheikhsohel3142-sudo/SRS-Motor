@@ -13,6 +13,7 @@
       >
     </div>
     <div class="table-container">
+      <div class="border-table">
       <div class="head-container">
         <!-- <div class="table-head-wrap">
           <div class="table-head"> -->
@@ -29,6 +30,7 @@
           <!-- </div>
         </div> -->
       </div>
+      </div>
 
       <div class="table-card">
         <div>
@@ -42,10 +44,10 @@
             <span class="paid2-amount">{{ s.outstandingAdvance }}</span>
             <span class="outstanding-amount">{{ s.outstandingAdvance }}</span>
             <span class="active">{{ s.status }}</span>
-            <span
+            <p
               class="view"
               [routerLink]="['/admin/billings-and-payments/bill-profile']"
-              >View ››</span
+              >View ››</p
             >
           </div>
         </div>

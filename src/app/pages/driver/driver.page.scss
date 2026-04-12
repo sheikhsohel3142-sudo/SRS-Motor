@@ -137,13 +137,28 @@ ion-button {
 }
 
 .table-row span{
-   font-size: 14px;
+   font-weight: 500;
+   font-size: 16px;
+   color: #1F1F1F;
+   line-height: 145%;
+   letter-spacing: 0%;
+   font-family: "Space Grotesk", sans-serif;
+    
+   
 }
 .head-container span{
-  font-weight: 600;
-   font-size: 13px;
-   color: #6b7280;
+  font-weight: 500;
+   font-size: 16px;
+   color: #0F172A;
+   line-height: 145%;
+   letter-spacing: 0%;
 
+}
+.border-table {
+  padding: 8px 4px;
+  border-radius: 12px;
+
+  border: 1px solid #ffffff;
 }
 
 /* ROWS */
@@ -160,14 +175,15 @@ ion-button {
 .table-row {
   display: grid;
   // grid-template-columns: 110px 1fr 1fr 0.5fr 0.5fr  0.5fr 295px;
-  grid-template-columns: 
-    0.5fr   /* S.no */
-    1.5fr   /* Driver Name */
-    1.5fr   /* Assigned Bus */
-    2fr     /* Assigned Route */
-    1.2fr   /* Outstanding Advance */
-    0.8fr     /* Status */
-    0.5fr;  /* View */
+  // grid-template-columns: 
+  //   0.5fr   /* S.no */
+  //   1.5fr   /* Driver Name */
+  //   1.5fr   /* Assigned Bus */
+  //   2fr     /* Assigned Route */
+  //   1.2fr   /* Outstanding Advance */
+  //   0.8fr     /* Status */
+  //   0.3fr;  /* View */
+    grid-template-columns: 0.8fr 1.2fr 1.2fr 1.4fr 0.8fr 0.5fr 0.4fr;
 
   align-items: center;
   padding: 12px 16px;
@@ -285,7 +301,7 @@ ion-button {
     width: 101%;
   }
   .table-container {
-    width: 107%;
+    width: 109%;
   }
   .head-container {
     width: 101%;
