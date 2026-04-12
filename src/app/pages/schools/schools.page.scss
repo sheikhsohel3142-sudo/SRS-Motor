@@ -51,14 +51,14 @@ ion-button {
     color: #0f172a;
   }
 }
-.table-head-wrap {
-  padding: 0 10px;
-  // position: relative;
-  // right: 70px;
-}
-.table-head-wrap div {
-  text-align: center;
-}
+// .table-head-wrap {
+//   padding: 0 10px;
+//   // position: relative;
+//   // right: 70px;
+// }
+// .table-head-wrap div {
+//   text-align: center;
+// }
 .special {
   margin-left: 15px;
 }
@@ -355,7 +355,7 @@ ion-button {
 
   .table-container {
     width: 100%;
-    overflow-x: auto;
+   overflow-x: auto;
   }
 
   /* 🔥 Header + Body same width */

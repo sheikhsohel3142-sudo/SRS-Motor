@@ -71,13 +71,14 @@
   }
 }
 .button2 {
+  position: relative;
   ion-button {
     height: 52px;
     width: 817px;
     border-radius: 16px;
     position: relative;
     left: 3px;
-    top: 60px;
+    top:80px;
     gap: 12px;
     text-transform: none;
     background-color: #4f8cff;
@@ -878,7 +879,7 @@ ion-card {
   .paid-btn {
     width: 100%;
     min-width: 400px;
-    top: 60px;
+    top: 80px;
   }
 }
 
@@ -886,7 +887,7 @@ ion-card {
 @media only screen and (max-width: 1599px) and (min-width: 1280px) {
   .driver-profile-container {
     width: 99%;
-    height: 2590px;
+    height: 2470px;
 
     // padding-left: 140px;
   }
@@ -910,7 +911,7 @@ ion-card {
   ion-card {
     width: 107%;
 
-    height: 1050px;
+    height: 850px;
   }
   .salary_configuration {
     width: 107%;
@@ -934,14 +935,14 @@ ion-card {
     ion-button {
       width: 100%;
       min-width: 400px;
-      top: 60px;
+      top: 80px;
     }
   }
   .generate-btn,
   .paid-btn {
     width: 100%;
     min-width: 400px;
-    top: 60px;
+    top: 80px;
   }
 }
 
@@ -972,7 +973,7 @@ ion-card {
 
   ion-card {
     width: 108%;
-    height: 1050px;
+    height: 850px;
 
     // right: 0;
     // top: 60px;
@@ -1005,7 +1006,7 @@ ion-card {
     ion-button {
       width: 100%;
       min-width: 400px;
-      top: 60px;
+      top: 80px;
     }
   }
    .generate-btn,
@@ -1021,7 +1022,7 @@ ion-card {
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
   .driver-profile-container {
     width: 99.5%;
-    height: 2950px;
+    height: 2400px;
   }
   .input {
     width: 91%;
@@ -1039,7 +1040,7 @@ ion-card {
 
   ion-card {
     width: 109%;
-    height: 1050px;
+    height: 850px;
 
     // right: 0;
     // top: 60px;
@@ -1072,7 +1073,7 @@ ion-card {
     ion-button {
       width: 100%;
       min-width: 400px;
-      top: 60px;
+      top: 80px;
     }
   }
   .generate-btn,
@@ -1197,6 +1198,7 @@ ion-card {
 
   /* Button */
   .button2 {
+    top: 50px;
     ion-button {
       width: 100%;
       min-width: 200px;
