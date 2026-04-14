@@ -41,14 +41,20 @@ ion-button {
   background-color: #b3cbf933;
   color: #0f172a;
   border: 1px dashed #4f8cff;
-  span {
+  .plus-container {
     border: 1px solid black;
     width: 21px;
     height: 21px;
     font-size: 20px;
-    position: relative;
-    right: 12px;
+    position: absolute;
+    left: -7px;
+    bottom: 8%;
     color: #0f172a;
+    span {
+      position: fixed;
+      top: 11px;
+      left: 13px;
+    }
   }
 }
 // .table-head-wrap {
@@ -225,7 +231,7 @@ ion-button {
 
 @media only screen and (min-width: 1600px) {
   .profile-container {
-    width: 99%;
+    width: 99.5%;
 
     // left: 20px;
     // padding-left: 120px;
@@ -241,10 +247,10 @@ ion-button {
   }
 
   .table-card {
-    width: 100%;
+    width: 100.5%;
   }
   .table-container {
-    width: 106%;
+    width: 105%;
   }
   .head-container {
     width: 100%;
@@ -312,7 +318,8 @@ ion-button {
     width: 101%;
   }
   .table-container {
-    width: 107%;
+    width: 100%;
+    min-width: 80%;
   }
   .head-container {
     width: 101%;
@@ -329,11 +336,6 @@ ion-button {
     // padding-left: 120px;
   }
 
-  .right-side {
-    // ion-input{
-    //   width: 81%;
-    // }
-  }
   .input {
     width: 81%;
   }
@@ -351,60 +353,91 @@ ion-button {
     width: 101%;
   }
 }
-@media (max-width: 780px) {
+// @media (max-width: 780px) {
 
+//   .table-container {
+//     width: 100%;
+//    overflow-x: auto;
+//   }
+
+//   /* 🔥 Header + Body same width */
+//   .head-container,
+//   .table-card {
+//    min-width: 900px; /* jitne columns ho us hisaab se */
+//   }
+
+//   /* 🔥 Header row */
+//   .head-container {
+//     display: flex;
+//     gap: 20px;
+//   }
+
+//   /* 🔥 Data row */
+//   .table-row {
+//     display: flex;
+//     gap: 20px;
+//     align-items: center;
+//   }
+
+//   /* 🔥 MOST IMPORTANT (columns shrink na ho) */
+//   .head-container span,
+//   .table-row span,
+//   .table-row p {
+//     min-width: 130px;
+//     flex-shrink: 0;
+//   }
+
+//   /* specific columns (optional better alignment) */
+//   // .s-no, .c-no {
+//   //   min-width: 60px;
+//   // }
+
+//   // .student-name {
+//   //   min-width: 160px;
+//   // }
+
+//   // .school, .school-N {
+//   //   min-width: 160px;
+//   // }
+
+//   // .status {
+//   //   min-width: 100px;
+//   // }
+
+//   // .view {
+//   //   min-width: 80px;
+//   // }
+// }
+@media (max-width: 780px) {
   .table-container {
     width: 100%;
-   overflow-x: auto;
+    overflow-x: auto;
+    display: block;
+    -webkit-overflow-scrolling: touch;
   }
 
-  /* 🔥 Header + Body same width */
   .head-container,
   .table-card {
-    min-width: 900px; /* jitne columns ho us hisaab se */
+    min-width: 900px;
   }
 
-  /* 🔥 Header row */
-  .head-container {
-    display: flex;
-    gap: 20px;
-  }
-
-  /* 🔥 Data row */
+  .head-container,
   .table-row {
     display: flex;
     gap: 20px;
+    flex-wrap: nowrap;
     align-items: center;
   }
 
-  /* 🔥 MOST IMPORTANT (columns shrink na ho) */
   .head-container span,
   .table-row span,
   .table-row p {
     min-width: 130px;
     flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-
-  /* specific columns (optional better alignment) */
-  // .s-no, .c-no {
-  //   min-width: 60px;
-  // }
-
-  // .student-name {
-  //   min-width: 160px;
-  // }
-
-  // .school, .school-N {
-  //   min-width: 160px;
-  // }
-
-  // .status {
-  //   min-width: 100px;
-  // }
-
-  // .view {
-  //   min-width: 80px;
-  // }
 }
 
 // /* ================= MOBILE ================= */

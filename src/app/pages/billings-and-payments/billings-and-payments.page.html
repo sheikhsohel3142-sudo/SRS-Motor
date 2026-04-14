@@ -4,32 +4,33 @@
       <div class="title-container">
         <div>Billing & Payments</div>
       </div>
-      <div class="search-box">
-        <img src="assets/img/search.png" alt="" />
-        <ion-input placeholder="Search"></ion-input>
+      <div class="btn-container">
+        <div class="search-box">
+          <img src="assets/img/search.png" alt="" />
+          <ion-input placeholder="Search"></ion-input>
+        </div>
+        &nbsp;
+        <ion-button (click)="addNewSchool()" fill="clear" fill="clear"
+          ><span><p>+</p></span>Generate Bills</ion-button
+        >
       </div>
-      <ion-button (click)="addNewSchool()" fill="clear" fill="clear"
-        ><span><p>+</p></span>Generate Bills</ion-button
-      >
     </div>
     <div class="table-container">
       <div class="border-table">
-      <div class="head-container">
-        <!-- <div class="table-head-wrap">
+        <div class="head-container">
+          <!-- <div class="table-head-wrap">
           <div class="table-head"> -->
-            <span class="s-no">S.no</span>
-            <span class="school-name"
-              >Students<br />&nbsp;&nbsp;&nbsp;Name</span
-            >
-            <span class="school">School</span>
-            <span class="buses">Billing<br/>Month</span>
-            <span class="total-Bill">Total Bill</span>
-            <span class="paid-amount">Paid Amount</span>
-            <span class="outstanding">Outstanding</span>
-            <span class="status">Status</span>
+          <span class="s-no">S.no</span>
+          <span class="school-name">Students<br />&nbsp;&nbsp;&nbsp;Name</span>
+          <span class="school">School</span>
+          <span class="buses">Billing<br />Month</span>
+          <span class="total-Bill">Total Bill</span>
+          <span class="paid-amount">Paid Amount</span>
+          <span class="outstanding">Outstanding</span>
+          <span class="status">Status</span>
           <!-- </div>
         </div> -->
-      </div>
+        </div>
       </div>
 
       <div class="table-card">
@@ -47,8 +48,9 @@
             <p
               class="view"
               [routerLink]="['/admin/billings-and-payments/bill-profile']"
-              >View ››</p
             >
+              View ››
+            </p>
           </div>
         </div>
       </div>
