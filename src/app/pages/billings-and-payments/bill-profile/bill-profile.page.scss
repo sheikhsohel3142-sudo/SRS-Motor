@@ -28,6 +28,24 @@
     }
   }
 }
+.status-container {
+  display: flex;
+
+  align-items: center;
+  gap: 10px;
+
+  position: relative;
+  left: 70px;
+  bottom: 60px;
+  ion-toggle {
+    transform: scale(0.5);
+    font-size: 40px;
+    font-weight: 700;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+}
 .bill-profile-container {
   background: #f2f2f2;
   width: 910px;
@@ -64,6 +82,10 @@
 //   overflow-x: hidden;
 // }
 .align-right-field {
+  position: relative;
+  left: 40px;
+}
+.align-right-f {
   position: relative;
   left: 40px;
 }
@@ -203,6 +225,7 @@ ion-card {
   ion-select::part(text) {
     text-align: center;
     width: 100%;
+    overflow-x: hidden;
   }
   ion-select {
     padding-left: 25px;
@@ -1157,10 +1180,11 @@ ion-card {
   }
   .input {
     width: 91%;
-    margin-left: 20px;
+     margin-left: 20px;
+   
   }
   .input-count {
-    margin-left: 20px;
+    // margin-left: 20px;
   }
   .setting-box {
     width: 91%;
@@ -1187,6 +1211,10 @@ ion-card {
   .align-right-field {
     left: 0;
   }
+  
+  // .align-rt-f{
+  //  margin-right: 20px;
+  // }
 
   /* Top button (My profile) */
   .title-container {
@@ -1215,6 +1243,7 @@ ion-card {
   ion-col {
     width: 100%;
     padding: 0;
+  
   }
 
   /* Remove right side shift */
@@ -1233,6 +1262,11 @@ ion-card {
     margin-bottom: 4px;
     margin-left: 20px;
   }
+  .bill-profile-container label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    margin-left: 20px;
+  }
 
   .bill-profile-container ion-input {
     width: 91%;
@@ -1241,6 +1275,10 @@ ion-card {
     font-size: 14px;
     padding: 10px;
     border-radius: 8px;
+     margin-left: 20px;
+
+    
+
   }
   .billing-breakdown {
     // width: 117%;

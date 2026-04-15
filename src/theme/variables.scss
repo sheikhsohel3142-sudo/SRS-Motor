@@ -1,6 +1,21 @@
 // For information on how to create your own theme, please refer to:
 // https://ionicframework.com/docs/theming/
-:root{
-    --background-color: black;
+:root {
+	--ion-color-dark-green: #16A34A;
+	--ion-color-dark-green-rgb: 22,163,74;
+	--ion-color-dark-green-contrast: #000000;
+	--ion-color-dark-green-contrast-rgb: 0,0,0;
+	--ion-color-dark-green-shade: #138f41;
+	--ion-color-dark-green-tint: #2dac5c;
 }
+
+.ion-color-dark-green {
+	--ion-color-base: var(--ion-color-dark-green);
+	--ion-color-base-rgb: var(--ion-color-dark-green-rgb);
+	--ion-color-contrast: var(--ion-color-dark-green-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-dark-green-contrast-rgb);
+	--ion-color-shade: var(--ion-color-dark-green-shade);
+	--ion-color-tint: var(--ion-color-dark-green-tint);
+}
+
 

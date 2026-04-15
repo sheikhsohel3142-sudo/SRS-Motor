@@ -5,16 +5,20 @@
 
 .status-container {
   display: flex;
+
   align-items: center;
   gap: 10px;
 
   position: relative;
-  left: 700px;
-  bottom: 50px;
+  left: 60px;
+  bottom: 0px;
   ion-toggle {
     transform: scale(0.5);
     font-size: 40px;
     font-weight: 700;
+    position: absolute;
+    top: 10%;
+    right: 2%;
   }
 }
 .title-container {
@@ -140,6 +144,7 @@
   border-bottom: 1px solid #e5e3dc;
   position: relative;
   top: -8px;
+  right: 60px;
   h2 {
     color: #1f1f1f;
     font-family: "Urbanist", sans-serif;
@@ -697,9 +702,9 @@
 .upload-icon ion-icon {
   font-size: 20px;
   color: #888;
-  position: absolute;
-  left: 335px;
-  bottom: 15px;
+  position: fixed;
+  right: 55%;
+  top: 78%;
 }
 .main-wrapper {
   display: flex;
@@ -726,6 +731,9 @@
   }
   .input {
     width: 91%;
+  }
+ .upload-box {
+    width: 45.5%;
   }
   .bus-details-container ion-input {
     width: 91%;
@@ -770,6 +778,9 @@
   }
   .input {
     width: 91%;
+  }
+  .upload-box {
+    width: 45.5%;
   }
 
   .right-side {
@@ -817,6 +828,9 @@
   }
   .input {
     width: 95%;
+  }
+  .upload-box {
+    width: 45.5%;
   }
 
   // .right-side {
@@ -877,6 +891,9 @@
   .input {
     width: 91%;
   }
+  .upload-box {
+    width: 45.5%;
+  }
 
   .right-side {
     left: 30px;
@@ -920,6 +937,10 @@
     padding: 8px 10px;
   }
   .input {
+    width: 91%;
+    margin-left: 21px;
+  }
+  .upload-box {
     width: 91%;
     margin-left: 21px;
   }
@@ -1000,8 +1021,13 @@
   .bus-details-container {
     margin-bottom: 12px;
   }
+  .upload-icon ion-icon {
+    right: 12%;
+    top: 83%;
+  }
 
-  .bus-details-container label {
+
+  .bus-details-container ion-label {
     font-size: 13px;
     margin-bottom: 4px;
     margin-left: 21px;

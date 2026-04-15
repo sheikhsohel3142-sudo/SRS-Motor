@@ -23,8 +23,7 @@ import {
   IonSelect,
   IonItem,
   IonLabel,
-  IonText,
-} from '@ionic/angular/standalone';
+  IonText, IonToggle } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 import jsPDF from 'jspdf';
 
@@ -33,7 +32,7 @@ import jsPDF from 'jspdf';
   templateUrl: './bill-profile.page.html',
   styleUrls: ['./bill-profile.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonToggle, 
     IonText,
     IonLabel,
     IonItem,

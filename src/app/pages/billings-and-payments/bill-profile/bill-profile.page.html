@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content mode="ios">
   <div class="bill-profile-container">
     <div class="title-container">
       <div routerLink="/admin/bus">
@@ -9,6 +9,11 @@
       <form [formGroup]="billDetailsForm">
         <div class="header-container">
           <h2>Bill Details</h2>
+        </div>
+        <div class="status-container">
+          <!-- <ion-toggle color="success" [(ngModel)]="isActive"></ion-toggle> -->
+          <!-- [(ngModel)]="isActive" -->
+          <ion-toggle color="dark-green"><span>Active</span></ion-toggle>
         </div>
         <ion-grid>
           <ion-row>
@@ -213,7 +218,7 @@
                   </ion-text>
                 </label>
 
-                <ion-label slot="start">$</ion-label>
+                <label slot="start">$</label>
                 <ion-input
                   type="number"
                   formControlName="transportFare"
@@ -244,7 +249,7 @@
                   </ion-text>
                 </label>
 
-                <ion-label slot="start">$</ion-label>
+                <label slot="start">$</label>
                 <ion-input
                   type="number"
                   formControlName="previousDue"
@@ -275,7 +280,7 @@
                   </ion-text>
                 </label>
 
-                <ion-label slot="start">$</ion-label>
+                <label slot="start">$</label>
                 <ion-input type="number" formControlName="lateFee"></ion-input>
               </div>
             </ion-col>
@@ -309,7 +314,7 @@
                   </ion-text>
                 </label>
 
-                <ion-label slot="start">$</ion-label>
+                <label slot="start">$</label>
                 <ion-input
                   type="number"
                   formControlName="totalAmount"
@@ -336,7 +341,7 @@
             <!-- Row 1 -->
             <ion-row>
               <ion-col size="6">
-                <label
+                <ion-label
                   >Payment Amount
                   <ion-text
                     color="danger"
@@ -351,14 +356,14 @@
                       Amount must be greater than 0
                     </small>
                   </ion-text>
-                </label>
+                </ion-label>
 
                 <ion-label slot="start">$</ion-label>
                 <ion-input type="number" formControlName="amount"></ion-input>
               </ion-col>
 
-              <ion-col size="6"class="align-right-field">
-                <label
+              <ion-col size="6" class="align-right-field">
+                <ion-label
                   >Payment Mode
                   <ion-text
                     color="danger"
@@ -366,7 +371,7 @@
                   >
                     <small>Payment mode is required</small>
                   </ion-text>
-                </label>
+                </ion-label>
                 <div class="input">
                   <ion-select formControlName="mode">
                     <ion-select-option value="upi">UPI</ion-select-option>
@@ -381,7 +386,7 @@
             <!-- Row 2 -->
             <ion-row>
               <ion-col size="6">
-                <label
+                <ion-label
                   >Payment Date
                   <ion-text
                     color="danger"
@@ -389,23 +394,23 @@
                   >
                     <small>Date is required</small>
                   </ion-text>
-                </label>
+                </ion-label>
 
                 <ion-input formControlName="date" type="date"></ion-input>
                 <ion-icon name="calendar-outline" slot="end"></ion-icon>
               </ion-col>
 
               <ion-col size="6" class="align-right-field">
-                <label>Reference ID (optional)</label>
+                <ion-label>Reference ID (optional)</ion-label>
 
                 <ion-input formControlName="reference"></ion-input>
               </ion-col>
             </ion-row>
 
             <!-- Row 3 -->
-            <ion-row>
-              <ion-col size="12" >
-                <label>Notes (optional)</label>
+            <ion-row >
+              <ion-col size="12">
+                <ion-label>Notes (optional)</ion-label>
                 <div class="input">
                   <ion-select formControlName="notes">
                     <ion-select-option value="parent">
@@ -429,7 +434,7 @@
             <!-- Row 4 -->
             <ion-row>
               <ion-col size="6">
-                <label>Total Bill</label>
+                <ion-label>Total Bill</ion-label>
                 <div class="input-count">
                   <ion-input formControlName="totalBill" readonly></ion-input>
                 </div>
@@ -446,7 +451,7 @@
             <!-- Row 5 -->
             <ion-row>
               <ion-col size="6">
-                <label>Outstanding Balance</label>
+                <ion-label>Outstanding Balance</ion-label>
 
                 <div class="input-count">
                   <ion-input readonly formControlName="balance"></ion-input>
@@ -481,12 +486,12 @@
         <div class="head-container">
           <!-- <div class="table-head-wrap">
             <div class="table-head"> -->
-              <span class="date">Date</span>
+          <span class="date">Date</span>
 
-              <span class="category">Amount</span>
-              <span class="amount2">Mode</span>
-              <span class="paid">Reference</span>
-            <!-- </div>
+          <span class="category">Amount</span>
+          <span class="amount2">Mode</span>
+          <span class="paid">Reference</span>
+          <!-- </div>
           </div> -->
         </div>
 
@@ -537,7 +542,7 @@
                 <div class="input-count">
                   <ion-input formControlName="mode" readonly></ion-input>
                 </div>
-              </ion-col>
+              </ion-col>ion-
             </ion-row>
 
             <!-- Row 2 -->
@@ -620,7 +625,7 @@
           <ion-row>
             <!-- Current Due -->
             <ion-col size="6">
-              <ion-label
+              <label
                 >Current Due
                 <ion-text
                   color="danger"
@@ -636,7 +641,7 @@
                     Value cannot be negative
                   </small>
                 </ion-text>
-              </ion-label>
+              </label>
               <div class="input-count">
                 <ion-input
                   type="number"
@@ -649,7 +654,7 @@
 
             <!-- Due Since -->
             <ion-col size="6" class="align-right-field">
-              <ion-label
+              <label
                 >Due Since
                 <ion-text
                   color="danger"
@@ -665,7 +670,7 @@
                     Future date not allowed
                   </small>
                 </ion-text>
-              </ion-label>
+              </label>
               <div class="input-count">
                 <ion-input formControlName="dueSince" type="date"> </ion-input>
               </div>

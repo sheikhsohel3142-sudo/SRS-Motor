@@ -591,6 +591,18 @@ ion-icon {
     display: flex;
     gap: 20px;
   }
+  ion-button {
+  flex: 0 0 auto; /* ❗ button shrink नहीं होगा */
+  min-width: 120px; /* हमेशा visible रहेगा */
+  height: 42px;
+  font-size: 14px;
+  white-space: nowrap; /* text break नहीं होगा */
+}
+
+ .search-box {
+  flex: 1 1 120px; /* grow + shrink */
+  min-width: 100px; /* बहुत छोटा ना हो */
+}
 
   /* 🔥 Data row */
   .table-row {

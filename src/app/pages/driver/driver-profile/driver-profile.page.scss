@@ -6,6 +6,24 @@
   position: relative;
   left: 40px;
 }
+.status-container {
+  display: flex;
+
+  align-items: center;
+  gap: 10px;
+
+  position: relative;
+  left: 70px;
+  top: -65px;
+  ion-toggle {
+    transform: scale(0.5);
+    font-size: 40px;
+    font-weight: 700;
+    position: absolute;
+    top: 10%;
+    right: 2%;
+  }
+}
 .driver-profile-container {
   background: #f2f2f2;
   // background: #9b9595;
@@ -1100,7 +1118,13 @@ ion-card {
   }
   .input-count {
     width: 91%;
-    margin-left: 20px;
+    margin-left: 16px;
+  }
+  .align-left{
+    left: 0;
+  }
+  .align-right{
+    left: 0;
   }
   .upload-box {
     width: 91%;
@@ -1220,6 +1244,44 @@ ion-card {
   body {
     overflow-x: hidden;
   }
+
+  
+  .button {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .button ion-button {
+    position: static; /* ❗ mobile fix */
+
+    width: 150px; /* same जैसा तुम्हारा design */
+    height: 36px;
+
+    font-size: 13px;
+    border-radius: 8px;
+
+    padding: 0 8px;
+  }
+
+  /* text alignment same रहे */
+  .button ion-button div {
+    right: 6px;
+    font-size: 14px;
+  }
+
+  /* plus icon same look but aligned */
+  .button ion-button .plus {
+    transform: scale(1.6);
+    width: 14px;
+    height: 14px;
+
+    position: relative;
+    left: 2px;
+    bottom: 1px;
+  }
+
 }
 @media (max-width: 780px) {
 

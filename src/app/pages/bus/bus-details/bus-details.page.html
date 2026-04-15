@@ -7,20 +7,21 @@
       </div>
       <ion-card class="bus-details">
         <div class="status-container">
-          <!-- <ion-toggle color="success" [(ngModel)]="isActive"></ion-toggle> -->
-          <!-- <ion-toggle color="success" [(ngModel)]="isActive"
-          ><span>Active</span></ion-toggle
-        > -->
-        </div>
-        <form [formGroup]="busForm">
-          <div class="header-container">
+           <div class="header-container">
             <h2>Bus Details</h2>
           </div>
+          <!-- <ion-toggle color="success" [(ngModel)]="isActive"></ion-toggle> -->
+          <ion-toggle color="dark-green"(ngModel)]="isActive"
+          ><span>Active</span></ion-toggle
+        >
+        </div>
+        <form [formGroup]="busForm">
+         
           <ion-grid>
             <ion-row>
               <!-- Bus Registration -->
               <ion-col class="align-right-field" size="12" size-md="6">
-                <label
+                <ion-label
                   >Bus Registration Number
                   <ion-text
                     color="danger"
@@ -28,7 +29,7 @@
                   >
                     Bus Registration is required
                   </ion-text>
-                </label>
+                </ion-label>
                 <ion-input
                   formControlName="busRegistrationNumber"
                   placeholder="Eg: TN48C238"
@@ -43,12 +44,12 @@
                 size="12"
                 size-md="6"
               >
-                <label
+                <ion-label
                   >Seating Capacity
                   <ion-text color="danger" *ngIf="isInvalid('seatingCapacity')">
                     Minimum 1 seat required
                   </ion-text>
-                </label>
+                </ion-label>
                 <ion-input
                   formControlName="seatingCapacity"
                   type="number"
@@ -59,12 +60,12 @@
 
               <!-- Fuel Type -->
               <ion-col class="align-right-field" size="12" size-md="6">
-                <label
+                <ion-label
                   >Fuel Type
                   <ion-text color="danger" *ngIf="isInvalid('fuelType')">
                     Select fuel type
                   </ion-text>
-                </label>
+                </ion-label>
 
                 <div class="input">
                   <ion-select
@@ -84,12 +85,12 @@
 
               <!-- Assign School -->
               <ion-col class="align-field" size="12" size-md="6">
-                <label>
+                <ion-label>
                   Assign School
                   <ion-text color="danger" *ngIf="isInvalid('assignSchool')">
                     Select school
                   </ion-text>
-                </label>
+                </ion-label>
 
                 <div class="input">
                   <ion-select
@@ -109,19 +110,19 @@
 
               <!-- Route -->
               <ion-col class="align-right-field" size="12" size-md="6">
-                <label
+                <ion-label
                   >Route
                   <ion-text color="danger" *ngIf="isInvalid('route')">
                     Route is required
                   </ion-text>
-                </label>
+                </ion-label>
                 <ion-input formControlName="route" placeholder="Eg: Triplicane">
                 </ion-input>
               </ion-col>
 
               <!-- Service Start Date -->
               <ion-col class="align-field" size="12" size-md="6">
-                <label
+                <ion-label
                   >Service Start Date
                   <ion-text
                     color="danger"
@@ -129,7 +130,7 @@
                   >
                     Date is required
                   </ion-text>
-                </label>
+                </ion-label>
 
                 <ion-input formControlName="serviceStartDate" type="date">
                 </ion-input>
@@ -193,12 +194,12 @@
 
               <ion-col class="align-right-field" size="12">
                 <div class="upload-container">
-                  <label class="upload-label"
+                  <ion-label class="upload-label"
                     >Upload Invoice
                     <ion-text color="danger" *ngIf="isInvalid('uploadInvoice')">
                       File is required
                     </ion-text>
-                  </label>
+                  </ion-label>
 
                   <div class="upload-box">
                     <!-- Hidden File Input -->

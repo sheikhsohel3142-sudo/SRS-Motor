@@ -23,7 +23,7 @@ import {
   IonInput,
   IonItem,
   IonLabel,
-  IonTabButton, IonText } from '@ionic/angular/standalone';
+  IonTabButton, IonText, IonToggle } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 
 @Component({
@@ -31,7 +31,7 @@ import { Router } from '@angular/router';
   templateUrl: './bus-details.page.html',
   styleUrls: ['./bus-details.page.scss'],
   standalone: true,
-  imports: [IonText, 
+  imports: [IonToggle, IonText, 
     IonTabButton,
     IonLabel,
     IonItem,
