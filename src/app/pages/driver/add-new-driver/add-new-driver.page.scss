@@ -161,7 +161,7 @@ ion-button {
   background: #f5f6f8;
   border-radius: 8px;
   // width: max-content;
-  // width: 372px;
+  // min-width: 272px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -333,7 +333,7 @@ ion-button {
     width: 91%;
   }
   .upload-container {
-    width: 91%;
+    width: 99%;
   }
   .upload-box {
     width: 91%;
@@ -346,7 +346,6 @@ ion-button {
   ion-card {
     width: 107%;
 
-    height: 1050px;
   }
 
   .add-new-driver-container ion-input {
@@ -369,7 +368,7 @@ ion-button {
     width: 91%;
   }
   .upload-box {
-    width: 91%;
+    width: 100%;
   }
   .upload-container {
     width: 91%;
@@ -381,7 +380,7 @@ ion-button {
 
   ion-card {
     width: 108%;
-    height: 1050px;
+
 
     // right: 0;
     // top: 60px;
@@ -415,7 +414,7 @@ ion-button {
     width: 91%;
   }
   .upload-box {
-    width: 91%;
+    width: 98%;
   }
   .upload-container {
     width: 91%;
@@ -464,12 +463,15 @@ ion-button {
   }
   .input {
     width: 91%;
+     margin-left: 20px;
   }
   .upload-box {
-    width: 91%;
+    width: 99%;
+     margin-left: 20px;
   }
   .upload-container {
     width: 91%;
+    
   }
 
   /* Card */
@@ -524,6 +526,7 @@ ion-button {
   .add-new-driver-container ion-label {
     font-size: 13px;
     margin-bottom: 4px;
+    margin-left: 20px;
   }
 
   .add-new-driver-container ion-input {
@@ -533,6 +536,7 @@ ion-button {
     font-size: 14px;
     padding: 10px;
     border-radius: 8px;
+    margin-left: 20px;
   }
 
   /* Button */

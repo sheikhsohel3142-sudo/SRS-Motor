@@ -66,7 +66,7 @@
   border-radius: 14px;
   padding-left: 100px;
   // overflow-x: hidden;
-  // overflow-y: hidden;
+  overflow-y: hidden;
   margin-bottom: 10px;
 }
 // .add-new-bus-container {
@@ -794,9 +794,9 @@ ion-card {
 @media only screen and (min-width: 1600px) {
   .bill-profile-container {
     width: 99%;
-    height: auto;
+    // height: auto;
    
-     overflow: auto;
+     overflow: hidden;
 
     // left: 20px;
     // padding-left: 120px;
@@ -886,7 +886,7 @@ ion-card {
     width: 99%;
     height: auto;
    
-     overflow: auto;
+     overflow: hidden;
 
     // padding-left: 140px;
   }
@@ -979,7 +979,7 @@ ion-card {
     width: 99%;
     height: auto;
    
-     overflow: auto;
+     overflow: hidden;
   }
   .input {
     width: 91%;
@@ -1076,7 +1076,7 @@ ion-card {
     width: 99.5%;
     height: auto;
    
-     overflow: auto;
+     overflow: hidden;
   }
   .input {
     width: 91%;
@@ -1173,7 +1173,7 @@ ion-card {
     width: 99%;
     height: auto;
    
-     overflow: auto;
+     overflow: hidden;
     // padding: 10px;
     background: #f2f2f2;
     padding: 8px 10px;

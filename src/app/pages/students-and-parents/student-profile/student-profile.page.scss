@@ -43,7 +43,23 @@
 }
 .header-container {
   border-bottom: 1px solid #e5e3dc;
+  // margin-bottom: 10px;
   margin-bottom: 20px;
+  position: relative;
+  top: -8px;
+  h2 {
+    color: #1f1f1f;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 20px;
+    line-height: 145%;
+    letter-spacing: 0%;
+  }
+}
+.bill-overview-container {
+  border-bottom: 1px solid #e5e3dc;
+  margin-bottom: -20px;
   position: relative;
   top: -8px;
   h2 {
@@ -247,7 +263,7 @@ label {
   display: flex;
   align-items: center;
   gap: 10px;
- 
+
   ion-toggle {
     position: absolute;
     top: 25%;
@@ -265,7 +281,7 @@ label {
   height: 350px;
   position: relative;
   top: 150px;
-  right: 75px;
+  right: 80px;
   padding-top: 30%;
 
   margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
@@ -341,7 +357,7 @@ label {
   height: 360px;
   position: relative;
   top: 220px;
-  right: 75px;
+  right: 80px;
   padding-top: 30%;
 
   // margin: -60px auto 24px; /* NEGATIVE margin = overlap effect */
@@ -414,7 +430,6 @@ label {
   .student-profile-container {
     width: 99%;
 
-
     // padding-left: 140px;
   }
   .input {
@@ -426,13 +441,13 @@ label {
     }
   }
   .billing-overview-container {
-    width: 105%;
+    width: 108%;
 
     // left: 20px;
     // padding-left: 120px;
   }
   .activity-loge {
-    width: 105%;
+    width: 108%;
 
     // left: 20px;
     // padding-left: 120px;
@@ -445,7 +460,7 @@ label {
   ion-card {
     width: 107%;
 
-    height: 1350px;
+    height: 1250px;
   }
 
   .student-profile-container ion-input {
@@ -473,13 +488,13 @@ label {
     width: 91%;
   }
   .billing-overview-container {
-    width: 105%;
+    width: 108%;
 
     // left: 20px;
     // padding-left: 120px;
   }
   .activity-loge {
-    width: 105%;
+    width: 108%;
 
     // left: 20px;
     // padding-left: 120px;
@@ -494,10 +509,11 @@ label {
 
   ion-card {
     width: 108%;
-    height: 1350px;
+    // height: 1350px;
 
     // right: 0;
     // top: 60px;
+    height: 1250px;
   }
   .title-container {
     margin-left: 50;
@@ -554,8 +570,7 @@ label {
 
   ion-card {
     width: 107%;
-    height: 1200px;
-   
+    height: 1250px;
 
     // right: 0;
     // top: 60px;
@@ -648,13 +663,11 @@ label {
   /* 🔥 GRID → SINGLE COLUMN */
   ion-grid {
     display: block;
-   
   }
 
   ion-row {
     display: block;
     left: 20px;
-    
   }
 
   ion-col {

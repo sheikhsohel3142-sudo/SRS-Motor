@@ -117,8 +117,9 @@ ion-button {
   position: relative;
   right: 86px;
   top: 40px;
+
   
-  box-sizing: border-box;
+  box-sizing: content-box;
   border: 1px solid #ffffff;
 }
 // .head-container {
