@@ -2,7 +2,10 @@
 //    width: 960px;
 //   height: 2570px;
 // }
-
+.header1{
+ position: relative;
+ left: 60px;
+}
 .status-container {
   display: flex;
 
@@ -141,9 +144,14 @@
 }
 
 .header-container {
+  // border-bottom: 1px solid #e5e3dc;
+ 
+  width: 100%;
+  display: block;
   border-bottom: 1px solid #e5e3dc;
   position: relative;
   top: -8px;
+  right: 60px;
 
   h2 {
     color: #1f1f1f;
@@ -154,6 +162,7 @@
     line-height: 145%;
     letter-spacing: 0%;
   }
+  
 }
 // .input {
 //   background: #f5f6f8;

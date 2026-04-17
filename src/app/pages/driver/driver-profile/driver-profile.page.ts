@@ -24,7 +24,7 @@ import {
   IonCardHeader,
   IonCardTitle,
   IonCardContent,
-  IonSelect, IonInput, IonToggle } from '@ionic/angular/standalone';
+  IonSelect, IonInput, IonToggle, IonAlert } from '@ionic/angular/standalone';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
@@ -32,7 +32,7 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './driver-profile.page.html',
   styleUrls: ['./driver-profile.page.scss'],
   standalone: true,
-  imports: [IonToggle, IonInput, 
+  imports: [IonAlert, IonToggle, IonInput, 
     IonCardContent,
     IonCardTitle,
     IonCardHeader,

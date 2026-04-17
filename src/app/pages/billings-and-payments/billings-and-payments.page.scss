@@ -181,14 +181,14 @@ ion-button {
   // grid-template-columns: 110px 1fr 1fr 0.5fr 0.5fr  0.5fr 295px;
   grid-template-columns: 
    60px        /* S.no */
-    1.5fr       /* Student Name */
+    1.1fr       /* Student Name */
     1fr         /* School */
     1.2fr       /* Billing Month */
     1fr         /* Total Bill */
-    1fr         /* Paid Amount */
-    1fr         /* Outstanding */
+    1.2fr         /* Paid Amount */
+    1.1fr         /* Outstanding */
     0.8fr       /* Status */
-    0.6fr;      /* View */
+    0.5fr;      /* View */
 
   align-items: center;
   padding: 12px 16px;
@@ -212,6 +212,23 @@ ion-button {
 //   border-bottom: 1px solid #f5f2f2;
 //   font-family: "Space Grotesk", sans-serif;
 // }
+.luffy{
+  padding-left: 15px;
+}
+.school-N{
+  padding-left: 15px;
+}
+.paid2-amount{
+  padding-left: 15px;
+}
+.school{
+
+  padding-left: -5px;
+}
+.outstanding-amount{
+   padding-left: 5px;
+
+}
 
 .active {
   position: relative;

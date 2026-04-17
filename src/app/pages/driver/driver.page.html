@@ -14,10 +14,10 @@
         <!-- <div class="table-head-wrap">
       <div class="table-head"> -->
         <span class="s-no">S.no</span>
-        <span class="school-name">Driver Name</span>
-        <span class="buses">Assigned Bus</span>
-        <span class="A-route">Assigned Route</span>
-        <span class="advance">Outstanding <br />Advance</span>
+        <span><div class="school-name">Driver Name</div></span>
+        <span><div class="buses">Assigned Bus</div></span>
+        <span><div class="A-route">Assigned Route</div></span>
+        <span class="advance">Outstanding <br />&nbsp;&nbsp;Advance</span>
         <span class="status">Status</span>
         <!-- </div>
       </div> -->
@@ -28,11 +28,11 @@
         <div>
           <div class="table-row" *ngFor="let s of schools; let i = index">
             <span class="c-no">{{ i + 1 }}</span>
-            <span class="driver-name">{{ s.name }}</span>
+            <span><div class="driver-name">{{ s.name }}</div></span>
             <span class="buses-no">{{ s.buses }}</span>
             <span class="route">{{s.route}}</span>
-            <span class="Advance-amount">{{ s.outstandingAdvance }}</span>
-            <span class="active">{{ s.status }}</span>
+            <span><div class="Advance-amount">{{ s.outstandingAdvance }}</div></span>
+            <span class="active"><div class="active2">{{ s.status }}</div></span>
             <p class="view" [routerLink]="['/admin/driver/driver-profile']"
               >View ››</p
             >

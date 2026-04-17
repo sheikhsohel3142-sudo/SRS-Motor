@@ -663,6 +663,9 @@ ion-card {
 //   position: relative;
 //   right: 90px;
 // }
+.upload-container{
+  margin-bottom: 25px;
+}
 
 .upload-label {
   font-size: 14px;
@@ -699,6 +702,14 @@ ion-card {
   font-size: 13px;
   gap: 6px;
   margin-left: 1px;
+}
+.file-placeholder{
+  padding-right: 135px;
+  font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  color: #8a8a8a;
+  margin-bottom: 6px;
 }
 .file-name {
   font-family: "Space Grotesk", sans-serif;

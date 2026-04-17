@@ -6,7 +6,9 @@
         <div><ion-icon name="chevron-back-outline"></ion-icon>Bus</div>
       </div>
       <ion-card class="bus-details">
-        <div class="status-container">
+      
+        <form [formGroup]="busForm">
+            <div class="status-container">
            <div class="header-container">
             <h2>Bus Details</h2>
           </div>
@@ -15,7 +17,6 @@
           ><span>Active</span></ion-toggle
         >
         </div>
-        <form [formGroup]="busForm">
          
           <ion-grid>
             <ion-row>
@@ -245,7 +246,7 @@
       <br />
 
       <ion-card class="All-list">
-        <div class="header">
+        <div class="header1">
           <div class="header-container">
             <h2>Revenue Tracking</h2>
           </div>
