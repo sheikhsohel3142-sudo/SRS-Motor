@@ -16,13 +16,10 @@
 }
 
 .input-count {
-  
-}
-.input-2{
-ion-input {
+  ion-input {
     background: #ffffff;
     border-radius: 8px;
-    // width: 472px;
+    width: 372px;
     height: 50px;
     margin-top: 10px;
     margin-bottom: 19px;
@@ -30,6 +27,19 @@ ion-input {
     border: 1px solid #c7c9cc;
   }
 }
+
+// .input-2{
+// ion-input {
+//     background: #ffffff;
+//     border-radius: 8px;
+//     // width: 472px;
+//     height: 50px;
+//     margin-top: 10px;
+//     margin-bottom: 19px;
+//     font-size: 16px;
+//     border: 1px solid #c7c9cc;
+//   }
+// }
 
 ion-card {
   // border: 2px solid black;

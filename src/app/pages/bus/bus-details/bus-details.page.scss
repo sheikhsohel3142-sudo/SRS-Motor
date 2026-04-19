@@ -2,9 +2,9 @@
 //    width: 960px;
 //   height: 2570px;
 // }
-.header1{
- position: relative;
- left: 60px;
+.header1 {
+  position: relative;
+  left: 60px;
 }
 .status-container {
   display: flex;
@@ -145,7 +145,7 @@
 
 .header-container {
   // border-bottom: 1px solid #e5e3dc;
- 
+
   width: 100%;
   display: block;
   border-bottom: 1px solid #e5e3dc;
@@ -162,7 +162,6 @@
     line-height: 145%;
     letter-spacing: 0%;
   }
-  
 }
 // .input {
 //   background: #f5f6f8;
@@ -270,9 +269,8 @@
   justify-content: space-around;
   padding-right: 13px;
 }
-.content-type{
+.content-type {
   padding-left: 15px;
-
 }
 // .table-head-wrap {
 //   padding: 0 10px;
@@ -346,19 +344,30 @@
 .head-container,
 .table-row {
   display: grid;
-  grid-template-columns: 110px 1.5fr 1.2fr 1.5fr 1fr 45px;
+  grid-template-columns: 160px 1.1fr 0.8fr 0.8fr 0.8fr 20px;
   align-items: center;
   padding: 12px 16px;
   width: 100%;
+}
+.catagory {
+  padding-left: 5px;
+}
+.amount2 {
+  padding-left: 10px;
+}
+.paidBy {
+  padding-left: 20px;
 }
 
 .table-row span {
   font-size: 14px;
 }
 .head-container span {
-  font-weight: 600;
-  font-size: 13px;
-  color: #6b7280;
+  font-weight: 500;
+  font-size: 16px;
+  color: #0f172a;
+  line-height: 145%;
+  letter-spacing: 0%;
 }
 
 /* CARD */
@@ -430,7 +439,7 @@
 /*Expense Style*/
 .expense-container {
   // border: 2px solid black;
-  width: 880px;
+  width: 100%;
 
   height: 500px;
   position: relative;
@@ -606,7 +615,7 @@
   // display: flex;
   // justify-content: space-evenly;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr 1fr 0.8fr;
+  grid-template-columns: 0.6fr 0.9fr 0.6fr 0.7fr 0.8fr;
   align-items: center;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
@@ -618,14 +627,56 @@
   font-size: 16px;
   border-bottom: 1px solid #f5f2f2;
 }
-// .table-month {
-//   // border: 1px solid black;
-//   width: 90px;
-//   display: flex;
-//   position: relative;
-//   right: 13px;
-//   justify-content: space-around;
-// }
+.table-month2 {
+  display: flex;
+  justify-content: space-around;
+}
+.total-revenue {
+  display: flex;
+  justify-content: space-around;
+}
+.month2 {
+ 
+  display: flex;
+  justify-content: space-around;
+
+}
+.table-month1 {
+  display: flex;
+  justify-content: space-around;
+
+}
+.total-expense {
+  display: flex;
+  justify-content: space-around;
+}
+.table-month3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.net-profit {
+  // border: 1px solid black;
+    display: flex;
+  justify-content: space-around;
+
+}
+.table-month4 {
+   display: flex;
+  justify-content: space-around;
+
+
+}
+// // .month2 {
+.status{
+ 
+  display: flex;
+  justify-content: space-around;
+}
+.table-month5 {
+  display: flex;
+  justify-content: space-around;
+}
 // .month2 {
 //   position: relative;
 //   left: 30px;
@@ -755,6 +806,13 @@
   //   // padding-left: 120px;
   // }
 
+  // .Profitability-head-container,
+  // .profitability-content-container {
+  //   display: grid;
+  //   grid-template-columns: 1.2fr 1fr 1fr 1fr 0.8fr; /* fixed */
+  //   align-items: center;
+  //   gap: 20px;
+  // }
   .right-side {
     left: 30px;
   }
@@ -769,26 +827,27 @@
   }
 
   .bus-details {
-    width: 105%;
+    width: 107%;
   }
   .All-list {
-    width: 105%;
+    width: 107%;
   }
   .expense-container {
-    width: 105%;
-  }
-  .Revenu-table-container {
-    width: 105%;
-  }
-  .table-profitability-container {
-    width: 105%;
-  }
-  .table-expense-container {
-    width: 105%;
+    width: 107%;
   }
   .profitability-summary-container {
-    width: 105%;
+    width: 107%;
   }
+  .Revenu-table-container {
+    width: 91%;
+  }
+  .table-profitability-container {
+    width: 91%;
+  }
+  .table-expense-container {
+    width: 91%;
+  }
+
   .confirm-btn {
     ion-button {
       width: 100%;
@@ -820,10 +879,13 @@
     width: 107%;
   }
   .All-list {
-    width: 105%;
+    width: 107%;
   }
   .expense-container {
-    width: 105%;
+    width: 107%;
+  }
+  .profitability-summary-container {
+    width: 107%;
   }
   .Revenu-table-container {
     width: 105%;
@@ -832,9 +894,6 @@
     width: 105%;
   }
   .table-expense-container {
-    width: 105%;
-  }
-  .profitability-summary-container {
     width: 105%;
   }
 
@@ -868,19 +927,19 @@
   // }
 
   .bus-details {
-    width: 108%;
+    width: 107%;
 
     // right: 0;
     // top: 60px;
   }
   .All-list {
-    width: 105%;
+    width: 107%;
   }
   .expense-container {
-    width: 105%;
+    width: 107%;
   }
   .Revenu-table-container {
-    width: 105%;
+    width: 107%;
   }
   .table-profitability-container {
     width: 105%;
@@ -889,7 +948,7 @@
     width: 105%;
   }
   .profitability-summary-container {
-    width: 105%;
+    width: 107%;
   }
   .title-container {
     margin-left: 50;
@@ -929,10 +988,25 @@
   }
 
   .bus-details {
-    width: 116%;
+    width: 108%;
 
     // right: 0;
     // top: 60px;
+  }
+  .expense-container {
+    width: 107%;
+  }
+  .Revenu-table-container {
+    width: 105%;
+  }
+  .table-profitability-container {
+    width: 105%;
+  }
+  .table-expense-container {
+    width: 105%;
+  }
+  .profitability-summary-container {
+    width: 105%;
   }
   .title-container {
     margin-left: 50;
@@ -1117,7 +1191,7 @@
   }
 
   /* 🔥 Data row */
-  .profitability-content-container,
+  .table-container,
   // .revenue-table-row2,
   .table-row {
     display: flex;
@@ -1128,6 +1202,13 @@
   .revenue-table-row2 {
     display: grid;
     grid-template-columns: 80px 150px 120px 150px; /* fixed */
+    align-items: center;
+    gap: 20px;
+  }
+  .Profitability-head-container,
+  .profitability-content-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 0.8fr; /* fixed */
     align-items: center;
     gap: 20px;
   }

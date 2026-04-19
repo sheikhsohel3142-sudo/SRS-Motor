@@ -7,13 +7,11 @@
       </div>
     </div>
     <ion-card>
-     
       <form [formGroup]="studentForm">
-       
         <div class="header-container">
           <h2>Student Profile</h2>
         </div>
-            <div class="status-container">
+        <div class="status-container">
           <!-- <ion-toggle color="success" [(ngModel)]="isActive"></ion-toggle> -->
           <!-- [(ngModel)]="isActive" -->
           <ion-toggle color="dark-green"><span>Active</span></ion-toggle>
@@ -204,15 +202,17 @@
             </ion-col>
 
             <ion-col size="6" class="align-right-field">
-              <ion-label>Receive Notices & Announcements</ion-label>
-              <div class="setting-box">
-                <div class="toggle">
-                  <span>{{studentForm.value.receiveNotice}}</span>
-                  <ion-toggle
-                    [checked]="isChecked('receiveNotice')"
-                    (ionChange)="toggleChange($event,'receiveNotice')"
-                  >
-                  </ion-toggle>
+              <div class="toogle-container">
+                <ion-label>Receive Notices & Announcements</ion-label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{studentForm.value.receiveNotice}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('receiveNotice')"
+                      (ionChange)="toggleChange($event,'receiveNotice')"
+                    >
+                    </ion-toggle>
+                  </div>
                 </div>
               </div>
             </ion-col>
@@ -222,15 +222,17 @@
 
           <ion-row>
             <ion-col size="6">
-              <ion-label>Complimentary Student</ion-label>
-              <div class="setting-box">
-                <div class="toggle">
-                  <span>{{studentForm.value.complimentaryStudent}}</span>
-                  <ion-toggle
-                    [checked]="isChecked('complimentaryStudent')"
-                    (ionChange)="toggleChange($event,'complimentaryStudent')"
-                  >
-                  </ion-toggle>
+              <div class="toogle-container">
+                <ion-label>Complimentary Student</ion-label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{studentForm.value.complimentaryStudent}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('complimentaryStudent')"
+                      (ionChange)="toggleChange($event,'complimentaryStudent')"
+                    >
+                    </ion-toggle>
+                  </div>
                 </div>
               </div>
             </ion-col>
@@ -262,15 +264,17 @@
             </ion-col>
 
             <ion-col size="6" class="align-right-field">
-              <ion-label>Disable Notices & Announcements</ion-label>
-              <div class="setting-box">
-                <div class="toggle">
-                  <span>{{studentForm.value.disableNotice}}</span>
-                  <ion-toggle
-                    [checked]="isChecked('disableNotice')"
-                    (ionChange)="toggleChange($event,'disableNotice')"
-                  >
-                  </ion-toggle>
+              <div class="toogle-container">
+                <ion-label>Disable Notices & Announcements</ion-label>
+                <div class="setting-box">
+                  <div class="toggle">
+                    <span>{{studentForm.value.disableNotice}}</span>
+                    <ion-toggle
+                      [checked]="isChecked('disableNotice')"
+                      (ionChange)="toggleChange($event,'disableNotice')"
+                    >
+                    </ion-toggle>
+                  </div>
                 </div>
               </div>
             </ion-col>

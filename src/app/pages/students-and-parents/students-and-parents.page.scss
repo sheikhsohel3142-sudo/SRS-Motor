@@ -174,21 +174,40 @@ ion-button {
   // grid-template-columns: 110px 1fr 1fr 0.5fr 0.5fr  0.5fr 295px;
   grid-template-columns:
     1fr /* S.no */
-    1.5fr /* Student Name */
-    1fr /* School */
-    1.8fr /* Assigned Bus */
-    2.5fr /* Assigned Route */
-    1.2fr /* Assigned Stop */
+    1.2fr /* Student Name */
+    1.2fr /* School */
+    1.68fr /* Assigned Bus */
+    1.8fr /* Assigned Route */
+    1.4fr /* Assigned Stop */
     1fr /* Status */
-    0.7fr; /* View */
+    0.60fr; /* View */
 
   align-items: center;
   padding: 12px 16px;
   width: 100%;
 }
+.driver-name{
+ 
+  padding-left: 20px;
+}
+.assigned-stop{
+  
+ 
+  padding-left: 27px;
+}
+.school-N{
+ 
+  padding-left: 15px;
+}
 
 .active {
-  color: #16a34a;
+ 
+  font-weight: 500;
+  // position: relative;
+  // left: 35px;
+}
+.active2 {
+ padding-left: 10px;
   font-weight: 500;
   // position: relative;
   // left: 35px;

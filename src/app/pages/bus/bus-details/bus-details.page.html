@@ -1,366 +1,353 @@
 <ion-content mode="ios">
- 
   <!-- <div class="root-container"> -->
-    <div class="bus-details-container">
-      <div class="title-container">
-        <div><ion-icon name="chevron-back-outline"></ion-icon>Bus</div>
-      </div>
-      <ion-card class="bus-details">
-      
-        <form [formGroup]="busForm">
-            <div class="status-container">
-           <div class="header-container">
+  <div class="bus-details-container">
+    <div class="title-container">
+      <div><ion-icon name="chevron-back-outline"></ion-icon>Bus</div>
+    </div>
+    <ion-card class="bus-details">
+      <form [formGroup]="busForm">
+        <div class="status-container">
+          <div class="header-container">
             <h2>Bus Details</h2>
           </div>
           <!-- <ion-toggle color="success" [(ngModel)]="isActive"></ion-toggle> -->
-          <ion-toggle color="dark-green"(ngModel)]="isActive"
-          ><span>Active</span></ion-toggle
-        >
+          <ion-toggle color="dark-green" (ngModel)]="isActive"
+            ><span>Active</span></ion-toggle
+          >
         </div>
-         
-          <ion-grid>
-            <ion-row>
-              <!-- Bus Registration -->
-              <ion-col class="align-right-field" size="12" size-md="6">
-                <ion-label
-                  >Bus Registration Number
-                  <ion-text
-                    color="danger"
-                    *ngIf="isInvalid('busRegistrationNumber')"
-                  >
-                    Bus Registration is required
-                  </ion-text>
-                </ion-label>
-                <ion-input
-                  formControlName="busRegistrationNumber"
-                  placeholder="Eg: TN48C238"
-                >
-                </ion-input>
-              </ion-col>
 
-              <!-- Seating Capacity -->
-              <ion-col
-                class="align-right-field"
-                class="align-field"
-                size="12"
-                size-md="6"
+        <ion-grid>
+          <ion-row>
+            <!-- Bus Registration -->
+            <ion-col class="align-right-field" size="12" size-md="6">
+              <ion-label
+                >Bus Registration Number
+                <ion-text
+                  color="danger"
+                  *ngIf="isInvalid('busRegistrationNumber')"
+                >
+                  Bus Registration is required
+                </ion-text>
+              </ion-label>
+              <ion-input
+                formControlName="busRegistrationNumber"
+                placeholder="Eg: TN48C238"
               >
-                <ion-label
-                  >Seating Capacity
-                  <ion-text color="danger" *ngIf="isInvalid('seatingCapacity')">
-                    Minimum 1 seat required
-                  </ion-text>
-                </ion-label>
-                <ion-input
-                  formControlName="seatingCapacity"
-                  type="number"
-                  placeholder="Eg: 32"
+              </ion-input>
+            </ion-col>
+
+            <!-- Seating Capacity -->
+            <ion-col
+              class="align-right-field"
+              class="align-field"
+              size="12"
+              size-md="6"
+            >
+              <ion-label
+                >Seating Capacity
+                <ion-text color="danger" *ngIf="isInvalid('seatingCapacity')">
+                  Minimum 1 seat required
+                </ion-text>
+              </ion-label>
+              <ion-input
+                formControlName="seatingCapacity"
+                type="number"
+                placeholder="Eg: 32"
+              >
+              </ion-input>
+            </ion-col>
+
+            <!-- Fuel Type -->
+            <ion-col class="align-right-field" size="12" size-md="6">
+              <ion-label
+                >Fuel Type
+                <ion-text color="danger" *ngIf="isInvalid('fuelType')">
+                  Select fuel type
+                </ion-text>
+              </ion-label>
+
+              <div class="input">
+                <ion-select
+                  formControlName="fuelType"
+                  placeholder="Eg:Petrol,Diesal..."
                 >
-                </ion-input>
-              </ion-col>
-
-              <!-- Fuel Type -->
-              <ion-col class="align-right-field" size="12" size-md="6">
-                <ion-label
-                  >Fuel Type
-                  <ion-text color="danger" *ngIf="isInvalid('fuelType')">
-                    Select fuel type
-                  </ion-text>
-                </ion-label>
-
-                <div class="input">
-                  <ion-select
-                    formControlName="fuelType"
-                    placeholder="Eg:Petrol,Diesal..."
+                  <ion-select-option
+                    *ngFor="let fuel of fuelTypes"
+                    [value]="fuel"
                   >
-                    <ion-select-option
-                      *ngFor="let fuel of fuelTypes"
-                      [value]="fuel"
-                    >
-                      {{fuel}}
-                    </ion-select-option>
-                  </ion-select>
-                  <ion-icon class="down" name="chevron-down-outline"></ion-icon>
-                </div>
-              </ion-col>
+                    {{fuel}}
+                  </ion-select-option>
+                </ion-select>
+                <ion-icon class="down" name="chevron-down-outline"></ion-icon>
+              </div>
+            </ion-col>
 
-              <!-- Assign School -->
-              <ion-col class="align-field" size="12" size-md="6">
-                <ion-label>
-                  Assign School
-                  <ion-text color="danger" *ngIf="isInvalid('assignSchool')">
-                    Select school
-                  </ion-text>
-                </ion-label>
+            <!-- Assign School -->
+            <ion-col class="align-field" size="12" size-md="6">
+              <ion-label>
+                Assign School
+                <ion-text color="danger" *ngIf="isInvalid('assignSchool')">
+                  Select school
+                </ion-text>
+              </ion-label>
 
-                <div class="input">
-                  <ion-select
-                    formControlName="assignSchool"
-                    placeholder="Eg: SRV, ARLM..."
+              <div class="input">
+                <ion-select
+                  formControlName="assignSchool"
+                  placeholder="Eg: SRV, ARLM..."
+                >
+                  <ion-select-option
+                    *ngFor="let school of schools"
+                    [value]="school"
                   >
-                    <ion-select-option
-                      *ngFor="let school of schools"
-                      [value]="school"
-                    >
-                      {{school}}
-                    </ion-select-option>
-                  </ion-select>
-                  <ion-icon name="add-circle-outline"></ion-icon>
-                </div>
-              </ion-col>
+                    {{school}}
+                  </ion-select-option>
+                </ion-select>
+                <ion-icon name="add-circle-outline"></ion-icon>
+              </div>
+            </ion-col>
 
-              <!-- Route -->
-              <ion-col class="align-right-field" size="12" size-md="6">
-                <ion-label
-                  >Route
-                  <ion-text color="danger" *ngIf="isInvalid('route')">
-                    Route is required
+            <!-- Route -->
+            <ion-col class="align-right-field" size="12" size-md="6">
+              <ion-label
+                >Route
+                <ion-text color="danger" *ngIf="isInvalid('route')">
+                  Route is required
+                </ion-text>
+              </ion-label>
+              <ion-input formControlName="route" placeholder="Eg: Triplicane">
+              </ion-input>
+            </ion-col>
+
+            <!-- Service Start Date -->
+            <ion-col class="align-field" size="12" size-md="6">
+              <ion-label
+                >Service Start Date
+                <ion-text color="danger" *ngIf="isInvalid('serviceStartDate')">
+                  Date is required
+                </ion-text>
+              </ion-label>
+
+              <ion-input formControlName="serviceStartDate" type="date">
+              </ion-input>
+            </ion-col>
+
+            <ion-col class="align-right-field" size="6">
+              <div class="input-count">
+                <ion-label position="stacked"
+                  >Active Students
+                  <ion-text color="danger" *ngIf="isInvalid('activeStudents')">
+                    Required
                   </ion-text>
                 </ion-label>
-                <ion-input formControlName="route" placeholder="Eg: Triplicane">
+                <ion-input type="number" formControlName="activeStudents">
                 </ion-input>
-              </ion-col>
+              </div>
+            </ion-col>
 
-              <!-- Service Start Date -->
-              <ion-col class="align-field" size="12" size-md="6">
-                <ion-label
-                  >Service Start Date
-                  <ion-text
-                    color="danger"
-                    *ngIf="isInvalid('serviceStartDate')"
+            <ion-col class="align-field" size="6">
+              <div class="input-count">
+                <ion-label position="stacked"
+                  >Monthly Revenue
+                  <ion-text color="danger" *ngIf="isInvalid('monthlyRevenue')">
+                    Required
+                  </ion-text>
+                </ion-label>
+                <ion-input type="number" formControlName="monthlyRevenue">
+                </ion-input>
+              </div>
+            </ion-col>
+
+            <ion-col class="align-right-field" size="6">
+              <div class="input-count">
+                <ion-label position="stacked"
+                  >Monthly Expenses
+                  <ion-text color="danger" *ngIf="isInvalid('monthlyExpenses')">
+                    Required
+                  </ion-text>
+                </ion-label>
+                <ion-input type="number" formControlName="monthlyExpenses">
+                </ion-input>
+              </div>
+            </ion-col>
+
+            <ion-col class="align-field" size="6">
+              <div class="input-count">
+                <ion-label position="stacked">Net Profit</ion-label>
+                <ion-input type="number" formControlName="netProfit">
+                </ion-input>
+              </div>
+            </ion-col>
+
+            <ion-col class="align-right-field" size="12">
+              <div class="upload-container">
+                <ion-label class="upload-label"
+                  >Upload Invoice
+                  <ion-text color="danger" *ngIf="isInvalid('uploadInvoice')">
+                    File is required
+                  </ion-text>
+                </ion-label>
+
+                <div class="upload-box">
+                  <!-- Hidden File Input -->
+                  <input
+                    type="file"
+                    #fileInput
+                    hidden
+                    (change)="onFileSelected($event)"
+                    formControlName="uploadInvoice"
+                  />
+
+                  <!-- Left Side File Name -->
+                  <div
+                    class="file-pill"
+                    *ngIf="selectedFile"
+                    (click)="fileInput.click()"
                   >
-                    Date is required
-                  </ion-text>
-                </ion-label>
+                    <div class="file-name">{{ selectedFile.name }}</div>
+                    <ion-icon
+                      name="close-circle-outline"
+                      (click)="removeFile($event)"
+                    ></ion-icon>
+                  </div>
 
-                <ion-input formControlName="serviceStartDate" type="date">
-                </ion-input>
-              </ion-col>
-
-              <ion-col class="align-right-field" size="6">
-                <div class="input-count">
-                  <ion-label position="stacked"
-                    >Active Students
-                    <ion-text
-                      color="danger"
-                      *ngIf="isInvalid('activeStudents')"
-                    >
-                      Required
-                    </ion-text>
-                  </ion-label>
-                  <ion-input type="number" formControlName="activeStudents">
-                  </ion-input>
-                </div>
-              </ion-col>
-
-              <ion-col class="align-field" size="6">
-                <div class="input-count">
-                  <ion-label position="stacked"
-                    >Monthly Revenue
-                    <ion-text
-                      color="danger"
-                      *ngIf="isInvalid('monthlyRevenue')"
-                    >
-                      Required
-                    </ion-text>
-                  </ion-label>
-                  <ion-input type="number" formControlName="monthlyRevenue">
-                  </ion-input>
-                </div>
-              </ion-col>
-
-              <ion-col class="align-right-field" size="6">
-                <div class="input-count">
-                  <ion-label position="stacked"
-                    >Monthly Expenses
-                    <ion-text
-                      color="danger"
-                      *ngIf="isInvalid('monthlyExpenses')"
-                    >
-                      Required
-                    </ion-text>
-                  </ion-label>
-                  <ion-input type="number" formControlName="monthlyExpenses">
-                  </ion-input>
-                </div>
-              </ion-col>
-
-              <ion-col class="align-field" size="6">
-                <div class="input-count">
-                  <ion-label position="stacked">Net Profit</ion-label>
-                  <ion-input type="number" formControlName="netProfit">
-                  </ion-input>
-                </div>
-              </ion-col>
-
-              <ion-col class="align-right-field" size="12">
-                <div class="upload-container">
-                  <ion-label class="upload-label"
-                    >Upload Invoice
-                    <ion-text color="danger" *ngIf="isInvalid('uploadInvoice')">
-                      File is required
-                    </ion-text>
-                  </ion-label>
-
-                  <div class="upload-box">
-                    <!-- Hidden File Input -->
-                    <input
-                      type="file"
-                      #fileInput
-                      hidden
-                      (change)="onFileSelected($event)"
-                      formControlName="uploadInvoice"
-                    />
-
-                    <!-- Left Side File Name -->
-                    <div
-                      class="file-pill"
-                      *ngIf="selectedFile"
-                      (click)="fileInput.click()"
-                    >
-                      <div class="file-name">{{ selectedFile.name }}</div>
-                      <ion-icon
-                        name="close-circle-outline"
-                        (click)="removeFile($event)"
-                      ></ion-icon>
-                    </div>
-
-                    <!-- Right Side Add Icon -->
-                    <div class="upload-icon" (click)="fileInput.click()">
-                      <ion-icon name="add-circle-outline"></ion-icon>
-                    </div>
+                  <!-- Right Side Add Icon -->
+                  <div class="upload-icon" (click)="fileInput.click()">
+                    <ion-icon name="add-circle-outline"></ion-icon>
                   </div>
                 </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
-          <!-- Confirm Button -->
-          <div class="confirm-btn">
-            <ion-button expand="block" fill="clear" (click)="submitForm()">
-              Confirm
-            </ion-button>
-          </div>
-        </form>
-      </ion-card>
-      <br />
-
-      <ion-card class="All-list">
-        <div class="header1">
-          <div class="header-container">
-            <h2>Revenue Tracking</h2>
-          </div>
+        <!-- Confirm Button -->
+        <div class="confirm-btn">
+          <ion-button expand="block" fill="clear" (click)="submitForm()">
+            Confirm
+          </ion-button>
         </div>
+      </form>
+    </ion-card>
+    <br />
 
-        <div class="Revenu-table-container">
-          <div class="Revenue-head-container2">
-            <!-- <div class="table-head-wrap">
-              <div class="table-head"> -->
-                <span>Year</span>
-                <span><div class="month">Month</div></span>
-                <span class="amount">Amount</span>
-                <span class="type">Revenue Type</span>
-              <!-- </div>
-            </div> -->
-          </div>
-
-          <div class="table-card">
-            <div class="revenue-table-row2" *ngFor="let r of revenues">
-              <span class="content-year">{{ r.year }}</span>
-              <span class="content-month"
-                ><div class="table-content">{{ r.month }}</div>
-              </span>
-
-              <span class="content-amount">{{r.amount}}</span>
-
-              <span><div class="content-type">{{ r.type }}</div></span>
-            </div>
-          </div>
-        </div>
-      </ion-card>
-
-      <div class="expense-container">
-        <div class="header">
-          <div class="expense-header-container">
-            <h2>Expense Management</h2>
-          </div>
-          <div class="button">
-            <ion-button (click)="addNewSchool()" fill="clear">
-              <div>Add New Bus</div>
-              <ion-icon class="plus" name="add-outline"></ion-icon>
-            </ion-button>
-          </div>
-        </div>
-
-        <div class="table-expense-container">
-          <div class="head-container">
-            <!-- <div class="table-head-wrap">
-              <div class="table-head"> -->
-                <span class="date">Date</span>
-                <span class="category">Category</span>
-                <span class="amount2">Amount</span>
-                <span class="paid">Paid By</span>
-                <span class="invoice">Invoice</span>
-              <!-- </div>
-            </div> -->
-          </div>
-
-          <div class="table-card">
-            <div class="table-row" *ngFor="let e of expenses">
-              <span>{{ e.date }}</span>
-              <span>{{ e.category }}</span>
-              <span>{{ e.amount }}</span>
-              <span>{{ e.paidBy }}</span>
-              <span class="view">View 👁</span>
-            </div>
-          </div>
+    <ion-card class="All-list">
+      <div class="header1">
+        <div class="header-container">
+          <h2>Revenue Tracking</h2>
         </div>
       </div>
 
-      <ion-card class="profitability-summary-container">
-        <div class="header">
-          <div class="profitability-header-container">
-            <h2>Profitability Summary</h2>
-          </div>
-        </div>
-
-        <div class="table-profitability-container">
-          <div class="Profitability-head-container">
-            <!-- <div class="table-head-wrap">
+      <div class="Revenu-table-container">
+        <div class="Revenue-head-container2">
+          <!-- <div class="table-head-wrap">
               <div class="table-head"> -->
-                <span class="month2">Month</span>
-                <span class="total-revenue">Total Revenue</span>
-                <span class="total-Expenses">Total Expenses</span>
-                <span class="net-profit">Net Profit</span>
-                <span class="status">Status</span>
-              <!-- </div>
+          <span>Year</span>
+          <span><div class="month">Month</div></span>
+          <span class="amount">Amount</span>
+          <span class="type">Revenue Type</span>
+          <!-- </div>
             </div> -->
-          </div>
+        </div>
 
-          <div class="table-card">
-            <div *ngFor="let p of profits">
-              <div class="profitability-content-container">
-                <span> <div class="table-month">{{ p.month }}</div></span>
-                <span class="total-revenue-content"
-                  ><div class="table-month">{{ p.totalRevenue }}</div></span
-                >
-                <span class="total-Expenses-content"
-                  ><div class="ttable-month">{{ p.totalExpenses }}</div></span
-                >
-                <span class="net-profit-content"
-                  ><div class="table-month">{{ p.netProfit }}</div></span
-                >
-                <span
-                  class="status-content"
-                  [ngClass]="p.status === 'Profit' ? 'profit' : 'loss'"
-                >
-                  <div class="table-month">{{ p.status }}</div>
-                </span>
-              </div>
-            </div>
+        <div class="table-card">
+          <div class="revenue-table-row2" *ngFor="let r of revenues">
+            <span class="content-year">{{ r.year }}</span>
+            <span class="content-month"
+              ><div class="table-content">{{ r.month }}</div>
+            </span>
+
+            <span class="content-amount">{{r.amount}}</span>
+
+            <span><div class="content-type">{{ r.type }}</div></span>
           </div>
         </div>
-      </ion-card>
+      </div>
+    </ion-card>
+
+    <div class="expense-container">
+      <div class="header">
+        <div class="expense-header-container">
+          <h2>Expense Management</h2>
+        </div>
+        <div class="button">
+          <ion-button (click)="addNewSchool()" fill="clear">
+            <div>Add New Bus</div>
+            <ion-icon class="plus" name="add-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+
+      <div class="table-expense-container">
+        <div class="head-container">
+          <!-- <div class="table-head-wrap">
+              <div class="table-head"> -->
+          <span class="date">Date</span>
+          <span><div class="catagory">Category</div></span>
+          <span>Amount</span>
+          <span class="paid">Paid By</span>
+          <span class="invoice">Invoice</span>
+          <!-- </div>
+            </div> -->
+        </div>
+
+        <div class="table-card">
+          <div class="table-row" *ngFor="let e of expenses">
+            <span>{{ e.date }}</span>
+            <span>{{ e.category }}</span>
+            <span><div class="amount2">{{ e.amount }}</div></span>
+            <span><div class="paidBy">{{ e.paidBy }}</div></span>
+            <span class="view">View 👁</span>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <ion-card class="profitability-summary-container">
+      <div class="header">
+        <div class="profitability-header-container">
+          <h2>Profitability Summary</h2>
+        </div>
+      </div>
+
+      <div class="table-profitability-container">
+        <div class="Profitability-head-container">
+          <!-- <div class="table-head-wrap">
+              <div class="table-head"> -->
+          <span><div class="month2">Month</div></span>
+          <span><div class="total-revenue">Total Revenue</div></span>
+          <span><div class="total-expense">Total Expenses</div></span>
+          <span><div class="net-profit">Net Profit</div></span>
+          <span><div class="status">Status</div></span>
+          <!-- </div>
+            </div> -->
+        </div>
+
+        <div class="table-card">
+          <div
+            class="profitability-content-container"
+            *ngFor="let p of profits"
+          >
+            <span> <div class="table-month1">{{ p.month }}</div></span>
+            <span class="total-revenue-content"
+              ><div class="table-month2">{{ p.totalRevenue }}</div></span
+            >
+            <span class="total-Expenses-content"
+              ><div class="table-month3">{{ p.totalExpenses }}</div></span
+            >
+            <span class="net-profit-content"
+              ><div class="table-month4">{{ p.netProfit }}</div></span
+            >
+            <span
+              class="status-content"
+              [ngClass]="p.status === 'Profit' ? 'profit' : 'loss'"
+            >
+              <div class="table-month5">{{ p.status }}</div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+  </div>
   <!-- </div> -->
 </ion-content>

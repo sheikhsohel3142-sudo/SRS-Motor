@@ -29,12 +29,12 @@
         <div>
           <div class="table-row" *ngFor="let s of schools; let i = index">
             <span class="c-no">{{ i + 1 }}</span>
-            <span class="driver-name">{{ s.name }}</span>
-            <span class="school-N">{{ s.school }}</span>
+            <span><div class="driver-name">{{ s.name }}</div></span>
+            <span><div class="school-N">{{ s.school }}</div></span>
             <span class="buses-no">{{ s.buses }}</span>
             <span class="route">{{s.route}}</span>
-            <span class="Advance-amount">{{ s.outstandingAdvance }}</span>
-            <span class="active">{{ s.status }}</span>
+            <span><div class="assigned-stop">{{ s.outstandingAdvance }}</div></span>
+            <span class="active"><div class="active2">{{ s.status }}</div></span>
             <span
               class="view"
               [routerLink]="['/admin/students-and-parents/student-profile']"
