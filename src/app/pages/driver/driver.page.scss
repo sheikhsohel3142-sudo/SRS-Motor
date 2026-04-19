@@ -36,7 +36,7 @@
 }
 
 ion-button {
-  position: absolute;
+  position: fixed;
   right: 2%;
   top: 2%;
   width: 187px;
@@ -369,9 +369,14 @@ padding-left: 5px;
 // /* MOBILE DESIGN */
 @media (max-width: 780px) {
 
+   .profile-container {
+    overflow-x: auto;   /* 🔥 scroll yaha shift kiya */
+    -webkit-overflow-scrolling: touch;
+  }
+
   .table-container {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: unset;  /* ❌ remove inner scroll */
   }
 
   /* 🔥 Header + Body same width */

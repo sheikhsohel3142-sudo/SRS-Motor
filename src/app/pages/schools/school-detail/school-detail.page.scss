@@ -81,6 +81,7 @@ ion-card {
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 0%;
+   overflow-wrap: anywhere;
   }
 
   border-bottom: 1px solid #e5e3dc;
@@ -216,7 +217,7 @@ ion-icon {
 
   position: relative;
   left: 60px;
-  bottom: 50px;
+  bottom: 60px;
   ion-toggle {
     transform: scale(0.5);
     font-size: 40px;
@@ -470,9 +471,11 @@ ion-icon {
     width: 91%;
     margin-left: 25px;
   }
-  // .status-container {
-  //   margin-left: -30%;
-  // }
+  .status-container {
+   ion-toggle{
+    right: 4%;
+   }
+  }
 
   /* Card */
   ion-card {
@@ -562,3 +565,4 @@ ion-icon {
     overflow-x: hidden;
   }
 }
+

@@ -593,11 +593,15 @@ ion-icon {
 
 @media (max-width: 780px) {
 
-  .table-container {
-    width: 100%;
-    overflow-x: auto;
+    .profile-container {
+    overflow-x: auto;   /* 🔥 scroll yaha shift kiya */
+    -webkit-overflow-scrolling: touch;
   }
 
+  .table-container {
+    width: 100%;
+    overflow-x: unset;  /* ❌ remove inner scroll */
+  }
   /* 🔥 Header + Body same width */
   .head-container,
   .table-card {
@@ -663,9 +667,14 @@ ion-icon {
 }
 @media (max-width: 446px) {
 
+     .profile-container {
+    overflow-x: auto;   /* 🔥 scroll yaha shift kiya */
+    -webkit-overflow-scrolling: touch;
+  }
+
   .table-container {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: unset;  /* ❌ remove inner scroll */
   }
 
   /* 🔥 Header + Body same width */

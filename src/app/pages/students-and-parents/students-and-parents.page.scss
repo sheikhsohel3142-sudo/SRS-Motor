@@ -161,10 +161,10 @@ ion-button {
 //   border-bottom: 1px solid #f5f2f2;
 //   font-family: "Space Grotesk", sans-serif;
 // }
-.special{
+.special {
   // border: 1px solid black;
 }
-.special3{
+.special3 {
   // border: 1px solid black;
 }
 
@@ -180,34 +180,29 @@ ion-button {
     1.8fr /* Assigned Route */
     1.4fr /* Assigned Stop */
     1fr /* Status */
-    0.60fr; /* View */
+    0.6fr; /* View */
 
   align-items: center;
   padding: 12px 16px;
   width: 100%;
 }
-.driver-name{
- 
+.driver-name {
   padding-left: 20px;
 }
-.assigned-stop{
-  
- 
+.assigned-stop {
   padding-left: 27px;
 }
-.school-N{
- 
+.school-N {
   padding-left: 15px;
 }
 
 .active {
- 
   font-weight: 500;
   // position: relative;
   // left: 35px;
 }
 .active2 {
- padding-left: 10px;
+  padding-left: 10px;
   font-weight: 500;
   // position: relative;
   // left: 35px;
@@ -363,10 +358,14 @@ ion-button {
 // /* ================= MOBILE ================= */
 // /* MOBILE DESIGN */
 @media (max-width: 780px) {
+  .profile-container {
+    overflow-x: auto; /* 🔥 scroll yaha shift kiya */
+    -webkit-overflow-scrolling: touch;
+  }
 
   .table-container {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: unset; /* ❌ remove inner scroll */
   }
 
   /* 🔥 Header + Body same width */

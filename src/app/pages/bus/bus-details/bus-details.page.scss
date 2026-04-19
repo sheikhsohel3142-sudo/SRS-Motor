@@ -604,11 +604,12 @@
   position: relative;
   top: 30px;
   left: 5px;
-  width: 810px;
+  width: 100%;
   padding: 10px;
   border-radius: 12px;
 
   background-color: #f8fafc;
+
 }
 .Profitability-head-container,
 .profitability-content-container {
@@ -1047,6 +1048,10 @@
     width: 91%;
     margin-left: 21px;
   }
+  .table-card {
+    width: fit-content;
+  }
+
 
   /* Card */
   .All-list {

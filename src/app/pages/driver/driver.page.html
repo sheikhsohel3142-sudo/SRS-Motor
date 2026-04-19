@@ -10,18 +10,18 @@
     </div>
     <div class="table-container">
       <div class="border-table">
-      <div class="head-container">
-        <!-- <div class="table-head-wrap">
+        <div class="head-container">
+          <!-- <div class="table-head-wrap">
       <div class="table-head"> -->
-        <span class="s-no">S.no</span>
-        <span><div class="school-name">Driver Name</div></span>
-        <span><div class="buses">Assigned Bus</div></span>
-        <span><div class="A-route">Assigned Route</div></span>
-        <span class="advance">Outstanding <br />&nbsp;&nbsp;Advance</span>
-        <span class="status">Status</span>
-        <!-- </div>
+          <span class="s-no">S.no</span>
+          <span><div class="school-name">Driver Name</div></span>
+          <span><div class="buses">Assigned Bus</div></span>
+          <span><div class="A-route">Assigned Route</div></span>
+          <span class="advance">Outstanding <br />&nbsp;&nbsp;Advance</span>
+          <span class="status">Status</span>
+          <!-- </div>
       </div> -->
-      </div>
+        </div>
       </div>
 
       <div class="table-card">
@@ -31,11 +31,17 @@
             <span><div class="driver-name">{{ s.name }}</div></span>
             <span class="buses-no">{{ s.buses }}</span>
             <span class="route">{{s.route}}</span>
-            <span><div class="Advance-amount">{{ s.outstandingAdvance }}</div></span>
-            <span class="active"><div class="active2">{{ s.status }}</div></span>
-            <p class="view" [routerLink]="['/admin/driver/driver-profile']"
-              >View ››</p
+            <span
+              ><div class="Advance-amount">
+                {{ s.outstandingAdvance }}
+              </div></span
             >
+            <span class="active"
+              ><div class="active2">{{ s.status }}</div></span
+            >
+            <p class="view" [routerLink]="['/admin/driver/driver-profile']">
+              View ››
+            </p>
           </div>
         </div>
       </div>
