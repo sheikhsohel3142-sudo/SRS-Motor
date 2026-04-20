@@ -69,14 +69,20 @@ ion-button {
   color: #0f172a;
   border: 1px dashed #4f8cff;
   z-index: 1;
-  span {
+ .plus-container {
     border: 1px solid black;
     width: 21px;
     height: 21px;
     font-size: 20px;
-    position: relative;
-    right: 12px;
+    position: absolute;
+    left: -7px;
+    bottom: 8%;
     color: #0f172a;
+    span {
+      position: fixed;
+      top: 11px;
+      left: 13px;
+    }
   }
 }
 .table-head-wrap {
@@ -414,9 +420,10 @@ ion-button {
   }
 
   /* Header + Body same */
+  .table-container,
   .head-container,
   .table-card {
-    min-width: 1450px; /* जैसा तुमने रखा है वैसा ही रहने दिया */
+    min-width: 1250px; /* जैसा तुमने रखा है वैसा ही रहने दिया */
   }
 
   .head-container {
@@ -437,4 +444,23 @@ ion-button {
     flex-shrink: 0;
   }
 
+}
+@media (max-width: 480px) {
+  // dono equal width lenge
+  // min-width: 250px;
+
+  ion-button {
+    font-size: 0;
+    width: 50px;
+    top: 25px;
+    right: 20px;
+    .plus-container {
+      left: 13px;
+      top: 2px;
+
+      span {
+        left: 17px;
+      }
+    }
+  }
 }
