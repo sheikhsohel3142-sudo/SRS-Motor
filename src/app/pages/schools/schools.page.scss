@@ -416,126 +416,200 @@ ion-button {
 //   // }
 // }
 @media (max-width: 780px) {
-  .table-container {
-    width: 100%;
-    overflow-x: auto;
-    display: block;
+  // dono equal width lenge
+  // min-width: 250px;
+
+  .profile-container {
+    overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
 
+
+
+  /* 🔥 Header + Body same width */
+  .table-container,
   .head-container,
   .table-card {
-    min-width: 1200px;
+    min-width: 1150px; /* jitne columns ho us hisaab se */
   }
 
-  .head-container,
+  /* 🔥 Header row */
+  .head-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* 🔥 Data row */
   .table-row {
     display: flex;
     gap: 20px;
-    flex-wrap: nowrap;
     align-items: center;
   }
 
+  /* 🔥 MOST IMPORTANT (columns shrink na ho) */
   .head-container span,
   .table-row span,
   .table-row p {
     min-width: 130px;
     flex-shrink: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
+@media (max-width: 680px) {
+  // dono equal width lenge
+  // min-width: 250px;
 
-// /* ================= MOBILE ================= */
-// /* MOBILE DESIGN */
-// @media (max-width: 480px) {
-//   .profile-container {
-//     padding: 10px;
-//     overflow-x: auto;
-//     white-space: nowrap;
-//   }
+  .profile-container {
+    overflow-x: auto; /* 🔥 scroll yaha shift kiya */
+    -webkit-overflow-scrolling: touch;
+  }
 
-//   /* Title */
-//   .title-container {
-//     width: 100%;
-//     height: auto;
-//     margin-bottom: 10px;
-//   }
 
-//   .title-container div {
-//     left: 10px;
-//     font-size: 16px;
-//     font-weight: 600;
-//   }
 
-//   /* TABLE HEAD (Stylish) */
-//   .table-head {
-//     display: flex;
-//     justify-content: space-between;
-//     font-size: 11px;
-//     padding: 8px 10px;
-//     background: #e2e8f0;
-//     border-radius: 8px;
-//     margin-bottom: 8px;
-//   }
+  /* 🔥 Header + Body same width */
+  .table-container,
+  .head-container,
+  .table-card {
+    min-width: 1420px; /* jitne columns ho us hisaab se */
+  }
 
-//   /* CARD */
-//   .table-card {
-//     width: 100%;
-//     margin: 10px 0;
-//     padding: 12px;
-//     border-radius: 12px;
-//     background: #ffffff;
-//     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-//   }
+  /* 🔥 Header row */
+  .head-container {
+    display: flex;
+    gap: 20px;
+  }
 
-//   /* ROW */
-//   .table-row {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 8px;
-//   }
+  /* 🔥 Data row */
+  .table-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
 
-//   /* EACH FIELD */
-//   .table-row div {
-//     display: flex;
-//     justify-content: space-between;
-//     font-size: 13px;
-//     padding: 6px 0;
-//     border-bottom: 1px dashed #e5e7eb;
-//   }
+  /* 🔥 MOST IMPORTANT (columns shrink na ho) */
+  .head-container span,
+  .table-row span,
+  .table-row p {
+    min-width: 140px;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 580px) {
+  // dono equal width lenge
+  // min-width: 250px;
 
-//   .table-row div:last-child {
-//     border-bottom: none;
-//   }
+  .profile-container {
+    overflow-x: auto; /* 🔥 scroll yaha shift kiya */
+    -webkit-overflow-scrolling: touch;
+  }
 
-//   /* LABEL */
-//   .table-row div::before {
-//     content: attr(data-label);
-//     font-weight: 600;
-//     color: #6b7280;
-//   }
 
-//   /* STATUS */
-//   .active {
-//     color: #16a34a;
-//     font-weight: 600;
-//   }
 
-//   /* VIEW BUTTON STYLE */
-//   .view {
-//     color: #2563eb;
-//     font-weight: 600;
-//   }
+  /* 🔥 Header + Body same width */
+  .table-container,
+  .head-container,
+  .table-card {
+    min-width: 1500px; /* jitne columns ho us hisaab se */
+  }
 
-//   /* BUTTON FIX */
-//   ion-button {
-//     position: static;
-//     width: 100%;
-//     margin-bottom: 12px;
-//   }
-// }
+  /* 🔥 Header row */
+  .head-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* 🔥 Data row */
+  .table-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* 🔥 MOST IMPORTANT (columns shrink na ho) */
+  .head-container span,
+  .table-row span,
+  .table-row p {
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 480px) {
+  // dono equal width lenge
+  // min-width: 250px;
+
+  .profile-container {
+    overflow-x: auto; /* 🔥 scroll yaha shift kiya */
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+
+  /* 🔥 Header + Body same width */
+  .table-container,
+  .head-container,
+  .table-card {
+    min-width: 1550px; /* jitne columns ho us hisaab se */
+  }
+
+  /* 🔥 Header row */
+  .head-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* 🔥 Data row */
+  .table-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* 🔥 MOST IMPORTANT (columns shrink na ho) */
+  .head-container span,
+  .table-row span,
+  .table-row p {
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 380px) {
+  // dono equal width lenge
+  // min-width: 250px;
+
+  .profile-container {
+    overflow-x: auto; /* 🔥 scroll yaha shift kiya */
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+
+  /* 🔥 Header + Body same width */
+  .table-container,
+  .head-container,
+  .table-card {
+    min-width: 1650px; /* jitne columns ho us hisaab se */
+  }
+
+  /* 🔥 Header row */
+  .head-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* 🔥 Data row */
+  .table-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* 🔥 MOST IMPORTANT (columns shrink na ho) */
+  .head-container span,
+  .table-row span,
+  .table-row p {
+    min-width: 130px;
+    flex-shrink: 0;
+  }
+}
 @media (max-width: 480px) {
   // dono equal width lenge
   // min-width: 250px;
