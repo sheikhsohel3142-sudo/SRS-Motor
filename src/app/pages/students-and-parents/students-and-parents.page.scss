@@ -35,7 +35,7 @@
 }
 
 ion-button {
-  position: absolute;
+  position: fixed;
   right: 2%;
   top: 2%;
   width: 205px;
@@ -46,18 +46,19 @@ ion-button {
   color: #0f172a;
   border: 1px dashed #4f8cff;
   white-space: nowrap;
-  span {
-    border: 2px solid black;
-    width: 19px;
-    height: 19px;
+  .plus-container {
+    border: 1px solid black;
+    width: 21px;
+    height: 21px;
     font-size: 20px;
-    position: relative;
-    right: 9px;
+    position: absolute;
+    left: -7px;
+    bottom: 8%;
     color: #0f172a;
-    border-radius: 3px;
-    p {
-      position: relative;
-      bottom: 2px;
+    span {
+      position: fixed;
+      top: 11px;
+      left: 13px;
     }
   }
 }
@@ -358,6 +359,9 @@ ion-button {
 // /* ================= MOBILE ================= */
 // /* MOBILE DESIGN */
 @media (max-width: 780px) {
+  // dono equal width lenge
+  // min-width: 250px;
+
   .profile-container {
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
@@ -371,7 +375,7 @@ ion-button {
   /* 🔥 Header + Body same width */
   .head-container,
   .table-card {
-    min-width: 1150px; /* jitne columns ho us hisaab se */
+    min-width: 1850px; /* jitne columns ho us hisaab se */
   }
 
   /* 🔥 Header row */
@@ -415,4 +419,23 @@ ion-button {
   // .view {
   //   min-width: 80px;
   // }
+}
+@media (max-width: 480px) {
+  // dono equal width lenge
+  // min-width: 250px;
+
+  ion-button {
+    font-size: 0;
+    width: 50px;
+    top: 25px;
+    right: 20px;
+    .plus-container {
+      left: 13px;
+      top: 2px;
+
+      span {
+        left: 17px;
+      }
+    }
+  }
 }

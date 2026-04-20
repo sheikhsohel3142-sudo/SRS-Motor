@@ -49,11 +49,18 @@
   border-radius: 14px;
   padding-left: 100px;
 }
+.btn-container {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  right: 1%;
+  top: 2%;
+}
 
 ion-button {
   position: fixed;
-  right: 2.2%;
-  top: 2.2%;
+  right: 2%;
+  top: 2%;
   width: 187px;
   height: 44px;
   border-radius: 10px;
@@ -61,6 +68,7 @@ ion-button {
   background-color: #b3cbf933;
   color: #0f172a;
   border: 1px dashed #4f8cff;
+  z-index: 1;
   span {
     border: 1px solid black;
     width: 21px;
@@ -283,7 +291,7 @@ ion-button {
   .table-head {
     width: 101%;
   }
-}
+ }
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
   .profile-container {
     width: 99%;
@@ -388,9 +396,9 @@ ion-button {
   
 // }
 /* ROOT PAGE SCROLL */
-.profile-container {
-  width: 99%;
-}
+// .profile-container {
+//   width: 99%;
+// }
 
 /* MOBILE */
 @media (max-width: 780px) {
@@ -408,7 +416,7 @@ ion-button {
   /* Header + Body same */
   .head-container,
   .table-card {
-    min-width: 1160px; /* जैसा तुमने रखा है वैसा ही रहने दिया */
+    min-width: 1450px; /* जैसा तुमने रखा है वैसा ही रहने दिया */
   }
 
   .head-container {

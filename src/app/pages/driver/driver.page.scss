@@ -367,7 +367,7 @@ padding-left: 5px;
 
 // /* ================= MOBILE ================= */
 // /* MOBILE DESIGN */
-@media (max-width: 780px) {
+@media only screen and (max-width: 780px) {
 
    .profile-container {
     overflow-x: auto;   /* 🔥 scroll yaha shift kiya */
@@ -382,7 +382,7 @@ padding-left: 5px;
   /* 🔥 Header + Body same width */
   .head-container,
   .table-card {
-    min-width: 1480px; /* jitne columns ho us hisaab se */
+    min-width: 1580px; /* jitne columns ho us hisaab se */
   }
 
   /* 🔥 Header row */

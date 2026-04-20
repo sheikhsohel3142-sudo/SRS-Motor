@@ -1,46 +1,46 @@
 <ion-content>
- <div class="profile-container">
+  <div class="profile-container">
     <div class="header">
       <div class="title-container">
         <div>Bus</div>
       </div>
-      <ion-button (click)="addNewSchool()"
-  fill="clear"><span>+</span> Add New Bus</ion-button>
-       
-   </div>
-   <div class="table-container">
-      
-   <div class="border-table">
-    <div class="head-container">
-   <!-- <div class="table-head-wrap">
+
+      <ion-button (click)="addNewSchool()" fill="clear"
+        ><span>+</span> Add New Bus</ion-button
+      >
+    </div>
+
+    <div class="table-container">
+      <div class="border-table">
+        <div class="head-container">
+          <!-- <div class="table-head-wrap">
       <div class="table-head"> -->
-        <span class="s-no">S.no</span>
-        <span class="school-name"><div class="special2">School Name</div></span>
-        <span class="buses">No of Buses</span>
-        <span class="location">Location</span>
-        <span class="status">Status</span>
-      <!-- </div>
+          <span class="s-no">S.no</span>
+          <span class="school-name"
+            ><div class="special2">School Name</div></span
+          >
+          <span class="buses">No of Buses</span>
+          <span class="location">Location</span>
+          <span class="status">Status</span>
+          <!-- </div>
       </div> -->
-    </div>
-    </div>
-  
+        </div>
+      </div>
 
-
-    <div class="table-card">
-      <div>
-        <div class="table-row" *ngFor="let s of schools; let i = index">
-          <span>{{ i + 1 }}</span>
-          <span>{{ s.name }}</span>
-          <span><div class="special">{{ s.buses }}</div></span>
-          <span>{{ s.location }}</span>
-          <span class="active">{{ s.status }}</span>
-          <span class="view" [routerLink]="['/admin/bus/bus-details']">View ››</span>
-
+      <div class="table-card">
+        <div>
+          <div class="table-row" *ngFor="let s of schools; let i = index">
+            <span>{{ i + 1 }}</span>
+            <span>{{ s.name }}</span>
+            <span><div class="special">{{ s.buses }}</div></span>
+            <span>{{ s.location }}</span>
+            <span class="active">{{ s.status }}</span>
+            <span class="view" [routerLink]="['/admin/bus/bus-details']"
+              >View ››</span
+            >
+          </div>
         </div>
       </div>
     </div>
-   
   </div>
-   </div>
-
 </ion-content>

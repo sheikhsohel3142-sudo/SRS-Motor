@@ -29,6 +29,13 @@
   border-radius: 14px;
   padding-left: 100px;
 }
+.btn-container {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  right: 1%;
+  top: 2%;
+}
 
 ion-button {
   position: absolute;
@@ -410,7 +417,7 @@ ion-button {
 // }
 @media (max-width: 780px) {
   .table-container {
-    width: 1090%;
+    width: 100%;
     overflow-x: auto;
     display: block;
     -webkit-overflow-scrolling: touch;
@@ -418,7 +425,7 @@ ion-button {
 
   .head-container,
   .table-card {
-    min-width: 900px;
+    min-width: 1200px;
   }
 
   .head-container,
