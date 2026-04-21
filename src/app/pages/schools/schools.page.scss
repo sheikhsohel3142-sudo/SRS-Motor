@@ -39,8 +39,8 @@
 
 ion-button {
   position: Fixed;
-  right: 2%;
-  top: 2%;
+  right: 1.7%;
+  top: 1.7%;
   width: 187px;
   height: 44px;
   border-radius: 10px;
@@ -420,17 +420,21 @@ ion-button {
   // min-width: 250px;
 
   .profile-container {
+    
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
-
-
+  .table-container {
+    width: 100%;
+    overflow-x: unset; /* ❌ remove inner scroll */
+  }
 
   /* 🔥 Header + Body same width */
   .table-container,
   .head-container,
   .table-card {
-    min-width: 900px; /* jitne columns ho us hisaab se */
+    min-width: 900px;
+    /* jitne columns ho us hisaab se */
   }
 
   /* 🔥 Header row */
@@ -462,8 +466,6 @@ ion-button {
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
-
-
 
   /* 🔥 Header + Body same width */
   .table-container,
@@ -502,8 +504,6 @@ ion-button {
     -webkit-overflow-scrolling: touch;
   }
 
-
-
   /* 🔥 Header + Body same width */
   .table-container,
   .head-container,
@@ -541,8 +541,6 @@ ion-button {
     -webkit-overflow-scrolling: touch;
   }
 
-
-
   /* 🔥 Header + Body same width */
   .table-container,
   .head-container,
@@ -576,12 +574,10 @@ ion-button {
   // min-width: 250px;
 
   .profile-container {
-  width: 100%;
+    width: 100%;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
-
-
 
   /* 🔥 Header + Body same width */
   .table-container,
@@ -618,8 +614,8 @@ ion-button {
   ion-button {
     font-size: 0;
     width: 50px;
-    bottom: 10px;
-    right: 10px;
+    top: 27px;
+    right: 17px;
     .plus-container {
       left: 13px;
       top: 2px;

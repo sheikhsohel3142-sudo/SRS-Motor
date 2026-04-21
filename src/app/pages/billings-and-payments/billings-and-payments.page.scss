@@ -37,8 +37,8 @@
   display: flex;
   gap: 1%;
   position: fixed;
-  right: 4%;
-  top: 2%;
+ right: 4%;
+  top: 3%;
 }
 
 ion-button {
@@ -474,7 +474,7 @@ ion-icon {
 }
 @media only screen and (min-width: 1600px) {
   .profile-container {
-    width: 99%;
+    width: 99.8%;
 
     // left: 20px;
     // padding-left: 120px;
@@ -484,7 +484,7 @@ ion-icon {
     width: 100%;
   }
   .table-container {
-    width: 106%;
+    width: 104%;
   }
   .head-container {
     width: 100%;
