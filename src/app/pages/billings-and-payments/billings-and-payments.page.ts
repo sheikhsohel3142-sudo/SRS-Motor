@@ -1,7 +1,18 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonIcon, IonInput, IonSelect, IonSelectOption, IonItem } from '@ionic/angular/standalone';
+import {
+  IonContent,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonButton,
+  IonIcon,
+  IonInput,
+  IonSelect,
+  IonSelectOption,
+  IonItem,
+} from '@ionic/angular/standalone';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
@@ -9,7 +20,8 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './billings-and-payments.page.html',
   styleUrls: ['./billings-and-payments.page.scss'],
   standalone: true,
-  imports: [IonItem, 
+  imports: [
+    IonItem,
     IonInput,
     IonIcon,
     IonButton,
@@ -21,8 +33,8 @@ import { Router, RouterLink } from '@angular/router';
     FormsModule,
     RouterLink,
     IonSelect,
-    IonSelectOption
-],
+    IonSelectOption,
+  ],
 })
 export class BillingsAndPaymentsPage implements OnInit {
   data: any[] = [];
@@ -82,7 +94,12 @@ export class BillingsAndPaymentsPage implements OnInit {
     this.selectedSchool = null;
   }
   schoolDetail() {
-    this.router.navigate(['/', 'admin', 'billings-and-payments', 'generate-bills']);
+    this.router.navigate([
+      '/',
+      'admin',
+      'billings-and-payments',
+      'generate-bills',
+    ]);
   }
 
   updateTable() {
@@ -113,4 +130,21 @@ export class BillingsAndPaymentsPage implements OnInit {
       this.updateTable();
     }
   }
+
+  isSearchOpen = false;
+
+toggleSearch(event: Event) {
+  event.stopPropagation(); // 🔥 important
+  this.isSearchOpen = true;
+}
+
+// 👉 outside click
+@HostListener('document:click', ['$event'])
+closeSearch(event: Event) {
+  const target = event.target as HTMLElement;
+
+  if (!target.closest('.search-box')) {
+    this.isSearchOpen = false;
+  }
+}
 }

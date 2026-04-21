@@ -96,7 +96,7 @@
     border-radius: 16px;
     position: relative;
     left: 3px;
-    top:80px;
+    top: 80px;
     gap: 12px;
     text-transform: none;
     background-color: #4f8cff;
@@ -522,7 +522,7 @@ ion-card {
     position: absolute;
     right: 2%;
     top: 2%;
-   
+
     width: 168px;
     height: 38px;
 
@@ -663,7 +663,7 @@ ion-card {
 //   position: relative;
 //   right: 90px;
 // }
-.upload-container{
+.upload-container {
   margin-bottom: 25px;
 }
 
@@ -703,7 +703,7 @@ ion-card {
   gap: 6px;
   margin-left: 1px;
 }
-.file-placeholder{
+.file-placeholder {
   padding-right: 135px;
   font-size: 14px;
   font-family: "Space Grotesk", sans-serif;
@@ -1045,7 +1045,7 @@ ion-card {
       top: 80px;
     }
   }
-   .generate-btn,
+  .generate-btn,
   .paid-btn {
     width: 100%;
     max-width: 400px; // max limit rakho
@@ -1135,23 +1135,21 @@ ion-card {
     margin-left: 20px;
   }
   .upload-icon ion-icon {
-
-
-  right:8%;
-  top: 50%;
-}
-.upload-icon2 ion-icon {
-  right: 8%;
-  top: 50%;
-}
+    right: 8%;
+    top: 50%;
+  }
+  .upload-icon2 ion-icon {
+    right: 8%;
+    top: 50%;
+  }
   .input-count {
     width: 91%;
     margin-left: 16px;
   }
-  .align-left{
+  .align-left {
     left: 0;
   }
-  .align-right{
+  .align-right {
     left: 0;
   }
   .upload-box {
@@ -1273,46 +1271,45 @@ ion-card {
     overflow-x: hidden;
   }
 
+ .button {
+    ion-button {
+      height: 30px;
+      top: 1%;
+    }
+  }
   
-  .button {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 10px;
   }
 
-  .button ion-button {
-    position: static; /* ❗ mobile fix */
+  // .button ion-button {
+  //   position: static; /* ❗ mobile fix */
 
-    width: 150px; /* same जैसा तुम्हारा design */
-    height: 36px;
+  //   width: 150px; /* same जैसा तुम्हारा design */
+  //   height: 36px;
 
-    font-size: 13px;
-    border-radius: 8px;
+  //   font-size: 13px;
+  //   border-radius: 8px;
 
-    padding: 0 8px;
-  }
+  //   padding: 0 8px;
+  // }
 
-  /* text alignment same रहे */
-  .button ion-button div {
-    right: 6px;
-    font-size: 14px;
-  }
+  // /* text alignment same रहे */
+  // .button ion-button div {
+  //   right: 6px;
+  //   font-size: 14px;
+  // }
 
-  /* plus icon same look but aligned */
-  .button ion-button .plus {
-    transform: scale(1.6);
-    width: 14px;
-    height: 14px;
+  // /* plus icon same look but aligned */
+  // .button ion-button .plus {
+  //   transform: scale(1.6);
+  //   width: 14px;
+  //   height: 14px;
 
-    position: relative;
-    left: 2px;
-    bottom: 1px;
-  }
+  //   position: relative;
+  //   left: 2px;
+  //   bottom: 1px;
+  // }
 
-}
 @media (max-width: 780px) {
-
   .table-expense-container {
     width: 100%;
     overflow-x: auto;
@@ -1343,5 +1340,28 @@ ion-card {
   .table-row p {
     min-width: 130px;
     flex-shrink: 0;
+  }
+}
+@media (max-width: 480px) {
+  // dono equal width lenge
+  // min-width: 250px;
+  .button {
+    ion-button {
+      div {
+        font-size: 0;
+      }
+
+      width: 50px;
+      top: 25px;
+      right: 20px;
+      .plus {
+        left: -1px;
+        top: -2px;
+
+        span {
+          left: 17px;
+        }
+      }
+    }
   }
 }

@@ -35,16 +35,16 @@
 }
 .btn-container {
   display: flex;
-  gap: 8px;
+  gap: 1%;
   position: fixed;
-  right: 1%;
+  right: 4%;
   top: 2%;
 }
 
 ion-button {
-  position: fixed;
-  right: 2%;
-  top: 2%;
+  // position: fixed;
+  // right: 2%;
+  // top: 2%;
   width: 150px;
   height: 44px;
   border-radius: 10px;
@@ -53,6 +53,7 @@ ion-button {
   color: #0f172a;
   border: 1px dashed #4f8cff;
   white-space: nowrap;
+
   .plus-container {
     border: 1px solid black;
     width: 21px;
@@ -62,6 +63,7 @@ ion-button {
     left: -7px;
     bottom: 8%;
     color: #0f172a;
+
     span {
       position: fixed;
       top: 11px;
@@ -266,6 +268,9 @@ ion-button {
 //   position: relative;
 //   left: 34px;
 // }
+// .input-container {
+// position: fixed;
+// right: 45%;
 .search-box {
   display: flex;
   align-items: center;
@@ -278,9 +283,9 @@ ion-button {
   padding: 8px 12px;
   width: 150px;
 
-  position: fixed;
-  right: 20%;
-  top: 2%;
+  // position: fixed;
+  // right: 20%;
+  // top: 2%;
 
   input {
     background-color: #b3cbf933;
@@ -296,6 +301,7 @@ ion-button {
     color: #0f172a;
   }
 }
+// }
 
 .search-box .icon {
   margin-right: 8px;
@@ -662,10 +668,11 @@ ion-icon {
   // min-width: 250px;
 
   .profile-container {
+    width: fit-content;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
-    .table-container {
+  .table-container {
     width: 100%;
     overflow-x: unset; /* ❌ remove inner scroll */
   }
@@ -703,10 +710,11 @@ ion-icon {
   // min-width: 250px;
 
   .profile-container {
+    width: fit-content;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
-    .table-container {
+  .table-container {
     width: 100%;
     overflow-x: unset; /* ❌ remove inner scroll */
   }
@@ -744,10 +752,11 @@ ion-icon {
   // min-width: 250px;
 
   .profile-container {
+    width: fit-content;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
-    .table-container {
+  .table-container {
     width: 100%;
     overflow-x: unset; /* ❌ remove inner scroll */
   }
@@ -783,8 +792,12 @@ ion-icon {
 @media (max-width: 380px) {
   // dono equal width lenge
   // min-width: 250px;
+  .btn-container {
+    gap: 1%;
+  }
 
   .profile-container {
+    width: fit-content;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
@@ -817,17 +830,56 @@ ion-icon {
     flex-shrink: 0;
   }
 }
-@media (max-width: 480px) {
-  // dono equal width lenge
-  // min-width: 250px;
-  .search-box {
 
+@media (max-width: 480px) {
+  .search-box ion-input::part(native) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+
+  .search-box {
+    width: 50px;
+    min-width: 100px; /* 🔥 ये add करो */
+    max-width: 100px; /* 🔥 पहले (default) सिर्फ icon जितना */
+    padding: 0;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 20px;
+    position: relative;
+    left: 20px;
+  }
+
+  // .search-box ion-input {
+  //   display: none;
+
+  //     /* input hidden */
+  // }
+
+  /* 👉 click के बाद */
+  .search-box {
+    width: 150px; /* expand */
+    padding: 8px 12px;
+    justify-content: flex-start;
+  }
+  .btn-container {
+    gap: -0.5%;
+  }
+
+  .search-box.active ion-input {
+    display: block;
+  }
+
+  .title-container {
+    left: -95px;
+  }
+
   ion-button {
     font-size: 0;
     width: 50px;
     top: 25px;
     right: 20px;
+    margin-left: 20px;
     .plus-container {
       left: 13px;
       top: 2px;

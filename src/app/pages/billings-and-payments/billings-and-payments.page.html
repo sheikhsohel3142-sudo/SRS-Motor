@@ -7,11 +7,12 @@
       <div class="btn-container">
         <div class="search-box">
           <img src="assets/img/search.png" alt="" />
-          <ion-input placeholder="Search"></ion-input>
+          <ion-input  placeholder="Search"></ion-input>
         </div>
         &nbsp;
         <ion-button (click)="addNewSchool()" fill="clear" fill="clear"
-          ><div class="plus-container"><span>+</span></div>Generate Bills</ion-button
+          ><div class="plus-container"><span>+</span></div>
+          &nbsp;&nbsp;&nbsp;&nbsp;Generate Bills</ion-button
         >
       </div>
     </div>
@@ -21,7 +22,11 @@
           <!-- <div class="table-head-wrap">
           <div class="table-head"> -->
           <span class="s-no">S.no</span>
-          <span ><div class="students-name">Students<br />&nbsp;&nbsp;&nbsp;Name</div></span>
+          <span
+            ><div class="students-name">
+              Students<br />&nbsp;&nbsp;&nbsp;Name
+            </div></span
+          >
           <span><div class="school">School</div></span>
           <span class="buses">Billing<br />Month</span>
           <span class="total-Bill">Total Bill</span>
@@ -38,12 +43,18 @@
           <div class="table-row" *ngFor="let s of pagedData; let i = index">
             <!-- <span class="c-no">{{ i + 1 }}</span> -->
             <span class="c-no">{{ (currentPage-1)*itemsPerPage + i + 1 }}</span>
-            <span ><div class="luffy">{{ s.name }}</div></span>
+            <span><div class="luffy">{{ s.name }}</div></span>
             <span><div class="school-N">{{ s.school }}</div></span>
             <span class="billing-M">{{ s.buses }}</span>
             <span class="t-bill">{{s.route}}</span>
-            <span><div class="paid2-amount">{{ s.outstandingAdvance }}</div></span>
-            <span class="outstanding-amount"><div class="outstanding-amount">{{ s.outstandingAdvance }}</div></span>
+            <span
+              ><div class="paid2-amount">{{ s.outstandingAdvance }}</div></span
+            >
+            <span class="outstanding-amount"
+              ><div class="outstanding-amount">
+                {{ s.outstandingAdvance }}
+              </div></span
+            >
             <span class="active">{{ s.status }}</span>
             <p
               class="view"

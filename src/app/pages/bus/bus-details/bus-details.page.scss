@@ -609,7 +609,6 @@
   border-radius: 12px;
 
   background-color: #f8fafc;
-
 }
 .Profitability-head-container,
 .profitability-content-container {
@@ -637,15 +636,12 @@
   justify-content: space-around;
 }
 .month2 {
- 
   display: flex;
   justify-content: space-around;
-
 }
 .table-month1 {
   display: flex;
   justify-content: space-around;
-
 }
 .total-expense {
   display: flex;
@@ -658,19 +654,15 @@
 
 .net-profit {
   // border: 1px solid black;
-    display: flex;
+  display: flex;
   justify-content: space-around;
-
 }
 .table-month4 {
-   display: flex;
+  display: flex;
   justify-content: space-around;
-
-
 }
 // // .month2 {
-.status{
- 
+.status {
   display: flex;
   justify-content: space-around;
 }
@@ -1052,7 +1044,6 @@
     width: fit-content;
   }
 
-
   /* Card */
   .All-list {
     width: 100%;
@@ -1249,4 +1240,27 @@
   // .view {
   //   min-width: 80px;
   // }
+}
+@media (max-width: 480px) {
+  // dono equal width lenge
+  // min-width: 250px;
+  .button {
+    ion-button {
+      div{
+  font-size: 0;
+      }
+    
+      width: 50px;
+      top: 25px;
+      right: 20px;
+      .plus {
+        left: -1px;
+        top: -2px;
+
+        span {
+          left: 17px;
+        }
+      }
+    }
+  }
 }
