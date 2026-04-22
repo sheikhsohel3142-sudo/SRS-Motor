@@ -26,7 +26,7 @@
 .profile-container {
   background: #f2f2f2;
   width: 910px;
-  min-height: 1000px;
+  height: auto;
   position: relative;
   top: 10px;
 
@@ -475,6 +475,8 @@ ion-icon {
 @media only screen and (min-width: 1600px) {
   .profile-container {
     width: 99.8%;
+    height: auto;
+    overflow: hidden;
 
     // left: 20px;
     // padding-left: 120px;
@@ -499,6 +501,8 @@ ion-icon {
 @media only screen and (max-width: 1599px) and (min-width: 1280px) {
   .profile-container {
     width: 99%;
+     height: auto;
+    overflow: hidden;
 
     // left: 20px;
     // padding-left: 120px;
@@ -531,6 +535,8 @@ ion-icon {
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
   .profile-container {
     width: 99%;
+     height: auto;
+    overflow: hidden;
 
     // left: 20px;
     // padding-left: 120px;
@@ -561,6 +567,8 @@ ion-icon {
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
   .profile-container {
     width: 99%;
+     height: auto;
+    overflow: hidden;
 
     // left: 20px;
     // padding-left: 120px;
@@ -591,6 +599,8 @@ ion-icon {
 
 @media (max-width: 780px) {
   .profile-container {
+     height: auto;
+    overflow: hidden;
     // width: fit-content;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
@@ -673,6 +683,8 @@ ion-icon {
   // min-width: 250px;
 
   .profile-container {
+     height: auto;
+    overflow: hidden;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
@@ -717,6 +729,8 @@ ion-icon {
   // min-width: 250px;
 
   .profile-container {
+     height: auto;
+    overflow: hidden;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
@@ -761,6 +775,8 @@ ion-icon {
   // min-width: 250px;
 
   .profile-container {
+     height: auto;
+    overflow: hidden;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
@@ -773,7 +789,7 @@ ion-icon {
   .table-container,
   .head-container,
   .table-card {
-    min-width: 1650px; /* jitne columns ho us hisaab se */
+    min-width: 1750px; /* jitne columns ho us hisaab se */
   }
 
   /* 🔥 Header row */
@@ -797,7 +813,7 @@ ion-icon {
     flex-shrink: 0;
   }
   .pagination {
-    left: -22%;
+    left: -27%;
   }
 }
 @media (max-width: 380px) {
@@ -807,8 +823,10 @@ ion-icon {
     gap: 1%;
   }
 
-  .profile-co4%tainer {
-    overflow4x: auto; /* 🔥 scroll yaha shift kiya */
+  .profile-container {
+     height: auto;
+    overflow: hidden;
+    overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
 
