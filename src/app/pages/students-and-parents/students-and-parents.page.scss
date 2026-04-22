@@ -35,9 +35,9 @@
 }
 
 ion-button {
-  position: fixed;
- right: 1.9%;
-  top: 1.7%;
+  position: absolute;
+  right: 2%;
+  top: 2%;
   width: 205px;
   height: 44px;
   border-radius: 10px;
@@ -367,8 +367,6 @@ ion-button {
     -webkit-overflow-scrolling: touch;
   }
 
-
-
   /* 🔥 Header + Body same width */
   .table-container,
   .head-container,
@@ -396,6 +394,11 @@ ion-button {
     min-width: 130px;
     flex-shrink: 0;
   }
+  ion-button{
+    position: fixed;
+    right: 3%;
+    top: 3.5%;
+  }
 }
 @media (max-width: 680px) {
   // dono equal width lenge
@@ -405,8 +408,6 @@ ion-button {
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
-
-
 
   /* 🔥 Header + Body same width */
   .table-container,
@@ -445,8 +446,6 @@ ion-button {
     -webkit-overflow-scrolling: touch;
   }
 
-
-
   /* 🔥 Header + Body same width */
   .table-container,
   .head-container,
@@ -483,8 +482,6 @@ ion-button {
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
   }
-
-
 
   /* 🔥 Header + Body same width */
   .table-container,
@@ -523,8 +520,6 @@ ion-button {
     -webkit-overflow-scrolling: touch;
   }
 
-
-
   /* 🔥 Header + Body same width */
   .table-container,
   .head-container,
@@ -553,21 +548,23 @@ ion-button {
     flex-shrink: 0;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   // dono equal width lenge
   // min-width: 250px;
 
   ion-button {
     font-size: 0;
     width: 50px;
-    top: 25px;
-    right: 20px;
+    position: fixed;
+    top: 3.1%;
+    right: 4%;
     .plus-container {
       left: 13px;
       top: 2px;
 
       span {
-        left: 17px;
+        top: 9.5px;
+        left: 18px;
       }
     }
   }

@@ -490,7 +490,6 @@ ion-icon {
     width: 100%;
   }
 
-
   // ion-button {
   //   width: 100%;
   //   min-width: 400px;
@@ -526,7 +525,6 @@ ion-icon {
   .table-head {
     width: 101%;
   }
- 
 }
 
 // /* ================== Tablet (768px – 1279px) ================== */
@@ -559,7 +557,6 @@ ion-icon {
   .table-head {
     width: 101%;
   }
- 
 }
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
   .profile-container {
@@ -590,7 +587,6 @@ ion-icon {
   .table-head {
     width: 101%;
   }
-
 }
 
 @media (max-width: 780px) {
@@ -645,6 +641,11 @@ ion-icon {
   .pagination {
     left: 60%;
   }
+  .btn-container {
+    position: fixed;
+    right: 3%;
+    top: 3.5%;
+  }
 
   /* specific columns (optional better alignment) */
   // .s-no, .c-no {
@@ -666,7 +667,6 @@ ion-icon {
   // .view {
   //   min-width: 80px;
   // }
-
 }
 @media (max-width: 680px) {
   // dono equal width lenge
@@ -711,7 +711,6 @@ ion-icon {
   .pagination {
     left: -10%;
   }
-
 }
 @media (max-width: 580px) {
   // dono equal width lenge
@@ -756,7 +755,6 @@ ion-icon {
   .pagination {
     left: -16%;
   }
-
 }
 @media (max-width: 480px) {
   // dono equal width lenge
@@ -801,7 +799,6 @@ ion-icon {
   .pagination {
     left: -22%;
   }
-
 }
 @media (max-width: 380px) {
   // dono equal width lenge
@@ -845,10 +842,9 @@ ion-icon {
   .pagination {
     left: -30%;
   }
- 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .search-box ion-input::part(native) {
     white-space: nowrap;
     overflow: hidden;
@@ -883,8 +879,8 @@ ion-icon {
     gap: -0.5%;
   }
 
-  .search-box4%active ion-input {
-    display:4block;
+  .search-box.active ion-input {
+    display: block;
   }
 
   .title-container {
@@ -908,8 +904,8 @@ ion-icon {
   }
   .btn-container {
     position: fixed;
-    right:2%;
-    top: 2%;
+    right: 4%;
+    top: 3.1%;
   }
 }
 
