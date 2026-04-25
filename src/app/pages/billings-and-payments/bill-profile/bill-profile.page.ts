@@ -23,7 +23,7 @@ import {
   IonSelect,
   IonItem,
   IonLabel,
-  IonText, IonToggle } from '@ionic/angular/standalone';
+  IonText, IonToggle, IonModal, IonDatetime } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 import jsPDF from 'jspdf';
 
@@ -32,7 +32,7 @@ import jsPDF from 'jspdf';
   templateUrl: './bill-profile.page.html',
   styleUrls: ['./bill-profile.page.scss'],
   standalone: true,
-  imports: [IonToggle, 
+  imports: [IonDatetime, IonModal, IonToggle, 
     IonText,
     IonLabel,
     IonItem,
@@ -275,4 +275,23 @@ Notes : ${data.notes}
 
     doc.save('payment-receipt.pdf');
   }
+
+  
+    isOpen = false;
+
+openPicker() {
+  this.isOpen = true;
+}
+
+selectDate(event: any) {
+  const value = event.detail.value;
+
+  // 🔥 IMPORTANT
+  console.log(value);
+  this.paymentForm.get('date')?.setValue(value);
+  this.paymentForm.get('date')?.markAsTouched();
+
+  this.isOpen = false;
+}
+
 }

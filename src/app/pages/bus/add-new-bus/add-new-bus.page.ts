@@ -26,7 +26,10 @@ import {
   IonIcon,
   IonInput,
   IonSelect,
-  IonItem, IonText } from '@ionic/angular/standalone';
+  IonItem,
+  IonText,
+  IonDatetime,
+} from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -34,7 +37,9 @@ import { RouterLink } from '@angular/router';
   templateUrl: './add-new-bus.page.html',
   styleUrls: ['./add-new-bus.page.scss'],
   standalone: true,
-  imports: [IonText, 
+  imports: [
+    IonDatetime,
+    IonText,
     IonItem,
     IonInput,
     IonButton,
@@ -51,6 +56,7 @@ import { RouterLink } from '@angular/router';
     IonSelectOption,
     RouterLink,
     IonSelect,
+    IonModal,
   ],
 })
 export class AddNewBusPage implements OnInit {
@@ -63,7 +69,6 @@ export class AddNewBusPage implements OnInit {
   fuelTypes = ['Petrol', 'Diesel', 'CNG', 'Electric'];
 
   school2s = ['SRV', 'ARLM', 'DAV', 'Public School'];
-
 
   constructor(private fb: FormBuilder) {}
 
@@ -85,4 +90,50 @@ export class AddNewBusPage implements OnInit {
       this.busForm.markAllAsTouched();
     }
   }
+
+  
+ 
+//   serviceStartDate: string = '';
+
+//   openDatePicker() {
+   
+//     this.isDateOpen = true;
+//   }
+
+ 
+// onDateChange() {
+
+//   this.isDateOpen = false;
+// }
+
+//   get f() {
+//     return this.busForm.controls;
+//   }
+
+isOpen = false;
+
+openPicker() {
+  this.isOpen = true;
+}
+
+selectDate(event: any) {
+  const value = event.detail.value;
+
+  // 🔥 IMPORTANT
+  console.log(value);
+  this.busForm.get('serviceStartDate')?.setValue(value);
+  this.busForm.get('serviceStartDate')?.markAsTouched();
+
+  this.isOpen = false;
+}
+
+// submit check (example)
+// submitForm() {
+//   if (!this.selectedDate) {
+//     this.showError = true;
+//     return;
+//   }
+
+//   console.log('Date:', this.selectedDate);
+// }
 }

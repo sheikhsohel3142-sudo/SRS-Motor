@@ -117,16 +117,43 @@
                   </ion-item>
 
                   <ion-item lines="none">
-                    <ion-label position="stacked"
-                      >School Timings
-                      <ion-text
-                        color="danger"
-                        *ngIf="isInvalid('schoolTimings')"
-                      >
-                        Timings are required
-                      </ion-text>
-                    </ion-label>
-                    <ion-input formControlName="schoolTimings"></ion-input>
+                 <ion-label position="stacked">
+                    School Timings
+
+                    <ion-text color="danger" *ngIf="isInvalid('schoolTimings')">
+                      Time is required
+                    </ion-text>
+                  </ion-label>
+
+                  <div class="date-box" (click)="openTimePicker()">
+                    <span>
+                      {{ schoolForm.value.startTime && schoolForm.value.endTime
+                      ? (formatTime(schoolForm.value.startTime) + ' - ' +
+                      formatTime(schoolForm.value.endTime)) : '09:00 AM - 04:30PM' }}
+                    </span>
+
+                    <ion-icon name="time-outline"></ion-icon>
+                  </div>
+
+                  <!-- 🔥 REMOVE formControlName from here -->
+                  <ion-modal
+                    [isOpen]="isTimeOpen"
+                    (didDismiss)="onModalClose()"
+                  >
+                    <ng-template>
+                      <ion-label>Start Time</ion-label>
+                      <ion-datetime
+                        presentation="time"
+                        (ionChange)="selectStartTime($event)"
+                      ></ion-datetime>
+
+                      <ion-label>End Time</ion-label>
+                      <ion-datetime
+                        presentation="time"
+                        (ionChange)="selectEndTime($event)"
+                      ></ion-datetime>
+                    </ng-template>
+                  </ion-modal>
                   </ion-item>
 
                   <ion-item lines="none">

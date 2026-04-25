@@ -5,7 +5,7 @@
         <div>Students & Parents</div>
       </div>
       <ion-button (click)="addNewSchool()" fill="clear" fill="clear"
-        ><div class="plus-container"><span>+</span></div> Enroll New Student</ion-button
+        ><div class="plus-container"><span>+</span></div> <p>Enroll New Student</p></ion-button
       >
     </div>
     <div class="table-container">
@@ -35,11 +35,12 @@
             <span class="route">{{s.route}}</span>
             <span><div class="assigned-stop">{{ s.outstandingAdvance }}</div></span>
             <span class="active"><div class="active2">{{ s.status }}</div></span>
-            <span
+            <span>
+            <p
               class="view"
               [routerLink]="['/admin/students-and-parents/student-profile']"
-              >View ››</span
-            >
+              >View ››</p
+            ></span>
           </div>
         </div>
       </div>

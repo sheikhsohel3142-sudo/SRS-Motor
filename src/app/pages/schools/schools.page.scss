@@ -37,6 +37,7 @@
   top: 2%;
 }
 
+
 ion-button {
   position: absolute;
   right: 2%;
@@ -44,23 +45,36 @@ ion-button {
   width: 187px;
   height: 44px;
   border-radius: 10px;
-  text-transform: none;
   background-color: #b3cbf933;
-  color: #0f172a;
   border: 1px dashed #4f8cff;
+  p {
+     position: fixed;
+    left: 48px;
+    top: 10px;
+    font-family: "Urbanist", sans-serif;
+    color: #0f172a;
+    text-transform: none;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 145%;
+    letter-spacing: 0%;
+  }
   .plus-container {
-    border: 1px solid black;
-    width: 21px;
-    height: 21px;
+    border: 1.5px solid black;
+    width: 18px;
+    height: 18px;
     font-size: 20px;
-    position: absolute;
-    left: -7px;
-    bottom: 8%;
+      border-radius: 2px;
+      position: absolute;
+    top: 3.5px;
+    left: 1.3px;
+    bottom: 12%;
     color: #0f172a;
     span {
       position: fixed;
-      top: 11px;
-      left: 13px;
+      top: 10px;
+      left: 20px;
     }
   }
 }
@@ -201,11 +215,14 @@ ion-button {
   font-family: "Space Grotesk", sans-serif;
 }
 .head-container span {
+  font-weight: 600;
+  font-size: 13px;
+  color: #0f172a;
   font-weight: 500;
   font-size: 16px;
-  color: #0f172a;
   line-height: 145%;
   letter-spacing: 0%;
+  font-family: "Urbanist", sans-serif;
 }
 .head-container,
 .table-row {
@@ -456,7 +473,7 @@ ion-button {
     min-width: 130px;
     flex-shrink: 0;
   }
-   ion-button{
+  ion-button {
     position: fixed;
     right: 2.5%;
     top: 3%;
@@ -626,8 +643,8 @@ ion-button {
       top: 2px;
 
       span {
-        top: 9.5px;
-        left: 18px;
+        top: 8.3px;
+        left: 16.3px;
       }
     }
   }

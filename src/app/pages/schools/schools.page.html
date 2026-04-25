@@ -6,7 +6,7 @@
       </div>
       <div class="btn-container">
       <ion-button (click)="addNewSchool()" fill="clear" fill="clear"
-        ><div class="plus-container"><span>+</span></div> Add New School</ion-button
+        ><div class="plus-container"><span>+</span></div><p>Add New School</p></ion-button
       >
       </div>
     </div>
@@ -36,9 +36,10 @@
             >
             <span class="location-c">{{ s.location }}</span>
             <span class="active">{{ s.status }}</span>
+            <span>
             <p class="view" [routerLink]="['/admin/schools/school-detail']"
               >View ››</p
-            >
+            ></span>
           </div>
         </div>
       </div>

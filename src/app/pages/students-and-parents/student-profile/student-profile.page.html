@@ -186,7 +186,7 @@
 
           <ion-row>
             <ion-col size="6">
-              <ion-label position="stacked"
+              <!-- <ion-label position="stacked"
                 >Billing Start Date
                 <ion-text
                   color="danger"
@@ -198,7 +198,38 @@
               <ion-input
                 type="date"
                 formControlName="billingStartDate"
-              ></ion-input>
+              ></ion-input> -->
+              <ion-label>
+                Billing Start Date
+                <ion-text
+                  color="danger"
+                  *ngIf="studentForm.get('billingStartDate')?.touched && studentForm.get('billingStartDate')?.errors"
+                >
+                  Billing start date is required
+                </ion-text>
+              </ion-label>
+
+              <!-- Custom Input -->
+              <div class="date-box" (click)="openPicker()">
+                <span>
+                  {{ studentForm.get('billingStartDate')?.value ?
+                  (studentForm.get('billingStartDate')?.value |
+                  date:'MM/dd/yyyy') : 'mm/dd/yyyy' }}
+                </span>
+
+                <ion-icon name="calendar-clear-outline"></ion-icon>
+              </div>
+
+              <!-- Date Picker -->
+              <ion-modal [isOpen]="isOpen" (didDismiss)="isOpen = false">
+                <ng-template>
+                  <ion-datetime
+                    formControlName="billingStartDate"
+                    presentation="date"
+                    (ionChange)="selectDate($event)"
+                  ></ion-datetime>
+                </ng-template>
+              </ion-modal>
             </ion-col>
 
             <ion-col size="6" class="align-right-field">
@@ -329,21 +360,37 @@
               </ion-col>
 
               <ion-col size="6" class="align-right-field">
-                <ion-label
-                  >Billing Start Date
+                <ion-label>
+                  Billing Start Date
                   <ion-text
                     color="danger"
-                    *ngIf="billingForm.get('billingStartDate')?.touched && billingForm.get('billingStartDate')?.invalid"
+                    *ngIf="billingForm.get('billingStartDate')?.touched && billingForm.get('billingStartDate')?.errors"
                   >
-                    <small>Billing start date is required</small>
+                    Billing start date is required
                   </ion-text>
                 </ion-label>
-                <div class="input-count">
-                  <ion-input
-                    type="date"
-                    formControlName="billingStartDate"
-                  ></ion-input>
+
+                <!-- Custom Input -->
+                <div class="date-box2" (click)="openPicker()">
+                  <span>
+                    {{ billingForm.get('billingStartDate')?.value ?
+                    (billingForm.get('billingStartDate')?.value |
+                    date:'MM/dd/yyyy') : 'mm/dd/yyyy' }}
+                  </span>
+
+                  <ion-icon name="calendar-clear-outline"></ion-icon>
                 </div>
+
+                <!-- Date Picker -->
+                <ion-modal [isOpen]="isOpen" (didDismiss)="isOpen = false">
+                  <ng-template>
+                    <ion-datetime
+                     formControlName="billingStartDate"
+                      presentation="date"
+                      (ionChange)="selectDate($event)"
+                    ></ion-datetime>
+                  </ng-template>
+                </ion-modal>
               </ion-col>
 
               <ion-col size="6">

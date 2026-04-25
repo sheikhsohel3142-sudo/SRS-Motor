@@ -181,6 +181,27 @@
 //   }
 
 // }
+.date-box {
+    background: #f5f6f8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  width: 372px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  line-height: 150%;
+  font-size: 16px;
+  color: #333;
+  --placeholder-color: #aaa;;
+  cursor: pointer;
+    ion-icon {
+    font-size: 18px;
+    color: #666;
+    position: absolute;
+    right: 13%;
+    top: 45%;
+  }
+}
 
 .input {
   background: #f5f6f8;
@@ -812,6 +833,9 @@
   .input {
     width: 91%;
   }
+  .date-box  {
+    width: 91%;
+  }
   .upload-box {
     width: 45.5%;
   }
@@ -862,6 +886,9 @@
   }
   .upload-box {
     width: 45.5%;
+  }
+  .date-box  {
+    width: 91%;
   }
 
   .right-side {
@@ -914,6 +941,9 @@
     width: 45.5%;
   }
 
+  .date-box  {
+    width: 91%;
+  }
   // .right-side {
 
   //   left: 30px
@@ -979,6 +1009,9 @@
   .right-side {
     left: 30px;
   }
+  .date-box  {
+    width: 91%;
+  }
 
   .bus-details {
     width: 108%;
@@ -1042,6 +1075,10 @@
   }
   .table-card {
     width: fit-content;
+  }
+  .date-box  {
+    width: 91%;
+    margin-left: 21px;
   }
 
   /* Card */

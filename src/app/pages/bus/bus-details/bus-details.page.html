@@ -121,15 +121,35 @@
 
             <!-- Service Start Date -->
             <ion-col class="align-field" size="12" size-md="6">
-              <ion-label
-                >Service Start Date
+               <label>
+                Service Start Date
                 <ion-text color="danger" *ngIf="isInvalid('serviceStartDate')">
-                  Date is required
+                  Start Date is required
                 </ion-text>
-              </ion-label>
+              </label>
 
-              <ion-input formControlName="serviceStartDate" type="date">
-              </ion-input>
+              <!-- Custom Input -->
+              <div class="date-box" (click)="openPicker()">
+                <span>
+                  {{ busForm.get('serviceStartDate')?.value ?
+                  (busForm.get('serviceStartDate')?.value | date:'MM/dd/yyyy') :
+                  'mm/dd/yyyy' }}
+                </span>
+
+                <ion-icon name="calendar-clear-outline"></ion-icon>
+              </div>
+
+              <!-- Date Picker -->
+              <ion-modal [isOpen]="isOpen" (didDismiss)="isOpen = false">
+                <ng-template>
+                  <ion-datetime
+                  formControlName="serviceStartDate"
+                    presentation="date"
+                    
+                    (ionChange)="selectDate($event)"
+                  ></ion-datetime>
+                </ng-template>
+              </ion-modal>
             </ion-col>
 
             <ion-col class="align-right-field" size="6">

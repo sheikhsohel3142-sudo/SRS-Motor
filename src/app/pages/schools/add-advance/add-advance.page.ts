@@ -20,8 +20,7 @@ import {
   IonButton,
   IonSelectOption,
   IonSelect,
-  IonInput,
-} from '@ionic/angular/standalone';
+  IonInput, IonModal, IonText, IonDatetime } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -29,7 +28,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './add-advance.page.html',
   styleUrls: ['./add-advance.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonDatetime, IonText, IonModal, 
     IonButton,
     IonCol,
     IonRow,
@@ -78,6 +77,10 @@ export class AddAdvancePage implements OnInit {
       this.selectedFile = file;
     }
   }
+   isInvalid(controlName: string) {
+    const control = this.busForm.get(controlName);
+    return control && control.invalid && (control.dirty || control.touched);
+  }
 
   submitForm() {
     if (this.busForm.valid) {
@@ -98,4 +101,20 @@ export class AddAdvancePage implements OnInit {
     event.stopPropagation();
     this.selectedFile = null;
   }
+  isOpen = false;
+
+openPicker() {
+  this.isOpen = true;
+}
+
+selectDate(event: any) {
+  const value = event.detail.value;
+
+  // 🔥 IMPORTANT
+  console.log(value);
+  this.busForm.get('expenseDate')?.setValue(value);
+  this.busForm.get('expenseDate')?.markAsTouched();
+
+  this.isOpen = false;
+}
 }

@@ -23,7 +23,10 @@ import {
   IonInput,
   IonItem,
   IonLabel,
-  IonTabButton, IonText, IonToggle } from '@ionic/angular/standalone';
+  IonTabButton,
+  IonText,
+  IonToggle,
+  IonModal, IonDatetime } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 
 @Component({
@@ -31,7 +34,10 @@ import { Router } from '@angular/router';
   templateUrl: './bus-details.page.html',
   styleUrls: ['./bus-details.page.scss'],
   standalone: true,
-  imports: [IonToggle, IonText, 
+  imports: [IonDatetime, 
+    IonModal,
+    IonToggle,
+    IonText,
     IonTabButton,
     IonLabel,
     IonItem,
@@ -110,8 +116,6 @@ export class BusDetailsPage implements OnInit {
     },
   ];
 
-
-
   profits = [
     {
       month: 'December',
@@ -158,9 +162,9 @@ export class BusDetailsPage implements OnInit {
   ) {}
 
   isInvalid(controlName: string) {
-  const control = this.busForm.get(controlName);
-  return control && control.invalid && (control.touched || control.dirty);
-}
+    const control = this.busForm.get(controlName);
+    return control && control.invalid && (control.touched || control.dirty);
+  }
 
   ngOnInit() {
     this.initForm();
@@ -219,7 +223,7 @@ export class BusDetailsPage implements OnInit {
   }
 
   // ✅ Submit Form
-  submitForm() {
+   submitForm() {
     // if (this.busForm.invalid) {
     //   this.showToast('Please fill all required fields');
     //   return;
@@ -258,5 +262,21 @@ export class BusDetailsPage implements OnInit {
     //   });
     //   toast.present();
     // }
+   }
+  isOpen = false;
+
+  openPicker() {
+    this.isOpen = true;
+  }
+
+  selectDate(event: any) {
+    const value = event.detail.value;
+
+    // 🔥 IMPORTANT
+    console.log(value);
+    this.busForm.get('serviceStartDate')?.setValue(value);
+    this.busForm.get('serviceStartDate')?.markAsTouched();
+
+    this.isOpen = false;
   }
 }

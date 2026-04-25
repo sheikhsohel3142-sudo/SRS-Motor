@@ -152,6 +152,49 @@ ion-card {
     right: 2%;
   }
 }
+.date-box {
+    background: #f5f6f8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  width: 372px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  line-height: 150%;
+  font-size: 16px;
+  color: #333;
+  --placeholder-color: #aaa;;
+  cursor: pointer;
+    ion-icon {
+    font-size: 18px;
+    color: #666;
+    position: absolute;
+    right: 13%;
+    top: 45%;
+  }
+}
+.date-box2 {
+    background: #ffffff;
+  border-radius: 8px;
+  padding: 12px 14px;
+  width: 372px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  line-height: 150%;
+  font-size: 16px;
+  color: #333;
+  --placeholder-color: #aaa;
+  border: 1px solid #c7c9cc;
+  cursor: pointer;
+    ion-icon {
+    font-size: 18px;
+    color: #666;
+    position: absolute;
+    right: 13%;
+    top: 45%;
+  }
+}
 
 .input {
   background: #f5f6f8;
@@ -409,6 +452,12 @@ label {
   .input {
     width: 91%;
   }
+  .date-box {
+    width: 91%;
+  }
+  .date-box2 {
+    width: 91%;
+  }
   .student-profile-container ion-input {
     width: 91%;
   }
@@ -433,6 +482,12 @@ label {
     // padding-left: 140px;
   }
   .input {
+    width: 91%;
+  }
+   .date-box {
+    width: 91%;
+  }
+  .date-box2 {
     width: 91%;
   }
   .input-count {
@@ -485,6 +540,12 @@ label {
     }
   }
   .input {
+    width: 91%;
+  }
+   .date-box {
+    width: 91%;
+  }
+  .date-box2 {
     width: 91%;
   }
   .billing-overview-container {
@@ -541,6 +602,12 @@ label {
     width: 99.5%;
   }
   .input {
+    width: 91%;
+  }
+   .date-box {
+    width: 91%;
+  }
+  .date-box2 {
     width: 91%;
   }
   .input-count {
@@ -606,6 +673,14 @@ label {
     padding: 8px 10px;
   }
   .input {
+    width: 91%;
+    margin-left: 25px;
+  }
+   .date-box {
+    width: 91%;
+    margin-left: 25px;
+  }
+  .date-box2 {
     width: 91%;
     margin-left: 25px;
   }

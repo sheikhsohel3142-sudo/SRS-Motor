@@ -164,6 +164,37 @@ ion-icon {
   right: 10px;
   top: 2px;
 }
+.date-box {
+  background: #f5f6f8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  width: 372px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  line-height: 150%;
+  font-size: 16px;
+  color: #333;
+  --placeholder-color: #aaa;
+  cursor: pointer;
+  ion-icon {
+    width: 16.66666603088379;
+    height: 16.66666603088379;
+    color:#828282;
+    position: absolute;
+    right: 17%;
+    top: 40%;
+  }
+}
+
+.date-box span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 145%;
+  letter-spacing: 0%;
+  color: #0f172a;
+  font-family: "Space Grotesk", sans-serif;
+}
 // .spacial-input {
 
 //   ion-input {
@@ -255,6 +286,9 @@ ion-icon {
   .input{
     width: 90%;
   }
+ .date-box {
+    width: 90%;
+  }
   .profile-container ion-input {
     width: 91%;
   }
@@ -280,6 +314,9 @@ ion-icon {
   }
   .input {
     width: 91%;
+  }
+   .date-box {
+    width: 90%;
   }
   // .status-container {
   //   margin-left: -50%;
@@ -369,6 +406,9 @@ ion-icon {
   .input {
     width: 91%;
   }
+   .date-box {
+    width: 90%;
+  }
 
   .right-side {
     left: 30px;
@@ -416,6 +456,9 @@ ion-icon {
   }
   .input {
     width: 91%;
+  }
+   .date-box {
+    width: 90%;
   }
   // .status-container {
   //   margin-left: -30%;
@@ -469,6 +512,10 @@ ion-icon {
   }
   .input {
     width: 91%;
+    margin-left: 25px;
+  }
+   .date-box {
+    width: 90%;
     margin-left: 25px;
   }
   .status-container {

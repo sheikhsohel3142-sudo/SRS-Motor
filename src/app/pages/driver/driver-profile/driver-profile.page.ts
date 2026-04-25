@@ -24,7 +24,14 @@ import {
   IonCardHeader,
   IonCardTitle,
   IonCardContent,
-  IonSelect, IonInput, IonToggle, IonAlert } from '@ionic/angular/standalone';
+  IonSelect,
+  IonInput,
+  IonToggle,
+  IonAlert,
+  IonModal,
+  IonText,
+  IonDatetime,
+} from '@ionic/angular/standalone';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
@@ -32,7 +39,13 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './driver-profile.page.html',
   styleUrls: ['./driver-profile.page.scss'],
   standalone: true,
-  imports: [IonAlert, IonToggle, IonInput, 
+  imports: [
+    IonDatetime,
+    IonText,
+    IonModal,
+    IonAlert,
+    IonToggle,
+    IonInput,
     IonCardContent,
     IonCardTitle,
     IonCardHeader,
@@ -54,7 +67,7 @@ import { Router, RouterLink } from '@angular/router';
     ReactiveFormsModule,
     NgFor,
     IonSelect,
-    RouterLink
+    RouterLink,
   ],
 })
 export class DriverProfilePage implements OnInit {
@@ -186,12 +199,26 @@ export class DriverProfilePage implements OnInit {
         return '';
     }
   }
-  driverProfile(){
-    
-  }
+  driverProfile() {}
   onSubmit() {
     if (this.salaryForm.valid) {
       console.log(this.salaryForm.value);
     }
+  }
+  isOpen = false;
+
+  openPicker() {
+    this.isOpen = true;
+  }
+
+  selectDate(event: any) {
+    const value = event.detail.value;
+
+    // 🔥 IMPORTANT
+    console.log(value);
+    this.form.get('joiningDate')?.setValue(value);
+    this.form.get('joiningDate')?.markAsTouched();
+
+    this.isOpen = false;
   }
 }

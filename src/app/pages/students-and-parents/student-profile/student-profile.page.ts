@@ -23,7 +23,9 @@ import {
   IonIcon,
   IonToggle,
   IonInput,
-  IonSelect, IonText } from '@ionic/angular/standalone';
+  IonSelect,
+  IonText,
+  IonModal, IonDatetime } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -31,7 +33,9 @@ import { RouterLink } from '@angular/router';
   templateUrl: './student-profile.page.html',
   styleUrls: ['./student-profile.page.scss'],
   standalone: true,
-  imports: [IonText, 
+  imports: [IonDatetime, 
+    IonModal,
+    IonText,
     IonInput,
     IonToggle,
     IonIcon,
@@ -119,8 +123,8 @@ export class StudentProfilePage implements OnInit {
     });
   }
   get f() {
-  return this.billingForm.controls;
-}
+    return this.billingForm.controls;
+  }
 
   updateStudent() {
     console.log(this.studentForm.value);
@@ -135,5 +139,24 @@ export class StudentProfilePage implements OnInit {
   // Toggle checked condition
   isChecked(control: string) {
     return this.studentForm.get(control)?.value === 'Yes';
+  }
+  isOpen = false;
+
+  openPicker() {
+    this.isOpen = true;
+  }
+
+  selectDate(event: any) {
+    const value = event.detail.value;
+
+    // 🔥 IMPORTANT
+    console.log(value);
+    this.studentForm.get('billingStartDate')?.setValue(value);
+    this.studentForm.get('billingStartDate')?.markAsTouched();
+
+    this.billingForm.get('billingStartDate')?.setValue(value);
+    this.billingForm.get('billingStartDate')?.markAsTouched();
+
+    this.isOpen = false;
   }
 }

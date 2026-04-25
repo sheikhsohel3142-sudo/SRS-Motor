@@ -5,7 +5,7 @@ import { ProfilePage } from "./pages/profile/profile.page";
 import { SidebarComponent } from "./component/layout/sidebar/sidebar.component";
 import { Router, RouterOutlet } from '@angular/router';
 import { addIcons } from 'ionicons';
-import { addCircleOutline, addOutline, chevronBackOutline, chevronDownOutline, close, closeCircle, closeCircleOutline, informationCircleOutline, menuOutline, search, shareSocialOutline } from 'ionicons/icons';
+import { addCircleOutline, addOutline, calendar, calendarClearOutline, calendarOutline, chevronBackOutline, chevronDownOutline, close, closeCircle, closeCircleOutline, informationCircleOutline, menuOutline, search, shareSocialOutline, timeOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -28,8 +28,9 @@ export class AppComponent {
      closeCircleOutline,
      search,
      shareSocialOutline,
-     menuOutline
+     menuOutline,
+     calendarClearOutline,
+     timeOutline
     })
   }
-  
 }

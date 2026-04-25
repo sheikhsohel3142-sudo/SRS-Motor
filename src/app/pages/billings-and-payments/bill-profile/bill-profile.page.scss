@@ -49,7 +49,7 @@
 .bill-profile-container {
   background: #f2f2f2;
   width: 910px;
-  // height: 2650px;
+   height: 2650px;
   //  height: auto;
   // min-height: 100px;
   // display: flex;
@@ -190,6 +190,27 @@ ion-card {
 //   }
 
 // }
+.date-box {
+    background: #f5f6f8;
+  border-radius: 8px;
+  padding: 12px 14px;
+  width: 372px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  line-height: 150%;
+  font-size: 16px;
+  color: #333;
+  --placeholder-color: #aaa;;
+  cursor: pointer;
+    ion-icon {
+    font-size: 18px;
+    color: #666;
+    position: absolute;
+    right: 13%;
+    top: 45%;
+  }
+}
 
 .input {
   background: #f5f6f8;
@@ -811,6 +832,9 @@ ion-card {
   .input {
     width: 91%;
   }
+  .date-box {
+    width: 91%;
+  }
   .billing-breakdown {
     width: 107%;
     height: auto;
@@ -894,6 +918,9 @@ ion-card {
     width: 91%;
   }
   .input {
+    width: 91%;
+  }
+  .date-box {
     width: 91%;
   }
 
@@ -982,6 +1009,9 @@ ion-card {
     overflow: hidden;
   }
   .input {
+    width: 91%;
+  }
+  .date-box {
     width: 91%;
   }
   .setting-box {
@@ -1079,6 +1109,9 @@ ion-card {
     overflow: hidden;
   }
   .input {
+    width: 91%;
+  }
+  .date-box {
     width: 91%;
   }
   .setting-box {
@@ -1181,6 +1214,9 @@ ion-card {
   .input {
     width: 91%;
     margin-left: 20px;
+  }
+  .date-box {
+    width: 91%;
   }
   .input-count {
     // margin-left: 20px;

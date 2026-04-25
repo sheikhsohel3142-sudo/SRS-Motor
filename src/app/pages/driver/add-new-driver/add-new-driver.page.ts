@@ -22,18 +22,16 @@ import {
   IonIcon,
   IonSelect,
   IonInput,
-  IonText,
-  
-} from '@ionic/angular/standalone';
+  IonText, IonModal, IonDatetime } from '@ionic/angular/standalone';
 import { Router, RouterLink } from '@angular/router';
-import { text } from 'ionicons/icons';
+import { text, chevronBackOutline, closeCircleOutline, addCircleOutline, calendarClearOutline, chevronDownOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-add-new-driver',
   templateUrl: './add-new-driver.page.html',
   styleUrls: ['./add-new-driver.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonDatetime, IonModal, 
     IonButton,
     IonLabel,
     IonText,
@@ -64,7 +62,9 @@ export class AddNewDriverPage implements OnInit {
   constructor(
     private fb: FormBuilder,
     
-  ) {}
+  ) {
+      
+  }
   //  Validators.pattern('^[0-9]{10}$')
   //  Validators.pattern('^[0-9]{10}$')
 
@@ -145,4 +145,20 @@ export class AddNewDriverPage implements OnInit {
       }
     }
   }
+  isOpen = false;
+
+openPicker() {
+  this.isOpen = true;
+}
+
+selectDate(event: any) {
+  const value = event.detail.value;
+
+  // 🔥 IMPORTANT
+  console.log(value);
+  this.driverForm.get('dateOfJoining')?.setValue(value);
+  this.driverForm.get('dateOfJoining')?.markAsTouched();
+
+  this.isOpen = false;
+}
 }
