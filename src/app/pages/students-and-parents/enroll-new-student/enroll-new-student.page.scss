@@ -119,7 +119,7 @@ ion-card {
   --border-width: 0;
 }
 .date-box {
-    background: #f5f6f8;
+  background: #f5f6f8;
   border-radius: 8px;
   padding: 12px 14px;
   width: 372px;
@@ -129,17 +129,22 @@ ion-card {
   line-height: 150%;
   font-size: 16px;
   color: #333;
-  --placeholder-color: #aaa;;
+  --placeholder-color: #aaa;
   cursor: pointer;
+  .icon-container {
+    position: relative;
+    bottom: 20px;
+    left: 34px;
+    
     ion-icon {
-    font-size: 18px;
-    color: #666;
-    position: absolute;
-    right: 13%;
-    top: 45%;
+      font-size: 18px;
+      color: #666;
+      position: absolute;
+      right: 13%;
+      top: 45%;
+    }
   }
 }
-
 
 .input {
   background: #f5f6f8;
@@ -464,7 +469,15 @@ label {
   }
   .date-box {
     width: 91%;
-     margin-left: 25px;
+    margin-left: 25px;
+   .icon-container{
+    bottom: 18px;
+    left: 8px;
+    ion-icon {
+      right: 2%;
+      top: -13%;
+    }
+    }
   }
   .setting-box {
     width: 91%;
@@ -513,7 +526,6 @@ label {
   /* Remove right side shift */
   .align-right-field {
     left: 0;
-   
   }
 
   /* Form fields */

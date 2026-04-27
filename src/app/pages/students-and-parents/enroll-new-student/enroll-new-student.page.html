@@ -167,27 +167,27 @@
           <!-- Row 6 -->
           <ion-row>
             <ion-col size="6">
-              <ion-label>Phone Number
-                  <ion-text
-                color="danger"
-                *ngIf="enrollForm.get('phoneNumber')?.touched && enrollForm.get('phoneNumber')?.errors"
-              >
-                <span
-                  *ngIf="enrollForm.get('phoneNumber')?.errors?.['required']"
-                  >Phone number is required</span
+              <ion-label
+                >Phone Number
+                <ion-text
+                  color="danger"
+                  *ngIf="enrollForm.get('phoneNumber')?.touched && enrollForm.get('phoneNumber')?.errors"
                 >
-                <span
-                  *ngIf="enrollForm.get('phoneNumber')?.errors?.['minlength']"
-                  >Minimum 10 digits required</span
-                >
-              </ion-text>
+                  <span
+                    *ngIf="enrollForm.get('phoneNumber')?.errors?.['required']"
+                    >Phone number is required</span
+                  >
+                  <span
+                    *ngIf="enrollForm.get('phoneNumber')?.errors?.['minlength']"
+                    >Minimum 10 digits required</span
+                  >
+                </ion-text>
               </ion-label>
               <ion-input
                 fill="outline"
                 formControlName="phoneNumber"
                 placeholder="Eg: 9876537***"
               ></ion-input>
-            
             </ion-col>
 
             <ion-col size="6" class="align-right-field">
@@ -210,38 +210,38 @@
                 fill="outline"
               ></ion-input> -->
 
-                <ion-label>
-                  Billing Start Date
-                  <ion-text
-                    color="danger"
-                    *ngIf="enrollForm.get('billingStartDate')?.touched && enrollForm.get('billingStartDate')?.errors"
-                  >
-                     is required
-                  </ion-text>
-                </ion-label>
+              <ion-label>
+                Billing Start Date
+                <ion-text
+                  color="danger"
+                  *ngIf="enrollForm.get('billingStartDate')?.touched && enrollForm.get('billingStartDate')?.errors"
+                >
+                  is required
+                </ion-text>
+              </ion-label>
 
-                <!-- Custom Input -->
-                <div class="date-box" (click)="openPicker()">
-                  <span>
-                    {{ enrollForm.get('billingStartDate')?.value ?
-                    (enrollForm.get('billingStartDate')?.value | date:'MM/dd/yyyy')
-                    : 'mm/dd/yyyy' }}
-                  </span>
-
+              <!-- Custom Input -->
+              <div class="date-box" (click)="openPicker()">
+                <span>
+                  {{ enrollForm.get('billingStartDate')?.value ?
+                  (enrollForm.get('billingStartDate')?.value |
+                  date:'MM/dd/yyyy') : 'mm/dd/yyyy' }}
+                </span>
+                <div class="icon-container">
                   <ion-icon name="calendar-clear-outline"></ion-icon>
                 </div>
+              </div>
 
-                <!-- Date Picker -->
-                <ion-modal [isOpen]="isOpen" (didDismiss)="isOpen = false">
-                  <ng-template>
-                    <ion-datetime
+              <!-- Date Picker -->
+              <ion-modal [isOpen]="isOpen" (didDismiss)="isOpen = false">
+                <ng-template>
+                  <ion-datetime
                     formControlName="billingStartDate"
-                      presentation="date"
-                      (ionChange)="selectDate($event)"
-                    ></ion-datetime>
-                  </ng-template>
-                </ion-modal>
-              
+                    presentation="date"
+                    (ionChange)="selectDate($event)"
+                  ></ion-datetime>
+                </ng-template>
+              </ion-modal>
             </ion-col>
 
             <ion-col size="6" class="toggle-row" class="align-right-field">

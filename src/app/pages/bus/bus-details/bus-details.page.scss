@@ -950,16 +950,16 @@
   // }
 
   .bus-details {
-    width: 107%;
+    width: 111%;
 
     // right: 0;
     // top: 60px;
   }
   .All-list {
-    width: 107%;
+    width: 111%;
   }
   .expense-container {
-    width: 107%;
+    width: 111%;
   }
   .Revenu-table-container {
     width: 107%;
@@ -968,10 +968,10 @@
     width: 105%;
   }
   .table-expense-container {
-    width: 105%;
+    width: 111%;
   }
   .profitability-summary-container {
-    width: 107%;
+    width: 111%;
   }
   .title-container {
     margin-left: 50;
@@ -1076,10 +1076,15 @@
   .table-card {
     width: fit-content;
   }
-  .date-box  {
+  .date-box {
     width: 91%;
     margin-left: 21px;
+    ion-icon{
+      right: 8%;
+      top: 55%;
+    }
   }
+ 
 
   /* Card */
   .All-list {

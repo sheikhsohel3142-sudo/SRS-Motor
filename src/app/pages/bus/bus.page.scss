@@ -86,9 +86,9 @@ ion-button {
     height: 18px;
     font-size: 20px;
       border-radius: 2px;
-     position: absolute;
-    top: 3.5px;
-    left: 1.3px;
+    position: fixed;
+    top: 10.5px;
+    left: 17.3px;
     bottom: 12%;
     color: #0f172a;
     span {
@@ -312,7 +312,7 @@ ion-button {
     width: 101%;
   }
   .table-container {
-    width: 107%;
+    width: 109.5%;
   }
   .head-container {
     width: 101%;
@@ -639,13 +639,13 @@ ion-button {
     position: fixed;
     top: 3.1%;
     right: 4%;
-    .plus-container {
-    left: 14px;
-      top: 4px;
+   .plus-container {
+      left: 15px;
+      top: 12px;
 
       span {
-           top: 10.5px;
-        left: 16.8px;
+        top: 11.3px;
+        left: 18.3px;
       }
     }
   }

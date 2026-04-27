@@ -310,7 +310,7 @@ ion-button {
   // }
 
   ion-card {
-    width: 108%;
+    width: 109%;
     height: 600px;
 
     // right: 0;
@@ -337,7 +337,7 @@ ion-button {
     top: 60px;
   }
 }
-@media only screen and (max-width: 1024px) and (min-width: 900px) {
+@media only screen and (max-width: 1094px) and (min-width: 900px) {
   .add-new-bus-container {
     width: 99.5%;
     height: 900px;
@@ -357,7 +357,7 @@ ion-button {
   }
 
   ion-card {
-    width: 116%;
+    width: 111%;
     height: 600px;
 
     // right: 0;
@@ -400,6 +400,10 @@ ion-button {
   .date-box {
     width: 91%;
     margin-left: 21px;
+    ion-icon{
+      right: 8%;
+      top: 55%;
+    }
   }
    .date-wrapper{
     width: 91%;

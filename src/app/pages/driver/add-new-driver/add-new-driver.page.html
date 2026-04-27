@@ -188,7 +188,7 @@
                     </div>
 
                     <!-- Add Icon -->
-                    <div class="upload-icon" (click)="aadhaarInput.click()">
+                    <div class="upload-icon2" (click)="aadhaarInput.click()">
                       <ion-icon name="add-circle-outline"></ion-icon>
                     </div>
                   </div>
@@ -299,7 +299,7 @@
                     </div>
 
                     <!-- Add Icon -->
-                    <div class="upload-icon" (click)="medicalInput.click()">
+                    <div class="upload-icon3" (click)="medicalInput.click()">
                       <ion-icon name="add-circle-outline"></ion-icon>
                     </div>
                   </div>
@@ -314,7 +314,7 @@
                     color="danger"
                     *ngIf="driverForm.get('dateOfJoining')?.touched && driverForm.get('dateOfJoining')?.errors"
                   >
-                     Date of Joining is required
+                    Date of Joining is required
                   </ion-text>
                 </label>
 
@@ -333,9 +333,8 @@
                 <ion-modal [isOpen]="isOpen" (didDismiss)="isOpen = false">
                   <ng-template>
                     <ion-datetime
-                    formControlName="dateOfJoining"
+                      formControlName="dateOfJoining"
                       presentation="date"
-                      
                       (ionChange)="selectDate($event)"
                     ></ion-datetime>
                   </ng-template>

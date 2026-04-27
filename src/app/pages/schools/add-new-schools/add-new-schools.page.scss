@@ -144,13 +144,18 @@ ion-icon {
   color: #333;
   --placeholder-color: #aaa;
   cursor: pointer;
+  .icon-container{
+    position: relative;
+    bottom: 25px;
+
   ion-icon {
     width: 16.66666603088379;
     height: 16.66666603088379;
     color:#828282;
     position: absolute;
-    right: 12%;
-    top: 50%;
+    right: -1%;
+    top: -2%;
+  }
   }
 }
 
@@ -291,7 +296,7 @@ ion-icon {
   }
 
   ion-card {
-    width: 108%;
+    width: 106%;
     height: 1050px;
 
     // right: 0;
@@ -334,7 +339,7 @@ ion-icon {
   }
 
   ion-card {
-    width: 107%;
+    width: 106%;
     height: 1050px;
 
     // right: 0;
@@ -377,6 +382,7 @@ ion-icon {
   .date-box {
     width: 91%;
     margin-left: 21px;
+ 
   }
 
   /* Card */

@@ -146,7 +146,9 @@
 
             <ion-col size="12" size-md="6">
               <div class="upload-container">
-                <ion-label class="upload-ion-label">Police Verification</ion-label>
+                <ion-label class="upload-ion-label"
+                  >Police Verification</ion-label
+                >
 
                 <div class="upload-box">
                   <input
@@ -232,39 +234,37 @@
             <!-- </div> -->
 
             <ion-col size="12" size-md="6">
-             <label>
-                  Date of Joining
-                  <ion-text
-                    color="danger"
-                    *ngIf="form.get('joiningDate')?.touched && form.get('joiningDate')?.errors"
-                  >
-                     Date of Joining is required
-                  </ion-text>
-                </label>
+              <label>
+                Date of Joining
+                <ion-text
+                  color="danger"
+                  *ngIf="form.get('joiningDate')?.touched && form.get('joiningDate')?.errors"
+                >
+                  Date of Joining is required
+                </ion-text>
+              </label>
 
-                <!-- Custom Input -->
-                <div class="date-box" (click)="openPicker()">
-                  <span>
-                    {{ form.get('joiningDate')?.value ?
-                    (form.get('joiningDate')?.value | date:'MM/dd/yyyy')
-                    : 'mm/dd/yyyy' }}
-                  </span>
+              <!-- Custom Input -->
+              <div class="date-box" (click)="openPicker()">
+                <span>
+                  {{ form.get('joiningDate')?.value ?
+                  (form.get('joiningDate')?.value | date:'MM/dd/yyyy') :
+                  'mm/dd/yyyy' }}
+                </span>
 
-                  <ion-icon name="calendar-clear-outline"></ion-icon>
-                </div>
+                <ion-icon name="calendar-clear-outline"></ion-icon>
+              </div>
 
-                <!-- Date Picker -->
-                <ion-modal [isOpen]="isOpen" (didDismiss)="isOpen = false">
-                  <ng-template>
-                    <ion-datetime
-                    
-                      presentation="date"
-                      formControlName="joiningDate"
-                      
-                      (ionChange)="selectDate($event)"
-                    ></ion-datetime>
-                  </ng-template>
-                </ion-modal>
+              <!-- Date Picker -->
+              <ion-modal [isOpen]="isOpen" (didDismiss)="isOpen = false">
+                <ng-template>
+                  <ion-datetime
+                    presentation="date"
+                    formControlName="joiningDate"
+                    (ionChange)="selectDate($event)"
+                  ></ion-datetime>
+                </ng-template>
+              </ion-modal>
             </ion-col>
 
             <ion-col size="12" size-md="6" class="align-right-field">
@@ -395,22 +395,22 @@
         <div class="head-container">
           <!-- <div class="table-head-wrap">
               <div class="table-head"> -->
-          <span ><div class="date">Date</div></span>
-          <span class="category">Reason</span>
-          <span class="amount2">Amount</span>
-          <span class="paid">Status</span>
+          <span
+            ><div><div class="date">Date</div></div></span
+          >
+          <span><div class="category">Reason</div></span>
+          <span><div class="amount">Amount</div></span>
+          <span><div class="status">Status</div></span>
           <!-- </div>
             </div> -->
         </div>
 
         <div class="table-card">
           <div class="table-row" *ngFor="let e of advanceList">
-            <span class="date2">{{ e.date }}</span>
-            <span class="reason"
-              ><div class="reson-container">{{ e.reason }}</div></span
-            >
-            <span class="amount">{{ e.amount }}</span>
-            <span class="status">{{ e.status }}</span>
+            <span><div class="date">{{ e.date }}</div></span>
+            <span><div class="category">{{ e.reason }}</div></span>
+            <span ><div class="amount">{{ e.amount }}</div></span>
+            <span><div class="status">{{ e.status }}</div></span>
           </div>
         </div>
       </div>

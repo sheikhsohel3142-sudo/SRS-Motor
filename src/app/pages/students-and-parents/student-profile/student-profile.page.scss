@@ -153,7 +153,7 @@ ion-card {
   }
 }
 .date-box {
-    background: #f5f6f8;
+  background: #f5f6f8;
   border-radius: 8px;
   padding: 12px 14px;
   width: 372px;
@@ -163,18 +163,23 @@ ion-card {
   line-height: 150%;
   font-size: 16px;
   color: #333;
-  --placeholder-color: #aaa;;
+  --placeholder-color: #aaa;
   cursor: pointer;
+  .icon-container {
+    position: relative;
+    bottom: 20px;
+    left: 34px;
     ion-icon {
-    font-size: 18px;
-    color: #666;
-    position: absolute;
-    right: 13%;
-    top: 45%;
+      font-size: 18px;
+      color: #666;
+      position: absolute;
+      right: 13%;
+      top: 45%;
+    }
   }
 }
 .date-box2 {
-    background: #ffffff;
+  background: #ffffff;
   border-radius: 8px;
   padding: 12px 14px;
   width: 372px;
@@ -187,12 +192,17 @@ ion-card {
   --placeholder-color: #aaa;
   border: 1px solid #c7c9cc;
   cursor: pointer;
+  .icon-container {
+    position: relative;
+    bottom: 20px;
+    left: 34px;
     ion-icon {
-    font-size: 18px;
-    color: #666;
-    position: absolute;
-    right: 13%;
-    top: 45%;
+      font-size: 18px;
+      color: #666;
+      position: absolute;
+      right: 13%;
+      top: 45%;
+    }
   }
 }
 
@@ -454,6 +464,10 @@ label {
   }
   .date-box {
     width: 91%;
+    ion-icon {
+      right: 2%;
+      top: 35%;
+    }
   }
   .date-box2 {
     width: 91%;
@@ -464,7 +478,7 @@ label {
 
   ion-card {
     width: 105%;
-   height: 1220px;
+    height: 1220px;
   }
 
   ion-button {
@@ -484,7 +498,7 @@ label {
   .input {
     width: 91%;
   }
-   .date-box {
+  .date-box {
     width: 91%;
   }
   .date-box2 {
@@ -542,7 +556,7 @@ label {
   .input {
     width: 91%;
   }
-   .date-box {
+  .date-box {
     width: 91%;
   }
   .date-box2 {
@@ -570,7 +584,7 @@ label {
 
   ion-card {
     width: 108%;
-     height: 1220px;
+    // height: 1220px;
 
     // right: 0;
     // top: 60px;
@@ -604,7 +618,7 @@ label {
   .input {
     width: 91%;
   }
-   .date-box {
+  .date-box {
     width: 91%;
   }
   .date-box2 {
@@ -676,23 +690,30 @@ label {
     width: 91%;
     margin-left: 25px;
   }
-   .date-box {
+  .date-box {
     width: 91%;
     margin-left: 25px;
+    .icon-container {
+      ion-icon {
+        right: 33px;
+      }
+    }
   }
   .date-box2 {
     width: 91%;
     margin-left: 25px;
+    .icon-container {
+     ion-icon {
+        right: 33px;
+      }
+    }
   }
   .setting-box {
     width: 91%;
     margin-left: 25px;
-   
   }
- .toogle-container {
-   
+  .toogle-container {
     margin-bottom: 30px;
-   
   }
   .input-count {
     ion-input {

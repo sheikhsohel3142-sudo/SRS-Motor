@@ -37,7 +37,6 @@
   top: 2%;
 }
 
-
 ion-button {
   position: absolute;
   right: 2%;
@@ -48,7 +47,7 @@ ion-button {
   background-color: #b3cbf933;
   border: 1px dashed #4f8cff;
   p {
-     position: fixed;
+    position: fixed;
     left: 48px;
     top: 10px;
     font-family: "Urbanist", sans-serif;
@@ -65,10 +64,10 @@ ion-button {
     width: 18px;
     height: 18px;
     font-size: 20px;
-      border-radius: 2px;
-      position: absolute;
-    top: 3.5px;
-    left: 1.3px;
+    border-radius: 2px;
+    position: fixed;
+    top: 10.5px;
+    left: 17.3px;
     bottom: 12%;
     color: #0f172a;
     span {
@@ -639,12 +638,12 @@ ion-button {
     top: 3.3%;
     right: 4%;
     .plus-container {
-      left: 13px;
-      top: 2px;
+      left: 15px;
+      top: 12px;
 
       span {
-        top: 8.3px;
-        left: 16.3px;
+        top: 11.3px;
+        left: 18.3px;
       }
     }
   }

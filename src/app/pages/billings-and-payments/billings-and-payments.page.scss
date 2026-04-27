@@ -11,7 +11,7 @@
   background-color: #b3cbf9;
   div {
     position: relative;
-   font-family: "Urbanist", sans-serif;
+    font-family: "Urbanist", sans-serif;
     font-weight: 500;
     top: 10px;
     left: 16px;
@@ -50,10 +50,9 @@ ion-button {
   border-radius: 10px;
   background-color: #b3cbf933;
   border: 1px dashed #4f8cff;
- 
 
-  p{
-      position: fixed;
+  p {
+    position: fixed;
     left: 48px;
     top: 10px;
     font-family: "Urbanist", sans-serif;
@@ -64,27 +63,25 @@ ion-button {
     font-size: 16px;
     line-height: 145%;
     letter-spacing: 0%;
-
   }
- .plus-container {
+  .plus-container {
     border: 1.5px solid black;
     width: 18px;
     height: 18px;
     font-size: 20px;
-      border-radius: 2px;
-     position: absolute;
-    top: 3.5px;
-    left: 1.3px;
+    border-radius: 2px;
+    position: fixed;
+    top: 10.5px;
+    left: 17.3px;
     bottom: 12%;
     color: #0f172a;
     span {
-    position: fixed;
+      position: fixed;
       top: 10px;
       left: 20px;
     }
   }
 }
-
 
 // .table-head-wrap {
 //   padding: 0 10px;
@@ -516,7 +513,7 @@ ion-icon {
 @media only screen and (max-width: 1599px) and (min-width: 1280px) {
   .profile-container {
     width: 99%;
-     height: auto;
+    height: auto;
     overflow: hidden;
 
     // left: 20px;
@@ -550,7 +547,7 @@ ion-icon {
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
   .profile-container {
     width: 99%;
-     height: auto;
+    height: auto;
     overflow: hidden;
 
     // left: 20px;
@@ -582,7 +579,7 @@ ion-icon {
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
   .profile-container {
     width: 99%;
-     height: auto;
+    height: auto;
     overflow: hidden;
 
     // left: 20px;
@@ -614,7 +611,7 @@ ion-icon {
 
 @media (max-width: 780px) {
   .profile-container {
-     height: auto;
+    height: auto;
     overflow: hidden;
     // width: fit-content;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
@@ -698,7 +695,7 @@ ion-icon {
   // min-width: 250px;
 
   .profile-container {
-     height: auto;
+    height: auto;
     overflow: hidden;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
@@ -744,7 +741,7 @@ ion-icon {
   // min-width: 250px;
 
   .profile-container {
-     height: auto;
+    height: auto;
     overflow: hidden;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
@@ -790,7 +787,7 @@ ion-icon {
   // min-width: 250px;
 
   .profile-container {
-     height: auto;
+    height: auto;
     overflow: hidden;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
@@ -839,7 +836,7 @@ ion-icon {
   }
 
   .profile-container {
-     height: auto;
+    height: auto;
     overflow: hidden;
     overflow-x: auto; /* 🔥 scroll yaha shift kiya */
     -webkit-overflow-scrolling: touch;
@@ -927,12 +924,12 @@ ion-icon {
     right: 20px;
     margin-left: 20px;
     .plus-container {
-     left: 13.5px;
-      top: 4px;
+      left: 15px;
+      top: 12px;
 
       span {
-           top: 10.5px;
-        left: 16.8px;
+        top: 11.3px;
+        left: 18.3px;
       }
     }
   }

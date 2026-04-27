@@ -142,9 +142,8 @@ ion-button {
 
 .upload-container {
   width: 30%;
- 
 }
-#DL{
+#DL {
   margin-bottom: 26px;
 }
 
@@ -215,30 +214,48 @@ ion-button {
   font-size: 20px;
   color: #888;
   position: absolute;
+  right: 12%;
+  top: 54%;
+}
+.upload-icon2 ion-icon {
+  font-size: 20px;
+  color: #888;
+  position: absolute;
   right: 11%;
-  top: 50%;
+  top: 45%;
+}
+.upload-icon3 ion-icon {
+  font-size: 20px;
+  color: #888;
+  position: absolute;
+  right: 11%;
+  top: 54%;
 }
 
+
+
+
 .date-box {
-    background: #f5f6f8;
+  background: #f5f6f8;
   border-radius: 8px;
   padding: 12px 14px;
   width: 372px;
   height: 50px;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 19px;
   line-height: 150%;
   font-size: 16px;
   color: #333;
-  --placeholder-color: #aaa;;
+  --placeholder-color: #aaa;
   cursor: pointer;
+ 
     ion-icon {
-    font-size: 18px;
-    color: #666;
-    position: absolute;
-    right: 13%;
-    top: 45%;
-  }
+      font-size: 18px;
+      color: #666;
+      position: absolute;
+      right: 12%;
+      top: 56%;
+    }
 }
 .input {
   background: #f5f6f8;
@@ -332,6 +349,9 @@ ion-button {
   .input {
     width: 91%;
   }
+  .date-box {
+    width: 91%;
+  }
   .add-new-driver-container ion-input {
     width: 91%;
   }
@@ -361,6 +381,9 @@ ion-button {
   .upload-container {
     width: 99%;
   }
+  .date-box {
+    width: 91%;
+  }
   .upload-box {
     width: 91%;
   }
@@ -371,7 +394,6 @@ ion-button {
 
   ion-card {
     width: 107%;
-
   }
 
   .add-new-driver-container ion-input {
@@ -396,6 +418,9 @@ ion-button {
   .upload-box {
     width: 100%;
   }
+  .date-box {
+    width: 91%;
+  }
   .upload-container {
     width: 91%;
   }
@@ -405,8 +430,7 @@ ion-button {
   }
 
   ion-card {
-    width: 108%;
-
+    width: 110%;
 
     // right: 0;
     // top: 60px;
@@ -441,6 +465,9 @@ ion-button {
   }
   .upload-box {
     width: 98%;
+  }
+  .date-box {
+    width: 91%;
   }
   .upload-container {
     width: 91%;
@@ -489,16 +516,23 @@ ion-button {
   }
   .input {
     width: 91%;
-     margin-left: 20px;
+    margin-left: 20px;
+  }
+  .date-box {
+    width: 91%;
+    margin-left: 20px;
+    ion-icon{
+      right: 10%;
+      top: 60%;
+    }
   }
   .upload-box {
     width: 99%;
-     margin-left: 20px;
+    margin-left: 20px;
   }
   .upload-container {
     width: 91%;
     margin-bottom: 25px;
-    
   }
 
   /* Card */

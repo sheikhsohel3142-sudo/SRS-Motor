@@ -22,16 +22,28 @@ import {
   IonIcon,
   IonSelect,
   IonInput,
-  IonText, IonModal, IonDatetime } from '@ionic/angular/standalone';
+  IonText,
+  IonModal,
+  IonDatetime,
+} from '@ionic/angular/standalone';
 import { Router, RouterLink } from '@angular/router';
-import { text, chevronBackOutline, closeCircleOutline, addCircleOutline, calendarClearOutline, chevronDownOutline } from 'ionicons/icons';
+import {
+  text,
+  chevronBackOutline,
+  closeCircleOutline,
+  addCircleOutline,
+  calendarClearOutline,
+  chevronDownOutline,
+} from 'ionicons/icons';
 
 @Component({
   selector: 'app-add-new-driver',
   templateUrl: './add-new-driver.page.html',
   styleUrls: ['./add-new-driver.page.scss'],
   standalone: true,
-  imports: [IonDatetime, IonModal, 
+  imports: [
+    IonDatetime,
+    IonModal,
     IonButton,
     IonLabel,
     IonText,
@@ -52,18 +64,15 @@ import { text, chevronBackOutline, closeCircleOutline, addCircleOutline, calenda
     IonSelectOption,
     ReactiveFormsModule,
     IonSelect,
-    RouterLink
+    RouterLink,
   ],
 })
 export class AddNewDriverPage implements OnInit {
   driverForm!: FormGroup;
 
   selectedFiles: { [key: string]: File[] } = {};
-  constructor(
-    private fb: FormBuilder,
-    
-  ) {
-      
+  constructor(private fb: FormBuilder) {
+;
   }
   //  Validators.pattern('^[0-9]{10}$')
   //  Validators.pattern('^[0-9]{10}$')
@@ -85,7 +94,6 @@ export class AddNewDriverPage implements OnInit {
       monthlySalary: ['', Validators.required],
     });
   }
-  
 
   onSubmit() {
     if (this.driverForm.valid) {
@@ -147,18 +155,18 @@ export class AddNewDriverPage implements OnInit {
   }
   isOpen = false;
 
-openPicker() {
-  this.isOpen = true;
-}
+  openPicker() {
+    this.isOpen = true;
+  }
 
-selectDate(event: any) {
-  const value = event.detail.value;
+  selectDate(event: any) {
+    const value = event.detail.value;
 
-  // 🔥 IMPORTANT
-  console.log(value);
-  this.driverForm.get('dateOfJoining')?.setValue(value);
-  this.driverForm.get('dateOfJoining')?.markAsTouched();
+    // 🔥 IMPORTANT
+    console.log(value);
+    this.driverForm.get('dateOfJoining')?.setValue(value);
+    this.driverForm.get('dateOfJoining')?.markAsTouched();
 
-  this.isOpen = false;
-}
+    this.isOpen = false;
+  }
 }

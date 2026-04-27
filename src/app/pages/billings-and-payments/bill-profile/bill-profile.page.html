@@ -403,8 +403,9 @@
                     (paymentForm.get('date')?.value | date:'MM/dd/yyyy')
                     : 'mm/dd/yyyy' }}
                   </span>
-
-                  <ion-icon name="calendar-clear-outline"></ion-icon>
+                   <div class="icon-container">
+                  <ion-icon name="calendar-clear-outline"></ion-icon></div>
+                 
                 </div>
 
                 <!-- Date Picker -->
@@ -503,27 +504,29 @@
         <div class="header-container">
           <h2>Payment History</h2>
         </div>
+        <div class="table-profit-container">
         <div class="head-container">
           <!-- <div class="table-head-wrap">
             <div class="table-head"> -->
-          <span class="date">Date</span>
+          <span><div class="date">Date</div></span>
 
-          <span class="category">Amount</span>
-          <span class="amount2">Mode</span>
-          <span class="paid">Reference</span>
+          <span><div class="catagory">Amount</div></span>
+          <span><div class="mode">Mode</div></span>
+          <span ><div class="status">Reference</div></span>
           <!-- </div>
           </div> -->
         </div>
 
         <div class="table-card">
           <div class="table-row" *ngFor="let e of advanceList">
-            <span class="date2">{{ e.date }}</span>
-            <span class="reason"
-              ><div class="reson-container">{{ e.reason }}</div></span
+            <span><div class="date">{{ e.date }}</div></span>
+            <span
+              ><div class="catagory">{{ e.reason }}</div></span
             >
-            <span class="amount">{{ e.amount }}</span>
-            <span class="status">{{ e.status }}</span>
+            <span ><div class="mode">{{ e.amount }}</div></span>
+            <span ><div class="status">{{ e.status }}</div></span>
           </div>
+        </div>
         </div>
       </ion-card>
     </div>
@@ -532,6 +535,7 @@
       <div class="after-record">
         <div class="header-container">
           <h2>Payment Recording</h2>
+          <div class="btn-container">
           <div class="button">
             <ion-button (click)="sendWhatsapp()" fill="clear">
               <div>WhatsApp</div>
@@ -543,6 +547,7 @@
               <div>download</div>
               <img src="assets/img/download (1).png" alt="" />
             </ion-button>
+          </div>
           </div>
         </div>
         <form [formGroup]="paymentForm">
@@ -562,7 +567,7 @@
                 <div class="input-count">
                   <ion-input formControlName="mode" readonly></ion-input>
                 </div>
-              </ion-col>ion-
+              </ion-col>
             </ion-row>
 
             <!-- Row 2 -->

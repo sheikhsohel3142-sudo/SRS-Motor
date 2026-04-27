@@ -216,8 +216,9 @@
                   (studentForm.get('billingStartDate')?.value |
                   date:'MM/dd/yyyy') : 'mm/dd/yyyy' }}
                 </span>
-
-                <ion-icon name="calendar-clear-outline"></ion-icon>
+                <div class="icon-container">
+                  <ion-icon name="calendar-clear-outline"></ion-icon>
+                </div>
               </div>
 
               <!-- Date Picker -->
@@ -377,15 +378,16 @@
                     (billingForm.get('billingStartDate')?.value |
                     date:'MM/dd/yyyy') : 'mm/dd/yyyy' }}
                   </span>
-
-                  <ion-icon name="calendar-clear-outline"></ion-icon>
+                  <div class="icon-container">
+                    <ion-icon name="calendar-clear-outline"></ion-icon>
+                  </div>
                 </div>
 
                 <!-- Date Picker -->
                 <ion-modal [isOpen]="isOpen" (didDismiss)="isOpen = false">
                   <ng-template>
                     <ion-datetime
-                     formControlName="billingStartDate"
+                      formControlName="billingStartDate"
                       presentation="date"
                       (ionChange)="selectDate($event)"
                     ></ion-datetime>
