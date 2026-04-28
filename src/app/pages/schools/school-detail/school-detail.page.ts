@@ -6,9 +6,28 @@ import {
   FormsModule,
   ReactiveFormsModule,
   Validators,
-
 } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonGrid, IonRow, IonCol, IonItem, IonLabel, IonText, IonInput, IonSelectOption, IonButton, IonCard, IonIcon, IonToggle, IonSelect, IonModal, IonDatetime } from '@ionic/angular/standalone';
+import {
+  IonContent,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonItem,
+  IonLabel,
+  IonText,
+  IonInput,
+  IonSelectOption,
+  IonButton,
+  IonCard,
+  IonIcon,
+  IonToggle,
+  IonSelect,
+  IonModal,
+  IonDatetime,
+} from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -16,7 +35,12 @@ import { RouterLink } from '@angular/router';
   templateUrl: './school-detail.page.html',
   styleUrls: ['./school-detail.page.scss'],
   standalone: true,
-  imports: [IonDatetime, IonModal, IonToggle, IonIcon, IonCard,
+  imports: [
+    IonDatetime,
+    IonModal,
+    IonToggle,
+    IonIcon,
+    IonCard,
     IonButton,
     IonButton,
     IonText,
@@ -35,7 +59,9 @@ import { RouterLink } from '@angular/router';
     FormsModule,
     ReactiveFormsModule,
     IonSelectOption,
-    RouterLink, IonSelect],
+    RouterLink,
+    IonSelect,
+  ],
 })
 export class SchoolDetailPage {
   isActive: boolean = true;
@@ -65,11 +91,11 @@ export class SchoolDetailPage {
       ],
       email: ['', [Validators.required, Validators.email]],
       operatingDays: ['', Validators.required],
-      schoolTimings: ['', Validators.required], 
+      schoolTimings: ['', Validators.required],
       activeDrivers: ['', Validators.required],
       routesAssigned: ['', Validators.required],
-              startTime: ['', Validators.required],
-  endTime: ['', Validators.required]
+      startTime: ['', Validators.required],
+      endTime: ['', Validators.required],
     });
   }
 
@@ -84,77 +110,76 @@ export class SchoolDetailPage {
   }
   isTimeOpen = false;
 
-openTimePicker() {
-  this.isTimeOpen = true;
-}
-
-selectTime(event: any) {
-  const selectedTime = event.detail.value;
-
-
- const control = this.schoolForm.get('schoolTimings');
-
-  // 🔥 अगर value नहीं है → validation trigger
-   if (selectedTime) {
-    // ✅ value set करो
-    control?.setValue(selectedTime);
-
-    // ✅ touched mark करो
-    control?.markAsTouched();
-
-    // ✅ validation update
-    control?.updateValueAndValidity();
+  openTimePicker() {
+    this.isTimeOpen = true;
   }
 
-  this.isTimeOpen = false;
-}
-onModalClose() {
-  this.isTimeOpen = false;
+  selectTime(event: any) {
+    const selectedTime = event.detail.value;
 
-  const control = this.schoolForm.get('schoolTimings');
+    const control = this.schoolForm.get('schoolTimings');
 
-  // 🔥 अगर user ने कुछ select नहीं किया
-  if (!control?.value) {
-    control?.markAsTouched();
-    control?.updateValueAndValidity();
+    // 🔥 अगर value नहीं है → validation trigger
+    if (selectedTime) {
+      // ✅ value set करो
+      control?.setValue(selectedTime);
+
+      // ✅ touched mark करो
+      control?.markAsTouched();
+
+      // ✅ validation update
+      control?.updateValueAndValidity();
+    }
+
+    this.isTimeOpen = false;
   }
-    if (!this.schoolForm.value.startTime) {
+  onModalClose() {
+    this.isTimeOpen = false;
+
+  const startTime = this.schoolForm.get('startTime');
+const endTime = this.schoolForm.get('endTime');
+
+if (!startTime?.value) {
+  startTime?.markAsTouched();
+  startTime?.updateValueAndValidity();
+}
+
+if (!endTime?.value) {
+  endTime?.markAsTouched();
+  endTime?.updateValueAndValidity();
+}
+  }
+  formatTime(value: any): string {
+    if (!value) return '';
+
+    const date = new Date(value);
+
+    let hours: any = date.getHours();
+    let minutes: any = date.getMinutes();
+
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+    return `${hours}:${minutes} ${ampm}`;
+  }
+
+  selectStartTime(event: any) {
+    const value = event.detail.value;
+    console.log(value);
+    this.schoolForm.get('startTime')?.setValue(value);
     this.schoolForm.get('startTime')?.markAsTouched();
   }
 
-  if (!this.schoolForm.value.endTime) {
+  // 👉 End Time
+  selectEndTime(event: any) {
+    const value = event.detail.value;
+     console.log(value);
+    this.schoolForm.get('endTime')?.setValue(value);
     this.schoolForm.get('endTime')?.markAsTouched();
   }
-}
-formatTime(value: any): string {
-  if (!value) return '';
-
-  const date = new Date(value);
-
-  let hours: any = date.getHours();
-  let minutes: any = date.getMinutes();
-
-  const ampm = hours >= 12 ? 'PM' : 'AM';
-
-  hours = hours % 12;
-  hours = hours ? hours : 12;
-
-  hours = hours < 10 ? '0' + hours : hours;
-  minutes = minutes < 10 ? '0' + minutes : minutes;
-
-  return `${hours}:${minutes} ${ampm}`;
-}
-
-selectStartTime(event: any) {
-  const value = event.detail.value;
-  this.schoolForm.get('startTime')?.setValue(value);
-  this.schoolForm.get('startTime')?.markAsTouched();
-}
-
-// 👉 End Time
-selectEndTime(event: any) {
-  const value = event.detail.value;
-  this.schoolForm.get('endTime')?.setValue(value);
-  this.schoolForm.get('endTime')?.markAsTouched();
-}
 }

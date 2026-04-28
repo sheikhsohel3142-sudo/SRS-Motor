@@ -696,9 +696,29 @@
                   </small>
                 </ion-text>
               </label>
-              <div class="input-count">
-                <ion-input formControlName="dueSince" type="date"> </ion-input>
-              </div>
+                <!-- Custom Input -->
+                <div class="date-box2" (click)="openPicker2()">
+                  <span>
+                    {{dueForm.get('dueSince')?.value ?
+                    (dueForm.get('dueSince')?.value | date:'MM/dd/yyyy')
+                    : 'mm/dd/yyyy' }}
+                  </span>
+                   <div class="icon-container">
+                  <ion-icon name="calendar-clear-outline"></ion-icon></div>
+                 
+                </div>
+
+                <!-- Date Picker -->
+                <ion-modal [isOpen]="isOpen2" (didDismiss)="isOpen2 = false">
+                  <ng-template>
+                    <ion-datetime
+                    formControlName="dueSince"
+                      presentation="date"
+                      
+                      (ionChange)="selectDate2($event)"
+                    ></ion-datetime>
+                  </ng-template>
+                </ion-modal>
             </ion-col>
           </ion-row>
 

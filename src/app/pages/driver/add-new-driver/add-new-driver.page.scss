@@ -214,26 +214,25 @@ ion-button {
   font-size: 20px;
   color: #888;
   position: absolute;
-  right: 12%;
+  right: 13%;
   top: 54%;
 }
 .upload-icon2 ion-icon {
   font-size: 20px;
   color: #888;
   position: absolute;
-  right: 11%;
+  right: 13%;
   top: 45%;
 }
-.upload-icon3 ion-icon {
-  font-size: 20px;
-  color: #888;
-  position: absolute;
-  right: 11%;
-  top: 54%;
+.upload-icon3 {
+  ion-icon {
+    font-size: 20px;
+    color: #888;
+    position: absolute;
+    right: 13%;
+    top: 54%;
+  }
 }
-
-
-
 
 .date-box {
   background: #f5f6f8;
@@ -241,21 +240,21 @@ ion-button {
   padding: 12px 14px;
   width: 372px;
   height: 50px;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 19px;
   line-height: 150%;
   font-size: 16px;
   color: #333;
   --placeholder-color: #aaa;
   cursor: pointer;
- 
-    ion-icon {
-      font-size: 18px;
-      color: #666;
-      position: absolute;
-      right: 12%;
-      top: 56%;
-    }
+
+  ion-icon {
+    font-size: 18px;
+    color: #666;
+    position: absolute;
+    right: 12%;
+    top: 56%;
+  }
 }
 .input {
   background: #f5f6f8;
@@ -521,18 +520,32 @@ ion-button {
   .date-box {
     width: 91%;
     margin-left: 20px;
-    ion-icon{
-      right: 10%;
-      top: 60%;
+    ion-icon {
+      right: 9.5%;
+      top: 58%;
     }
   }
   .upload-box {
-    width: 99%;
+    width: 100%;
     margin-left: 20px;
   }
   .upload-container {
     width: 91%;
     margin-bottom: 25px;
+  }
+  .upload-icon ion-icon {
+    right: 10%;
+  }
+  .upload-icon2 ion-icon {
+    right: 10%;
+  }
+  .upload-icon3 {
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+    ion-icon {
+      right: 10%;
+    }
   }
 
   /* Card */

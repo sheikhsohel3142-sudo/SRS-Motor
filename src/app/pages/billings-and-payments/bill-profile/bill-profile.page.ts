@@ -23,7 +23,11 @@ import {
   IonSelect,
   IonItem,
   IonLabel,
-  IonText, IonToggle, IonModal, IonDatetime } from '@ionic/angular/standalone';
+  IonText,
+  IonToggle,
+  IonModal,
+  IonDatetime,
+} from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 import jsPDF from 'jspdf';
 
@@ -32,7 +36,10 @@ import jsPDF from 'jspdf';
   templateUrl: './bill-profile.page.html',
   styleUrls: ['./bill-profile.page.scss'],
   standalone: true,
-  imports: [IonDatetime, IonModal, IonToggle, 
+  imports: [
+    IonDatetime,
+    IonModal,
+    IonToggle,
     IonText,
     IonLabel,
     IonItem,
@@ -276,22 +283,36 @@ Notes : ${data.notes}
     doc.save('payment-receipt.pdf');
   }
 
-  
-    isOpen = false;
+  isOpen = false;
 
-openPicker() {
-  this.isOpen = true;
-}
+  openPicker() {
+    this.isOpen = true;
+  }
 
-selectDate(event: any) {
-  const value = event.detail.value;
+  selectDate(event: any) {
+    const value = event.detail.value;
 
-  // 🔥 IMPORTANT
-  console.log(value);
-  this.paymentForm.get('date')?.setValue(value);
-  this.paymentForm.get('date')?.markAsTouched();
+    // 🔥 IMPORTANT
+    console.log(value);
+    this.paymentForm.get('date')?.setValue(value);
+    this.paymentForm.get('date')?.markAsTouched();
 
-  this.isOpen = false;
-}
+    this.isOpen = false;
+  }
+  isOpen2 = false;
 
+  openPicker2() {
+    this.isOpen = true;
+  }
+
+  selectDate2(event: any) {
+    const value = event.detail.value;
+
+    // 🔥 IMPORTANT
+    console.log(value);
+    this.dueForm.get('dueSince')?.setValue(value);
+    this.dueForm.get('dueSince')?.markAsTouched();
+
+    this.isOpen = false;
+  }
 }

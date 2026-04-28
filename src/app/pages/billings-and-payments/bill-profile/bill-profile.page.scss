@@ -211,7 +211,34 @@ ion-card {
       font-size: 18px;
       color: #666;
       position: absolute;
-      right: 13%;
+      right: 10%;
+      top: 45%;
+    }
+  }
+}
+.date-box2 {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 12px 14px;
+  width: 372px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+  line-height: 150%;
+  font-size: 16px;
+  color: #333;
+  --placeholder-color: #aaa;
+  border: 1px solid black;
+  cursor: pointer;
+  .icon-container {
+    position: relative;
+    bottom: 20px;
+    left: 34px;
+    ion-icon {
+      font-size: 18px;
+      color: #666;
+      position: absolute;
+      right: 10%;
       top: 45%;
     }
   }
@@ -475,6 +502,7 @@ ion-card {
   border-radius: 12px;
 
   position: relative;
+  top: 10px;
   left: 5px;
   bottom: 20px;
 
@@ -889,6 +917,9 @@ ion-card {
   .date-box {
     width: 91%;
   }
+  .date-box2 {
+    width: 91%;
+  }
   .billing-breakdown {
     width: 107%;
     height: auto;
@@ -975,6 +1006,9 @@ ion-card {
     width: 91%;
   }
   .date-box {
+    width: 91%;
+  }
+   .date-box2 {
     width: 91%;
   }
 
@@ -1069,6 +1103,9 @@ ion-card {
     width: 91%;
   }
   .setting-box {
+    width: 91%;
+  }
+   .date-box2 {
     width: 91%;
   }
 
@@ -1185,6 +1222,9 @@ ion-card {
     width: 91%;
   }
   .setting-box {
+    width: 91%;
+  }
+   .date-box2 {
     width: 91%;
   }
 
@@ -1338,6 +1378,9 @@ ion-card {
   }
   .align-right-field {
     left: 0;
+  }
+   .date-box2 {
+    width: 91%;
   }
 
   // .align-rt-f{

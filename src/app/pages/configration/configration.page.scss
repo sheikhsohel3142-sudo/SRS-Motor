@@ -174,7 +174,7 @@ ion-button {
   width: 820px;
   border-radius: 12px;
   position: relative;
-  // right: 40px;
+  right: 10px;
   // top: 20px;
 
   text-transform: none;
@@ -377,7 +377,7 @@ ion-button {
     width: 100%;
     min-width: 400px;
     top: 60px;
-    right: 40px;
+    right: 60px;
   }
 }
 
@@ -420,6 +420,7 @@ ion-button {
     width: 100%;
     min-width: 400px;
     top: 60px;
+     right: 60px;
   }
 }
 
@@ -654,13 +655,20 @@ ion-button {
   }
 
   //   /* Button */
-  ion-button {
-    width: 100%;
-    min-width: 200px;
-    height: 48px;
-    margin-top: 16px;
-    border-radius: 10px;
-    font-size: 15px;
+  // ion-button {
+  //   width: 100%;
+  //   min-width: 200px;
+  //   height: 48px;
+  //   margin-top: 16px;
+  //   border-radius: 10px;
+  //   font-size: 15px;
+  // }
+    ion-button {
+    width: 90%;
+    min-width: 100px;
+    // top: 60px;
+    // right: 50px;
+     left: 20px;
   }
 
   //   /* Remove extra spacing issue */

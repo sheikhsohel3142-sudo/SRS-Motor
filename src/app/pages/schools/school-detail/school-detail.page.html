@@ -117,43 +117,46 @@
                   </ion-item>
 
                   <ion-item lines="none">
-                 <ion-label position="stacked">
-                    School Timings
+                    <ion-label position="stacked">
+                      School Timings
 
-                    <ion-text color="danger" *ngIf="isInvalid('schoolTimings')">
-                      Time is required
-                    </ion-text>
-                  </ion-label>
+                      <ion-text
+                        color="danger"
+                        *ngIf="(isInvalid('startTime') || isInvalid('endTime'))"
+                      >
+                        Time is required
+                      </ion-text>
+                    </ion-label>
+                    <div class="date-box" (click)="openTimePicker()">
+                      <span>
+                        {{ schoolForm.value.startTime &&
+                        schoolForm.value.endTime ?
+                        (formatTime(schoolForm.value.startTime) + ' - ' +
+                        formatTime(schoolForm.value.endTime)) : '09:00 AM - 04:30PM' }}
+                      </span>
 
-                  <div class="date-box" (click)="openTimePicker()">
-                    <span>
-                      {{ schoolForm.value.startTime && schoolForm.value.endTime
-                      ? (formatTime(schoolForm.value.startTime) + ' - ' +
-                      formatTime(schoolForm.value.endTime)) : '09:00 AM - 04:30PM' }}
-                    </span>
+                      <ion-icon name="time-outline"></ion-icon>
+                    </div>
 
-                    <ion-icon name="time-outline"></ion-icon>
-                  </div>
+                    <!-- 🔥 REMOVE formControlName from here -->
+                    <ion-modal
+                      [isOpen]="isTimeOpen"
+                      (didDismiss)="onModalClose()"
+                    >
+                      <ng-template>
+                        <ion-label>Start Time</ion-label>
+                        <ion-datetime
+                          presentation="time"
+                          (ionChange)="selectStartTime($event)"
+                        ></ion-datetime>
 
-                  <!-- 🔥 REMOVE formControlName from here -->
-                  <ion-modal
-                    [isOpen]="isTimeOpen"
-                    (didDismiss)="onModalClose()"
-                  >
-                    <ng-template>
-                      <ion-label>Start Time</ion-label>
-                      <ion-datetime
-                        presentation="time"
-                        (ionChange)="selectStartTime($event)"
-                      ></ion-datetime>
-
-                      <ion-label>End Time</ion-label>
-                      <ion-datetime
-                        presentation="time"
-                        (ionChange)="selectEndTime($event)"
-                      ></ion-datetime>
-                    </ng-template>
-                  </ion-modal>
+                        <ion-label>End Time</ion-label>
+                        <ion-datetime
+                          presentation="time"
+                          (ionChange)="selectEndTime($event)"
+                        ></ion-datetime>
+                      </ng-template>
+                    </ion-modal>
                   </ion-item>
 
                   <ion-item lines="none">
@@ -166,12 +169,11 @@
                         Active Drivers is required
                       </ion-text>
                     </ion-label>
-                    <div class="input-2">
-                      <ion-input
-                        type="number"
-                        formControlName="activeDrivers"
-                      ></ion-input>
-                    </div>
+                    <input
+                      type="number"
+                      class="input-count"
+                      formControlName="activeDrivers"
+                    />
                   </ion-item>
                 </ion-col>
 
@@ -284,13 +286,12 @@
                         Operating days are required
                       </ion-text>
                     </ion-label>
-                    <div class="input" >
+                    <div class="input">
                       <ion-icon
                         class="down"
                         name="chevron-down-outline"
                       ></ion-icon>
-                      <ion-select
-                      formControlName="operatingDays">
+                      <ion-select formControlName="operatingDays">
                         <ion-select-option value="Mon-Fri"
                           >Monday - Friday</ion-select-option
                         >
@@ -300,24 +301,23 @@
                       </ion-select>
                     </div>
                   </ion-item>
-                  
+
                   <ion-item lines="none">
-                    <div class="input-count">
                     <ion-label position="stacked"
                       >Routes Assigned
                       <ion-text
                         color="danger"
                         *ngIf="isInvalid('routesAssigned')"
-                    >
+                      >
                         Routes Assigned is required
                       </ion-text>
                     </ion-label>
-                    
-                      <ion-input
-                        type="number"
-                        formControlName="routesAssigned"
-                      ></ion-input>
-                    </div>
+
+                    <input
+                      type="number"
+                      class="input-count"
+                      formControlName="routesAssigned"
+                    />
                   </ion-item>
                 </ion-col>
               </ion-row>
