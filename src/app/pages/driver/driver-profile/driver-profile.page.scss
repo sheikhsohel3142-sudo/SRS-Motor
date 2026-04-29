@@ -538,8 +538,9 @@ ion-card {
 }
 
 .button {
-  // position: absolute;
-  // top: 12px;
+   position: relative;
+   top: -58px;
+   right: -35px;
 
   ion-button {
     position: absolute;
@@ -716,7 +717,7 @@ ion-card {
 //   right: 90px;
 // }
 .upload-container {
-  margin-bottom: 25px;
+  margin-bottom: 14px;
 }
 
 .upload-label {
@@ -737,6 +738,8 @@ ion-card {
   align-items: center;
   justify-content: space-around;
   padding: 0 12px;
+  margin-top: 10px;
+  
   cursor: pointer;
 }
 
@@ -756,11 +759,12 @@ ion-card {
   margin-left: 1px;
 }
 .file-placeholder {
-  padding-right: 135px;
+  padding-right: 120px;
+  padding-top: 8px;
   font-size: 14px;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
-  color: #8a8a8a;
+  color: #0f172abf;
   margin-bottom: 6px;
 }
 .file-name {
@@ -793,14 +797,14 @@ ion-card {
   color: #888;
   position: absolute;
   right: 11%;
-  top: 35%;
+  top: 45%;
 }
 .upload-icon2 ion-icon {
   font-size: 20px;
   color: #888;
   position: absolute;
   right: 4%;
-  top: 35%;
+  top: 45%;
 }
 
 .monthly-card {
@@ -921,9 +925,9 @@ ion-card {
       width: 98%;
     }
   }
-  .upload-box {
-    min-width: 372px;
-  }
+  // .upload-box {
+  //   min-width: 372px;
+  // }
   .input {
     width: 91%;
   }
@@ -992,13 +996,15 @@ ion-card {
   .upload-box {
     width: 91%;
   }
-
+  .upload-container{
+    width: 100%;
+  }
   .right-side {
     left: 30px;
   }
   .align-row {
     .upload-box {
-      width: 98%;
+      width: 100%;
     }
   }
 
@@ -1057,13 +1063,13 @@ ion-card {
   }
   .align-row {
     .upload-box {
-      width: 98%;
+      width: 91%;
     }
   }
 
-  .right-side {
-    left: 30px;
-  }
+  // .right-side {
+  //   left: 30px;
+  // }
   .table-expense-container {
     width: 100%;
   }
@@ -1199,12 +1205,20 @@ ion-card {
     margin-left: 20px;
   }
   .upload-icon ion-icon {
-    right: 8%;
+    right: 9%;
     top: 50%;
   }
-  .upload-icon2 ion-icon {
-    right: 8%;
-    top: 50%;
+  // .upload-icon2 ion-icon {
+  //   right: 8%;
+  //   top: 50%;
+  // }
+   .upload-icon2 {
+    position: relative;
+    bottom: 10px;
+  
+    ion-icon {
+      right: 2%;
+    }
   }
   .input-count {
     width: 91%;
@@ -1424,7 +1438,7 @@ ion-card {
       }
 
       width: 50px;
-      top: 25px;
+      top: 5px;
       right: 20px;
       .plus {
         left: -1px;

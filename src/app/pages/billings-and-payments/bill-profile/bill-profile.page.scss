@@ -49,13 +49,13 @@
 .bill-profile-container {
   background: #f2f2f2;
   width: 910px;
-  height: 2650px;
+  // height: 2650px;
   //  height: auto;
-  // min-height: 100px;
+  min-height: 100px;
   // display: flex;
   // flex-direction: column;
 
-  //  min-height: 100%; /* container content के हिसाब से बढ़ेगा */
+   min-height: 100%; /* container content के हिसाब से बढ़ेगा */
   height: auto;
   position: relative;
   top: 10px;
@@ -67,6 +67,11 @@
   padding-left: 100px;
   overflow: hidden;
   margin-bottom: 10px;
+}
+.domi-card{
+   background: #f2f2f2;
+  width: 910px;
+  height: 20px;
 }
 
 // .add-new-bus-container {
@@ -228,7 +233,7 @@ ion-card {
   font-size: 16px;
   color: #333;
   --placeholder-color: #aaa;
-  border: 1px solid black;
+  border: 1px solid #C7C9CC;
   cursor: pointer;
   .icon-container {
     position: relative;
@@ -644,10 +649,11 @@ ion-card {
 
 .due-and-reminder-managment {
   width: 880px;
-  height: 3500px;
+  // height: 3500px;
   position: relative;
   top: 330px;
   right: 80px;
+  margin-bottom: 100px;
 
   padding-top: 30%;
 
@@ -918,11 +924,25 @@ ion-card {
     width: 91%;
   }
   .date-box2 {
-    width: 91%;
+    width: 88%;
   }
   .billing-breakdown {
     width: 107%;
     height: auto;
+  }
+  .table-profit-container { 
+    width: 100%;
+   
+  }
+   .due-and-reminder-managment {
+    width: 110%;
+    height: 350px;
+    
+  }
+  .domi-card{
+    width: 110%;
+    height: 320px;
+    
   }
   .bill-profile-container ion-input {
     width: 91%;
@@ -949,10 +969,7 @@ ion-card {
     width: 105%;
     height: auto;
   }
-  .due-and-reminder-managment {
-    width: 105%;
-    height: 700px;
-  }
+ 
   .first-btn {
     ion-button {
       width: 100%;
@@ -983,9 +1000,12 @@ ion-card {
   }
   .dRM-btn,
   .dRM-btn2 {
+    flex: 1 1 300px; // grow + shrink + base width
     width: 100%;
-    min-width: 400px;
-    top: 60px;
+    height: 48px;
+    margin-top: -16px;
+    border-radius: 10px;
+    font-size: 15px;
   }
 }
 
@@ -1011,6 +1031,11 @@ ion-card {
    .date-box2 {
     width: 91%;
   }
+  .domi-card{
+    width: 110%;
+    height: 320px;
+    
+  }
 
   .right-side {
     left: 30px;
@@ -1025,6 +1050,10 @@ ion-card {
     width: 107%;
 
     height: auto;
+  }
+  .table-profit-container { 
+    width: 100%;
+   
   }
 
   .bill-profile-container ion-input {
@@ -1049,7 +1078,7 @@ ion-card {
   }
   .due-and-reminder-managment {
     width: 107%;
-    height: 700px;
+    height: 350px;
   }
 
   .first-btn {
@@ -1080,11 +1109,14 @@ ion-card {
       top: 60px;
     }
   }
-  .dRM-btn,
+    .dRM-btn,
   .dRM-btn2 {
+    flex: 1 1 300px; // grow + shrink + base width
     width: 100%;
-    min-width: 400px;
-    top: 60px;
+    height: 48px;
+    margin-top: -16px;
+    border-radius: 10px;
+    font-size: 15px;
   }
 }
 
@@ -1136,6 +1168,10 @@ ion-card {
 
     height: auto;
   }
+  .table-profit-container { 
+    width: 100%;
+   
+  }
   .payment-recording {
     width: 110%;
     height: 900px;
@@ -1151,7 +1187,13 @@ ion-card {
 
   .due-and-reminder-managment {
     width: 110%;
-    height: 700px;
+    height: 350px;
+    
+  }
+  .domi-card{
+    width: 110%;
+    height: 320px;
+    
   }
   .bill-profile-container ion-input {
     width: 91%;
@@ -1203,7 +1245,7 @@ ion-card {
     flex: 1 1 300px; // grow + shrink + base width
     width: 100%;
     height: 48px;
-    margin-top: 16px;
+    margin-top: -16px;
     border-radius: 10px;
     font-size: 15px;
   }
@@ -1248,9 +1290,19 @@ ion-card {
     width: 107%;
     height: auto;
   }
+  .table-profit-container { 
+    width: 100%;
+   
+  }
   .due-and-reminder-managment {
     width: 107%;
-    height: 700px;
+    height: 350px;
+  }
+
+  .domi-card{
+    width: 110%;
+    height: 320px;
+    
   }
 
   ion-card {
@@ -1381,7 +1433,9 @@ ion-card {
   }
    .date-box2 {
     width: 91%;
+    margin-left: 20px;
   }
+ 
 
   // .align-rt-f{
   //  margin-right: 20px;
@@ -1459,7 +1513,7 @@ ion-card {
   }
   .payment-recording {
     width: 100%;
-    height: 1100px;
+    height: 1050px;
     position: static;
     margin: 10px 0;
     margin-top: 30px;
@@ -1474,7 +1528,7 @@ ion-card {
   }
   .payment-history {
     width: 100%;
-    height: 400px;
+    height: 350px;
     position: static;
     margin: 10px 0;
     margin-top: 30px;
@@ -1548,7 +1602,7 @@ ion-card {
     ion-button {
       width: 100%;
       height: 48px;
-      margin-top: 16px;
+      margin-top: 46px;
       border-radius: 10px;
       font-size: 15px;
     }
@@ -1572,7 +1626,7 @@ ion-card {
     flex: 1 1 300px; // grow + shrink + base width
     width: 100%;
     height: 48px;
-    margin-top: 16px;
+    margin-top: -16px;
     border-radius: 10px;
     font-size: 15px;
   }

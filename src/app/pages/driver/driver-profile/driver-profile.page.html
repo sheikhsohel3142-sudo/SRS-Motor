@@ -98,7 +98,7 @@
             </ion-col>
 
             <!-- <div class="align-row"> -->
-            <ion-col>
+            <ion-col size="12" size-md="6">
               <div class="upload-container" class="align-row">
                 <ion-label class="upload-ion-label"
                   >Aadhaar / ID Proof</ion-label
@@ -238,7 +238,10 @@
                 Date of Joining
                 <ion-text
                   color="danger"
-                  *ngIf="form.get('joiningDate')?.touched && form.get('joiningDate')?.errors"
+                  *ngIf="form.get(
+                    
+                    
+                    'joiningDate')?.touched && form.get('joiningDate')?.errors"
                 >
                   Date of Joining is required
                 </ion-text>
