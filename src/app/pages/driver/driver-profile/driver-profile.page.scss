@@ -220,13 +220,13 @@ ion-card {
   --placeholder-color: #aaa;
   cursor: pointer;
 
-   ion-icon {
-      font-size: 18px;
-      color: #666;
-      position: absolute;
-      right: 13%;
-      top: 46%;
-    }
+  ion-icon {
+    font-size: 18px;
+    color: #666;
+    position: absolute;
+    right: 13%;
+    top: 46%;
+  }
 }
 .input {
   background: #f5f6f8;
@@ -538,9 +538,9 @@ ion-card {
 }
 
 .button {
-   position: relative;
-   top: -58px;
-   right: -35px;
+  position: relative;
+  top: -58px;
+  right: -35px;
 
   ion-button {
     position: absolute;
@@ -549,9 +549,8 @@ ion-card {
 
     width: 168px;
     height: 30px;
-    --padding-top:0px;
-    --padding-bottom:0px;
-
+    --padding-top: 0px;
+    --padding-bottom: 0px;
 
     border-radius: 10px;
     text-transform: none;
@@ -739,9 +738,22 @@ ion-card {
   justify-content: space-around;
   padding: 0 12px;
   margin-top: 10px;
-  
+
   cursor: pointer;
 }
+// .upload-box2 {
+//   background: #f5f6f8;
+//   border-radius: 8px;
+//   width: 372px;
+//   height: 50px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+//   padding: 0 12px;
+//   margin-top: 10px;
+
+//   cursor: pointer;
+// }
 
 .file-pill {
   display: inline-block;
@@ -796,16 +808,32 @@ ion-card {
   font-size: 20px;
   color: #888;
   position: absolute;
-  right: 11%;
-  top: 45%;
+  right: 12%;
+  top: 50%;
 }
 .upload-icon2 ion-icon {
+    font-size: 20px;
+    color: #888;
+    position: absolute;
+    right: 12%;
+    top: 50%;
+  }
+
+.upload-icon3 {
+  position: relative;
+  width: 100%;
+}
+
+.upload-icon3 ion-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 20px;
   color: #888;
-  position: absolute;
-  right: 4%;
-  top: 45%;
+  pointer-events: none;
 }
+
 
 .monthly-card {
   width: 880px;
@@ -912,6 +940,7 @@ ion-card {
 @media only screen and (min-width: 1600px) {
   .driver-profile-container {
     width: 99%;
+    height: 2450px;
 
     // left: 20px;
     // padding-left: 120px;
@@ -920,11 +949,7 @@ ion-card {
   .right-side {
     left: 30px;
   }
-  .align-row {
-    .upload-box {
-      width: 98%;
-    }
-  }
+
   // .upload-box {
   //   min-width: 372px;
   // }
@@ -944,6 +969,9 @@ ion-card {
   }
   .upload-box {
     width: 91%;
+  }
+  .upload-box2 {
+    width: 96%;
   }
   .salary_configuration {
     width: 105%;
@@ -996,16 +1024,14 @@ ion-card {
   .upload-box {
     width: 91%;
   }
-  .upload-container{
+  .upload-box2 {
+    width: 96%;
+  }
+  .upload-container {
     width: 100%;
   }
   .right-side {
     left: 30px;
-  }
-  .align-row {
-    .upload-box {
-      width: 100%;
-    }
   }
 
   ion-card {
@@ -1058,12 +1084,15 @@ ion-card {
   .upload-box {
     width: 91%;
   }
+  .upload-box2 {
+    width: 96%;
+  }
   .date-box {
     width: 91%;
   }
   .align-row {
     .upload-box {
-      width: 91%;
+      width: 100%;
     }
   }
 
@@ -1132,6 +1161,9 @@ ion-card {
   }
   .upload-box {
     width: 91%;
+  }
+  .upload-box2 {
+    width: 96%;
   }
   .date-box {
     width: 91%;
@@ -1204,22 +1236,29 @@ ion-card {
     width: 91%;
     margin-left: 20px;
   }
+  .upload-box2 {
+    width: 91%;
+    margin-left: 20px;
+  }
   .upload-icon ion-icon {
     right: 9%;
     top: 50%;
   }
-  // .upload-icon2 ion-icon {
-  //   right: 8%;
-  //   top: 50%;
-  // }
-   .upload-icon2 {
-    position: relative;
-    bottom: 10px;
-  
-    ion-icon {
-      right: 2%;
-    }
+  .upload-icon2 ion-icon {
+    right: 9%;
+    top: 50%;
   }
+  .upload-icon3{ 
+    position: fixed;
+    left: 90%;
+    top: 50%;
+    ion-icon {
+   
+  }
+}
+
+
+
   .input-count {
     width: 91%;
     margin-left: 16px;
@@ -1227,11 +1266,10 @@ ion-card {
   .date-box {
     width: 91%;
     margin-left: 20px;
-    ion-icon{
+    ion-icon {
       top: 55%;
       right: 9%;
     }
-   
   }
   .align-left {
     left: 0;

@@ -151,7 +151,7 @@ ion-button {
   background: #f5f6f8;
   border-radius: 8px;
   // width: 372px;
-  height: 50px;
+  height: 49px;
   margin-top: 10px;
   margin-bottom: 19px;
   font-size: 16px;
@@ -463,9 +463,19 @@ ion-button {
   .upload-container {
     width: 100%;
   }
+  .upload-icon {
+    position: relative;
+    left: 99%;
+    bottom: 11px;
+    ion-icon {
+      right: 2%;
+    }
+  }
+
   .upload-box {
     width: 91%;
     margin-left: 20px;
+    margin-bottom: 18px;
   }
   /* Top button (My profile) */
   .title-container {
@@ -528,7 +538,7 @@ ion-button {
     width: 100%;
     min-width: 200px;
     height: 48px;
-    margin-top: 16px;
+    margin-top: -16px;
     border-radius: 10px;
     font-size: 15px;
   }

@@ -98,8 +98,8 @@
             </ion-col>
 
             <!-- <div class="align-row"> -->
-            <ion-col size="12" size-md="6">
-              <div class="upload-container" class="align-row">
+            <ion-col size="12" size-md="6" class="align-right-field">
+              <div class="upload-container">
                 <ion-label class="upload-ion-label"
                   >Aadhaar / ID Proof</ion-label
                 >
@@ -188,8 +188,8 @@
               </div>
             </ion-col>
             <!-- <div class="align-row"> -->
-            <ion-col size="12" size-md="6">
-              <div class="upload-container" class="align-row">
+            <ion-col size="12" size-md="6" class="align-right-field">
+              <div class="upload-container">
                 <ion-label class="upload-ion-label"
                   >Medical Certificate</ion-label
                 >
@@ -225,7 +225,7 @@
                     ></ion-icon>
                   </div>
 
-                  <div class="upload-icon2" (click)="medicalInput.click()">
+                  <div class="upload-icon" (click)="medicalInput.click()">
                     <ion-icon name="add-circle-outline"></ion-icon>
                   </div>
                 </div>
@@ -412,7 +412,7 @@
           <div class="table-row" *ngFor="let e of advanceList">
             <span><div class="date">{{ e.date }}</div></span>
             <span><div class="category">{{ e.reason }}</div></span>
-            <span ><div class="amount">{{ e.amount }}</div></span>
+            <span><div class="amount">{{ e.amount }}</div></span>
             <span><div class="status">{{ e.status }}</div></span>
           </div>
         </div>
