@@ -771,16 +771,7 @@ ion-card {
   margin-left: 1px;
 }
 .file-placeholder {
-  padding-right: 120px;
-  padding-top: 8px;
-  font-size: 14px;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 500;
-  color: #0f172abf;
-  margin-bottom: 6px;
-}
-.file-placeholder2 {
-  padding-right: 30px;
+  // padding-right: 100px;
   padding-top: 8px;
   font-size: 14px;
   font-family: "Space Grotesk", sans-serif;
@@ -828,21 +819,13 @@ ion-card {
   top: 50%;
 }
 
-.upload-icon3 {
-  position: relative;
-  width: 100%;
-}
-
 .upload-icon3 ion-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
   font-size: 20px;
   color: #888;
-  pointer-events: none;
+  position: absolute;
+  right: 12%;
+  top: 50%;
 }
-
 .monthly-card {
   width: 880px;
   height: 450px;
@@ -1257,9 +1240,539 @@ ion-card {
     top: 50%;
   }
   .upload-icon3 ion-icon {
-    right: 3%;
-    top: 50%;
+    position:fixed;
+    right: 13%;
+    top: 60%;
   }
+ 
+
+  .input-count {
+    width: 91%;
+    margin-left: 16px;
+  }
+  .date-box {
+    width: 91%;
+    margin-left: 20px;
+    ion-icon {
+      top: 55%;
+      right: 9%;
+    }
+  }
+  .align-left {
+    left: 0;
+  }
+  .align-right {
+    left: 0;
+  }
+  .upload-box {
+    width: 91%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .upload-container label {
+    margin-left: 20px;
+  }
+
+  /* Card */
+  ion-card {
+    width: 100%;
+    height: 1350px;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+  }
+  .salary_configuration {
+    width: 100%;
+    right: 0;
+    top: 80px;
+  }
+  .expense-container {
+    width: 100%;
+    right: 0;
+    top: 140px;
+  }
+  .monthly-card {
+    width: 100%;
+    height: 600px;
+    right: 0;
+    top: 200px;
+  }
+
+  /* Top button (My profile) */
+  .title-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    right: 0;
+  }
+
+  /* Heading */
+  .form-head {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  /* 🔥 GRID → SINGLE COLUMN */
+  ion-grid {
+    display: block;
+  }
+
+  ion-row {
+    display: block;
+    left: 20px;
+  }
+
+  ion-col {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Remove right side shift */
+  .align-row {
+    margin-left: 0;
+  }
+
+  .align-right-field {
+    left: 0;
+    margin-top: 10px;
+  }
+
+  /* Form fields */
+  .driver-profile-container {
+    margin-bottom: 12px;
+  }
+
+  .driver-profile-container ion-label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    margin-left: 20px;
+  }
+
+  .driver-profile-container ion-input {
+    width: 91%;
+    min-width: 31%;
+    height: 44px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 20px;
+  }
+
+  /* Button */
+  .button2 {
+    top: 50px;
+    ion-button {
+      width: 100%;
+      min-width: 200px;
+      height: 48px;
+      top: 50%;
+      margin-top: 16px;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+  }
+  .paid-btn {
+    left: -40px;
+  }
+  .generate-btn {
+    left: -40px;
+  }
+
+  /* Remove extra spacing issue */
+  body {
+    overflow-x: hidden;
+  }
+
+  .button {
+    ion-button {
+      height: 30px;
+      top: 1%;
+    }
+  }
+}
+@media only screen and (max-width: 567px) {
+  /* Outer container */
+  .driver-profile-container {
+    width: 99%;
+    height: 3000px;
+    // padding: 10px;
+    background: #f2f2f2;
+    padding: 8px 10px;
+  }
+  .input {
+    width: 91%;
+    margin-left: 20px;
+  }
+  .upload-box2 {
+    width: 91%;
+    margin-left: 20px;
+  }
+  .upload-icon ion-icon {
+    right: 9%;
+    top: 55%;
+  }
+  .upload-icon2 ion-icon {
+    right: 9%;
+    top: 55%;
+  }
+  .upload-icon3 ion-icon {
+    position:fixed;
+    right: 14%;
+    top: 60%;
+  }
+ 
+
+  .input-count {
+    width: 91%;
+    margin-left: 16px;
+  }
+  .date-box {
+    width: 91%;
+    margin-left: 20px;
+    ion-icon {
+      top: 55%;
+      right: 9%;
+    }
+  }
+  .align-left {
+    left: 0;
+  }
+  .align-right {
+    left: 0;
+  }
+  .upload-box {
+    width: 91%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .upload-container label {
+    margin-left: 20px;
+  }
+
+  /* Card */
+  ion-card {
+    width: 100%;
+    height: 1350px;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+  }
+  .salary_configuration {
+    width: 100%;
+    right: 0;
+    top: 80px;
+  }
+  .expense-container {
+    width: 100%;
+    right: 0;
+    top: 140px;
+  }
+  .monthly-card {
+    width: 100%;
+    height: 600px;
+    right: 0;
+    top: 200px;
+  }
+
+  /* Top button (My profile) */
+  .title-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    right: 0;
+  }
+
+  /* Heading */
+  .form-head {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  /* 🔥 GRID → SINGLE COLUMN */
+  ion-grid {
+    display: block;
+  }
+
+  ion-row {
+    display: block;
+    left: 20px;
+  }
+
+  ion-col {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Remove right side shift */
+  .align-row {
+    margin-left: 0;
+  }
+
+  .align-right-field {
+    left: 0;
+    margin-top: 10px;
+  }
+
+  /* Form fields */
+  .driver-profile-container {
+    margin-bottom: 12px;
+  }
+
+  .driver-profile-container ion-label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    margin-left: 20px;
+  }
+
+  .driver-profile-container ion-input {
+    width: 91%;
+    min-width: 31%;
+    height: 44px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 20px;
+  }
+
+  /* Button */
+  .button2 {
+    top: 50px;
+    ion-button {
+      width: 100%;
+      min-width: 200px;
+      height: 48px;
+      top: 50%;
+      margin-top: 16px;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+  }
+  .paid-btn {
+    left: -40px;
+  }
+  .generate-btn {
+    left: -40px;
+  }
+
+  /* Remove extra spacing issue */
+  body {
+    overflow-x: hidden;
+  }
+
+  .button {
+    ion-button {
+      height: 30px;
+      top: 1%;
+    }
+  }
+}
+@media only screen and (max-width: 467px) {
+  /* Outer container */
+  .driver-profile-container {
+    width: 99%;
+    height: 3000px;
+    // padding: 10px;
+    background: #f2f2f2;
+    padding: 8px 10px;
+  }
+  .input {
+    width: 91%;
+    margin-left: 20px;
+  }
+  .upload-box2 {
+    width: 91%;
+    margin-left: 20px;
+  }
+  .upload-icon ion-icon {
+    right: 9%;
+    top: 55%;
+  }
+  .upload-icon2 ion-icon {
+    right: 9%;
+    top: 55%;
+  }
+  .upload-icon3 ion-icon {
+    position:fixed;
+    right: 15%;
+    top: 60%;
+  }
+ 
+
+  .input-count {
+    width: 91%;
+    margin-left: 16px;
+  }
+  .date-box {
+    width: 91%;
+    margin-left: 20px;
+    ion-icon {
+      top: 55%;
+      right: 9%;
+    }
+  }
+  .align-left {
+    left: 0;
+  }
+  .align-right {
+    left: 0;
+  }
+  .upload-box {
+    width: 91%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .upload-container label {
+    margin-left: 20px;
+  }
+
+  /* Card */
+  ion-card {
+    width: 100%;
+    height: 1350px;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
+  }
+  .salary_configuration {
+    width: 100%;
+    right: 0;
+    top: 80px;
+  }
+  .expense-container {
+    width: 100%;
+    right: 0;
+    top: 140px;
+  }
+  .monthly-card {
+    width: 100%;
+    height: 600px;
+    right: 0;
+    top: 200px;
+  }
+
+  /* Top button (My profile) */
+  .title-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    right: 0;
+  }
+
+  /* Heading */
+  .form-head {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  /* 🔥 GRID → SINGLE COLUMN */
+  ion-grid {
+    display: block;
+  }
+
+  ion-row {
+    display: block;
+    left: 20px;
+  }
+
+  ion-col {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Remove right side shift */
+  .align-row {
+    margin-left: 0;
+  }
+
+  .align-right-field {
+    left: 0;
+    margin-top: 10px;
+  }
+
+  /* Form fields */
+  .driver-profile-container {
+    margin-bottom: 12px;
+  }
+
+  .driver-profile-container ion-label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    margin-left: 20px;
+  }
+
+  .driver-profile-container ion-input {
+    width: 91%;
+    min-width: 31%;
+    height: 44px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 20px;
+  }
+
+  /* Button */
+  .button2 {
+    top: 50px;
+    ion-button {
+      width: 100%;
+      min-width: 200px;
+      height: 48px;
+      top: 50%;
+      margin-top: 16px;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+  }
+  .paid-btn {
+    left: -40px;
+  }
+  .generate-btn {
+    left: -40px;
+  }
+
+  /* Remove extra spacing issue */
+  body {
+    overflow-x: hidden;
+  }
+
+  .button {
+    ion-button {
+      height: 30px;
+      top: 1%;
+    }
+  }
+}
+@media only screen and (max-width: 390px) {
+  /* Outer container */
+  .driver-profile-container {
+    width: 99%;
+    height: 3000px;
+    // padding: 10px;
+    background: #f2f2f2;
+    padding: 8px 10px;
+  }
+  .input {
+    width: 91%;
+    margin-left: 20px;
+  }
+  .upload-box2 {
+    width: 91%;
+    margin-left: 20px;
+  }
+  .upload-icon ion-icon {
+    right: 9%;
+    top: 55%;
+  }
+  .upload-icon2 ion-icon {
+    right: 9%;
+    top: 55%;
+  }
+  .upload-icon3 ion-icon {
+    position:fixed;
+    right: 16%;
+    top: 60%;
+  }
+ 
 
   .input-count {
     width: 91%;

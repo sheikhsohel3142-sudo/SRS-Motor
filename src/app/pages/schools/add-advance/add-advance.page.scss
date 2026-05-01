@@ -1,4 +1,3 @@
-
 .title-container {
   position: relative;
   top: 20px;
@@ -16,7 +15,7 @@
     font-weight: 500;
     top: 2px;
     left: 19px;
-   
+
     font-size: 17px;
 
     ion-icon {
@@ -29,7 +28,7 @@
   }
 }
 
-.add-advance{
+.add-advance {
   background: #f2f2f2;
   // width: 910px;
   // height: 880px;
@@ -142,7 +141,7 @@ ion-button {
 
 // }
 .date-box {
-    background: #f5f6f8;
+  background: #f5f6f8;
   border-radius: 8px;
   padding: 12px 14px;
   width: 372px;
@@ -152,9 +151,9 @@ ion-button {
   line-height: 150%;
   font-size: 16px;
   color: #333;
-  --placeholder-color: #aaa;;
+  --placeholder-color: #aaa;
   cursor: pointer;
-    ion-icon {
+  ion-icon {
     font-size: 18px;
     color: #666;
     position: absolute;
@@ -290,8 +289,7 @@ ion-button {
   }
 
   .right-side {
-    
-    left: 30px
+    left: 30px;
   }
   .input {
     width: 91%;
@@ -328,8 +326,7 @@ ion-button {
   }
 
   .right-side {
-    
-    left: 30px
+    left: 30px;
   }
 
   .date-box {
@@ -362,8 +359,7 @@ ion-button {
   }
 
   .right-side {
-    
-    left: 30px
+    left: 30px;
   }
   .date-box {
     width: 91%;
@@ -407,8 +403,7 @@ ion-button {
   }
 
   .right-side {
-    
-    left: 30px
+    left: 30px;
   }
   .date-box {
     width: 91%;
@@ -457,17 +452,27 @@ ion-button {
   .date-box {
     width: 91%;
     margin-left: 20px;
+    ion-icon {
+    position: fixed;
+      right: 13%;
+      top: 48%;
+    }
   }
 
   /* Card */
   ion-card {
-    min-width: 300px;
-    height: 500px;
-    margin: 5px;
-    padding: 16px;
-    border-radius: 12px;
-    top: 30px;
-    right: 0;
+    // min-width: 300px;
+    // height: 500px;
+    // margin: 5px;
+    // padding: 16px;
+    // border-radius: 12px;
+    // top: 30px;
+    // right: 0;
+      width: 100%;
+    height: 550px;
+    position: static;
+    margin: 10px 0;
+    margin-top: 30px;
   }
 
   /* Top button (My profile) */
@@ -487,7 +492,6 @@ ion-button {
   /* 🔥 GRID → SINGLE COLUMN */
   ion-grid {
     display: block;
-    
   }
 
   ion-row {

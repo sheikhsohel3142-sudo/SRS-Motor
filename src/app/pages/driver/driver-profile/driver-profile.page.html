@@ -189,7 +189,7 @@
             </ion-col>
             <!-- <div class="align-row"> -->
             <ion-col size="12" size-md="6" class="align-right-field">
-              <!-- <div class="upload-container">
+              <div class="upload-container">
                 <ion-label class="upload-ion-label"
                   >Medical Certificate</ion-label
                 >
@@ -225,64 +225,11 @@
                     ></ion-icon>
                   </div>
 
-                  <div class="upload-icon" (click)="medicalInput.click()">
+                  <div class="upload-icon3" (click)="medicalInput.click()">
                     <ion-icon name="add-circle-outline"></ion-icon>
                   </div>
                 </div>
-              </div> -->
-
-                 <div class="upload-container">
-                  <ion-label class="upload-label"
-                    >Medical Certificate
-                    <ion-text
-                      color="danger"
-                      *ngIf="form.get('medicalCertificate')?.touched && !selectedFiles['medicalCertificate']?.length"
-                    >
-                      Medical Certificate is required
-                    </ion-text>
-                  </ion-label>
-
-                  <div class="upload-box">
-                    <input
-                      type="file"
-                      #medicalInput
-                      hidden
-                      multiple
-                      formControlName="medicalCertificate"
-                      (change)="onFileSelected($event, 'medicalCertificate')"
-                    />
-
-                    <!-- Placeholder -->
-                    <div
-                      class="file-placeholder2"
-                      *ngIf="!selectedFiles['medicalCertificate']?.length"
-                      (click)="medicalInput.click()"
-                    >
-                      Upload Medical Certificate
-                    </div>
-
-                    <!-- File Pills -->
-                    <div
-                      class="file-pill"
-                      *ngFor="let file of selectedFiles['medicalCertificate']; let i = index"
-                      (click)="medicalInput.click()"
-                    >
-                      <div class="file-name">{{ file.name }}</div>
-
-                      <ion-icon
-                        name="close-circle-outline"
-                        (click)="removeFile($event, 'medicalCertificate', i)"
-                      ></ion-icon>
-                    </div>
-
-                    <!-- Add Icon -->
-                    <div class="upload-icon3" (click)="medicalInput.click()">
-                      <ion-icon name="add-circle-outline"></ion-icon>
-                    </div>
-                  </div>
-                </div>
-            
-
+              </div>
             </ion-col>
             <!-- </div> -->
 
