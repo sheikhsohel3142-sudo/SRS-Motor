@@ -82,7 +82,7 @@
     ion-icon {
       transform: scale(1.3);
       position: relative;
-      top: 5px;
+      top: 6px;
       right: 5px;
       color: #000000;
     }
@@ -931,7 +931,7 @@ ion-card {
 @media only screen and (min-width: 1600px) {
   .driver-profile-container {
     width: 99%;
-    height: 2450px;
+    height: 2440px;
 
     // left: 20px;
     // padding-left: 120px;
@@ -1001,7 +1001,7 @@ ion-card {
 @media only screen and (max-width: 1599px) and (min-width: 1280px) {
   .driver-profile-container {
     width: 99%;
-    height: 2470px;
+    height: 2450px;
 
     // padding-left: 140px;
   }
@@ -1067,7 +1067,7 @@ ion-card {
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
   .driver-profile-container {
     width: 99%;
-    height: 2470px;
+    height: 2450px;
   }
   .input {
     width: 91%;
@@ -1145,7 +1145,7 @@ ion-card {
 @media only screen and (max-width: 1024px) and (min-width: 900px) {
   .driver-profile-container {
     width: 99.5%;
-    height: 2400px;
+    height: 2450px;
   }
   .input {
     width: 91%;
@@ -1169,7 +1169,7 @@ ion-card {
 
   ion-card {
     width: 109%;
-    height: 850px;
+    height: 900px;
 
     // right: 0;
     // top: 60px;
@@ -1218,7 +1218,7 @@ ion-card {
   /* Outer container */
   .driver-profile-container {
     width: 99%;
-    height: 3000px;
+    height: 3020px;
     // padding: 10px;
     background: #f2f2f2;
     padding: 8px 10px;
@@ -1240,11 +1240,10 @@ ion-card {
     top: 50%;
   }
   .upload-icon3 ion-icon {
-    position:fixed;
-    right: 14%;
+    position: fixed;
+    right: 13%;
     top: 60%;
   }
- 
 
   .input-count {
     width: 91%;
@@ -1390,9 +1389,34 @@ ion-card {
     }
   }
 }
-
-
-
+@media only screen and (max-width: 567px) {
+  .upload-icon3 ion-icon {
+    position: fixed;
+    right: 15%;
+    top: 60%;
+  }
+}
+@media only screen and (max-width: 467px) {
+  .upload-icon3 ion-icon {
+    position: fixed;
+    right: 16%;
+    top: 60%;
+  }
+}
+@media only screen and (max-width: 367px) {
+  .upload-icon3 ion-icon {
+    position: fixed;
+    right: 17%;
+    top: 60%;
+  }
+}
+@media only screen and (max-width: 267px) {
+  .upload-icon3 ion-icon {
+    position: fixed;
+    right: 19%;
+    top: 60%;
+  }
+}
 
 // .button ion-button {
 //   position: static; /* ❗ mobile fix */
