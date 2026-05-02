@@ -59,21 +59,24 @@ ion-button {
     letter-spacing: 0%;
   }
 
-  .plus-container {
-    border: 1.5px solid #000000;
+    .plus-container {
+    border: 2px solid black;
     width: 18px;
     height: 18px;
     font-size: 20px;
-    border-radius: 2px;
-     position: fixed;
-    top: 10.5px;
-    left: 17.3px;
+    border-radius: 3px;
+    position: fixed;
+    top: 12px;
+    left: 18px;
     bottom: 12%;
     color: #0f172a;
     span {
+      transform: scale(0.8);
       position: fixed;
-      top: 10px;
-      left: 20px;
+      top: 11px;
+      left: 21.364px;
+  
+      
     }
   }
 }
