@@ -827,6 +827,7 @@
   //   align-items: center;
   //   gap: 20px;
   // }
+
   .right-side {
     left: 30px;
   }
@@ -935,7 +936,7 @@
     width: 99%;
   }
   .input {
-    width: 95%;
+    width: 91%;
   }
   .upload-box {
     width: 45.5%;
@@ -948,30 +949,31 @@
 
   //   left: 30px
   // }
+ 
 
   .bus-details {
-    width: 111%;
+    width: 110%;
 
     // right: 0;
     // top: 60px;
   }
   .All-list {
-    width: 111%;
+    width: 110%;
   }
   .expense-container {
-    width: 111%;
+    width: 110%;
   }
   .Revenu-table-container {
-    width: 107%;
+    width: 102%;
   }
   .table-profitability-container {
-    width: 105%;
+    width: 102%;
   }
   .table-expense-container {
-    width: 111%;
+    width: 102%;
   }
   .profitability-summary-container {
-    width: 111%;
+    width: 110%;
   }
   .title-container {
     margin-left: 50;
@@ -991,7 +993,7 @@
     ion-button {
       width: 100%;
       min-width: 400px;
-      top: 60px;
+      top: 100px;
     }
   }
 }
