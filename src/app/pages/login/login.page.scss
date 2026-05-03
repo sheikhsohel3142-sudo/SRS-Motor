@@ -15,6 +15,7 @@
   top: 10px;
 
   overflow: hidden;
+
 }
 // .profile-container{
 //   width: calc(100% - 10px);  /* left + right margin */
@@ -37,9 +38,9 @@
 .login-container {
   padding: 30px 20px;
   width: 400px;
-  position: relative;
-  left: 700px;
-  bottom: 500px;
+  position: absolute;
+  right: 5%;
+ top: 12%;
 }
 
 .company {
@@ -63,12 +64,16 @@ label {
   display: block;
   margin-bottom: 6px;
   font-weight: 600;
+  position: relative;
+
 }
 
 .input-box {
   --background: #ffffff;
   border-radius: 12px;
-  padding-left: 10px;
+  padding-left: 10px; 
+  position: relative;
+  right: 10px;
 }
 
 ion-icon {
@@ -87,262 +92,310 @@ ion-icon {
   margin-top: 30px;
   --border-radius: 12px;
   --background: #375677;
+
 }
 
 small {
   color: red;
   margin-left: 5px;
 }
-// @media (min-width: 1620px) {
-//   .profile-container {
-//     min-width: 1890px;
-//     min-height: 1200px;
-//     left: 10px;
-//   }
+.vertical-line{
+ width: 0;
+  height: 700px;
+  border-left: 1px solid #C7C9CC;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
 
+}
+
+
+// @media only screen and (min-width: 1024px) {
+//   .profile-container {
+//     width: 98%;
+//     height: auto;
+//   }
+  
 //   .login-container {
-//     left: 850px;
+//     left: 750px;
 //     bottom: 520px;
 //   }
-
-//   .icon-container {
-//     left: 20px;
-//   }
-// }
-// @media (max-width: 1509px) {
-//   .profile-container {
-//     min-width: 1490px;
-//     min-height: 920px;
-//     left: 10px;
-//   }
-
-//   .login-container {
-//     left: 850px;
-//     bottom: 520px;
-//   }
-
-//   .icon-container {
-//     left: 20px;
-//   }
-// }
-// @media (min-width: 1600px) {
-//   .profile-container {
-//     max-width: 1590px;
-//   }
-
-//   .icon-container img {
-//     max-width: 500px;
-//   }
-// }
-
-
-// @media only screen and (min-width: 1909px) {
-
-//   .profile-container {
-//     min-width: 1609px;
-//     height: 950px;
-//   }
-
-//   .icon-container {
-//     width: 600px;
-//     top: 200px;
-//   }
-
-//   .login-container {
-//     width: 450px;
-//     right: 400px;
-    
-//   }
-
-// }.
-
-// .profile-container {
-//   background: #f2f2f2;
-
-//   width: 90%;
-//   max-width: 1600px;   /* इससे large screen पर भी limit रहेगा */
-
-//   height: 880px;
-//   margin: auto;
-
-//   position: relative;
-//   top: 20px;
-
-//   border-radius: 14px;
-//   padding-left: 80px;
-//   overflow: hidden;
-// }
-
-// .icon-container {
-//   height: 600px;
-//   width: 500px;
-
-//   position: absolute;
-//   top: 160px;
-//   left: 40px;
-// }
-
-// .login-container {
-//   padding: 30px 20px;
-//   width: 400px;
-
-//   position: absolute;
-//   right: 120px;
-//   top: 200px;
-// }
-
-
-/* ===== Desktop Large (1600px+) ===== */
-// @media only screen and (min-width: 1409px) {
-//   .profile-container {
-//     min-width: 1490px;
-//     height: 900px;
-//     background-color: #b8b7b7;
-//   }
-
-//   .login-container {
-//     left: 780px;
-//     bottom: 520px;
-//   }
-
 //   .icon-container {
 //     left: 40px;
 //   }
 // }
-/* Samsung Galaxy A8 Tablet */
-// @media (max-width: 768px){
-
-//   .profile-container{
-//     width: 92%;
+// @media only screen and (min-width: 1300px) {
+//   .profile-container {
+//     width: 98%;
 //     height: auto;
-//     padding-left: 25px;
+//   }
+//   .login-container {
+//     left: 680px;
+//     bottom: 520px;
+//   }
+//   .icon-container {
+//     left: 40px;
+//   }
+// }
+// @media only screen and (min-width: 1500px) {
+//   .profile-container {
+//     width: 98%;
+//     height: auto;
+//   }
+//   .login-container {
+//     left: 880px;
+//     bottom: 520px;
+//   }
+//   .icon-container {
+//     left: 40px;
+//   }
+// }
+// @media only screen and (min-width: 1600px) {
+//   .profile-container {
+//     width: 99%;
+//     height: auto;
+//   }
+//   .login-container {
+//     left: 1080px;
+//     bottom: 520px;
+//   }
+//   .icon-container {
+//     left: 40px;
+//   }
+// }
+
+// /* ===== Normal Laptop (1280px) ===== */
+// @media only screen and (max-width: 1280px) {
+//   .profile-container {
+//     width: 98%;
+//     height: auto;
+//     padding-left: 70px;
 //   }
 
-//   .icon-container{
+//   .login-container {
+//     width: 360px;
+//     left: 700px;
+//     bottom: 470px;
+//   }
+
+//   .icon-container {
+//     width: 420px;
+//     left: 0px;
+//   }
+// }
+
+// /* ===== Tablet (768px) ===== */
+// @media only screen and (max-width: 1108px) {
+//   .profile-container {
+//     width: 90%;
+//     margin-top: 350px;
+//     height: auto;
+//     padding-left: 30px;
+//   }
+
+//   .icon-container {
 //     display: none;
 //   }
 
-//   .login-container{
+//   .login-container {
+//     width: 100%;
 //     position: relative;
 //     left: 0;
 //     bottom: 0;
-//     width: 100%;
 //   }
-
 // }
 
+// /* ===== Mobile (480px) ===== */
+// @media only screen and (max-width: 480px) {
+//   .profile-container {
+//     width: 95%;
+//     margin-top: 150px;
+//     height: auto;
+//     padding: 20px;
+//   }
 
-@media only screen and (min-width: 1024px) {
+//   .login-container {
+//     width: 100%;
+//     padding: 20px;
+//   }
+
+//   .title {
+//     font-size: 22px;
+//   }
+
+//   .login-btn {
+//     width: 100%;
+//   }
+// }
+
+/* ===== 1600px and above ===== */
+@media (min-width: 1600px) {
+  .profile-container {
+    width: 98.6%;
+    height: 806px;
+  }
+
+  // .login-container {
+  //   left: 900px;
+  //   bottom: 690px;
+  // }
+
+  // .icon-container {
+  //   left: 20px;
+  // }
+}
+
+/* ===== 1280px – 1599px ===== */
+@media (min-width: 1280px) and (max-width: 1599px) {
+  .profile-container {
+    width: 98.6%;
+    height: 806px;
+    padding-left: 80px;
+  }
+
+  // .login-container {
+  //   left: 700px;
+  //   bottom: 690px;
+  // }
+
+  .icon-container {
+    width: 450px;
+  }
+    .input-box {
+    width: 105%;
+  }
+    .login-btn {
+     width: 105%;
+
+  }
+}
+
+/* ===== 1024px – 1279px ===== */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .profile-container {
+    width: 98.6%;
+    height: 806px;
+    padding-left: 50px;
+  }
+
+  .login-container {
+   
+    bottom: 0;
+  }
+  .input-box {
+    width: 107%;
+  }
+ 
+
+
+  .icon-container {
+    width: 450px;
+  }
+  .login-btn {
+     width: 105%;
+
+  }
+}
+
+/* ===== 768px – 1023px (Tablet) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
   .profile-container {
     width: 98%;
     height: auto;
-  }
-  
-  .login-container {
-    left: 750px;
-    bottom: 520px;
-  }
-  .icon-container {
-    left: 40px;
-  }
-}
-@media only screen and (min-width: 1300px) {
-  .profile-container {
-    width: 98%;
-    height: auto;
-  }
-  .login-container {
-    left: 680px;
-    bottom: 520px;
-  }
-  .icon-container {
-    left: 40px;
-  }
-}
-@media only screen and (min-width: 1500px) {
-  .profile-container {
-    width: 98%;
-    height: auto;
-  }
-  .login-container {
-    left: 880px;
-    bottom: 520px;
-  }
-  .icon-container {
-    left: 40px;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  .profile-container {
-    width: 99%;
-    height: auto;
-  }
-  .login-container {
-    left: 1080px;
-    bottom: 520px;
-  }
-  .icon-container {
-    left: 40px;
-  }
-}
-
-/* ===== Normal Laptop (1280px) ===== */
-@media only screen and (max-width: 1280px) {
-  .profile-container {
-    width: 98%;
-    height: auto;
-    padding-left: 70px;
-  }
-
-  .login-container {
-    width: 360px;
-    left: 700px;
-    bottom: 470px;
-  }
-
-  .icon-container {
-    width: 420px;
-    left: 0px;
-  }
-}
-
-/* ===== Tablet (768px) ===== */
-@media only screen and (max-width: 1108px) {
-  .profile-container {
-    width: 90%;
-    margin-top: 350px;
-    height: auto;
-    padding-left: 30px;
+    padding: 40px;
+    margin-top: 35%;
   }
 
   .icon-container {
     display: none;
   }
+ .vertical-line{
+    display: none;
+  }
+   .input-box {
+    width: 107%;
+  }
+    .login-btn {
+     width: 105%;
+
+  }
 
   .login-container {
-    width: 100%;
     position: relative;
     left: 0;
     bottom: 0;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
   }
 }
 
-/* ===== Mobile (480px) ===== */
-@media only screen and (max-width: 480px) {
+/* ===== 480px – 767px (Mobile) ===== */
+@media (min-width: 480px) and (max-width: 767px) {
   .profile-container {
-    width: 95%;
-    margin-top: 150px;
+    width: 98%;
     height: auto;
     padding: 20px;
+    margin-top: 50%;
+  }
+
+  .icon-container {
+    display: none;
+  }
+  .vertical-line{
+    display: none;
+  }
+    .input-box {
+    width: 102%;
+  }
+    .login-btn {
+     width: 100%;
+
   }
 
   .login-container {
+    position: relative;
+    left: 0;
+    bottom: 0;
     width: 100%;
     padding: 20px;
   }
 
   .title {
     font-size: 22px;
+  }
+}
+
+/* ===== Below 480px ===== */
+@media (max-width: 479px) {
+  .profile-container {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    margin-top: 50%;
+  }
+
+  .icon-container {
+    display: none;
+  }
+  .vertical-line{
+    display: none;
+  }
+    .input-box {
+    width: 102%;
+  }
+
+
+  .login-container {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 20px;
   }
 
   .login-btn {
