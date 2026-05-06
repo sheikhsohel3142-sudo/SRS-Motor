@@ -55,7 +55,7 @@
   // display: flex;
   // flex-direction: column;
 
-   min-height: 100%; /* container content के हिसाब से बढ़ेगा */
+  min-height: 100%; /* container content के हिसाब से बढ़ेगा */
   height: auto;
   position: relative;
   top: 10px;
@@ -68,8 +68,8 @@
   overflow: hidden;
   margin-bottom: 10px;
 }
-.domi-card{
-   background: #f2f2f2;
+.domi-card {
+  background: #f2f2f2;
   width: 910px;
   height: 20px;
 }
@@ -233,7 +233,7 @@ ion-card {
   font-size: 16px;
   color: #333;
   --placeholder-color: #aaa;
-  border: 1px solid #C7C9CC;
+  border: 1px solid #c7c9cc;
   cursor: pointer;
   .icon-container {
     position: relative;
@@ -288,6 +288,13 @@ ion-card {
   ion-select {
     padding-left: 25px;
     --placeholder-color: #0f172abf;
+  }
+  ion-select::part(text) {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   ion-select::part(icon) {
@@ -535,28 +542,24 @@ ion-card {
 //     color: #0f172a;
 //   }
 // }
-.date{
+.date {
   // border: 1px solid red;
   display: flex;
   justify-content: center;
-
 }
-.catagory{
+.catagory {
   // border: 1px solid red;
   display: flex;
   justify-content: center;
-
 }
-.mode{
+.mode {
   // border: 1px solid red;
   display: flex;
   justify-content: center;
-
 }
-.status{
+.status {
   display: flex;
   justify-content: center;
-
 }
 
 // .date2 {
@@ -789,8 +792,8 @@ ion-card {
     text-align: center;
   }
 }
-.btn-container{
-   display: flex;
+.btn-container {
+  display: flex;
   gap: 10%;
 
   position: absolute;
@@ -804,19 +807,19 @@ ion-card {
 
   ion-button {
     // position: absolute;
-     // top: 2%;
+    // top: 2%;
     // right: 18%;
     bottom: 400px;
     width: 158px;
     // height: 18px;
     margin-top: 15px;
-     --padding-top: 0px;
-  --padding-bottom: 0px;
-  --padding-start: 10px;
-  --padding-end: 10px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-start: 10px;
+    --padding-end: 10px;
 
-  min-height: 30px;   /* IMPORTANT */
-  height: 42px;
+    min-height: 30px; /* IMPORTANT */
+    height: 42px;
 
     border-radius: 10px;
     text-transform: none;
@@ -824,8 +827,8 @@ ion-card {
     color: #4f8cff;
     border: 1px dashed #4f8cff;
     white-space: nowrap;
-    ion-icon{
-    transform: scale(1.15);
+    ion-icon {
+      transform: scale(1.15);
     }
     div {
       font-family: "Space Grotesk", sans-serif;
@@ -862,13 +865,13 @@ ion-card {
     bottom: 400px;
     width: 158px;
     margin-top: 15px;
-     --padding-top: 0px;
-  --padding-bottom: 0px;
-  --padding-start: 10px;
-  --padding-end: 10px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-start: 10px;
+    --padding-end: 10px;
 
-  min-height: 30px;   /* IMPORTANT */
-  height: 42px;
+    min-height: 30px; /* IMPORTANT */
+    height: 42px;
     border-radius: 10px;
     text-transform: none;
     background-color: #ffffff;
@@ -882,10 +885,10 @@ ion-card {
       font-size: 18px;
       margin-left: 5px;
     }
-     img{
-    transform: scale(1.1);
-    margin-right:-8px;
-   }
+    img {
+      transform: scale(1.1);
+      margin-right: -8px;
+    }
     .plus {
       width: 21px;
       height: 21px;
@@ -930,19 +933,16 @@ ion-card {
     width: 107%;
     height: auto;
   }
-  .table-profit-container { 
+  .table-profit-container {
     width: 100%;
-   
   }
-   .due-and-reminder-managment {
+  .due-and-reminder-managment {
     width: 110%;
     height: 350px;
-    
   }
-  .domi-card{
+  .domi-card {
     width: 110%;
     height: 320px;
-    
   }
   .bill-profile-container ion-input {
     width: 91%;
@@ -969,7 +969,7 @@ ion-card {
     width: 105%;
     height: auto;
   }
- 
+
   .first-btn {
     ion-button {
       width: 100%;
@@ -1028,13 +1028,12 @@ ion-card {
   .date-box {
     width: 91%;
   }
-   .date-box2 {
+  .date-box2 {
     width: 91%;
   }
-  .domi-card{
+  .domi-card {
     width: 110%;
     height: 320px;
-    
   }
 
   .right-side {
@@ -1051,9 +1050,8 @@ ion-card {
 
     height: auto;
   }
-  .table-profit-container { 
+  .table-profit-container {
     width: 100%;
-   
   }
 
   .bill-profile-container ion-input {
@@ -1109,7 +1107,7 @@ ion-card {
       top: 60px;
     }
   }
-    .dRM-btn,
+  .dRM-btn,
   .dRM-btn2 {
     flex: 1 1 300px; // grow + shrink + base width
     width: 100%;
@@ -1137,7 +1135,7 @@ ion-card {
   .setting-box {
     width: 91%;
   }
-   .date-box2 {
+  .date-box2 {
     width: 91%;
   }
 
@@ -1168,9 +1166,8 @@ ion-card {
 
     height: auto;
   }
-  .table-profit-container { 
+  .table-profit-container {
     width: 100%;
-   
   }
   .payment-recording {
     width: 110%;
@@ -1188,12 +1185,10 @@ ion-card {
   .due-and-reminder-managment {
     width: 110%;
     height: 350px;
-    
   }
-  .domi-card{
+  .domi-card {
     width: 110%;
     height: 320px;
-    
   }
   .bill-profile-container ion-input {
     width: 91%;
@@ -1213,7 +1208,7 @@ ion-card {
       top: 60px;
     }
   }
- .recored-btn,
+  .recored-btn,
   .recored-btn2 {
     flex: 1 1 300px; // dono equal width lenge
     // min-width: 250px;
@@ -1266,7 +1261,7 @@ ion-card {
   .setting-box {
     width: 91%;
   }
-   .date-box2 {
+  .date-box2 {
     width: 91%;
   }
 
@@ -1290,19 +1285,17 @@ ion-card {
     width: 107%;
     height: auto;
   }
-  .table-profit-container { 
+  .table-profit-container {
     width: 100%;
-   
   }
   .due-and-reminder-managment {
     width: 107%;
     height: 350px;
   }
 
-  .domi-card{
+  .domi-card {
     width: 110%;
     height: 320px;
-    
   }
 
   ion-card {
@@ -1342,7 +1335,7 @@ ion-card {
     }
   }
 
- .recored-btn,
+  .recored-btn,
   .recored-btn2 {
     flex: 1 1 300px; // dono equal width lenge
     // min-width: 250px;
@@ -1431,11 +1424,10 @@ ion-card {
   .align-right-field {
     left: 0;
   }
-   .date-box2 {
+  .date-box2 {
     width: 91%;
     margin-left: 20px;
   }
- 
 
   // .align-rt-f{
   //  margin-right: 20px;
@@ -1671,95 +1663,88 @@ ion-card {
   }
 }
 @media (max-width: 600px) {
- .button {
-  // position: absolute;
-  // top: 12px;
-
-  ion-button {
+  .button {
     // position: absolute;
-     // top: 2%;
-    // right: 18%;
-    bottom: 400px;
-    width: 50px;
-    height: 38px;
+    // top: 12px;
 
-   ion-icon{
-    transform: scale(1.2);
-    position: relative;
-    right: 5px;
-   
-   }
-    
-    div {
-    
-      font-size: 0px;
-      
+    ion-button {
+      // position: absolute;
+      // top: 2%;
+      // right: 18%;
+      bottom: 400px;
+      width: 50px;
+      height: 38px;
+
+      ion-icon {
+        transform: scale(1.2);
+        position: relative;
+        right: 5px;
+      }
+
+      div {
+        font-size: 0px;
+      }
+      // img {
+      //   color: #4f8cff;
+      // }
+      // .plus {
+      //   width: 21px;
+      //   height: 21px;
+      //   transform: scale(2);
+      //   width: 14px;
+      //   height: 15px;
+      //   position: relative;
+
+      //   left: 3px;
+      //   bottom: 2px;
+      //   color: #4f8cff;
+      // }
     }
-    // img {
-    //   color: #4f8cff;
-    // }
-    // .plus {
-    //   width: 21px;
-    //   height: 21px;
-    //   transform: scale(2);
-    //   width: 14px;
-    //   height: 15px;
-    //   position: relative;
-
-    //   left: 3px;
-    //   bottom: 2px;
-    //   color: #4f8cff;
-    // }
   }
-}
-.btn-container{
-  gap: 18%;
-  position: absolute;
- 
-  right: 1px;
-}
- .button2 {
-  // position: absolute;
-  // top: 12px;
+  .btn-container {
+    gap: 18%;
+    position: absolute;
 
-  ion-button {
+    right: 1px;
+  }
+  .button2 {
     // position: absolute;
-     // top: 2%;
-    // right: 18%;
-    bottom: 400px;
-    width: 50px;
-    height: 38px;
+    // top: 12px;
 
-   img{
-    transform: scale(1.2);
-    margin-right: 8px;
-   }
-    
-    div {
-    
-      font-size: 0px;
-      
+    ion-button {
+      // position: absolute;
+      // top: 2%;
+      // right: 18%;
+      bottom: 400px;
+      width: 50px;
+      height: 38px;
+
+      img {
+        transform: scale(1.2);
+        margin-right: 8px;
+      }
+
+      div {
+        font-size: 0px;
+      }
+      // img {
+      //   color: #4f8cff;
+      // }
+      // .plus {
+      //   width: 21px;
+      //   height: 21px;
+      //   transform: scale(2);
+      //   width: 14px;
+      //   height: 15px;
+      //   position: relative;
+
+      //   left: 3px;
+      //   bottom: 2px;
+      //   color: #4f8cff;
+      // }
     }
-    // img {
-    //   color: #4f8cff;
-    // }
-    // .plus {
-    //   width: 21px;
-    //   height: 21px;
-    //   transform: scale(2);
-    //   width: 14px;
-    //   height: 15px;
-    //   position: relative;
-
-    //   left: 3px;
-    //   bottom: 2px;
-    //   color: #4f8cff;
-    // }
+  }
+  .header-container {
+    width: auto;
   }
 }
-.header-container{
-  width: auto;
-}
-  
-  }
-
