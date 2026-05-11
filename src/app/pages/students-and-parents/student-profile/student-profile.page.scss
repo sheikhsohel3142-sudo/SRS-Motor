@@ -136,6 +136,13 @@ ion-card {
   --highlight-height: 0; /* red underline remove */
   --border-width: 0;
 }
+.student-profile-container ion-label {
+  font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin-bottom: -4px;
+}
 .status-container {
   display: flex;
 
@@ -735,7 +742,7 @@ ion-datetime::part(confirm-button) {
 @media only screen and (max-width: 1279px) and (min-width: 768px) {
   .student-profile-container {
     width: 99%;
-    height: 2260px;
+    height: 2190px;
   }
   .input-count {
     ion-input {

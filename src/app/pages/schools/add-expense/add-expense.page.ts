@@ -7,7 +7,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonCol, IonSelectOption, IonIcon, IonGrid, IonRow, IonCard, IonInput, IonSelect, IonText } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonCol, IonSelectOption, IonIcon, IonGrid, IonRow, IonCard, IonInput, IonSelect, IonText, IonLabel } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -15,7 +15,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './add-expense.page.html',
   styleUrls: ['./add-expense.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonLabel, 
     IonInput,
     IonButton,
     IonIcon,

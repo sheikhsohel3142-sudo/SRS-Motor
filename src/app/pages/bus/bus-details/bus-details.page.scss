@@ -124,6 +124,13 @@
   --highlight-height: 0; /* red underline remove */
   --border-width: 0;
 }
+.bus-details-container ion-label {
+  font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin-bottom: -4px;
+}
 .confirm-btn {
   ion-button {
     height: 52px;
@@ -738,12 +745,11 @@
 // }
 
 .upload-label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #555;
-  display: block;
-  margin-bottom: 6px;
-  margin-top: 2px;
+   font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin-bottom: -4px;
 }
 
 .upload-box {

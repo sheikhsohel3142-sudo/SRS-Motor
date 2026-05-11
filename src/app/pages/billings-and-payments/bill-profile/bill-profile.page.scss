@@ -144,6 +144,13 @@ ion-card {
   --highlight-height: 0; /* red underline remove */
   --border-width: 0;
 }
+.bill-profile-container ion-label {
+  font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin-bottom: -4px;
+}
 .first-btn {
   ion-button {
     height: 52px;

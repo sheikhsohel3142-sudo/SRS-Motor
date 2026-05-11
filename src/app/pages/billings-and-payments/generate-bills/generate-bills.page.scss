@@ -73,7 +73,7 @@ ion-card {
     }
   }
 }
-.profile-container ion-input {
+.genrate-bill-container ion-input {
   background: #f5f6f8;
   border-radius: 8px;
   padding: 12px 14px;
@@ -97,6 +97,13 @@ ion-card {
   }
   --highlight-height: 0; /* red underline remove */
   --border-width: 0;
+}
+.genrate-bill-container ion-label {
+  font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin-bottom: -4px;
 }
 ion-button {
   height: 52px;
@@ -276,6 +283,7 @@ ion-button {
   margin-bottom: 12px;
   width: 372px;
   height: 50px;
+  margin-top: 10px;
 }
 label {
   font-size: 14px;

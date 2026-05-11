@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+MX+Guides&family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 .title-container {
   position: relative;
   top: 20px;
@@ -38,6 +38,7 @@
   overflow-x: hidden;
   margin-bottom: 10px;
 }
+
 ion-card {
   // border: 2px solid black;
   // width: 880px;
@@ -83,6 +84,13 @@ ion-card {
   }
   --highlight-height: 0; /* red underline remove */
   --border-width: 0;
+}
+.add-new-bus-container ion-label {
+  font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin-bottom: -4px;
 }
 ion-button {
   height: 52px;
@@ -641,7 +649,7 @@ ion-datetime::part(confirm-button) {
     margin-bottom: 12px;
   }
 
-  .add-new-bus-container label {
+  .add-new-bus-container ion-label {
     font-size: 13px;
     margin-bottom: 4px;
     margin-left: 21px;

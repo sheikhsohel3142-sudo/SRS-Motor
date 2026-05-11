@@ -95,6 +95,13 @@ ion-card {
   --highlight-height: 0; /* red underline remove */
   --border-width: 0;
 }
+.add-advance-container ion-label {
+  font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin-bottom: -4px;
+}
 ion-button {
   height: 52px;
   width: 800px;
@@ -204,8 +211,9 @@ ion-button {
   font-weight: 500;
   color: #555;
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
   margin-top: 2px;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .upload-box {
@@ -218,6 +226,7 @@ ion-button {
   justify-content: space-between;
   padding: 0 12px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .file-pill {
@@ -533,7 +542,7 @@ ion-button {
     margin-bottom: 12px;
   }
 
-  .add-advance-container label {
+  .add-advance-container ion-label {
     font-size: 13px;
     margin-bottom: 4px;
     margin-left: 20px;

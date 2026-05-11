@@ -80,6 +80,7 @@ ion-card {
     }
   }
 }
+
 .header-container {
   border-bottom: 1px solid #e5e3dc;
   position: relative;
@@ -119,6 +120,14 @@ ion-card {
   --highlight-height: 0; /* red underline remove */
   --border-width: 0;
 }
+.enroll-new-student-container ion-label {
+  font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin-bottom: -4px;
+}
+
 .date-box {
   background: #f5f6f8;
   border-radius: 8px;
@@ -220,6 +229,7 @@ ion-button {
   margin-bottom: 12px;
   width: 362px;
   height: 50px;
+  margin-top: 10px;
 }
 label {
   font-size: 14px;

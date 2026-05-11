@@ -28,8 +28,7 @@ import {
   IonSelect,
   IonItem,
   IonText,
-  IonDatetime,
-} from '@ionic/angular/standalone';
+  IonDatetime, IonLabel } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -37,7 +36,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './add-new-bus.page.html',
   styleUrls: ['./add-new-bus.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonLabel, 
     IonDatetime,
     IonText,
     IonItem,

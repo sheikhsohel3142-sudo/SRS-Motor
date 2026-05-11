@@ -19,7 +19,7 @@
           <ion-row>
             <!-- Student Name -->
             <ion-col size="12" size-md="6">
-              <label>Student Name</label>
+              <ion-label>Student Name</ion-label>
 
               <div class="input-count">
                 <ion-input
@@ -51,7 +51,7 @@
 
             <!-- Parents Name -->
             <ion-col class="align-right-field" size="12" size-md="6">
-              <label>Parents Name</label>
+              <ion-label>Parents Name</ion-label>
 
               <div class="input-count">
                 <ion-input
@@ -84,7 +84,7 @@
 
             <!-- Phone Number -->
             <ion-col size="12" size-md="6">
-              <label>Phone Number</label>
+              <ion-label>Phone Number</ion-label>
 
               <div class="input-count">
                 <ion-input
@@ -116,7 +116,7 @@
 
             <!-- School -->
             <ion-col class="align-right-field" size="12" size-md="6">
-              <label>School</label>
+              <ion-label>School</ion-label>
 
               <div class="input-count">
                 <ion-input
@@ -138,7 +138,7 @@
 
             <!-- Route / School -->
             <ion-col size="12" size-md="6">
-              <label>School</label>
+              <ion-label>School</ion-label>
 
               <div class="input-count">
                 <ion-input
@@ -160,7 +160,7 @@
 
             <!-- Billing Month -->
             <ion-col class="align-right-field" size="12" size-md="6">
-              <label>Billing Month</label>
+              <ion-label>Billing Month</ion-label>
 
               <div class="input-count">
                 <ion-input
@@ -207,7 +207,7 @@
             <!-- Transport Fare -->
             <ion-col size="6">
               <div class="input-count">
-                <label
+                <ion-label
                   >Transport Fare
                   <ion-text
                     class="danger"
@@ -231,9 +231,9 @@
                       Enter valid amount (max 2 decimal)
                     </small>
                   </ion-text>
-                </label>
+                </ion-label>
 
-                <label slot="start">$</label>
+                <ion-label slot="start">$</ion-label>
                 <ion-input
                   type="number"
                   formControlName="transportFare"
@@ -244,7 +244,7 @@
             <!-- Previous Due -->
             <ion-col size="6" class="align-right-field">
               <div class="input-count">
-                <label
+                <ion-label
                   >Previous Due
                   <ion-text
                     class="danger"
@@ -262,9 +262,9 @@
                       Enter valid amount (max 2 decimal)
                     </small>
                   </ion-text>
-                </label>
+                </ion-label>
 
-                <label slot="start">$</label>
+                <ion-label slot="start">$</ion-label>
                 <ion-input
                   type="number"
                   formControlName="previousDue"
@@ -277,7 +277,7 @@
             <!-- Late Fee -->
             <ion-col size="6">
               <div class="input-count">
-                <label
+                <ion-label
                   >Late Fee
                   <ion-text
                     class="danger"
@@ -293,9 +293,9 @@
                       Enter valid amount (max 2 decimal)
                     </small>
                   </ion-text>
-                </label>
+                </ion-label>
 
-                <label slot="start">$</label>
+                <ion-label slot="start">$</ion-label>
                 <ion-input type="number" formControlName="lateFee"></ion-input>
               </div>
             </ion-col>
@@ -303,7 +303,7 @@
             <!-- Total Amount -->
             <ion-col size="6" class="align-right-field">
               <div class="input-count">
-                <label
+                <ion-label
                   >Total Amount
                   <ion-text
                     class="danger"
@@ -327,9 +327,9 @@
                       Enter valid amount
                     </small>
                   </ion-text>
-                </label>
+                </ion-label>
 
-                <label slot="start">$</label>
+                <ion-label slot="start">$</ion-label>
                 <ion-input
                   type="number"
                   formControlName="totalAmount"
@@ -476,7 +476,7 @@
               </ion-col>
 
               <ion-col size="6" class="align-right-field">
-                <label>Paid So Far</label>
+                <ion-label>Paid So Far</ion-label>
                 <div class="input-count">
                   <ion-input formControlName="paid" readonly></ion-input>
                 </div>
@@ -567,7 +567,7 @@
             <!-- Row 1 -->
             <ion-row>
               <ion-col size="6">
-                <label>Payment Amount</label>
+                <ion-label>Payment Amount</ion-label>
 
                 <div class="input-count">
                   <ion-input type="number" formControlName="amount"></ion-input>
@@ -575,7 +575,7 @@
               </ion-col>
 
               <ion-col size="6">
-                <label>Payment Mode</label>
+                <ion-label>Payment Mode</ion-label>
                 <div class="input-count">
                   <ion-input formControlName="mode" readonly></ion-input>
                 </div>
@@ -585,7 +585,7 @@
             <!-- Row 2 -->
             <ion-row>
               <ion-col size="6">
-                <label>Payment Date</label>
+                <ion-label>Payment Date</ion-label>
                 <div class="input-count">
                   <ion-input formControlName="date" readonly></ion-input>
                   <!-- <ion-icon name="calendar-outline" slot="end"></ion-icon> -->
@@ -593,7 +593,7 @@
               </ion-col>
 
               <ion-col size="6">
-                <label>Reference ID (optional)</label>
+                <ion-label>Reference ID (optional)</ion-label>
                 <div class="input-count">
                   <ion-input formControlName="reference" readonly></ion-input>
                 </div>
@@ -603,7 +603,7 @@
             <!-- Row 3 -->
             <ion-row>
               <ion-col size="12">
-                <label>Notes (optional)</label>
+                <ion-label>Notes (optional)</ion-label>
                 <div class="input-count">
                   <ion-input formControlName="notes" readonly></ion-input>
                 </div>
@@ -619,14 +619,14 @@
             <!-- Row 4 -->
             <ion-row>
               <ion-col size="6">
-                <label>Total Bill</label>
+                <ion-label>Total Bill</ion-label>
                 <div class="input-count">
                   <ion-input formControlName="totalBill" readonly></ion-input>
                 </div>
               </ion-col>
 
               <ion-col size="6">
-                <label>Paid So Far</label>
+                <ion-label>Paid So Far</ion-label>
                 <div class="input-count">
                   <ion-input formControlName="paid" readonly></ion-input>
                 </div>
@@ -636,7 +636,7 @@
             <!-- Row 5 -->
             <ion-row>
               <ion-col size="6">
-                <label>Outstanding Balance</label>
+                <ion-label>Outstanding Balance</ion-label>
 
                 <div class="input-count">
                   <ion-input formControlName="balance" readonly></ion-input>
@@ -662,7 +662,7 @@
           <ion-row>
             <!-- Current Due -->
             <ion-col size="6">
-              <label>Current Due</label>
+              <ion-label>Current Due</ion-label>
 
               <div class="input-count">
                 <ion-input
@@ -696,7 +696,7 @@
 
             <!-- Due Since -->
             <ion-col size="6" class="align-right-field">
-              <label>Due Since</label>
+              <ion-label>Due Since</ion-label>
 
               <!-- Custom Input -->
               <div class="date-box2" (click)="openPicker2()">

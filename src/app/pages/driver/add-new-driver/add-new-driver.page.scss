@@ -123,6 +123,13 @@ ion-card {
   --highlight-height: 0; /* red underline remove */
   --border-width: 0;
 }
+.add-new-driver-container ion-label {
+  font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #8a8a8a;
+  margin-bottom: -4px;
+}
 ion-button {
   height: 52px;
   width: 821px;
@@ -173,6 +180,7 @@ ion-button {
   justify-content: space-between;
   padding: 0 12px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .file-pill {

@@ -53,7 +53,7 @@ ion-card {
 ion-grid {
   // margin-bottom: 70px;
   position: relative;
-  top: 10px;
+  top: -16px;
   gap: 85px;
 }
 .right-col {
@@ -92,11 +92,11 @@ ion-grid {
 }
 
 .profile-item ion-label {
-  font-size: 14px;
+  font-size: 17px;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   color: #8a8a8a;
-  margin-bottom: 6px;
+  margin-bottom: 14px;
 }
 
 .profile-item ion-input {
@@ -198,14 +198,14 @@ ion-content {
   }
 
   ion-card {
-    width: 106%;
+    width: 105%;
     height: 780px;
   }
 
   ion-button {
     width: 100%;
     min-width: 400px;
-    top: 60px;
+    top: -10px;
   }
 }
 
@@ -265,7 +265,7 @@ ion-content {
   ion-button {
     width: 100%;
     min-width: 400px;
-    top: 40px;
+    top: -10px;
   }
 }
 @media only screen and (max-width: 1024px) and (min-width: 995px) {
@@ -338,6 +338,7 @@ ion-content {
   /* 🔥 GRID → SINGLE COLUMN */
   ion-grid {
     display: block;
+    top: 30px
   }
 
   ion-row {
