@@ -793,12 +793,12 @@
   cursor: pointer;
 }
 
-.upload-icon ion-icon {
+.upload-icon2 ion-icon {
   font-size: 20px;
   color: #888;
-  position: fixed;
-  right: 55%;
-  top: 83.5%;
+  position: absolute;
+  right: 56%;
+  top: 46.5%;
 }
 .main-wrapper {
   display: flex;
@@ -1258,6 +1258,11 @@ ion-datetime::part(confirm-button) {
   .table-card {
     width: fit-content;
   }
+  .upload-icon2 ion-icon{
+    right: 8%;
+    
+  }
+
   .date-box {
     width: 91%;
     margin-left: 21px;
@@ -1348,10 +1353,10 @@ ion-datetime::part(confirm-button) {
   .bus-details-container {
     margin-bottom: 12px;
   }
-  .upload-icon ion-icon {
-    right: 12%;
-    top: 83%;
-  }
+  // .upload-icon2 ion-icon {
+  //   right: 12%;
+  //   top: 43%;
+  // }
 
   .bus-details-container ion-label {
     font-size: 13px;
