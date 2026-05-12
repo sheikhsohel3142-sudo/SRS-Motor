@@ -230,7 +230,7 @@ ion-content {
   ion-button {
     width: 100%;
     min-width: 400px;
-    top: 60px;
+    top: -10px;
   }
 }
 
@@ -274,7 +274,7 @@ ion-content {
   }
 
   ion-card {
-    width: 111%;
+    width: 107%;
     height: 780px;
 
     // right: 0;
@@ -298,14 +298,14 @@ ion-content {
   ion-button {
     width: 100%;
     min-width: 400px;
-    top: 60px;
+    top: -10px;
   }
 }
 @media only screen and (max-width: 767px) {
   /* Outer container */
   .profile-container {
     width: 100%;
-    height: 1270px;
+    height: 1430px;
     padding: 10px;
     background: #f2f2f2;
   }
@@ -313,7 +313,7 @@ ion-content {
   /* Card */
   ion-card {
     min-width: 300px;
-    height: 1120px;
+    height: 1300px;
     margin: 0;
     padding: 16px;
     border-radius: 12px;
@@ -363,8 +363,7 @@ ion-content {
   }
 
   .profile-item ion-label {
-    font-size: 13px;
-    margin-bottom: 4px;
+    
   }
 
   .profile-item ion-input {
